@@ -1242,9 +1242,9 @@ If application data required to be marked does not retain its marking when it is
 					<VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>CCI-002264</ATTRIBUTE_DATA>
 				</STIG_DATA>
-				<STATUS>Not_Reviewed</STATUS>
-				<FINDING_DETAILS></FINDING_DETAILS>
-				<COMMENTS></COMMENTS>
+				<STATUS>OPEN</STATUS>
+				<FINDING_DETAILS>These are finding details</FINDING_DETAILS>
+				<COMMENTS>This is a comment.</COMMENTS>
 				<SEVERITY_OVERRIDE></SEVERITY_OVERRIDE>
 				<SEVERITY_JUSTIFICATION></SEVERITY_JUSTIFICATION>
 			</VULN>

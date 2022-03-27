@@ -6,7 +6,7 @@ import requests
 import sys
 import xml.etree.ElementTree as ET
 
-
+# For BAM Share and Projects
 #SHARE = "//bamtech/public/IA/Projects"
 #PROJECTS = ["/afaems","/slcms","/myvector","/seco","/msep","/aiportal"]
 
@@ -19,13 +19,13 @@ def check_connection(url, timeout=5):
         _ = requests.head(url, timeout=timeout)
         return True
     except requests.ConnectionError:
-        print("No internet connection available.")
+        print("No connection to share available.")
     return False
 
 
 def savetoCSV(checklist_location=CKL_GLOB, output_file=OUTPUT_CSV):
 
-    fieldnames = ['HOST_NAME', 'HOST_IP', 'Vuln_Num', 'Severity', 'Group_Title', 'Rule_ID', 'Rule_Ver', 'Rule_Title', 'Fix_Text']
+    fieldnames = ['HOST_NAME', 'HOST_IP', 'Vuln_Num', 'Severity', 'STATUS', 'Group_Title', 'Rule_ID', 'Rule_Ver', 'Rule_Title', 'Fix_Text', 'FINDING_DETAILS', 'COMMENTS']
 
     # writing to csv file
     with open(output_file, 'w', newline='') as csvfile:
@@ -51,9 +51,14 @@ def savetoCSV(checklist_location=CKL_GLOB, output_file=OUTPUT_CSV):
                     for stig_data in vuln.findall('./STIG_DATA'):
                         if (stig_data.find('VULN_ATTRIBUTE').text in ['Vuln_Num', 'Severity', 'Group_Title', 'Rule_ID', 'Rule_Ver', 'Rule_Title', 'Fix_Text']):
                             finding[stig_data.find('VULN_ATTRIBUTE').text] = stig_data.find('ATTRIBUTE_DATA').text.replace('\n', '')
-        
-                    writer.writerow(finding)
+                    
+                    finding['STATUS'] = vuln.find('./STATUS').text
+                    finding['FINDING_DETAILS'] = vuln.find('./FINDING_DETAILS').text
+                    finding['COMMENTS'] = vuln.find('./COMMENTS').text
 
+                    writer.writerow(finding)
+                    
+                    
       
 def main():
 
