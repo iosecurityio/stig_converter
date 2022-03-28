@@ -1,4 +1,5 @@
 import csv
+import datetime
 import glob
 import requests
 import xml.etree.ElementTree as ET
@@ -8,7 +9,8 @@ import xml.etree.ElementTree as ET
 #PROJECTS = ["/afaems","/slcms","/myvector","/seco","/msep","/aiportal"]
 BAM_ROOT = "//bamtech/public/IA/Projects/"
 CKL_SHARE_GLOB = f"{BAM_ROOT}['afaems','slcms','myvector','seco','msep','aiportal']/STIGs/*.ckl"
-OUTPUT_CSV = "F:/Allen/python/ckl_to_csv/TestNewChecklist.csv"
+CUR_DATE = datetime.datetime.now().strftime('%Y%m%d')
+OUTPUT_CSV = f"F:/Allen/python/ckl_to_csv/test_checklist-{CUR_DATE}.csv"
 CKL_GLOB = "F:/Allen/python/ckl_to_csv/*.ckl"
 
 
@@ -91,6 +93,6 @@ def main():
     convert_to_csv(stig_checklists, OUTPUT_CSV)
 
 
-# RUN RUN RUN      
+# RUN MAIN
 if __name__ == "__main__":
     main()
