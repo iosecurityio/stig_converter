@@ -82,13 +82,11 @@ def main():
     # 1. Check Connection at the beginning
     # if check_connection(BAM_ROOT):
 
-    #2. Get list of checklists that exist, look at them
-    # get_checklists(location)
+    #2. Get list of checklists that exist and look at them
     stig_checklists = get_checklists(CKL_GLOB)
     print(f"Checklists detected: {stig_checklists}")
 
     #3. convert them to csv files
-    # convert_to_csv(get_checklists(CKL_GLOB))
     print(f"Converting {stig_checklists} to .csv")
     convert_to_csv(stig_checklists, OUTPUT_CSV)
 
