@@ -7,9 +7,9 @@
 		<MARKING>CUI</MARKING>
 		<HOST_NAME>BAM Test Hostname</HOST_NAME>
 		<HOST_IP>192.168.1.256</HOST_IP>
-		<HOST_MAC></HOST_MAC>
-		<HOST_FQDN></HOST_FQDN>
-		<TARGET_COMMENT></TARGET_COMMENT>
+		<HOST_MAC>ma:ca:dd:re:ss:00</HOST_MAC>
+		<HOST_FQDN>https://example.com</HOST_FQDN>
+		<TARGET_COMMENT>Asset Target comment here.</TARGET_COMMENT>
 		<TECH_AREA></TECH_AREA>
 		<TARGET_KEY>4093</TARGET_KEY>
 		<WEB_OR_DATABASE>false</WEB_OR_DATABASE>
@@ -241,7 +241,7 @@ Web applications must clear sensitive data from files and storage areas on the c
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review application design documentation and interview application administrator to identify how the application makes use of temporary client storage and cookies.  Identify cookie and web storage locations on the client.  Clear all browser cookies and web cache.
 
-Log on to the application and perform several standard operations, noting if the application ever prompts the user to accept a cookie. If prompted by the browser to save the user ID and password (decline to save the user ID and password), this is a finding. 
+Log on to the application and perform several standard operations, noting if the application ever prompts the user to accept a cookie. If prompted by the browser to save the user ID and password (decline to save the user ID and password), this is a finding.
 
 Log out of the application and close the browser. Reopen the browser and examine the stored cookies. The cookies displayed should be related to the application website.
 
@@ -2053,7 +2053,7 @@ If the design document does not exist, or does not indicate SAML assertion ident
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>SAML is a standard for exchanging authentication and authorization data between security domains.  SAML uses security tokens containing assertions to pass information about a principal (usually an end user) between a SAML authority, (identity provider), and a SAML consumer, (service provider).  SAML assertions are usually made about a subject, (user) represented by the &lt;Subject&gt; element.   
+					<ATTRIBUTE_DATA>SAML is a standard for exchanging authentication and authorization data between security domains.  SAML uses security tokens containing assertions to pass information about a principal (usually an end user) between a SAML authority, (identity provider), and a SAML consumer, (service provider).  SAML assertions are usually made about a subject, (user) represented by the &lt;Subject&gt; element.
 
 The confidentially of the data in a message as the message is passed through an intermediary web service may be required to be restricted by the intermediary web service. The intermediary web service may leak or distribute the data contained in a message if not encrypted or protected.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -2065,7 +2065,7 @@ The confidentially of the data in a message as the message is passed through an 
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Ask the application representative for the design document.
 
-Review the design document for web services using WS-Security tokens.  
+Review the design document for web services using WS-Security tokens.
 
 If the application does not utilize WS-Security tokens, this check is not applicable.
 
@@ -3113,7 +3113,7 @@ To address access requirements, many application developers choose to integrate 
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Review the application documentation and interview the application administrator. Identify if emergency accounts are ever used. 
+					<ATTRIBUTE_DATA>Review the application documentation and interview the application administrator. Identify if emergency accounts are ever used.
 
 If emergency accounts are not used, this requirement is not applicable.
 
@@ -3367,7 +3367,7 @@ If the application is not set to expire inactive accounts after 35 days, or if t
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Test or demonstration accounts are sometimes created during the application installation process. This creates a security risk as these accounts often remain after the initial installation process and can be used to gain unauthorized access to the application. Applications must be designed and configured to disable or delete any unnecessary accounts that may be created. 
+					<ATTRIBUTE_DATA>Test or demonstration accounts are sometimes created during the application installation process. This creates a security risk as these accounts often remain after the initial installation process and can be used to gain unauthorized access to the application. Applications must be designed and configured to disable or delete any unnecessary accounts that may be created.
 
 Care must be taken to ensure valid accounts used for valid application operations are not disabled or deleted when this requirement is applied.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -3764,7 +3764,7 @@ At a minimum, ensure account name, date and time of the event are recorded.</ATT
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>When application accounts are disabled, user accessibility is affected. Accounts are utilized for identifying individual application users or for identifying the application processes themselves. In order to detect and respond to events affecting user accessibility and application processing, applications must audit account disabling actions and, as required, notify the appropriate individuals, so they can investigate the event. Such a capability greatly reduces the risk that application accessibility will be negatively affected for extended periods of time and provides logging that can be used for forensic purposes. 
+					<ATTRIBUTE_DATA>When application accounts are disabled, user accessibility is affected. Accounts are utilized for identifying individual application users or for identifying the application processes themselves. In order to detect and respond to events affecting user accessibility and application processing, applications must audit account disabling actions and, as required, notify the appropriate individuals, so they can investigate the event. Such a capability greatly reduces the risk that application accessibility will be negatively affected for extended periods of time and provides logging that can be used for forensic purposes.
 
 Application developers are encouraged to integrate their applications with enterprise-level authentication/access/audit mechanisms such as Syslog, Active Directory or LDAP.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -4294,7 +4294,7 @@ If system administrators and ISSOs are not notified when accounts are modified, 
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and Information System Security Officers (ISSO) exists. Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes. 
+					<ATTRIBUTE_DATA>Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and Information System Security Officers (ISSO) exists. Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.
 
 To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to off-load those access control functions and focus on core application features and functionality.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -4578,7 +4578,7 @@ If the account enabling event information was not logged, this is a finding.</AT
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Configure the application to write a log entry when a user account is enabled. 
+					<ATTRIBUTE_DATA>Configure the application to write a log entry when a user account is enabled.
 
 At a minimum, ensure account name, date and time of the event are recorded.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -5090,7 +5090,7 @@ If the application requirements specify protections for data mining and the appl
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>To mitigate the risk of unauthorized access to sensitive information by entities that have been issued certificates by DoD-approved PKIs, all DoD systems (e.g., networks, web servers, and web portals) must be properly configured to incorporate access control methods that do not rely solely on the possession of a certificate for access. 
+					<ATTRIBUTE_DATA>To mitigate the risk of unauthorized access to sensitive information by entities that have been issued certificates by DoD-approved PKIs, all DoD systems (e.g., networks, web servers, and web portals) must be properly configured to incorporate access control methods that do not rely solely on the possession of a certificate for access.
 
 Successful authentication must not automatically give an entity access to a restricted asset or security boundary.
 
@@ -5823,9 +5823,9 @@ The finding details should note the full path of the file(s) and the associated 
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Applications are often designed to utilize a user account.  The account represents a means to control application permissions and access to OS resources, application resources or both.  
+					<ATTRIBUTE_DATA>Applications are often designed to utilize a user account.  The account represents a means to control application permissions and access to OS resources, application resources or both.
 
-When the application is designed and installed, care must be taken not to assign excessive permissions to the user account that is used by the application.  
+When the application is designed and installed, care must be taken not to assign excessive permissions to the user account that is used by the application.
 
 An application operating with unnecessary privileges can potentially give an attacker access to the underlying operating system or if the privileges required for application execution are at a higher level than the privileges assigned to organizational users invoking such applications/programs, those users are indirectly provided with greater privileges than assigned by organizations.
 
@@ -5839,7 +5839,7 @@ Applications must be designed and configured to operate with only those permissi
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review the system documentation or interview the application representative and identify if the application utilizes an account in order to operate.
 
-Determine the OS user groups in which each application account is a member.  List the user rights assigned to these users and groups using relevant OS commands and evaluate whether any of them provide admin rights or if they are unnecessary or excessive. 
+Determine the OS user groups in which each application account is a member.  List the user rights assigned to these users and groups using relevant OS commands and evaluate whether any of them provide admin rights or if they are unnecessary or excessive.
 
 If the application connects to a database, open an admin console to the database and view the database users, their roles and group rights.
 
@@ -6226,13 +6226,13 @@ If the logon is successful upon the 4th attempt the account was not locked after
 
 An ISSM and ISSO approved process must be created and followed to ensure the user requesting access is properly authenticated prior to access being re-established.
 
-The process must include having the user provide information only the user would know and having the administrator verify the accuracy of the information prior to unlocking the account. This means having the user provide this information when their account is created so the information can be referenced when they are locked out.    
+The process must include having the user provide information only the user would know and having the administrator verify the accuracy of the information prior to unlocking the account. This means having the user provide this information when their account is created so the information can be referenced when they are locked out.
 
-The process utilized may be manual in nature, however it is recognized that password resets are a time consuming task. To minimize helpdesk resource constraints related to user lockout requests, procedures may be automated by administrators in order to unlock the account or reset the password.  
+The process utilized may be manual in nature, however it is recognized that password resets are a time consuming task. To minimize helpdesk resource constraints related to user lockout requests, procedures may be automated by administrators in order to unlock the account or reset the password.
 
 Authentication process examples include having the user provide personal information known only by the user and provided when the account was created and/or using Out-of-Band or side channel communication methods such as text messages to the users established cell phone number in order to provide a temporary password or token that can be used to logon once and reset the password.
 
-The OWASP site provides an acceptable password reset process that can be used as a reference.  https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet.  
+The OWASP site provides an acceptable password reset process that can be used as a reference.  https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet.
 
 Automated procedures should follow industry standards and best practice for securely automating password reset/account unlocks and must be reviewed, tested, and then approved by the ISSM and ISSO.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -6796,7 +6796,7 @@ If the standard DoD-approved banner is not displayed prior to obtaining access, 
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Providing a last successful logon date and time stamp notification to the user when they authenticate and access the application allows the user to determine if their application account has been used without their knowledge. 
+					<ATTRIBUTE_DATA>Providing a last successful logon date and time stamp notification to the user when they authenticate and access the application allows the user to determine if their application account has been used without their knowledge.
 
 Armed with that information, the user can notify the application administrator and initiate a forensics investigation to identify root cause.  Without providing this information to the user, a potential compromise of user accounts could go unnoticed.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -6818,7 +6818,7 @@ Log out of the application.
 
 Re-authenticate to the application as the same user.
 
-Validate the last logon date and time is displayed in the user interface. 
+Validate the last logon date and time is displayed in the user interface.
 
 If the date and time the user account was last granted access to the application is not displayed in the user interface, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -6945,11 +6945,11 @@ DoD PKI provides for non-repudiation through the use of digital signatures. Non-
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review the application documentation, the design requirements if available and interview the application administrator.
 
-Identify application services or application commands that are formerly required and designed to provide non-repudiation services (e.g., digital signatures).  
+Identify application services or application commands that are formerly required and designed to provide non-repudiation services (e.g., digital signatures).
 
-If the application documentation specifically states that non-repudiation services for application users are not defined as part of the application design, this requirement is not applicable.  
+If the application documentation specifically states that non-repudiation services for application users are not defined as part of the application design, this requirement is not applicable.
 
-Email is one example of an application specifically required to provide non-repudiation services for application users within the DoD. 
+Email is one example of an application specifically required to provide non-repudiation services for application users within the DoD.
 
 Interview the application administrators and have them describe which aspect of the application, if any, is required to provide digital signatures.
 
@@ -7225,7 +7225,7 @@ Review the logs to ensure the session creation event was recorded.
 
 If the application is not configured to log session ID creation events, or if no creation event was recorded, this is a finding.
 
-If a web-based application delegates session ID creation to an application server, this is not a finding. 
+If a web-based application delegates session ID creation to an application server, this is not a finding.
 
 If the application generates session ID creation event logs by default, and that behavior cannot be disabled, this is not a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -7356,7 +7356,7 @@ Terminate a user session within the application and review the logs to ensure th
 
 If the application is not configured to log session ID destruction events, or if the application has no means to enable auditing of session ID destruction events, this is a finding.
 
-If a web-based application delegates session ID destruction to an application server, this is not a finding. 
+If a web-based application delegates session ID destruction to an application server, this is not a finding.
 
 If the application generates audit logs by default when session IDs are destroyed, and that behavior cannot be disabled, this is not a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -7501,7 +7501,7 @@ Escalate privileges by authenticating as a privileged user.
 
 Review the logs and determine if new session information is created and being used.
 
-If a web-based application delegates session ID renewals to an application server, this is not a finding. 
+If a web-based application delegates session ID renewals to an application server, this is not a finding.
 
 If the application is not configured to log session ID renewal events this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -7783,7 +7783,7 @@ Perform no action within the application in order to allow the session to timeou
 
 Once the session timeout threshold has been exceeded, verify the session has been terminated due to the timeout event and review the logs again to ensure the session timeout event was recorded in the logs.
 
-If a web-based application delegates session timeout auditing to an application server, this is not a finding. 
+If a web-based application delegates session timeout auditing to an application server, this is not a finding.
 
 If the session timeout event is not recorded in the logs, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -8687,7 +8687,7 @@ If the application does not generate an audit record when successful and unsucce
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>A security level denotes a permissions or authorization capability within the application. This is most often associated with a user role. Attempts to access a security level can occur when a user attempts an action such as escalating their privilege from within the application itself. Attempts to access a security level can be construed as an attempt to change your user role from within the application. 
+					<ATTRIBUTE_DATA>A security level denotes a permissions or authorization capability within the application. This is most often associated with a user role. Attempts to access a security level can occur when a user attempts an action such as escalating their privilege from within the application itself. Attempts to access a security level can be construed as an attempt to change your user role from within the application.
 
 Without generating audit records that are specific to the security and mission needs of the organization, it would be difficult to establish, correlate, and investigate the events relating to an incident, or identify those responsible for one. Audit records can be generated from various components within the information system (e.g., module or policy filter).</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -10855,11 +10855,11 @@ If the application is writing to an existing log or log file:
 
 Open and monitor the application log.
 
-Start the application service and view the log entries. 
+Start the application service and view the log entries.
 
 Log entries indicating the application is starting should commence as soon as the application starts. Determine if the log events correlate with the time the application was started and if event log entries include an application start up sequence of events.
 
-If the application writes events to a new log on startup: 
+If the application writes events to a new log on startup:
 
 Identify location logs are written to, start the application and then identify and access the new log.
 
@@ -10976,7 +10976,7 @@ If the application does not begin logging events upon start up, this is a findin
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Forensics is a large part of security incident response.  Applications must provide a record of their actions so application events can be investigated post-event.  
+					<ATTRIBUTE_DATA>Forensics is a large part of security incident response.  Applications must provide a record of their actions so application events can be investigated post-event.
 
 Attackers may attempt to shut off the application logging capability to cover their activity while on the system.  Recording the shutdown event and the time it occurred in the application or  system logs helps to provide forensic evidence that aids in investigating the events.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -11768,7 +11768,7 @@ If the audit logs do not contain enough data in the logs to establish which comp
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Without establishing the source, it is impossible to establish, correlate, and investigate the events leading up to an outage or attack.
 
-In the case of centralized logging, or other instances where log files are consolidated, there is risk that the application's log data could be co-mingled with other log data.  To address this issue, the application itself must be identified as well as the application host or client name. 
+In the case of centralized logging, or other instances where log files are consolidated, there is risk that the application's log data could be co-mingled with other log data.  To address this issue, the application itself must be identified as well as the application host or client name.
 
 In order to compile an accurate risk assessment, and provide forensic analysis, it is essential for security personnel to know the source of the event, particularly in the case of centralized logging.
 
@@ -12164,7 +12164,7 @@ If the event logs do not include the appropriate identifier or identifiers, this
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Reconstruction of harmful events or forensic analysis is not possible if audit records do not contain enough information.
 
-Organizations consider limiting the additional audit information to only that information explicitly needed for specific audit requirements. The additional information required is dependent on the type of information (i.e., sensitivity of the data and the environment within which it resides). At a minimum, the organization must audit either full-text recording of privileged commands or the individual identities of group users, or both. The organization must maintain audit trails in sufficient detail to reconstruct events to determine the cause and impact of compromise. 
+Organizations consider limiting the additional audit information to only that information explicitly needed for specific audit requirements. The additional information required is dependent on the type of information (i.e., sensitivity of the data and the environment within which it resides). At a minimum, the organization must audit either full-text recording of privileged commands or the individual identities of group users, or both. The organization must maintain audit trails in sufficient detail to reconstruct events to determine the cause and impact of compromise.
 
 In addition, the application must have the capability to include organization-defined additional, more detailed information in the audit records for audit events.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -12178,7 +12178,7 @@ In addition, the application must have the capability to include organization-de
 
 Access the system as a privileged user and execute privileged commands.
 
-Review the application logs and ensure that the logs contain all details of the actions performed.  
+Review the application logs and ensure that the logs contain all details of the actions performed.
 
 If a privileged command was typed within the application that command text must be included in the logs. Authentication information provided as part of the text must NOT be logged, just the commands.
 
@@ -12440,7 +12440,7 @@ If the application is configured to log application event entries to a centraliz
 
 Review the application components and the log management capabilities of the application.
 
-Verify the application log management interface includes the ability to centrally manage the configuration of what is captured in the logs of all application components. 
+Verify the application log management interface includes the ability to centrally manage the configuration of what is captured in the logs of all application components.
 
 If the application does not provide the ability to centrally manage the content captured in the audit logs, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -12555,7 +12555,7 @@ If the application does not provide the ability to centrally manage the content 
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Information stored in one location is vulnerable to accidental or incidental deletion or alteration.  In addition, attackers often manipulate logs to hide or obfuscate their activity.
 
-The goal is to off-load application logs to a separate server as quickly and efficiently as possible so as to mitigate these risks.  
+The goal is to off-load application logs to a separate server as quickly and efficiently as possible so as to mitigate these risks.
 
 A centralized logging solution offering applications an enterprise designed and managed logging capability which is the desired solution.
 
@@ -12571,7 +12571,7 @@ However, when a centralized logging solution is not an option due to the operati
 
 If the application is configured to utilize a centralized logging solution, this requirement is not applicable.
 
-Evaluate log management processes and determine if there are automated tasks that move the logs off of the system hosting the application.   
+Evaluate log management processes and determine if there are automated tasks that move the logs off of the system hosting the application.
 
 Verify automated tasks are performed on an ISSO approved schedule (hourly, daily etc.).  Automation can be via scripting, log management oriented tools or other automated means.
 
@@ -12829,7 +12829,7 @@ The requirement will take into account a reasonable amount of processing time su
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Review system documentation and interview application administrator for details regarding logging configuration.  
+					<ATTRIBUTE_DATA>Review system documentation and interview application administrator for details regarding logging configuration.
 
 If the application utilizes a centralized logging system that provides storage capacity alarming, this requirement is not applicable.
 
@@ -12950,11 +12950,11 @@ If the application is not configured to send an alarm when storage volume exceed
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Applications that are categorized as having a high or moderate impact on the organization must provide immediate alerts when encountering failures with the application audit system.  It is critical for the appropriate personnel to be aware if a system is at risk of failing to process audit logs as required. Without this notification, the security personnel may be unaware of an impending failure of the audit capability and system operation may be adversely affected. 
+					<ATTRIBUTE_DATA>Applications that are categorized as having a high or moderate impact on the organization must provide immediate alerts when encountering failures with the application audit system.  It is critical for the appropriate personnel to be aware if a system is at risk of failing to process audit logs as required. Without this notification, the security personnel may be unaware of an impending failure of the audit capability and system operation may be adversely affected.
 
 Audit processing failures include software/hardware errors, failures in the audit capturing mechanisms, and audit storage capacity being reached or exceeded.
 
-While alerts provide organizations with urgent messages containing important information regarding application audit log activity, real-time alerts provide these messages at information technology speed (i.e., the time from event detection to alert occurs in seconds or no more than 1-2 minutes).  
+While alerts provide organizations with urgent messages containing important information regarding application audit log activity, real-time alerts provide these messages at information technology speed (i.e., the time from event detection to alert occurs in seconds or no more than 1-2 minutes).
 
 Without a real-time alert, security personnel may be unaware of an impending failure of the audit capability and system operation may be adversely affected.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -12976,7 +12976,7 @@ If the application is categorized as having a moderate or high impact and is not
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Configure the log alerts to send an alarm when the audit system is in danger of failing or has failed.  
+					<ATTRIBUTE_DATA>Configure the log alerts to send an alarm when the audit system is in danger of failing or has failed.
 
 Configure the log alerts to be immediately sent to the application admin/SA and ISSO.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -13085,7 +13085,7 @@ Configure the log alerts to be immediately sent to the application admin/SA and 
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>It is critical for the appropriate personnel to be aware if a system is at risk of failing to process audit logs as required. Without this notification, the security personnel may be unaware of an impending failure of the audit capability and system operation may be adversely affected. 
+					<ATTRIBUTE_DATA>It is critical for the appropriate personnel to be aware if a system is at risk of failing to process audit logs as required. Without this notification, the security personnel may be unaware of an impending failure of the audit capability and system operation may be adversely affected.
 
 Audit processing failures include software/hardware errors, failures in the audit capturing mechanisms, and audit storage capacity being reached or exceeded.
 
@@ -13105,7 +13105,7 @@ Identify application alarming capability regarding audit processing failure even
 
 Verify the application is configured to alarm when the auditing system fails.
 
-Example alarm events include but are not limited to: 
+Example alarm events include but are not limited to:
 
 hardware failure events
 failures to capture audit record events
@@ -13224,7 +13224,7 @@ If the application is not configured to alarm on alerts that indicate the audit 
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>It is critical that when the application is at risk of failing to process audit logs as required, it take action to mitigate the failure. Audit processing failures include: software/hardware errors; failures in the audit capturing mechanisms; and audit storage capacity being reached or exceeded. Responses to audit failure depend upon the nature of the failure mode.
 
-When availability is an overriding concern, other approved actions in response to an audit failure are as follows: 
+When availability is an overriding concern, other approved actions in response to an audit failure are as follows:
 
 (i) If the failure was caused by the lack of audit record storage capacity, the application must continue generating audit records if possible (automatically restarting the audit service if necessary), overwriting the oldest audit records in a first-in-first-out manner.
 
@@ -14771,7 +14771,7 @@ Identify the application components and the logs associated with the components.
 Ensure the time written into the logs coincides with the OS timeclock.
 
 Access random audit records and review the most recent logs.
- 
+
 Access the system OS hosting the application and use the related OS commands to determine the time of the system.
 
 Perform an action in the application that causes a log event to be written and review the log to ensure the system times and the application log times correlate; compensating for any time delays that may have occurred between running the OS time command and running the application action.
@@ -14899,7 +14899,7 @@ Time stamps generated by the application include date and time. Time is commonly
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review the system documentation and interview the application administrator for details regarding application architecture and logging configuration.
 
-Identify the application components and the logs associated with the components. 
+Identify the application components and the logs associated with the components.
 
 If the application utilizes the underlying OS system clock, and the system clock is mapped to UTC or GMT, this is not a finding.
 
@@ -16398,7 +16398,7 @@ If a cryptographic checksum or hash value of the audit tool file is not created 
 
 Audit tools include, but are not limited to, vendor provided and open source audit tools needed to successfully view and manipulate audit information system activity and records. Audit tools include custom queries and report generators.
 
-It is not uncommon for attackers to replace the audit tools or inject code into the existing tools with the purpose of providing the capability to hide or erase system activity from the audit logs. 
+It is not uncommon for attackers to replace the audit tools or inject code into the existing tools with the purpose of providing the capability to hide or erase system activity from the audit logs.
 
 To address this risk, audit tools must be cryptographically signed/hashed in order to provide the capability to identify when the audit tools have been modified, manipulated or replaced. An example is a checksum hash of the file or files.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -17208,7 +17208,7 @@ Vulnerability assessment tests normally utilize a combination of specialized sof
 
 Testers will typically utilize application user test accounts in order to test application features and functionality such as adding content, executing queries and completing transactions. The vulnerability testing software utilizes user actions and access as well as a list of known security vulnerabilities in order to detect and identify weak security controls or misconfigurations that could potentially be manipulated by the user or create a security vulnerability.
 
-The Open Web Application Security Project (OWASP) top 10 for 2013 includes the following top issues that should be tested.  The site is available by pointing your browser to https://www.owasp.org. 
+The Open Web Application Security Project (OWASP) top 10 for 2013 includes the following top issues that should be tested.  The site is available by pointing your browser to https://www.owasp.org.
 
 A1 Injection
 A2 Weak authentication and session management
@@ -17237,7 +17237,7 @@ Interview the application administrator, obtain and review their application vul
 
 Request the latest scan results including scan configuration settings.
 
-Review scan configurations and ensure coverage of all application architecture has been tested.  The proper scanning tool or combination of tools must be utilized in order to ensure the full range of application features and functionality is tested. 
+Review scan configurations and ensure coverage of all application architecture has been tested.  The proper scanning tool or combination of tools must be utilized in order to ensure the full range of application features and functionality is tested.
 
 For example, if the application includes a web interface and a SQL database, then ensure test results for web and SQL vulnerabilities are provided.  Although web and SQL applications are included as examples and are the prevalent types of applications, this requirement is not intended to be limited to just the aforementioned application architectures.   Ensure test results are provided from all testing tools employed during vulnerability testing.
 
@@ -17775,7 +17775,7 @@ Review the PPSM web page at:
 
 http://www.disa.mil/Network-Services/Enterprise-Connections/PPSM
 
-Review the PPSM Category Assurance List (CAL) directly at the following link: 
+Review the PPSM Category Assurance List (CAL) directly at the following link:
 
 https://disa.deps.mil/ext/cop/iase/ppsm/Pages/cal.aspx
 
@@ -18188,11 +18188,11 @@ If the device is not forced to reauthenticate periodically, this is a finding.</
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>To assure accountability and prevent unauthenticated access, organizational users must be identified and authenticated to prevent potential misuse and compromise of the system.
 
-Organizational users include organizational employees or individuals the organization deems to have equivalent status of employees (e.g., contractors). 
+Organizational users include organizational employees or individuals the organization deems to have equivalent status of employees (e.g., contractors).
 
 Organizational users (and any processes acting on behalf of users) must be uniquely identified and authenticated for all accesses, except the following:
 
-(i) Accesses explicitly identified and documented by the organization. Organizations document specific user actions that can be performed on the information system without identification or authentication; and 
+(i) Accesses explicitly identified and documented by the organization. Organizations document specific user actions that can be performed on the information system without identification or authentication; and
 (ii) Accesses that occur through authorized use of group authenticators without individual authentication. Organizations may require unique identification of individuals in group accounts (e.g., shared privilege accounts) or for detailed accountability of individual activity.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -18327,9 +18327,9 @@ Factors include:
 (ii) something a user has (e.g., cryptographic identification device, token); or
 (iii) something a user is (e.g., biometric).
 
-Multifactor authentication decreases the attack surface by virtue of the fact that attackers must obtain two factors, a physical token or a biometric and a PIN, in order to authenticate.  It is not enough to simply steal a user's password to obtain access.  
+Multifactor authentication decreases the attack surface by virtue of the fact that attackers must obtain two factors, a physical token or a biometric and a PIN, in order to authenticate.  It is not enough to simply steal a user's password to obtain access.
 
-A privileged account is defined as an information system account with authorizations of a privileged user.  
+A privileged account is defined as an information system account with authorizations of a privileged user.
 
 An Alt. Token is a separate CAC like token used specifically for administrative account access and serves as a separate identifier much like a separate user account.
 
@@ -18343,7 +18343,7 @@ Network access is defined as access to an information system by a user (or a pro
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review the application documentation and interview the application administrator to identify application access methods.
 
-Ask the application administrator to present both their primary CAC and their Alt. Token.  Ask the application administrator to log on to the application using application relevant network based access methods.  Attempt to use both CAC and Alt. Tokens to authenticate to the application. 
+Ask the application administrator to present both their primary CAC and their Alt. Token.  Ask the application administrator to log on to the application using application relevant network based access methods.  Attempt to use both CAC and Alt. Tokens to authenticate to the application.
 
 Validate the application requests the user to input their CAC PIN and that they cannot perform administrative functions.
 
@@ -18752,7 +18752,7 @@ Ask the application administrator to log on to the application. Have the applica
 
 Validate the application prompts the user to provide a certificate from the CAC.
 
-Validate the application requests the user to input their CAC PIN. 
+Validate the application requests the user to input their CAC PIN.
 
 If the application allows access without requiring a CAC or Alt. Token, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -18872,9 +18872,9 @@ Factors include:
 (ii) something a user has (e.g., cryptographic identification device, token); or
 (iii) something a user is (e.g., biometric).
 
-Multifactor authentication decreases the attack surface by virtue of the fact that attackers must obtain two factors, a physical token or a biometric and a PIN, in order to authenticate.  It is not enough to simply steal a user's password to obtain access.  
+Multifactor authentication decreases the attack surface by virtue of the fact that attackers must obtain two factors, a physical token or a biometric and a PIN, in order to authenticate.  It is not enough to simply steal a user's password to obtain access.
 
-A privileged account is defined as an information system account with authorizations of a privileged user.  
+A privileged account is defined as an information system account with authorizations of a privileged user.
 
 An Alt. Token is a separate CAC or token used specifically for administrative account access and serves as a separate identifier much like a separate user account.
 
@@ -18888,9 +18888,9 @@ Local access is defined as access to an organizational information system by a u
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review the application documentation and interview the application administrator to identify application access methods.
 
-Ask the application administrator to present both their primary CAC and their Alt. Token.  Ask the application administrator to log on to the application using the local application console.  
+Ask the application administrator to present both their primary CAC and their Alt. Token.  Ask the application administrator to log on to the application using the local application console.
 
-Attempt to use both the CAC and Alt. Tokens to authenticate to the application. 
+Attempt to use both the CAC and Alt. Tokens to authenticate to the application.
 
 Validate the application requests the user to input their CAC PIN and that they cannot perform administrative functions.
 
@@ -20019,13 +20019,13 @@ If SSL/TLS mutual authentication is required due to the application processing n
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Device identifiers are used to identify hardware devices that interact with the application much like a user account is used to identify an application user.  Examples of hardware devices include but are not limited to mobile phones, application gateways or other types of smart hardware.  
+					<ATTRIBUTE_DATA>Device identifiers are used to identify hardware devices that interact with the application much like a user account is used to identify an application user.  Examples of hardware devices include but are not limited to mobile phones, application gateways or other types of smart hardware.
 
-This requirement does not apply to individual application user accounts.  
+This requirement does not apply to individual application user accounts.
 
 This requirement is not applicable to shared information system accounts, application groups, roles (e.g., guest and anonymous accounts) that are used by the application itself in order to function.  Care must be taken to not disable identifiers that are used by the application in order to function.
 
-Inactive device identifiers pose a risk to systems and applications. Attackers that are able to exploit an inactive identifier can potentially obtain and maintain undetected access to the application. 
+Inactive device identifiers pose a risk to systems and applications. Attackers that are able to exploit an inactive identifier can potentially obtain and maintain undetected access to the application.
 
 Applications need to track periods of device inactivity and disable the device identifier after 35 days of inactivity.  This is usually accomplished by disabling the account used by the device to access the application.
 
@@ -21028,11 +21028,11 @@ and
 
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
-Passwords need to be protected at all times and using a strong one-way hashing encryption algorithm with a salt is the standard method for providing a means to validate a user's password without having to store the actual password.  
+Passwords need to be protected at all times and using a strong one-way hashing encryption algorithm with a salt is the standard method for providing a means to validate a user's password without having to store the actual password.
 
 Performance and time required to access are factors that must be considered and the one way hash is the most feasible means of securing the password and providing an acceptable measure of password security.  If passwords are stored in clear text, they can be plainly read and easily compromised.
 
-In many instances, verifying the user knows a password is performed using a password verifier. In its simplest form, a password verifier is a computational function that is capable of creating a hash of a password and determining if the value provided by the user matches the hash.  
+In many instances, verifying the user knows a password is performed using a password verifier. In its simplest form, a password verifier is a computational function that is capable of creating a hash of a password and determining if the value provided by the user matches the hash.
 
 A more secure version of verifying a user knowing a password is to store the result of an iterating hash function and a large random SALT value as follows:
 
@@ -21041,10 +21041,10 @@ Hn = H(Hn-1,H(salt))
 
 Where n is a cryptographically-strong random [*3] number. Hn is stored, along with the salt. When the application wishes to verify that the user knows a password, it simply repeats the process and compares Hn with the stored Hn.
 
-A SALT is essentially a fixed-length cryptographically-strong random value.  
+A SALT is essentially a fixed-length cryptographically-strong random value.
 
 Another method used is utilizing a keyed hash message authentication code (HMAC).  HMAC calculates a message authentication code via a cryptographic hash function used in conjunction with an encryption key.  The key must be protected as with any private key.
- 
+
 Applications must only store passwords that have been cryptographically protected.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -22843,9 +22843,9 @@ Design the application so obfuscated passwords cannot be copied and then pasted 
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>A cryptographic module is a hardware or software device or component that performs cryptographic operations securely within a physical or logical boundary, using a hardware, software or hybrid cryptographic engine contained within the boundary, and cryptographic keys that do not leave the boundary.
-Based on the criticality of the application, system designers might choose to utilize a hardware based cryptographic module due to the protections and security benefits a hardware based solution provides over a software based solution. Due to various factors, including expense, hardware based encryption modules are usually relegated to only those applications where the system requirements specify it as a required protection. Examples include applications that handle extremely sensitive data or those used in life and death situations, e.g., weapons systems. 
+Based on the criticality of the application, system designers might choose to utilize a hardware based cryptographic module due to the protections and security benefits a hardware based solution provides over a software based solution. Due to various factors, including expense, hardware based encryption modules are usually relegated to only those applications where the system requirements specify it as a required protection. Examples include applications that handle extremely sensitive data or those used in life and death situations, e.g., weapons systems.
 
-General purpose applications such as a web site will often opt to leverage an underlying software based encryption capability that is offered by the OS, database or application development framework.  Operating systems or database products often provide their own cryptographic modules that are FIPS 140-2 compliant and can meet the authentication to the crypto module requirement via their Role Based Access Controls (users and groups) built into the product.  
+General purpose applications such as a web site will often opt to leverage an underlying software based encryption capability that is offered by the OS, database or application development framework.  Operating systems or database products often provide their own cryptographic modules that are FIPS 140-2 compliant and can meet the authentication to the crypto module requirement via their Role Based Access Controls (users and groups) built into the product.
 In all cases, user’s accessing the cryptographic module must be authenticated and granted the appropriate rights in order to access the encryption module.  Any encryption utilized by the access control mechanisms must be FIPS 140-2 compliant.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -23371,11 +23371,11 @@ If the application is required to provide authenticated access to Federal agenci
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>FICAM establishes a federated identity framework for the Federal Government. FICAM provides Government-wide services for common Identity, Credential and Access Management (ICAM) requirements.  The FICAM Trust Framework Solutions (TFS) is the federated identity framework for the U.S. federal government.
- The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the Government.  
+ The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the Government.
 
-A Trust Framework that is comparable to federal standards is adopted through this process, which allows Federal Government Relying Parties (Federal Government web sites or RP's) to trust Credential Service Providers a.k.a. Identity Providers that have been assessed under that particular trust framework.  This allows federal government relying parties to trust such credentials at their approved assurance levels. 
+A Trust Framework that is comparable to federal standards is adopted through this process, which allows Federal Government Relying Parties (Federal Government web sites or RP's) to trust Credential Service Providers a.k.a. Identity Providers that have been assessed under that particular trust framework.  This allows federal government relying parties to trust such credentials at their approved assurance levels.
 
-This requirement only applies to applications that are intended to be accessible to non-federal government agencies and other partners through FICAM. 
+This requirement only applies to applications that are intended to be accessible to non-federal government agencies and other partners through FICAM.
 
 Third-party credentials are those credentials issued by non-federal government entities approved by the Federal Identity, Credential, and Access Management (FICAM) Trust Framework Solutions initiative.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -23507,7 +23507,7 @@ If the application does not accept FICAM approved credentials when accepting thi
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>FICAM establishes a federated identity framework for the Federal Government. FICAM provides Government-wide services for common Identity, Credential, and Access Management (ICAM) requirements.  The FICAM Trust Framework Solutions (TFS) is the federated identity framework for the U.S. federal government.
- The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the Government.  
+ The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the Government.
 
 This requirement only applies to applications that are intended to be accessible to non-federal government agencies and other partners or non-organizational (non-DoD) users.
 
@@ -23530,8 +23530,8 @@ If the application is only deployed to SIPRNet, this requirement is not applicab
 If the application is not intended to be available to Federal government partners this requirement is not applicable.
 
 This requirement applies to DoD service providers who are relying parties of external (Federal Government) identity providers.
- 
-Ask the application administrator to demonstrate how the application conforms to FICAM issued profiles such as SAML or OPENID.  
+
+Ask the application administrator to demonstrate how the application conforms to FICAM issued profiles such as SAML or OPENID.
 
 If the application is designed to be a service provider utilizing an external identify provider and doesn't conform to FICAM-issued profiles, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -24486,7 +24486,7 @@ If the application does not deny access after each user session has exceeded the
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>A race condition is a timing event within an application that can become a security vulnerability.  A race condition can occur when a pair of programming calls operating simultaneously do not work in a sequential or coordinated manner.  A race condition is a timing event within software that can become a security vulnerability if the calls are not performed in the correct order.  
+					<ATTRIBUTE_DATA>A race condition is a timing event within an application that can become a security vulnerability.  A race condition can occur when a pair of programming calls operating simultaneously do not work in a sequential or coordinated manner.  A race condition is a timing event within software that can become a security vulnerability if the calls are not performed in the correct order.
 
 There are different types of race conditions and they are dependent upon the action that the application is undertaking when the race condition occurs.  Some examples of race conditions include but are not limited to:
 
@@ -24510,7 +24510,7 @@ If the application is a COTS application and the vendor will not provide code re
 
 Interview the application admin and identify the most recent code testing and analysis that has been conducted.
 
-Review the test results; verify configuration of analysis tools are set to check for the existence of  race conditions.  
+Review the test results; verify configuration of analysis tools are set to check for the existence of  race conditions.
 
 If race conditions are identified in the test results, verify the latest test results are being used, if not, ensure remediation has been completed.
 
@@ -24631,9 +24631,9 @@ Validate that variable values do not change while a switch event is occurring.</
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Networked applications routinely open connections to and from other systems as part of their design and function.  When connections are opened by the application, system resources are consumed.  Terminating the network connection at the end of the application session frees up these resources for later use and aids in maintaining system stability. 
+					<ATTRIBUTE_DATA>Networked applications routinely open connections to and from other systems as part of their design and function.  When connections are opened by the application, system resources are consumed.  Terminating the network connection at the end of the application session frees up these resources for later use and aids in maintaining system stability.
 
-Terminating network connections associated with communications sessions includes, for example, de-allocating associated TCP/IP address/port pairs at the operating system level, or de-allocating networking assignments at the application level if multiple application sessions are using a single, operating system level network connection. 
+Terminating network connections associated with communications sessions includes, for example, de-allocating associated TCP/IP address/port pairs at the operating system level, or de-allocating networking assignments at the application level if multiple application sessions are using a single, operating system level network connection.
 
 This does not mean that the application terminates all sessions or network access; it only ends the inactive session and releases the resources associated with that session.
 
@@ -24653,7 +24653,7 @@ When the aforementioned type of situation occurs, the root cause of the issue as
 
 Identify any documented exceptions to the requirement and review associated mitigations.
 
-If the application provides a management interface for controlling or monitoring application network sessions, access that management interface.  Monitor application network activity.  
+If the application provides a management interface for controlling or monitoring application network sessions, access that management interface.  Monitor application network activity.
 
 If the application utilizes the underlying OS to control network connections, access the command prompt of the OS.  Run the OS command for observing network connections at the OS.  For Windows and Unix OS's, use the "netstat" command.  Include command parameters that identify the application and/or process ID. netstat /? or -h provides the list of available parameters.
 
@@ -24775,7 +24775,7 @@ If exceptions are documented with no mitigation this is a finding.</ATTRIBUTE_DA
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to protect classified data. The application must implement cryptographic modules adhering to the higher standards approved by the federal government since this provides assurance they have been tested and validated.
- 
+
 Advanced Encryption Standard (AES)
 Symmetric block cipher used for information protection
 FIPS Pub 197
@@ -24796,10 +24796,10 @@ Algorithm used for computing a condensed representation of information
 FIPS Pub 180-4
 
 Use SHA-384 to protect up to TOP SECRET.
- 
+
 Diffie-Hellman (DH) Key Exchange
 Asymmetric algorithm used for key establishment
-IETF RFC 3526 
+IETF RFC 3526
 Minimum 3072-bit modulus to protect up to TOP SECRET
 
 RSA
@@ -24807,7 +24807,7 @@ Asymmetric algorithm used for key establishment
 NIST SP 800-56B rev 1
 Minimum 3072-bit modulus to protect up to TOP SECRET
 
-RSA 
+RSA
 Asymmetric algorithm used for digital signatures
 FIPS PUB 186-4
 Minimum 3072 bit-modulus to protect up to TOP SECRET.</ATTRIBUTE_DATA>
@@ -24959,7 +24959,7 @@ If the application resides on a National Security System (NSS) it must not use a
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review the application documentation and interview the application administrator to identify the cryptographic modules used by the application.
 
-Review the application components and application requirements. Interview application developers and application admins to determine if code signing is performed on distributable application components, files or packages.  
+Review the application components and application requirements. Interview application developers and application admins to determine if code signing is performed on distributable application components, files or packages.
 
 For example, a developer may sign application code components or an admin may sign application files or packages in order to provide application consumers with integrity assurances.
 
@@ -24967,7 +24967,7 @@ If signing has been identified in the application security plan as not being req
 
 Have the application admin or the developer demonstrate how the signing algorithms are used and how signing of components including files, code and packages is performed.
 
-While SHA1 is currently FIPS-140-2 approved, due to known vulnerabilities with this algorithm, DoD PKI policy prohibits the use of SHA1 as of December 2016.  See DoD CIO Memo Subject: Revised Schedule to Update DoD Public Key Infrastructure Certificates to Secure Hash Algorithm-256. 
+While SHA1 is currently FIPS-140-2 approved, due to known vulnerabilities with this algorithm, DoD PKI policy prohibits the use of SHA1 as of December 2016.  See DoD CIO Memo Subject: Revised Schedule to Update DoD Public Key Infrastructure Certificates to Secure Hash Algorithm-256.
 
 If the application signing process does not use FIPS validated cryptographic modules, or if the signing process includes SHA1 or MD5 hashing algorithms, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -25098,7 +25098,7 @@ If hashing of application components has been identified in the application secu
 
 Have the application admin or the developer demonstrate how the application generates hashes and what hashing algorithms are used when generating a hash value.
 
-While SHA1 is currently FIPS-140-2 approved, due to known vulnerabilities with this algorithm, DoD PKI policy prohibits the use of SHA1 as of December 2016.  See DoD CIO Memo Subject: Revised Schedule to Update DoD Public Key Infrastructure Certificates to Secure Hash Algorithm-256. 
+While SHA1 is currently FIPS-140-2 approved, due to known vulnerabilities with this algorithm, DoD PKI policy prohibits the use of SHA1 as of December 2016.  See DoD CIO Memo Subject: Revised Schedule to Update DoD Public Key Infrastructure Certificates to Secure Hash Algorithm-256.
 
 If the application resides on a National Security System (NSS) and uses an algorithm weaker than SHA-384, this is a finding.
 
@@ -25769,7 +25769,7 @@ Verify that the scan configuration includes checks for the secure flag on sessio
 
 Review the scan results and determine if the secure flag not being set was identified as a vulnerability.
 
-To manually perform the check, open a web browser, logon to the web application and use the web browser to view the new session cookie.  
+To manually perform the check, open a web browser, logon to the web application and use the web browser to view the new session cookie.
 
 The procedures used for viewing and clearing browser cookies will vary based upon the web browser used.  Providing steps for every browser is outside the scope of the STIG.  There are numerous sites that document how to view cookies using various web browsers.
 
@@ -27237,11 +27237,11 @@ If the application does not log the data required to determine root cause of app
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Information at rest refers to the state of information when it is located on a secondary storage device (e.g., disk drive and tape drive) within an organizational information system. Mobile devices, laptops, desktops, and storage devices can be either lost or stolen, and the contents of their data storage (e.g., hard drives and non-volatile memory) can be read, copied, or altered. 
+					<ATTRIBUTE_DATA>Information at rest refers to the state of information when it is located on a secondary storage device (e.g., disk drive and tape drive) within an organizational information system. Mobile devices, laptops, desktops, and storage devices can be either lost or stolen, and the contents of their data storage (e.g., hard drives and non-volatile memory) can be read, copied, or altered.
 
 Applications and application users generate information throughout the course of their application use, including data that is stored in areas of volatile memory.  Volatile memory must not be overlooked when assigning protections.
 
-This requirement addresses protection of user-generated data, as well as, operating system-specific configuration data. 
+This requirement addresses protection of user-generated data, as well as, operating system-specific configuration data.
 
 Applications must employ mechanisms to achieve confidentiality and integrity protections, as appropriate, in accordance with the security category and/or classification of the information.
 
@@ -28194,9 +28194,9 @@ If the application administrator cannot demonstrate how these protections are im
 
 Individuals of concern can include hostile insiders or external adversaries that have access or have successfully breached the information system and are using the system as a platform to launch cyber attacks on the application, the application host or other third-parties.
 
-Application developers and application administrators must take the steps needed to ensure an application cannot be used to launch DoS attacks against the application itself, the application host or other systems and networks. 
+Application developers and application administrators must take the steps needed to ensure an application cannot be used to launch DoS attacks against the application itself, the application host or other systems and networks.
 
-Application developers should be cognizant that many attackers using DoS techniques will attempt to identify resource intensive processes and functions within the application.  For web applications, this can be application objects that perform database queries or other resource intensive tasks.  Improper application memory management can also lead to memory leaks which can exhaust system resources forcing a system or application restart.  
+Application developers should be cognizant that many attackers using DoS techniques will attempt to identify resource intensive processes and functions within the application.  For web applications, this can be application objects that perform database queries or other resource intensive tasks.  Improper application memory management can also lead to memory leaks which can exhaust system resources forcing a system or application restart.
 
 Limiting attempts to repeatedly execute application processes by validating the requests also reduces the ability to launch some DoS attacks.
 
@@ -28345,7 +28345,7 @@ The methods employed to meet this requirement will vary depending upon the techn
 
 If the application has not been designated as a high availability system, this requirement is not applicable.
 
-Review the application architecture documentation and identify solutions that provide application DoS protections. 
+Review the application architecture documentation and identify solutions that provide application DoS protections.
 
 Verify the application has been built to work in a clustered or otherwise high availability environment in accordance with documented availability requirements.
 
@@ -28470,10 +28470,10 @@ If the application has been designated as high availability but the architecture
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Without protection of the transmitted information, confidentiality and integrity may be compromised since unprotected communications can be intercepted and either read or altered.
 
-This requirement applies  to those applications that transmit data, or allow access to data non-locally. Application and data owners have a responsibility for ensuring data integrity and confidentiality is maintained at every step of the data transfer and handling process. 
+This requirement applies  to those applications that transmit data, or allow access to data non-locally. Application and data owners have a responsibility for ensuring data integrity and confidentiality is maintained at every step of the data transfer and handling process.
 
 Application and data owners need to identify the data that requires cryptographic protection. If no data protection requirements are defined as to what specific data must be encrypted and what data is non-sensitive and doesn't require encryption, all data must be encrypted.
- 
+
 When transmitting data, applications need to leverage transmission protection mechanisms, such as TLS, SSL VPNs, or IPSEC.
 
 Communication paths outside the physical protection of a controlled boundary are exposed to the possibility of interception and modification. Protecting the confidentiality and integrity of organizational information can be accomplished by physical means (e.g., employing physical distribution systems) or by logical means (e.g., employing cryptographic techniques). If physical means of protection are employed, then logical means (cryptography) do not have to be employed, and vice versa.</ATTRIBUTE_DATA>
@@ -28486,7 +28486,7 @@ Communication paths outside the physical protection of a controlled boundary are
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Review the application documentation and interview the application administrator.
 
-Identify application clients, servers and associated network connections including application networking ports.  
+Identify application clients, servers and associated network connections including application networking ports.
 
 Identify the types of data processed by the application and review any documented data protection requirements.
 
@@ -29135,7 +29135,7 @@ If the application displays any application technical data such as database vers
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Hidden fields allow developers to process application data without having to display it on the screen.  Using hidden fields to pass data in forms is a common practice among web applications and by itself is not a security risk.  
+					<ATTRIBUTE_DATA>Hidden fields allow developers to process application data without having to display it on the screen.  Using hidden fields to pass data in forms is a common practice among web applications and by itself is not a security risk.
 
 However, hidden fields are not secure and can be easily manipulated by users.  Information requiring confidentiality or integrity protections must not be placed in a hidden field.   If data that is sensitive must be stored in a hidden field, it must be encrypted.
 
@@ -29149,7 +29149,7 @@ Furthermore, hidden fields used to control access decisions can lead to a comple
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Interview application administrator and review application documentation to identify and familiarize with the application features and functions.
 
-Request most recent code review and vulnerability scan results.  Review test configuration to ensure testing for hidden fields was conducted.  Review test results for incidents of hidden data fields.  
+Request most recent code review and vulnerability scan results.  Review test configuration to ensure testing for hidden fields was conducted.  Review test results for incidents of hidden data fields.
 
 Examine identified hidden fields and determine what type of data is stored in the hidden fields.
 
@@ -29157,7 +29157,7 @@ If the data stored in the hidden fields are determined to be authentication or s
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Design and configure the application to not store sensitive information in hidden fields.  
+					<ATTRIBUTE_DATA>Design and configure the application to not store sensitive information in hidden fields.
 
 Encrypt sensitive information stored in hidden fields using DoD-approved encryption and use server side session management techniques for user session management.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -29279,7 +29279,7 @@ There are several different types of XSS attack and the complete details regardi
 To address the issue of XSS, web application developers must escape, encode or otherwise validate all user input that is processed and output by the web server. They should also use web templates or a web development framework that provides the capability to encode or otherwise validate user input.
 
 Examples of XSS vulnerabilities can be obtained from the Open Web Application Security Project (OWASP) website.
-  
+
 The site is available by pointing your browser to https://www.owasp.org.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -29291,7 +29291,7 @@ The site is available by pointing your browser to https://www.owasp.org.</ATTRIB
 					<ATTRIBUTE_DATA>Review the application documentation and the vulnerability assessment scan results from automated vulnerability assessment tools.
 
 Verify scan configuration settings include web-based applications settings which include XSS tests.
- 
+
 Review scan results for XSS vulnerabilities.
 
 If the scan results indicate aspects of the application are vulnerable to XSS, request subsequent scan data that shows the XSS vulnerabilities previously detected have been fixed.
@@ -29566,12 +29566,12 @@ The following is an example of a URL based command injection attack.
 Before alteration:
 http://sitename/cgi-bin/userData.pl?doc=user1.txt
 
-Example URL modified: 
+Example URL modified:
 http://sitename/cgi-bin/userData.pl?doc=/bin/ls|
 
 The result is the execution of the command “/bin/ls” which could allow the attacker to list contents of the directory via the browser.
 
-The following is a list of functions vulnerable to command injection sorted according to language.  
+The following is a list of functions vulnerable to command injection sorted according to language.
 
 Language Functions/Characters
 - C/C++  - system(), popen(), execlp(), execvp(), ShellExecute(), ShellExecuteEx(), _wsystem()
@@ -29865,9 +29865,9 @@ Security checks should be carried out after decoding is completed. Moreover, it 
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Checking the valid syntax and semantics of information system inputs (e.g., character set, length, numerical range, and acceptable values) verifies that inputs match specified definitions for format and content. Software applications typically follow well-defined protocols that use structured messages (i.e., commands or queries) to communicate between software modules or system components. 
+					<ATTRIBUTE_DATA>Checking the valid syntax and semantics of information system inputs (e.g., character set, length, numerical range, and acceptable values) verifies that inputs match specified definitions for format and content. Software applications typically follow well-defined protocols that use structured messages (i.e., commands or queries) to communicate between software modules or system components.
 
-Structured messages can contain raw or unstructured data interspersed with metadata or control information. If software applications use attacker-supplied inputs to construct structured messages without properly encoding such messages, then the attacker could insert malicious commands or special characters that can cause the data to be interpreted as control information or metadata. 
+Structured messages can contain raw or unstructured data interspersed with metadata or control information. If software applications use attacker-supplied inputs to construct structured messages without properly encoding such messages, then the attacker could insert malicious commands or special characters that can cause the data to be interpreted as control information or metadata.
 
 Consequently, the module or component that receives the tainted output will perform the wrong operations or otherwise interpret the data incorrectly. Prescreening inputs prior to passing to interpreters prevents the content from being unintentionally interpreted as commands. Input validation helps to ensure accurate and correct inputs and prevent attacks such as cross-site scripting and a variety of injection attacks.
 
@@ -30321,12 +30321,12 @@ Some examples of input methods:
 
 Items to validate:
 
-- Out of range values/Boundary 
-- Data length 
+- Out of range values/Boundary
+- Data length
 - Validate types of characters allowed
 - Whitelist validation for known good data input while denying all other input.
 
-Other recommendations include: 
+Other recommendations include:
 
 - Using drop down menus for lists
 - Validating input on the server, not on the client.
@@ -30745,7 +30745,7 @@ Security safeguards employed to protect memory include, for example, data execut
 
 Buffer overflows can manifest as stack overflows, heap overflows integer overflows and format string overflows. Each type of overflow is dependent upon the underlying application language and the context in which the overflow is executed.
 
-Integer overflows can lead to infinite looping when loop index variables are compromised and cause a denial of service.  If the integer is used in data references, the data can become corrupt. Also, using the integer in memory allocation can cause buffer overflows, and a denial of service.  Integers used in access control mechanisms can potentially trigger buffer overflows, which can be used to execute arbitrary code. 
+Integer overflows can lead to infinite looping when loop index variables are compromised and cause a denial of service.  If the integer is used in data references, the data can become corrupt. Also, using the integer in memory allocation can cause buffer overflows, and a denial of service.  Integers used in access control mechanisms can potentially trigger buffer overflows, which can be used to execute arbitrary code.
 
 Almost all known web servers, application servers, and web application environments are susceptible to buffer overflows. Proper validation of user input is required to mitigate the risk. Notably, limiting the size of the strings a user is allowed to input to a program to a predetermined, acceptable length.
 
@@ -31429,7 +31429,7 @@ Review application logs and take note of log entries that indicate security func
 Review logs to identify if the application has sent notifications to ISSO and ISSM when security verification tests fail.
 
 Review application features and function to identify areas of the management interfaces that specify where failed security verifications tests are to be sent and validate the ISSO and ISSM are configured as recipients.
- 
+
 If the application is designed to perform security function testing and does not notify the ISSO and ISSM of failed verification tests, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -31697,7 +31697,7 @@ If the code has not been signed or the application warns that a control cannot b
 					<ATTRIBUTE_DATA>Interview the application representative to verify that a documented process exists for user and system account creation, termination, and expiration.
 
 Obtain a list of recently departed personnel and verify that their accounts were removed or deactivated on all systems in a timely manner (e.g., less than two days).
- 
+
 If a documented account management process does not exist or unauthorized users have active accounts, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -32234,7 +32234,7 @@ Maintain a log or records of dates and times audit logs are reviewed.</ATTRIBUTE
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Interview the application representative and review the SOPs to ensure that violations of IA policies are analyzed and reported.
- 
+
 If there is no policy for reporting IA violations, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -32789,14 +32789,14 @@ If the application user data is located in the same directory as the application
 
 Identify if a DoD STIG or NSA guide is available.
 
-If no STIG is available for the product, the application and application components must be configured by the following as available: 
+If no STIG is available for the product, the application and application components must be configured by the following as available:
 
-- commercially accepted practices, 
-- independent testing results, or 
+- commercially accepted practices,
+- independent testing results, or
 - vendor literature and lock down guides.
 
-If the application and application components do not have DoD STIG or NSA guidance available and are not configured according to: 
-commercially accepted practices, 
+If the application and application components do not have DoD STIG or NSA guidance available and are not configured according to:
+commercially accepted practices,
 independent testing results,
 or vendor literature and lock down guides, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -33189,9 +33189,9 @@ If the application requires registration, and is not registered or all ports use
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>A Configuration Management (CM) repository is used to manage application code versions and to securely store application code.
 
-Failure to properly apply security patches and secure the software Configuration Management system could affect the confidentiality and integrity of the application source-code.  
+Failure to properly apply security patches and secure the software Configuration Management system could affect the confidentiality and integrity of the application source-code.
 
-Compromise of the Configuration Management system could lead to unauthorized changes to applications including the addition of malware, root kits, back doors, logic bombs or other malicious functions into valid application code.   
+Compromise of the Configuration Management system could lead to unauthorized changes to applications including the addition of malware, root kits, back doors, logic bombs or other malicious functions into valid application code.
 
 This requirement is intended to be applied to application developers or organizations responsible for code management or who have and operate an application CM repository.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -33205,7 +33205,7 @@ This requirement is intended to be applied to application developers or organiza
 
 Identify if the STIG is being applied to application developers or organizations responsible for code management or who have and operate an application CM repository. If this is not the case, the requirement is not applicable.
 
-Review CM patch management processes and procedures.  Have the system and CM admins demonstrate their patch management processes and verify the system has the latest security patches applied.  
+Review CM patch management processes and procedures.  Have the system and CM admins demonstrate their patch management processes and verify the system has the latest security patches applied.
 
 Review the ATO documentation and verify the system that operates the CM repository software has had all relevant STIGs applied.
 
@@ -33522,7 +33522,7 @@ The SCM plan should have procedures for label versions of application components
 The configuration management repository (CMR) should track change requests from beginning to end.
 
 The configuration management repository (CMR) should authorize change requests to the application.
- 
+
 The configuration management repository (CMR) should contain security classification labels for code and documentation in the repository. Classification labels are not applicable to unclassified systems.
 
 The configuration management repository (CMR) should monitor all objects under CMR control for auditing.</ATTRIBUTE_DATA>
@@ -33612,7 +33612,7 @@ If the CMR does not track authorized change requests, this is a finding.
 
 If the application has just completed its first release, there may not be any change requests logged in the CMR. In this case, this finding is not applicable.
 
-The CMR should contain security classification labels for code and documentation in the repository. 
+The CMR should contain security classification labels for code and documentation in the repository.
 
 Classification labels are not applicable to unclassified systems.  If the applications managed by the CMR are not classified, this requirement is not applicable.
 
@@ -34005,7 +34005,7 @@ If the application environment is not compliant with all DoD IPv6 Standards Prof
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Ask the application representative to review the servers where the application is deployed. 
+					<ATTRIBUTE_DATA>Ask the application representative to review the servers where the application is deployed.
 
 Ask what other applications are deployed on those servers.
 
@@ -34137,11 +34137,11 @@ If a mission critical application is deployed onto the same server as non-missio
 					<ATTRIBUTE_DATA>Review disaster recovery/continuity plans.
 
 For high risk applications, verify the disaster plan exists and provides for the smooth transfer of all mission or business essential functions to an alternate site for the duration of an event with little or no loss of operational continuity.
- 
+
 For moderate risk applications, verify the disaster recovery/continuity plan exists and provides for the resumption of mission or business essential functions within 24 hours activation.
 
 For low risk applications, verify the disaster recovery/continuity plan exists and provides for the partial resumption of mission or business essential functions within 5 days of activation.
- 
+
 If the disaster recovery/continuity plan does not exist or does not meet the severity level requirements, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -34541,7 +34541,7 @@ If any of the requirements above for the associated risk level of the applicatio
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Application developers and application administrators must take steps to ensure continuity of development effort and operations should a disaster strike.  
+					<ATTRIBUTE_DATA>Application developers and application administrators must take steps to ensure continuity of development effort and operations should a disaster strike.
 
 Steps include protecting back-up copies of development code and application software.
 
@@ -34557,7 +34557,7 @@ To address this risk, copies of application software and application source code
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>When reviewing a COTS or GOTS application, verify that a back-up copy of the software is stored in a fire rated container or is stored separately (offsite) from the operational environment.
 
-Determine if application development is done in-house. 
+Determine if application development is done in-house.
 
 If application development occurs in-house and source code is available, verify a back-up copy of the source code is kept in a fire-rated container or stored offsite from the development environment.
 
@@ -35351,11 +35351,11 @@ Linux operating systems include the "sha256sum" utility. For Linux systems using
 
 Recent Windows PowerShell versions include the "get-filehash" PowerShell cmdlet. The default algorithm value used is SHA256.
 
-Syntax is: 
+Syntax is:
 Get-FileHash
    [-Path] &lt;String[]&gt;
    [-Algorithm &lt;String&gt;]
-   [&lt;CommonParameters&gt;] 
+   [&lt;CommonParameters&gt;]
 
 A validation process involves obtaining the application files’ cryptographic hash value from the programs author or other authoritative source such as the application's website. A utility like the "sha256sum" utility is then run using the downloaded application file name as the argument. The output is the files' hash value. The two hash values are compared and if they match, then file integrity is ensured.
 
@@ -35749,8 +35749,8 @@ This requirement is meant to apply to developers or organizations that are doing
 Examples of security flaws include but are not limited to:
 
 - format string exploits
-- memory leaks 
-- buffer overflows 
+- memory leaks
+- buffer overflows
 - race conditions
 - sql injection
 - dead/unused/commented code
@@ -36441,7 +36441,7 @@ If security flaws are not addressed in the project plan or there is no process t
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Coding standards are guidelines established by the development team or individual developers that recommend programming style, practices and methods.  The coding standards employed will vary based upon the programming language that is being used to develop the application and the development team.
 
-Coding standards often cover the use of white space characters, variable naming conventions, function naming conventions, and comment styles.  Implementing coding standards provides many benefits to the development process.  These benefits include code readability, coding consistency among both individual and teams of developers as well as ease of code integration.  
+Coding standards often cover the use of white space characters, variable naming conventions, function naming conventions, and comment styles.  Implementing coding standards provides many benefits to the development process.  These benefits include code readability, coding consistency among both individual and teams of developers as well as ease of code integration.
 
 The following are examples of what will typically be in a coding standards document.  This list is an example of what one can expect to find in typical coding standard documents and is not a comprehensive list:
 
@@ -36452,7 +36452,7 @@ The following are examples of what will typically be in a coding standards docum
 - Programming best practices
 - Programming style conventions
 
-Coding standards allow developers to quickly adapt to code which has been developed by various members of a development team.  Coding standards are useful in the code review process as well as in situations where a team member leaves and duties must then be assigned to another team member.  
+Coding standards allow developers to quickly adapt to code which has been developed by various members of a development team.  Coding standards are useful in the code review process as well as in situations where a team member leaves and duties must then be assigned to another team member.
 
 Code conforming to a standard format is easier to read, especially if someone other than the original developer is examining the code.  In addition, formatted code can be debugged and corrected faster than unformatted code.
 
@@ -36466,13 +36466,13 @@ Introducing coding standards can help increase the consistency, reliability, and
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>This requirement is meant to apply to developers or organizations that are doing application development work. If the organization operating the application under review is not doing the development or managing the development of the application, the requirement is not applicable.
 
-Ask the application representative about their coding standards.  Ask for a coding standards document, review the document and ask the developers if they are aware of and if they use the coding standards.  Make a determination if the application developers follow the coding standard. 
+Ask the application representative about their coding standards.  Ask for a coding standards document, review the document and ask the developers if they are aware of and if they use the coding standards.  Make a determination if the application developers follow the coding standard.
 
 If the developers do not follow a coding standard, or if a coding standard document does not exist, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Create and maintain a coding standard process and documentation for developers to follow.  
+					<ATTRIBUTE_DATA>Create and maintain a coding standard process and documentation for developers to follow.
 
 Include programming best practices based on the languages being used for application development.  Include items that should be standardized across the team that that deal with how developers write their application code.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -36899,7 +36899,7 @@ If the described threat model documentation does not exist, this is a finding.</
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Error handling is the failure to check the return values of functions or catch top level exceptions within a program. Improper error handling in an application can lead to an application failure or possibly result in the application entering an insecure state. 
+					<ATTRIBUTE_DATA>Error handling is the failure to check the return values of functions or catch top level exceptions within a program. Improper error handling in an application can lead to an application failure or possibly result in the application entering an insecure state.
 
 The primary way to detect error handling vulnerabilities is to perform code reviews. If a manual code review cannot be performed, static code analysis tools should be employed in conjunction with tests to help force the error conditions by specifying invalid input (such as fuzzed data and malformed filenames) and by using different accounts to run the application. These tests may give indications of vulnerability, but they are not comprehensive.
 
@@ -37034,7 +37034,7 @@ If no test results are available for review, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>An application incident response process is managed by the development team and should include a method for individuals to submit potential security vulnerabilities to the development or maintenance team. 
+					<ATTRIBUTE_DATA>An application incident response process is managed by the development team and should include a method for individuals to submit potential security vulnerabilities to the development or maintenance team.
 
 The plan should dictate what is to be done with the reported vulnerabilities. Reported vulnerabilities must be tracked throughout the process to ensure they are triaged, corrected, and tested. The corresponding update is released to the user community and the user community is notified of the availability of the application update.
 
@@ -37052,7 +37052,7 @@ This requirement is meant to be applied when reviewing an application with the d
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>If the application is a COTS application and the development team is not accessible to interview this requirement is not applicable.
 
-Interview the application development team members.  Request and review the application incident response plan. 
+Interview the application development team members.  Request and review the application incident response plan.
 
 Ensure the plan includes an implemented process that:
 
@@ -37456,7 +37456,7 @@ This risk is primarily geared towards insider threat scenarios and externally ac
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>Interview the application representative to determine if provisions are in place to notify users when an application is decommissioned.
- 
+
 If provisions are not in place to notify users when an application is decommissioned, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -37834,7 +37834,7 @@ If authentication is successful, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>The Application Configuration Guide is any document or collection of documents used to configure the application.  These documents may be part of a user guide, secure configuration guide, or any guidance that satisfies the requirements provided herein.  
+					<ATTRIBUTE_DATA>The Application Configuration Guide is any document or collection of documents used to configure the application.  These documents may be part of a user guide, secure configuration guide, or any guidance that satisfies the requirements provided herein.
 
 Configuration examples include but are not limited to:
 
@@ -37845,20 +37845,20 @@ Configuration examples include but are not limited to:
  - AD configuration
  - Backup and disaster recovery settings
  - List of hosting enclaves and network connection requirements
- - Deployment configuration settings 
+ - Deployment configuration settings
  - Known security assumptions, implications, system level protections, best practices, and required permissions
 
 Development systems, build systems, and test systems must operate in a standardized environment. These settings are to be documented in the Application Configuration Guide.
 
 Examples include but are not limited to:
 
- - List of development systems, build systems, and test systems. 
+ - List of development systems, build systems, and test systems.
  - Versions of compilers used
  - Build options when creating applications and components
  - Versions of COTS software (used as part of the application)
  - Operating systems and versions
  - For web applications, which browsers and what versions are supported.
- 
+
 All deployment configuration settings are to be documented in the Application Configuration Guide and the Application Configuration Guide must be made available to application hosting providers and application/system administrators.</ATTRIBUTE_DATA>
 				</STIG_DATA>
 				<STIG_DATA>
@@ -37867,7 +37867,7 @@ All deployment configuration settings are to be documented in the Application Co
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Interview the application administrator.  Request and review the Application Configuration Guide. 
+					<ATTRIBUTE_DATA>Interview the application administrator.  Request and review the Application Configuration Guide.
 
 Verify the configuration guide at a minimum provides configuration details for the following examples.  The examples provided herein are not intended to limit the configuration settings that are documented in the guide.
 
@@ -37880,7 +37880,7 @@ Configuration examples include but are not limited to:
  - AD configuration
  - Backup and disaster recovery settings
  - List of hosting enclaves and network connection requirements
- - Deployment configuration settings 
+ - Deployment configuration settings
  - Known security assumptions, implications, system level protections, best practices, and required permissions
 
 Review the Application Configuration Guide and determine if development systems are documented.  If no development is being performed where the application is hosted, this part of the requirement is NA.
@@ -37889,7 +37889,7 @@ Development systems, build systems, and test systems must operate in a standardi
 
 Examples include but are not limited to:
 
- - List of development systems, build systems, and test systems. 
+ - List of development systems, build systems, and test systems.
  - Versions of compilers used
  - Build options when creating applications and components
  - Versions of COTS software (used as part of the application)
@@ -38022,7 +38022,7 @@ Verify the application configuration guide is distributed along  with the applic
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>If the application does not process classified information, this check is not applicable.
- 
+
 The application may already be covered by a higher level program or other classification guide. If the classification guide is not written specifically to the application, the sensitive application data should be reviewed to determine whether it is contained in the classification guide.
 
 DoD 5200.01R identifies requirements for security classification and/or declassification guides.
@@ -38162,7 +38162,7 @@ If the security classification guide does not exist, or does not contain applica
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>By definition, mobile code is software obtained from remote systems outside the enclave boundary, transferred across a network, and then downloaded and executed on a local system without explicit installation or execution by the recipient.  
+					<ATTRIBUTE_DATA>By definition, mobile code is software obtained from remote systems outside the enclave boundary, transferred across a network, and then downloaded and executed on a local system without explicit installation or execution by the recipient.
 
 For a complete list of mobile code categorizations, refer to the overview document included with this STIG.
 Categorized mobile code includes but is not limited to:
@@ -38192,7 +38192,7 @@ The following technologies are not currently designated as mobile code:
 The following are outside the scope of the mobile code requirements:
 
 - Scripts and applets embedded in or linked to web pages and executed in the context of the web server.  Examples of this are Java servlets, Java Server pages, CGI, Active Server Pages, CFML, PHP, SSI, server-side JavaScript, server-side LotusScript.
-- Local programs and command scripts 
+- Local programs and command scripts
 - Distributed object-oriented programming systems (e.g., CORBA, DCOM).
 - Software patches, updates, including self-extracting updates - software updates that must be invoked explicitly by the user are outside the mobile code policy.  Examples of technologies in this area include: Netscape SmartUpdate, Microsoft Windows Update, Netscape web browser plug-ins and Linux.
 
@@ -38334,7 +38334,7 @@ If uncategorized mobile code types are found, ask the application administrator 
 					<ATTRIBUTE_DATA>Review the application documentation and identify the existence of databases within the application architecture.
 
 Ask the application admin to identify when data exports from this database are imported to test or development databases.
- 
+
 If no data is exported to test or development databases, this check is not applicable.
 
 If there are such data exports, ask if the production database includes sensitive data identified by the data owner as sensitive such as passwords, financial, personnel, personal, HIPAA, Privacy Act, or classified data is included.
@@ -38843,7 +38843,7 @@ If no deployment personnel are registered to receive the alerts, this is a findi
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
 					<ATTRIBUTE_DATA>An application vulnerability management and update process must be in place to notify and provide users and administrators with a means of obtaining security patches and updates for the application.
 
-An important part of the maintenance phase of an application is managing vulnerabilities for updated versions of the application after the application is released.  When a security flaw is discovered in an application deployed in a production environment, notification to the user community must take place as quickly as possible. 
+An important part of the maintenance phase of an application is managing vulnerabilities for updated versions of the application after the application is released.  When a security flaw is discovered in an application deployed in a production environment, notification to the user community must take place as quickly as possible.
 
 This notification should be planned for in the design phase of the application. This notification should be a warning of any potential risks to the application or data. A notification mechanism will be established to notify users of the vulnerability and the potential risks, the availability of a solution, and/or potential mitigations reducing risks to the application.</ATTRIBUTE_DATA>
 				</STIG_DATA>
@@ -39234,11 +39234,11 @@ If the application does not create an audit record when concurrent logons occur 
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>Many application team members may not be aware of the security implications regarding the code that they design, write and test.  To address this concern, the Program Manager will ensure all levels of program management receive security training regarding the necessity, impact, and benefits of integrating secure development practices into the development lifecycle.  
+					<ATTRIBUTE_DATA>Many application team members may not be aware of the security implications regarding the code that they design, write and test.  To address this concern, the Program Manager will ensure all levels of program management receive security training regarding the necessity, impact, and benefits of integrating secure development practices into the development lifecycle.
 
 This training is in addition to DoD 8570 training requirements as DoD 8570 annual security training does not presently cover application SDLC security concerns.
 
-The Program Manager will ensure development team members are provided training on secure design principles for the entire SDLC and newly discovered vulnerability types on, at least, an annual basis. 
+The Program Manager will ensure development team members are provided training on secure design principles for the entire SDLC and newly discovered vulnerability types on, at least, an annual basis.
 
 Development team members include:
 
@@ -39255,15 +39255,15 @@ This requirement applies to development teams or individual application develope
 				</STIG_DATA>
 				<STIG_DATA>
 					<VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
-					<ATTRIBUTE_DATA>This requirement is meant to be applied to developers and development teams only, otherwise, this requirement is not applicable.  
+					<ATTRIBUTE_DATA>This requirement is meant to be applied to developers and development teams only, otherwise, this requirement is not applicable.
 
 Interview the application representative.
 
-Ask for evidence of annual security training for application managers, designers, developers, and testers. 
+Ask for evidence of annual security training for application managers, designers, developers, and testers.
 
 Examples of evidence include course completion certificates and a class roster. At a minimum, security training should include security awareness training pertaining to overall principles of secure application development.
 
-Training must be in addition to DoD 8570 training requirements as DoD 8570 annual security training does not presently cover application SDLC security concerns. 
+Training must be in addition to DoD 8570 training requirements as DoD 8570 annual security training does not presently cover application SDLC security concerns.
 
 If there is no evidence of security training, this is a finding.</ATTRIBUTE_DATA>
 				</STIG_DATA>

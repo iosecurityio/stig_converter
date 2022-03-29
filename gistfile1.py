@@ -10,7 +10,8 @@ import xml.etree.ElementTree as ET
 
 # Original github here:
 # https://gist.github.com/nemonik/951a0e55436e0708222b
-
+# Note this is Python2 implementation
+# changed to Python3 and incorporated into ckl_to_csv.py
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -22,7 +23,7 @@ with open('tmp.csv', 'ab+') as csvfile:
         output.writeheader()
 
         for filename in glob.glob("*.xml"):
-                print"processing: " + filename
+                print "processing: " + filename
                 tree = ET.parse(filename)
                 root = tree.getroot()
                 row = {}
