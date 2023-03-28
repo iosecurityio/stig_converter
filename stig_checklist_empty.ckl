@@ -5,9 +5,9 @@
 		<ROLE>None</ROLE>
 		<ASSET_TYPE>Computing</ASSET_TYPE>
 		<MARKING>CUI</MARKING>
-		<HOST_NAME>BAM Test Hostname</HOST_NAME>
+		<HOST_NAME>Test Hostname</HOST_NAME>
 		<HOST_IP>192.168.1.256</HOST_IP>
-		<HOST_MAC>ma:ca:dd:re:ss:00</HOST_MAC>
+		<HOST_MAC>a4:ca:dd:7e:ss:00</HOST_MAC>
 		<HOST_FQDN>https://example.com</HOST_FQDN>
 		<TARGET_COMMENT>Asset Target comment here.</TARGET_COMMENT>
 		<TECH_AREA></TECH_AREA>
