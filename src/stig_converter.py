@@ -1,6 +1,6 @@
-# stig_to_splunk.py
+# stig_converter.py
 # Converts STIG Checklist to other various file formats (CSV, JSON) for data ingestion in other platforms
-# Refactored Date: 4/6/2023
+# Allen Montgomery 4/2023
 
 import csv
 from datetime import datetime
@@ -9,14 +9,15 @@ import json
 import os
 import xml.etree.ElementTree as ET
 
-#List all potential projects you want to include here; will create a new checklist if the project is in here
+#List all potential projects you want to include here;
+# will scan for names and create a new checklist if the project is in here
 PROJECTS = ["project1",
             "project2",
             "project3"
             ]
 INPUT_FILE = "" # Absolute path to a single .ckl file to convert
-INPUT_LOC = "../**.ckl" # Regex of Potential .ckl files to look for
-OUTPUT_LOC = ""    # Location to write .csv files
+INPUT_LOC = "*.ckl" # Regex of dir to look in for .ckl files
+OUTPUT_LOC = "./"    # Location to write .csv files
 JSON_LOC = f"{OUTPUT_LOC}*.json"    # Location containing .json files
 CSV_LOC = f"{OUTPUT_LOC}*.csv"  # Location containing .csv files
 DATE = datetime.now().strftime('%Y%m%d')   # current date timestamp in format 20230406
@@ -124,11 +125,17 @@ def convert_csv_to_json(csv_location, output_location) -> str:
 
 
 def main():
-    """Main function to convert STIG Checklists to CSVs and then to JSON for Splunk events"""
+    """Main function to convert STIG Checklists to CSVs and then to JSON for Splunk events
+    Change variables at the top of the script before running.
+    """
 
     ckls = get_checklists(INPUT_LOC)
-    for ckl in ckls:
-        print(f"{ckl}")
+    if ckls:
+        for ckl in ckls:
+            print(f"Checklist detected: {ckl}")
+            convert_ckl_to_csv(cklfile=ckl,csvpath=OUTPUT_LOC)
+    else:
+        print("No checklists found. Check INPUT_LOC variable")
 
 
 if __name__ == "__main__":
