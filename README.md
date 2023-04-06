@@ -1,38 +1,34 @@
-# ckl_to_csv.py
+# stig_converter.py
 
-## Overview
+## Overview and Features
 
-This is a Python script to convert a DISA STIG Checklist `.ckl` file to `.csv` file.
+This is a Python script to convert DISA STIG Checklists into various formats.
+
+- convert `.ckl` file to `.csv` file
+
+- convert `.csv` file to `.json` file
+
+- finds your most recent checklists in a share
 
 ## Usage
 
 ```python
-python3 ckl_to_csv.py
-```
-
-```python
-def check_connection(url, timeout=5) -> bool:
-#Check connection to the URL provided, returns bool. Can provide a timeout limit
-
-def get_checklists(checklist_location) -> list:
-#Takes a location as a "glob" and returns a list of .ckl files detected. A glob in this case is an absolute path that can take wildcards (eg /var/log/*.log)
-
-def parse_hostname(checklist, project_list) -> str:
-#Takes a checklist location and a list of projects. Will look for any names in the list in the path and if it finds one, return that value.
-
-def convert_to_csv(checklists) -> None:
-#Takes in a list of absolute filepaths and writes them from .ckl to .csv.
+python3 stig_to_splunk.py
 ```
 
 ## TODO
 
 - Implement command line argument parsing
 
+- Interface?
+
 ## Credits
 
 Inspired from "a Python script to extract data out of a DISA STIG Viewer xccdf file to a CSV" @author Michael Joseph Walsh <github.com@nemonik.com> and the original [Github link](https://gist.github.com/nemonik/951a0e55436e0708222b)
 
-> Note: (This was a Python2 implementation that I changed to Python3 and incorporated into `ckl_to_csv.py`)
+> Note: (This was a Python2 implementation that I changed to Python3 and incorporated into `stig_converter.py`)
+
+---
 
 ## Legal
 
