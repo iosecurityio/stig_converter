@@ -16,8 +16,8 @@ PROJECTS = ["project1",
             "project3"
             ]
 INPUT_FILE = "" # Absolute path to a single .ckl file to convert
-INPUT_LOC = "*.ckl" # Regex of dir to look in for .ckl files
-OUTPUT_LOC = "./"    # Location to write .csv files
+OUTPUT_LOC = f"{os.path.dirname(__file__)}/../data/"    # Location to write .csv files
+INPUT_LOC = f"{OUTPUT_LOC}*.ckl" # Regex of dir to look in for .ckl files
 JSON_LOC = f"{OUTPUT_LOC}*.json"    # Location containing .json files
 CSV_LOC = f"{OUTPUT_LOC}*.csv"  # Location containing .csv files
 DATE = datetime.now().strftime('%Y%m%d')   # current date timestamp in format 20230406
@@ -75,12 +75,12 @@ def convert_ckl_to_csv(cklfile, csvfile) -> str:
     return new_csv
 
 
-def get_checklists(checklist_location) -> list:
+def get_checklists(checklist_loc) -> list:
     """Takes in a location 'glob' and returns a list of .ckl files detected
-    :param checklist_location: The location of the .ckl files to convert
+    :param checklist_loc: The location of the .ckl files to convert
     :return: A list of .ckl files"""
 
-    return [ckl for ckl in glob.glob(checklist_location)]
+    return [ckl for ckl in glob.glob(checklist_loc)]
 
 
 def parse_hostname(checklist, project_list) -> str:
