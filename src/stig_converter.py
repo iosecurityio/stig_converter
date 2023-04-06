@@ -1,15 +1,18 @@
 # stig_converter.py
 # Converts STIG Checklist to other various file formats (CSV, JSON) for data ingestion in other platforms
 # Allen Montgomery 4/2023
+# IO SECURITY
+# Version 1.0
 
 import csv
 from datetime import datetime
 import glob
+import httpx
 import json
 import os
 import xml.etree.ElementTree as ET
 
-#List all potential projects you want to include here;
+# List all potential projects you want to include here;
 # will scan for names and create a new checklist if the project is in here
 PROJECTS = ["project1",
             "project2",
@@ -134,11 +137,11 @@ def main():
     ckls = get_checklists(INPUT_LOC)
     if ckls:
         for ckl in ckls:
-            print(f"Checklist detected: {ckl}")
+            print(f"Checklist detected: {os.path.basename(ckl)}")
             csvfile = convert_ckl_to_csv(cklfile=ckl,csvfile=OUTPUT_LOC)
-            print(f"CSV Created: {csvfile}")
+            print(f"CSV File Created: {os.path.basename(csvfile)}")
             jsonfile = convert_csv_to_json(csvfile=csvfile,json_loc=OUTPUT_LOC)
-            print(f"Checklist detected: {jsonfile}")
+            print(f"JSON File Created: {os.path.basename(jsonfile)}")
     else:
         print("No checklists found. Check INPUT_LOC variable")
 
