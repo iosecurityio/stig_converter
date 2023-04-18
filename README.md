@@ -34,4 +34,4 @@ Inspired from "a Python script to extract data out of a DISA STIG Viewer xccdf f
 
 Department of Defense and Defense Information Systems Agency (DISA) are the owners of the STIGs and the associated documentation. The STIGs are provided as a public service. You are free to use the STIGs in any way you see fit provided that you give credit to the DoD and DISA. The STIGs are provided "as is" without any warranty of any kind.
 
-![DoD and DISA](./DoD-DISA-logos-as-JPEG.jpg)
+![DoD and DISA](./docs/DoD-DISA-logos-as-JPEG.jpg)
