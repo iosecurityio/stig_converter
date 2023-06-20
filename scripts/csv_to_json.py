@@ -6,8 +6,8 @@ from datetime import datetime
 import json
 import os
 
-INPUT_FILE = r"tests/blank_checklist-20230601.csv"  # Absolute path to CSV file
-OUTPUT_LOC = r"tests/"  # Absolute path for json output directory
+INPUT_FILE = r"tests/stig_checklist-20230620.csv"
+OUTPUT_LOC = r"tests/"
 # Current date timestamp to append to filename
 DATE = datetime.now().strftime("%Y%m%d")
 

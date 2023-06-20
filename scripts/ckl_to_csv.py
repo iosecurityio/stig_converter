@@ -6,8 +6,8 @@ from datetime import datetime
 import os
 import xml.etree.ElementTree as ET
 
-INPUT_FILE = r"tests/blank_checklist.ckl"  # Absolute path to CSV file
-OUTPUT_LOC = r"tests"  # Absolute path for json output directory
+INPUT_FILE = r"data/stig_checklist.ckl"
+OUTPUT_LOC = r"tests/"
 # Current date timestamp to append to filename
 DATE = datetime.now().strftime("%Y%m%d")
 

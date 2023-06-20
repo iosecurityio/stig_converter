@@ -1,6 +1,6 @@
 [
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222387",
@@ -13,10 +13,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222387r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222387r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222388",
@@ -29,10 +29,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222388r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222388r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222389",
@@ -45,10 +45,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222389r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222389r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222390",
@@ -61,10 +61,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222390r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222390r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222391",
@@ -77,10 +77,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222391r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222391r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222392",
@@ -93,10 +93,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222392r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222392r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222393",
@@ -109,10 +109,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222393r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222393r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222394",
@@ -125,10 +125,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222394r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222394r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222395",
@@ -141,10 +141,10 @@
         "STATUS": "OPEN",
         "FINDING_DETAILS": "These are finding details",
         "COMMENTS": "This is a comment.",
-        "Unique_ID": "test.hostname-SV-222395r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222395r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222396",
@@ -157,10 +157,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222396r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222396r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222397",
@@ -173,10 +173,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222397r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222397r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222398",
@@ -189,10 +189,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222398r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222398r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222399",
@@ -205,10 +205,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222399r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222399r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222400",
@@ -221,10 +221,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222400r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222400r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222401",
@@ -237,10 +237,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222401r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222401r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222402",
@@ -253,10 +253,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222402r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222402r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222403",
@@ -269,10 +269,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222403r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222403r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222404",
@@ -285,10 +285,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222404r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222404r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222405",
@@ -301,10 +301,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222405r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222405r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222406",
@@ -317,10 +317,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222406r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222406r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222407",
@@ -333,10 +333,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222407r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222407r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222408",
@@ -349,10 +349,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222408r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222408r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222409",
@@ -365,10 +365,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222409r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222409r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222410",
@@ -381,10 +381,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222410r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222410r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222411",
@@ -397,10 +397,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222411r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222411r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222412",
@@ -413,10 +413,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222412r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222412r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222413",
@@ -429,10 +429,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222413r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222413r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222414",
@@ -445,10 +445,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222414r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222414r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222415",
@@ -461,10 +461,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222415r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222415r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222416",
@@ -477,10 +477,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222416r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222416r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222417",
@@ -493,10 +493,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222417r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222417r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222418",
@@ -509,10 +509,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222418r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222418r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222419",
@@ -525,10 +525,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222419r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222419r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222420",
@@ -541,10 +541,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222420r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222420r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222421",
@@ -557,10 +557,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222421r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222421r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222422",
@@ -573,10 +573,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222422r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222422r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222423",
@@ -589,10 +589,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222423r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222423r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222424",
@@ -605,10 +605,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222424r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222424r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222425",
@@ -621,10 +621,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222425r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222425r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222426",
@@ -637,10 +637,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222426r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222426r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222427",
@@ -653,10 +653,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222427r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222427r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222428",
@@ -669,10 +669,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222428r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222428r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222429",
@@ -685,10 +685,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222429r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222429r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222430",
@@ -701,10 +701,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222430r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222430r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222431",
@@ -717,10 +717,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222431r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222431r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222432",
@@ -733,10 +733,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222432r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222432r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222433",
@@ -749,10 +749,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222433r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222433r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222434",
@@ -765,10 +765,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222434r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222434r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222435",
@@ -781,10 +781,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222435r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222435r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222436",
@@ -797,10 +797,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222436r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222436r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222437",
@@ -813,10 +813,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222437r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222437r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222438",
@@ -829,10 +829,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222438r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222438r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222439",
@@ -845,10 +845,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222439r561233_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222439r561233_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222441",
@@ -861,10 +861,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222441r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222441r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222442",
@@ -877,10 +877,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222442r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222442r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222443",
@@ -893,10 +893,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222443r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222443r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222444",
@@ -909,10 +909,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222444r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222444r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222445",
@@ -925,10 +925,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222445r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222445r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222446",
@@ -941,10 +941,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222446r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222446r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222447",
@@ -957,10 +957,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222447r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222447r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222448",
@@ -973,10 +973,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222448r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222448r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222449",
@@ -989,10 +989,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222449r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222449r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222450",
@@ -1005,10 +1005,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222450r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222450r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222451",
@@ -1021,10 +1021,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222451r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222451r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222452",
@@ -1037,10 +1037,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222452r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222452r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222453",
@@ -1053,10 +1053,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222453r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222453r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222454",
@@ -1069,10 +1069,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222454r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222454r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222455",
@@ -1085,10 +1085,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222455r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222455r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222456",
@@ -1101,10 +1101,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222456r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222456r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222457",
@@ -1117,10 +1117,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222457r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222457r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222458",
@@ -1133,10 +1133,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222458r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222458r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222459",
@@ -1149,10 +1149,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222459r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222459r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222460",
@@ -1165,10 +1165,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222460r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222460r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222461",
@@ -1181,10 +1181,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222461r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222461r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222462",
@@ -1197,10 +1197,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222462r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222462r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222463",
@@ -1213,10 +1213,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222463r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222463r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222464",
@@ -1229,10 +1229,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222464r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222464r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222465",
@@ -1245,10 +1245,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222465r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222465r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222466",
@@ -1261,10 +1261,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222466r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222466r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222467",
@@ -1277,10 +1277,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222467r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222467r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222468",
@@ -1293,10 +1293,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222468r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222468r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222469",
@@ -1309,10 +1309,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222469r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222469r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222470",
@@ -1325,10 +1325,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222470r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222470r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222471",
@@ -1341,10 +1341,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222471r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222471r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222472",
@@ -1357,10 +1357,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222472r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222472r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222473",
@@ -1373,10 +1373,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222473r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222473r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222474",
@@ -1389,10 +1389,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222474r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222474r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222475",
@@ -1405,10 +1405,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222475r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222475r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222476",
@@ -1421,10 +1421,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222476r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222476r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222477",
@@ -1437,10 +1437,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222477r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222477r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222478",
@@ -1453,10 +1453,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222478r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222478r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222479",
@@ -1469,10 +1469,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222479r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222479r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222480",
@@ -1485,10 +1485,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222480r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222480r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222481",
@@ -1501,10 +1501,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222481r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222481r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222482",
@@ -1517,10 +1517,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222482r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222482r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222483",
@@ -1533,10 +1533,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222483r561236_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222483r561236_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222484",
@@ -1549,10 +1549,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222484r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222484r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222485",
@@ -1565,10 +1565,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222485r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222485r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222486",
@@ -1581,10 +1581,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222486r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222486r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222487",
@@ -1597,10 +1597,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222487r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222487r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222488",
@@ -1613,10 +1613,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222488r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222488r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222489",
@@ -1629,10 +1629,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222489r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222489r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222490",
@@ -1645,10 +1645,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222490r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222490r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222491",
@@ -1661,10 +1661,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222491r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222491r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222492",
@@ -1677,10 +1677,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222492r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222492r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222493",
@@ -1693,10 +1693,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222493r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222493r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222494",
@@ -1709,10 +1709,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222494r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222494r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222495",
@@ -1725,10 +1725,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222495r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222495r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222496",
@@ -1741,10 +1741,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222496r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222496r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222497",
@@ -1757,10 +1757,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222497r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222497r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222498",
@@ -1773,10 +1773,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222498r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222498r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222499",
@@ -1789,10 +1789,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222499r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222499r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222500",
@@ -1805,10 +1805,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222500r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222500r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222501",
@@ -1821,10 +1821,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222501r561239_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222501r561239_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222502",
@@ -1837,10 +1837,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222502r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222502r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222503",
@@ -1853,10 +1853,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222503r561242_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222503r561242_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222504",
@@ -1869,10 +1869,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222504r561290_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222504r561290_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222505",
@@ -1885,10 +1885,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222505r561245_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222505r561245_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222506",
@@ -1901,10 +1901,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222506r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222506r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222507",
@@ -1917,10 +1917,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222507r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222507r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222508",
@@ -1933,10 +1933,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222508r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222508r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222509",
@@ -1949,10 +1949,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222509r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222509r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222510",
@@ -1965,10 +1965,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222510r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222510r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222511",
@@ -1981,10 +1981,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222511r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222511r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222512",
@@ -1997,10 +1997,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222512r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222512r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222513",
@@ -2013,10 +2013,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222513r561248_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222513r561248_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222514",
@@ -2029,10 +2029,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222514r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222514r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222515",
@@ -2045,10 +2045,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222515r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222515r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222516",
@@ -2061,10 +2061,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222516r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222516r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222517",
@@ -2077,10 +2077,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222517r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222517r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222518",
@@ -2093,10 +2093,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222518r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222518r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222519",
@@ -2109,10 +2109,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222519r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222519r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222520",
@@ -2125,10 +2125,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222520r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222520r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222521",
@@ -2141,10 +2141,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222521r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222521r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222522",
@@ -2157,10 +2157,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222522r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222522r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222523",
@@ -2173,10 +2173,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222523r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222523r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222524",
@@ -2189,10 +2189,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222524r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222524r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222525",
@@ -2205,10 +2205,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222525r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222525r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222526",
@@ -2221,10 +2221,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222526r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222526r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222527",
@@ -2237,10 +2237,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222527r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222527r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222528",
@@ -2253,10 +2253,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222528r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222528r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222529",
@@ -2269,10 +2269,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222529r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222529r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222530",
@@ -2285,10 +2285,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222530r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222530r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222531",
@@ -2301,10 +2301,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222531r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222531r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222532",
@@ -2317,10 +2317,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222532r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222532r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222533",
@@ -2333,10 +2333,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222533r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222533r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222534",
@@ -2349,10 +2349,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222534r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222534r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222535",
@@ -2365,10 +2365,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222535r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222535r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222536",
@@ -2381,10 +2381,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222536r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222536r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222537",
@@ -2397,10 +2397,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222537r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222537r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222538",
@@ -2413,10 +2413,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222538r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222538r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222539",
@@ -2429,10 +2429,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222539r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222539r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222540",
@@ -2445,10 +2445,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222540r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222540r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222541",
@@ -2461,10 +2461,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222541r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222541r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222542",
@@ -2477,10 +2477,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222542r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222542r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222543",
@@ -2493,10 +2493,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222543r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222543r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222544",
@@ -2509,10 +2509,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222544r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222544r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222545",
@@ -2525,10 +2525,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222545r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222545r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222546",
@@ -2541,10 +2541,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222546r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222546r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222547",
@@ -2557,10 +2557,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222547r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222547r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222548",
@@ -2573,10 +2573,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222548r561251_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222548r561251_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222549",
@@ -2589,10 +2589,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222549r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222549r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222550",
@@ -2605,10 +2605,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222550r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222550r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222551",
@@ -2621,10 +2621,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222551r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222551r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222552",
@@ -2637,10 +2637,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222552r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222552r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222553",
@@ -2653,10 +2653,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222553r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222553r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222554",
@@ -2669,10 +2669,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222554r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222554r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222555",
@@ -2685,10 +2685,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222555r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222555r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222556",
@@ -2701,10 +2701,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222556r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222556r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222557",
@@ -2717,10 +2717,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222557r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222557r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222558",
@@ -2733,10 +2733,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222558r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222558r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222559",
@@ -2749,10 +2749,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222559r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222559r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222560",
@@ -2765,10 +2765,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222560r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222560r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222561",
@@ -2781,10 +2781,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222561r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222561r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222562",
@@ -2797,10 +2797,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222562r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222562r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222563",
@@ -2813,10 +2813,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222563r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222563r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222564",
@@ -2829,10 +2829,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222564r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222564r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222565",
@@ -2845,10 +2845,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222565r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222565r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222566",
@@ -2861,10 +2861,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222566r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222566r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222567",
@@ -2877,10 +2877,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222567r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222567r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222568",
@@ -2893,10 +2893,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222568r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222568r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222569",
@@ -2909,10 +2909,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222569r561293_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222569r561293_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222570",
@@ -2925,10 +2925,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222570r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222570r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222571",
@@ -2941,10 +2941,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222571r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222571r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222572",
@@ -2957,10 +2957,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222572r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222572r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222573",
@@ -2973,10 +2973,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222573r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222573r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222574",
@@ -2989,10 +2989,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222574r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222574r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222575",
@@ -3005,10 +3005,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222575r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222575r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222576",
@@ -3021,10 +3021,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222576r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222576r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222577",
@@ -3037,10 +3037,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222577r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222577r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222578",
@@ -3053,10 +3053,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222578r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222578r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222579",
@@ -3069,10 +3069,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222579r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222579r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222580",
@@ -3085,10 +3085,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222580r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222580r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222581",
@@ -3101,10 +3101,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222581r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222581r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222582",
@@ -3117,10 +3117,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222582r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222582r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222583",
@@ -3133,10 +3133,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222583r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222583r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222584",
@@ -3149,10 +3149,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222584r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222584r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222585",
@@ -3165,10 +3165,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222585r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222585r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222586",
@@ -3181,10 +3181,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222586r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222586r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222587",
@@ -3197,10 +3197,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222587r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222587r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222588",
@@ -3213,10 +3213,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222588r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222588r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222589",
@@ -3229,10 +3229,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222589r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222589r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222590",
@@ -3245,10 +3245,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222590r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222590r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222591",
@@ -3261,10 +3261,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222591r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222591r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222592",
@@ -3277,10 +3277,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222592r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222592r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222593",
@@ -3293,10 +3293,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222593r561254_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222593r561254_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222594",
@@ -3309,10 +3309,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222594r561257_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222594r561257_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222595",
@@ -3325,10 +3325,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222595r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222595r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222596",
@@ -3341,10 +3341,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222596r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222596r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222597",
@@ -3357,10 +3357,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222597r561260_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222597r561260_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222598",
@@ -3373,10 +3373,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222598r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222598r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222599",
@@ -3389,10 +3389,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222599r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222599r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222600",
@@ -3405,10 +3405,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222600r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222600r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222601",
@@ -3421,10 +3421,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222601r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222601r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222602",
@@ -3437,10 +3437,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222602r561263_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222602r561263_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222603",
@@ -3453,10 +3453,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222603r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222603r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222604",
@@ -3469,10 +3469,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222604r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222604r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222605",
@@ -3485,10 +3485,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222605r561266_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222605r561266_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222606",
@@ -3501,10 +3501,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222606r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222606r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222607",
@@ -3517,10 +3517,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222607r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222607r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222608",
@@ -3533,10 +3533,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222608r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222608r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222609",
@@ -3549,10 +3549,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222609r561269_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222609r561269_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222610",
@@ -3565,10 +3565,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222610r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222610r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222611",
@@ -3581,10 +3581,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222611r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222611r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222612",
@@ -3597,10 +3597,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222612r561272_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222612r561272_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222613",
@@ -3613,10 +3613,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222613r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222613r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222614",
@@ -3629,10 +3629,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222614r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222614r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222615",
@@ -3645,10 +3645,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222615r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222615r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222616",
@@ -3661,10 +3661,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222616r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222616r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222617",
@@ -3677,10 +3677,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222617r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222617r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222618",
@@ -3693,10 +3693,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222618r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222618r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222619",
@@ -3709,10 +3709,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222619r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222619r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222620",
@@ -3725,10 +3725,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222620r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222620r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222621",
@@ -3741,10 +3741,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222621r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222621r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222622",
@@ -3757,10 +3757,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222622r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222622r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222623",
@@ -3773,10 +3773,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222623r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222623r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222624",
@@ -3789,10 +3789,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222624r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222624r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222625",
@@ -3805,10 +3805,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222625r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222625r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222626",
@@ -3821,10 +3821,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222626r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222626r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222627",
@@ -3837,10 +3837,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222627r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222627r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222628",
@@ -3853,10 +3853,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222628r561275_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222628r561275_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222629",
@@ -3869,10 +3869,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222629r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222629r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222630",
@@ -3885,10 +3885,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222630r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222630r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222631",
@@ -3901,10 +3901,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222631r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222631r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222632",
@@ -3917,10 +3917,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222632r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222632r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222633",
@@ -3933,10 +3933,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222633r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222633r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222634",
@@ -3949,10 +3949,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222634r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222634r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222635",
@@ -3965,10 +3965,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222635r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222635r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222636",
@@ -3981,10 +3981,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222636r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222636r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222637",
@@ -3997,10 +3997,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222637r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222637r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222638",
@@ -4013,10 +4013,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222638r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222638r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222639",
@@ -4029,10 +4029,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222639r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222639r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222640",
@@ -4045,10 +4045,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222640r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222640r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222641",
@@ -4061,10 +4061,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222641r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222641r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222642",
@@ -4077,10 +4077,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222642r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222642r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222643",
@@ -4093,10 +4093,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222643r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222643r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222644",
@@ -4109,10 +4109,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222644r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222644r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222645",
@@ -4125,10 +4125,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222645r561278_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222645r561278_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222646",
@@ -4141,10 +4141,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222646r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222646r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222647",
@@ -4157,10 +4157,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222647r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222647r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222648",
@@ -4173,10 +4173,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222648r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222648r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222649",
@@ -4189,10 +4189,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222649r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222649r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222650",
@@ -4205,10 +4205,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222650r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222650r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222651",
@@ -4221,10 +4221,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222651r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222651r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222652",
@@ -4237,10 +4237,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222652r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222652r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222653",
@@ -4253,10 +4253,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222653r561281_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222653r561281_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222654",
@@ -4269,10 +4269,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222654r561284_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222654r561284_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222655",
@@ -4285,10 +4285,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222655r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222655r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222656",
@@ -4301,10 +4301,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222656r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222656r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222657",
@@ -4317,10 +4317,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222657r561287_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222657r561287_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222658",
@@ -4333,10 +4333,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222658r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222658r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222659",
@@ -4349,10 +4349,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222659r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222659r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222660",
@@ -4365,10 +4365,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222660r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222660r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222661",
@@ -4381,10 +4381,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222661r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222661r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222662",
@@ -4397,10 +4397,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222662r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222662r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222663",
@@ -4413,10 +4413,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222663r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222663r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222664",
@@ -4429,10 +4429,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222664r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222664r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222665",
@@ -4445,10 +4445,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222665r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222665r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222666",
@@ -4461,10 +4461,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222666r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222666r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222667",
@@ -4477,10 +4477,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222667r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222667r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222668",
@@ -4493,10 +4493,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222668r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222668r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222669",
@@ -4509,10 +4509,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222669r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222669r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222670",
@@ -4525,10 +4525,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222670r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222670r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222671",
@@ -4541,10 +4541,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222671r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222671r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222672",
@@ -4557,10 +4557,10 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222672r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222672r508029_rule-20230620"
     },
     {
-        "DATE": "20230601",
+        "DATE": "20230620",
         "HOST_NAME": "test.hostname",
         "HOST_IP": "192.168.1.256",
         "Vuln_Num": "V-222673",
@@ -4573,6 +4573,6 @@
         "STATUS": "Not_Reviewed",
         "FINDING_DETAILS": null,
         "COMMENTS": null,
-        "Unique_ID": "test.hostname-SV-222673r508029_rule-20230601"
+        "Unique_ID": "test.hostname-SV-222673r508029_rule-20230620"
     }
 ]

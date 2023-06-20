@@ -6,8 +6,8 @@ import json
 import os
 import xml.etree.ElementTree as ET
 
-INPUT_FILE = r"tests/blank_checklist.ckl"  # Absolute path to CKL file
-OUTPUT_LOC = r"tests"  # Absolute path for json output directory
+INPUT_FILE = r"data/stig_checklist.ckl"
+OUTPUT_LOC = r"tests/"
 # Current date timestamp to append to filename
 DATE = datetime.now().strftime("%Y%m%d")
 
@@ -21,7 +21,7 @@ def convert_ckl_to_json(ckl, json_path) -> str:
 
     filename = os.path.basename(ckl)
     new_filename = os.path.splitext(filename)
-    new_location = f"{json_path}/{new_filename[0].replace(' ', '_')}-{DATE}.json"
+    new_location = f"{json_path}{new_filename[0].replace(' ', '_')}-{DATE}.json"
 
     with open(new_location, "w", newline="", encoding="utf-8") as jsonf:
         # Create an xml object from the ckl file
