@@ -6,31 +6,19 @@ import json
 import xml.etree.ElementTree as ET
 
 
-JSON_DATA = r"tests/stig_checklist-20230620.json"
-# Blank STIG checklist to use as a template
-BASE_CKL = r"data/stig_checklist.ckl"
-# TODO: Handle output of filename in this script
-OUTPUT_LOC = r"tests/stig_checklist-20230620.ckl"
-# Current date timestamp to append to filename
-DATE = datetime.now().strftime("%Y%m%d")
+def convert_json_to_ckl(
+    json_data, ckl_path, base_ckl=r"data/stig_checklist.ckl"
+) -> str:
+    """Populates a STIG Checklist with the JSON equivalent values"""
 
-
-def read_json(json_data):
-    """Read in the JSON data and return the json loaded object"""
-
+    # Read in the JSON Data
     try:
         with open(json_data, "r") as read_file:
             loaded_data = json.load(read_file)
     except FileNotFoundError as fnf:
         print(f"[X] JSON didn't load properly: {fnf}")
-    return loaded_data
-
-
-def convert_json_to_ckl(json_data, base_ckl, ckl_path) -> str:
-    """Populates a STIG Checklist with the JSON equivalent values"""
-
-    # Read in the JSON Data
-    loaded_data = read_json(json_data)
+    except KeyError as ke:
+        print(f"[X] JSON didn't load properly: {ke}")
 
     try:
         # Read in the STIG Checklist we are using as a template
@@ -74,8 +62,12 @@ def convert_json_to_ckl(json_data, base_ckl, ckl_path) -> str:
 
 
 if __name__ == "__main__":
+    JSON_DATA = r"tests/stig_checklist-20230620.json"
+    # TODO: Handle output of filename in this script
+    OUTPUT_LOC = r"tests/stig_checklist-20230620.ckl"
+    # Current date timestamp to append to filename
+    DATE = datetime.now().strftime("%Y%m%d")
+
     print("[*] Converting JSON to CKL...")
-    out = convert_json_to_ckl(
-        json_data=JSON_DATA, base_ckl=BASE_CKL, ckl_path=OUTPUT_LOC
-    )
+    convert_json_to_ckl(json_data=JSON_DATA, ckl_path=OUTPUT_LOC)
     print(f"[*] Converted! {OUTPUT_LOC}")

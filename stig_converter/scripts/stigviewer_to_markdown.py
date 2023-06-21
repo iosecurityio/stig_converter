@@ -2,7 +2,6 @@
 
 import requests
 import json
-import os
 
 STIG_URL = "https://stigviewer.com/stig/application_security_and_development/2022-09-21/MAC-3_Sensitive/json"
 FILENAME = "tests/AppSecDevSTIGs_Markdown.md"
@@ -11,7 +10,7 @@ FILENAME = "tests/AppSecDevSTIGs_Markdown.md"
 def get_stigs(url=STIG_URL):
     """Takes a URL of a STIG Checklist in JSON, generally STIG Viewer API"""
 
-    response = requests.get(url)
+    response = requests.get(url, timeout=5)
     stiglist = json.loads(response.text)
     return stiglist
 
@@ -37,7 +36,7 @@ def write_stigs(stigs, newfile):
     header = stigs["stig"]
     vulnids = header["findings"]
     print(f"[*] Writing {newfile}.")
-    with open(newfile, "w") as outfile:
+    with open(newfile, "w", encoding="utf-8") as outfile:
         outfile.write("# Application Security and Development STIGs\n\n")
         outfile.write(f"**Date:** {header['date']}\n\n")
         outfile.write(f"**Description:** {header['description']}\n\n")

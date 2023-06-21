@@ -6,11 +6,6 @@ from datetime import datetime
 import os
 import xml.etree.ElementTree as ET
 
-INPUT_FILE = r"data/stig_checklist.ckl"
-OUTPUT_LOC = r"tests/"
-# Current date timestamp to append to filename
-DATE = datetime.now().strftime("%Y%m%d")
-
 
 def convert_ckl_to_csv(ckl, csv_path) -> str:
     """Converts a CKL file to a CSV file
@@ -37,9 +32,10 @@ def convert_ckl_to_csv(ckl, csv_path) -> str:
         "COMMENTS",
         "Unique_ID",
     ]
+    current_date = datetime.now().strftime('%Y%m%d')
     filename = os.path.basename(ckl)
     new_filename = os.path.splitext(filename)
-    new_csv = f"{csv_path}/{new_filename[0].replace(' ', '_')}-{DATE}.csv"
+    new_csv = f"{csv_path}{new_filename[0].replace(' ', '_')}-{current_date}.csv"
 
     with open(new_csv, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -49,7 +45,7 @@ def convert_ckl_to_csv(ckl, csv_path) -> str:
 
         # create a dictionary to hold findings
         finding = {
-            "DATE": DATE,
+            "DATE": current_date,
             "HOST_NAME": "",
             "HOST_IP": "",
         }
@@ -79,7 +75,7 @@ def convert_ckl_to_csv(ckl, csv_path) -> str:
             finding["FINDING_DETAILS"] = vuln.find("./FINDING_DETAILS").text
             finding["COMMENTS"] = vuln.find("./COMMENTS").text
             # Append a unique ID to map for each finding
-            finding["Unique_ID"] = f"{finding['HOST_NAME']}-{finding['Rule_ID']}-{DATE}"
+            finding["Unique_ID"] = f"{finding['HOST_NAME']}-{finding['Rule_ID']}-{current_date}"
             # Write the finding to the CSV
             writer.writerow(finding)
     # Return the location of the new CSV
@@ -87,11 +83,7 @@ def convert_ckl_to_csv(ckl, csv_path) -> str:
 
 
 if __name__ == "__main__":
-    try:
-        if not INPUT_FILE or not OUTPUT_LOC:
-            print("[X] Specify both input file and output location.")
-            exit()
-        out = convert_ckl_to_csv(ckl=INPUT_FILE, csv_path=OUTPUT_LOC)
-        print(f"[*] Success! Output: {out}")
-    except Exception as e:
-        print(f"[X] Failed: {e}")
+    INPUT_FILE = r"data/stig_checklist.ckl"
+    OUTPUT_LOC = r"tests/"
+    out = convert_ckl_to_csv(ckl=INPUT_FILE, csv_path=OUTPUT_LOC)
+    print(f"[*] Success! Output: {out}")

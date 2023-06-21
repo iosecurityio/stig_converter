@@ -8,7 +8,11 @@ This is a Python script to convert DISA STIG Checklists into various formats.
 
 - convert `.csv` file to `.json` file
 
-- can also find your most recent checklists in a file share
+- convert `.ckl` file to `.json` file
+
+- convert `.json` file to `.ckl` file
+
+- pull down latest STIGs from www.stigviewer.com and convert them to a markdown format
 
 ## Usage and Examples
 
@@ -46,7 +50,7 @@ Will convert the .CKL checklist that is in ./data/ and convert to both a csv and
 
 - Implement command line argument parsing
 
-- Interface?
+- Refactor basically every script (:
 
 ---
 
@@ -62,7 +66,7 @@ Inspired by "a Python script to extract data out of a DISA STIG Viewer xccdf fil
 
 **Allen Montgomery** - <allen@iosecurityio> - IO Security
 
-Use responsibly at your leisure.
+Use responsibly at your leisure. Wear your helmet.
 
 ---
 
