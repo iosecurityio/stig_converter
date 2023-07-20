@@ -19,25 +19,25 @@ from scripts.csv_to_json import convert_csv_to_json
 class STIGConverter:
     """Converts STIG Checklists to/from various file formats (CSV, JSON, CKL)"""
 
-    def __init__(self, project_name, input_file, output_type, output_dir) -> None:
+    def __init__(self, project_name, options) -> None:
         self.project_name = project_name
-        self.input_file = input_file
-        self.input_file_ext = self.parse_extension(input_file)
-        self.output_type = output_type
-        self.output_dir = output_dir
+        self.input_file = options.input_file
+        self.input_file_ext = self.parse_extension(options.input_file)
         self.output_file = None
+        self.output_type = options.output_type
+        self.output_dir = options.output_dir
 
-    def parse_extension(self, filename) -> str:
-        """Takes a file or filepath and returns the extension of the file"""
+    def parse_extension(self, input_path) -> str:
+        # Regular expression to check for a valid file extension
+        pattern = r"^(.*[\\/])?[^./\\]+\.[^./\\]+$"
 
-        # Check if the input filename is a valid file.ext combination
-        pattern = r"^[^.]+(\.[^.]+)?$"
-        try:
-            if re.match(pattern, filename):
-                return filename.split(".")[-1]
-        except TypeError:
-            print(f"[X] Invalid file: {filename}")
-            sys.exit()
+        match = re.match(pattern, input_path)
+        if match:
+            return match.group(0).split(".")[-1]
+        else:
+            raise ValueError(
+                "Invalid file extension. The input should have a valid extension."
+            )
 
     def parse_hostname(self, checklist, project_list) -> str:
         """Takes a checklist location and a list of projects to look for in the path provided
@@ -54,7 +54,7 @@ class STIGConverter:
                 return item
         return ""
 
-    def update_timestamp(self, filename) -> str:
+    def update_filename(self, filename) -> str:
         """Updates the timestamp of the checklist to the current date"""
 
         pattern = r"-(\d{8})"
@@ -64,10 +64,15 @@ class STIGConverter:
         if match:
             matched_sequence = match.group(1)
             updated_filename = filename.replace(matched_sequence, current_date)
+            return updated_filename
         else:
-            filename_split = filename.split(".")
-            updated_filename = f"{filename_split[0]}-{current_date}.{filename_split[1]}"
-        return updated_filename
+            if "/" in filename:
+                splitpath = filename.split("/")
+                newfile = splitpath[-1]
+                name = newfile.split(".")[0]
+                ext = newfile.split(".")[1]
+                updated_filename = f"{name}-{current_date}.{ext}"
+                return "/".join(splitpath[:-1]) + "/" + updated_filename
 
     def validate_filetype(self, file_in, out_type) -> bool:
         """Returns a list of valid outputs for the provided checklist type"""
@@ -80,9 +85,8 @@ class STIGConverter:
         }
         if ext not in valid_conversions:
             print(f"Invalid input file type: {ext}")
-            return False
-        if out_type not in valid_conversions[ext]:
-            print(f"Can't convert {ext} to file type {out_type}")
+            if out_type not in valid_conversions[ext]:
+                print(f"Can't convert {ext} to file type {out_type}")
             return False
         print(f"[*] Valid conversion: {ext} to {out_type} [*]")
         return True
@@ -90,11 +94,12 @@ class STIGConverter:
     def convert(self) -> None:
         """Takes in a checklist and converts it to the desired output type"""
 
-        cant_convert = f"Can't convert {self.input_file_ext} to {self.output_type}"
-        self.newtime = self.update_timestamp(self.input_file)
-        outputfile = os.path.join(self.output_dir, self.newtime)
-        self.output_file = outputfile.append(f".{self.output_type}")
+        updatedname = self.update_filename(self.input_file)
+        base_path, current_extension = os.path.splitext(updatedname)
+        updated_file_path = base_path + "." + self.output_type
+        self.output_file = updated_file_path
 
+        #TODO Use os.path or pathlib to work with filepaths
         if self.validate_filetype(self.input_file, self.output_type):
             if self.input_file_ext == "ckl":
                 if self.output_type == "csv":
@@ -108,7 +113,7 @@ class STIGConverter:
                 if self.output_type == "ckl":
                     convert_json_to_ckl(self.input_file, self.output_dir)
             else:
-                print(cant_convert)
+                print("Conversion error")
         print(f"[*] Conversion complete: {self.output_file} [*]")
 
 
@@ -120,59 +125,52 @@ class Interface:
         self.input_file = None
         self.output_dir = None
         self.project_name = None
-        self.type = None
+        self.output_type = None
         self.cli()
 
     def cli(self):
-        """Runs the script with the provided arguments"""
+        """Starts the Command Line Interface for stig_converter.py"""
 
+        # Create argparsers to take CLI inputs
         parser = argparse.ArgumentParser(
             description="Process input checklist and generate output checklist."
         )
-        # Parse arguments
-        parser.add_argument("-n", "--name", required=False, help="project name")
+
+        # Add CLI arguments
         parser.add_argument("-i", "--input", required=True, help="input file name")
         parser.add_argument(
             "-o", "--output", required=True, help="output file directory"
         )
         parser.add_argument("-t", "--type", required=True, help="output file type")
-        # parser.add_argument("-v", "--verbose", required=False, help="verbose output")
+        parser.add_argument("-n", "--name", required=False, help="project name")
 
-        # Validate arguments
         try:
+            # Parse arguments
             args = parser.parse_args()
-            self.args = args
-            self.input_file = self.args.input
-            self.output_dir = self.args.output
-            self.project_name = self.args.name
-            self.output_type = self.args.type if self.args.type else "ckl"
-
-            print(f"Input file: {self.input_file}")
-            print(f"Output Directory: {self.output_dir}")
-            print(f"Project name: {self.project_name}")
-            print(f"Output type: {self.output_type}")
-
         except argparse.ArgumentError as arg_error:
             parser.print_usage()
             print(arg_error)
             exit()
+        self.args = args
+        self.input_file = self.args.input
+        self.output_dir = self.args.output
+        self.output_type = self.args.type
+        self.project_name = self.args.name
+        print("Interface options:")
+        print("Input file: ", self.input_file)
+        print("Output directory: ", self.output_dir)
+        print("Output type: ", self.output_type)
+        print("Project name: ", self.project_name)
 
 
 def main():
     """Main function to run the script"""
 
-    try:
-        interface = Interface()
-        stigconverter = STIGConverter(
-            project_name=interface.project_name,
-            input_file=interface.input_file,
-            output_type=interface.type,
-            output_dir=interface.output_dir,
-        )
-        stigconverter.convert()
-    except KeyboardInterrupt:
-        print("Exiting...")
-        sys.exit(0)
+    # python stig_converter.py -i "../data/stig_checklist.ckl" -o "../data" -t "json" -n "project1"
+    interface = Interface()
+    converter = STIGConverter(project_name="project1", options=interface)
+    converter.input_file_ext = converter.parse_extension(converter.input_file)
+    converter.convert()
 
 
 if __name__ == "__main__":

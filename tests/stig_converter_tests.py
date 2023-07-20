@@ -19,12 +19,14 @@ class Interface:
             description="Process input checklist and generate output checklist."
         )
         # Parse arguments
-        parser.add_argument("-n", "--name", required=False, help="project name")
+
         parser.add_argument("-i", "--input", required=True, help="input file name")
-        parser.add_argument(
-            "-o", "--output", required=True, help="output file directory"
-        )
         parser.add_argument("-t", "--type", required=True, help="output file type")
+        parser.add_argument(
+            "-o", "--output", required=False, help="output file directory"
+        )
+        parser.add_argument("-n", "--name", required=False, help="project name")
+
         # parser.add_argument("-v", "--verbose", required=False, help="verbose output")
 
         # Validate arguments
