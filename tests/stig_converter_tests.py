@@ -1,40 +1,55 @@
-""" Description: This script is used to test the stig_converter.py script"""
-
 import argparse
-import sys
 
-def main():
-    """Main function to run the script"""
 
-    parser = argparse.ArgumentParser(
-        description="Process input file and generate output.",
-        usage="%(prog)s -i <input file> -o <output directory>",
-    )
-    parser.add_argument("-i", "--input", type=str, help="The input file to convert")
-    parser.add_argument(
-        "-o",
-        "--output",
-        type=str,
-        help="The output directory to save the converted file to",
-    )
-    args = parser.parse_args()
-    # check that there are no more than 2 arguments
-    if len(sys.argv) > 5:
-        print("Too many arguments")
-        exit()
-    
-    if args.input is None:
-        print("Please provide an input file")
-        exit()
-    if args.output is None:
-        print("Please provide an output directory")
-        exit()
-    input_file = args.input
-    output_dir = args.output
+class Interface:
+    """Command line interface for stig_converter.py"""
 
-    print(input_file + "Input file")
-    print(output_dir + "Output directory")
+    def __init__(self) -> None:
+        self.args = None
+        self.input_file = None
+        self.output_dir = None
+        self.project_name = None
+        self.type = None
+        self.cli()
+
+    def cli(self):
+        """Runs the script with the provided arguments"""
+
+        parser = argparse.ArgumentParser(
+            description="Process input checklist and generate output checklist."
+        )
+        # Parse arguments
+        parser.add_argument("-n", "--name", required=False, help="project name")
+        parser.add_argument("-i", "--input", required=True, help="input file name")
+        parser.add_argument(
+            "-o", "--output", required=True, help="output file directory"
+        )
+        parser.add_argument("-t", "--type", required=True, help="output file type")
+        # parser.add_argument("-v", "--verbose", required=False, help="verbose output")
+
+        # Validate arguments
+        try:
+            args = parser.parse_args()
+        except argparse.ArgumentError as arg_error:
+            parser.print_usage()
+            print(arg_error)
+            exit()
+        self.args = args
+        self.input_file = self.args.input
+        self.output_dir = self.args.output
+        self.project_name = self.args.name
+        self.output_type = self.args.type if self.args.type else "ckl"
+        print("[*] Interface Created...")
+        print(f"Arguments: {self.args}")
+        print(f"Input file: {self.input_file}")
+        print(f"Output Directory: {self.output_dir}")
+        print(f"Output type: {self.output_type}")
+        print(f"Project name: {self.project_name}")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        interface = Interface()
+    except Exception as e:
+        print(f"[-] Error: {e}")
+        exit()

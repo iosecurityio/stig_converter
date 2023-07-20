@@ -26,17 +26,17 @@ class STIGConverter:
         self.output_type = output_type
         self.output_dir = output_dir
         self.output_file = None
-        self.run()
 
     def parse_extension(self, filename) -> str:
         """Takes a file or filepath and returns the extension of the file"""
 
         # Check if the input filename is a valid file.ext combination
-        pattern = r"^[^.]*\.[^.]*$"
-        if re.match(pattern, filename):
-            return filename.split(".")[-1]
-        else:
-            print(f"Invalid file: {filename}")
+        pattern = r"^[^.]+(\.[^.]+)?$"
+        try:
+            if re.match(pattern, filename):
+                return filename.split(".")[-1]
+        except TypeError:
+            print(f"[X] Invalid file: {filename}")
             sys.exit()
 
     def parse_hostname(self, checklist, project_list) -> str:
@@ -87,10 +87,13 @@ class STIGConverter:
         print(f"[*] Valid conversion: {ext} to {out_type} [*]")
         return True
 
-    def run(self) -> None:
+    def convert(self) -> None:
         """Takes in a checklist and converts it to the desired output type"""
 
         cant_convert = f"Can't convert {self.input_file_ext} to {self.output_type}"
+        self.newtime = self.update_timestamp(self.input_file)
+        outputfile = os.path.join(self.output_dir, self.newtime)
+        self.output_file = outputfile.append(f".{self.output_type}")
 
         if self.validate_filetype(self.input_file, self.output_type):
             if self.input_file_ext == "ckl":
@@ -106,6 +109,7 @@ class STIGConverter:
                     convert_json_to_ckl(self.input_file, self.output_dir)
             else:
                 print(cant_convert)
+        print(f"[*] Conversion complete: {self.output_file} [*]")
 
 
 class Interface:
@@ -116,18 +120,8 @@ class Interface:
         self.input_file = None
         self.output_dir = None
         self.project_name = None
+        self.type = None
         self.cli()
-
-    def check_file_extension(self, value):
-        "Ensures the file extension matches a list of valid extensions"
-
-        valid_extensions = [".csv", ".ckl", ".json"]
-        _, extension = os.path.splitext(value)
-        if extension.lower() not in valid_extensions:
-            raise argparse.ArgumentTypeError(
-                f"Invalid file extension. Allowed extensions are: {', '.join(valid_extensions)}"
-            )
-        return value
 
     def cli(self):
         """Runs the script with the provided arguments"""
@@ -136,36 +130,46 @@ class Interface:
             description="Process input checklist and generate output checklist."
         )
         # Parse arguments
-        parser.add_argument("-n", "--name", required=True, help="project name")
+        parser.add_argument("-n", "--name", required=False, help="project name")
+        parser.add_argument("-i", "--input", required=True, help="input file name")
         parser.add_argument(
             "-o", "--output", required=True, help="output file directory"
         )
-        parser.add_argument("-i", "--input", required=True, help="input file name")
-        parser.add_argument("-t", "--type", required=False, help="output file type")
-        parser.add_argument("-v", "--verbose", required=False, help="verbose output")
+        parser.add_argument("-t", "--type", required=True, help="output file type")
+        # parser.add_argument("-v", "--verbose", required=False, help="verbose output")
+
         # Validate arguments
         try:
             args = parser.parse_args()
-            input_file = args.input
-            output_dir = args.output
-            project_name = args.name
-            # TODO Check for type argument
-            # TODO check for verbose argument
+            self.args = args
+            self.input_file = self.args.input
+            self.output_dir = self.args.output
+            self.project_name = self.args.name
+            self.output_type = self.args.type if self.args.type else "ckl"
 
-            print(f"Input file: {input_file}")
-            print(f"Output file: {output_dir}")
-            print(f"Project name: {project_name}")
+            print(f"Input file: {self.input_file}")
+            print(f"Output Directory: {self.output_dir}")
+            print(f"Project name: {self.project_name}")
+            print(f"Output type: {self.output_type}")
 
         except argparse.ArgumentError as arg_error:
             parser.print_usage()
-            print(f"Error: {arg_error}")
+            print(arg_error)
             exit()
 
 
 def main():
     """Main function to run the script"""
+
     try:
         interface = Interface()
+        stigconverter = STIGConverter(
+            project_name=interface.project_name,
+            input_file=interface.input_file,
+            output_type=interface.type,
+            output_dir=interface.output_dir,
+        )
+        stigconverter.convert()
     except KeyboardInterrupt:
         print("Exiting...")
         sys.exit(0)
