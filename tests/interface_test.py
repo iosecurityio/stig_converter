@@ -1,5 +1,8 @@
+"""For testing the interface of the stig_converter.py script"""
 import argparse
-
+from pathlib import Path
+import sys
+import os
 
 class Interface:
     """Command line interface for stig_converter.py"""
@@ -31,16 +34,16 @@ class Interface:
 
         # Validate arguments
         try:
-            args = parser.parse_args()
+            self.args = parser.parse_args()
+            self.input_file = Path.absolute(self.args.input)
+            self.output_dir = Path.absolute(self.args.output)
+            self.project_name = self.args.name
+            self.output_type = self.args.type if self.args.type else "ckl"            
         except argparse.ArgumentError as arg_error:
             parser.print_usage()
             print(arg_error)
-            exit()
-        self.args = args
-        self.input_file = self.args.input
-        self.output_dir = self.args.output
-        self.project_name = self.args.name
-        self.output_type = self.args.type if self.args.type else "ckl"
+            sys.exit(1)
+
         print("[*] Interface Created...")
         print(f"Arguments: {self.args}")
         print(f"Input file: {self.input_file}")
