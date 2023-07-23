@@ -42,6 +42,7 @@ class Interface:
 
         try:
             # Parse arguments from the command line
+            print("Parsing arguments...")
             self.args = parser.parse_args()
         except argparse.ArgumentError as arg_error:
             # TODO: Add logging and check proper way of argparse exception handling
@@ -116,17 +117,20 @@ class Interface:
 
     def run_script(self):
         # Runs the script with the provided arguments
-        print("STIG Conversion Interface Test")
-        print("[*] Running STIG Conversion... [*]")
+        print("[*] Running STIG Conversion script... [*]")
         print(f"[*] Input file: {self.input_file}")
         print(f"[*] Output file: {self.output_file}")
         print(f"[*] Project name: {self.project_name}")
 
 
 if __name__ == "__main__":
+    div = "-" * 30
     try:
+        print("STIG Conversion Interface Test")
+        print(div)
         interface = Interface()
     except Exception as e:
         print(f"[-] Error: {e}")
         exit()
+    print(div)
     print("[*] Interface test successful [*]")
