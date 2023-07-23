@@ -368,14 +368,16 @@ def main():
     """Main function to run the script"""
 
     try:
-        # python stig_converter.py -i "../data/stig_checklist.ckl" -o "../data.json"
+        # python stig_converter.py -i "../data/stig_checklist.ckl" -o "../data/test_checklist.json"
         config = Interface()
         converter = STIGConverter(config)
-        # Run the conversion
-        print("Run conversion now")
+        converter.convert_ckl_to_json(config.input_file_path, config.output_file_path)
+
     except Exception as e:
+        # TODO: Handle what happens when the output file already exists
         print("[-] Error: Unable to run STIG conversion [-]")
         print(e)
+
 
 if __name__ == "__main__":
     main()
