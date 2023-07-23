@@ -18,6 +18,11 @@ class Interface:
         self.output_file_type = None
         self.project_name = None
         self.ready = None
+        self._conversions = {
+            "ckl": ["csv", "json"],
+            "csv": ["json"],
+            "json": ["ckl"],
+        }
         self.start_cli()
 
     def start_cli(self):
@@ -39,93 +44,83 @@ class Interface:
             # Parse arguments from the command line
             self.args = parser.parse_args()
         except argparse.ArgumentError as arg_error:
+            # TODO: Add logging and check proper way of argparse exception handling
             parser.print_usage()
             print(arg_error)
             sys.exit(1)
 
         try:
             # Validate the command line input file and path
-            self.validate_input(self.args.input)
+            self.validate_file(self.args.input)
+
             # Validate the command line output file and path
-            self.validate_output(self.args.output)
+            self.validate_file(self.args.output)
+
             # Check if its a valid conversion
             self.is_valid_conversion(self.input_file_type, self.output_file_type)
+
             # Set the project name
             self.project_name = self.args.name
+
             # if self.ready is true, then the script is ready to run
             self.ready = True
+
         except Exception as e:
             print(f"[-] Error: {e}")
             sys.exit(1)
 
         if self.ready:
-            print("[*] Interface ready to run... [*]")
+            print("[*] Conversion ready to run... [*]")
             self.run_script()
+        else:
+            print("[-] Error: Conversion not ready... [-]")
+            sys.exit(1)
 
-    def validate_files(self, input_file, output_file):
+    def validate_file(self, stig_file):
         # Validate input file and output file
 
-        abs_ifp = Path.absolute(input_file)
-        abs_ofp = Path.absolute(output_file)
-        filetypes = [".ckl", ".csv", ".json"]
-        if abs_ifp.exists():
-            if abs_ifp.is_file():
-                if abs_ifp.suffix in filetypes:
-                    self.input_file = abs_ifp
-                    self.input_file_path = abs_ifp.parent
-                    self.input_file_type = abs_ifp.suffix
-                else:
-                    print(f"[-] Error: {self.input_file} is not a valid input file")
-                    sys.exit(1)
+        # Converts the input file into an absolute file path
+        absolute_path = Path(stig_file).resolve()
+        # Ensures the file extension is valid
+        if absolute_path.suffix[1:] in self._conversions.keys():
+            # If the absolute path is a file already then it's the input
+            if absolute_path.is_file():
+                self.input_file_type = absolute_path.suffix[1:]
+                self.input_file = absolute_path.name
+                self.input_file_path = absolute_path
+            # if there is no file, then set the output file
             else:
-                print(f"[-] Error: {abs_ifp} is not a file")
+                self.output_file_type = absolute_path.suffix[1:]
+                self.output_file = absolute_path.name
+                self.output_file_path = absolute_path
         else:
-            print(f"[-] Error: {abs_ifp} does not exist")
-            sys.exit(1)
-        # Validate Output File
-        if abs_ofp.exists():
-            if abs_ofp.is_file():
-                if abs_ofp.suffix in filetypes:
-                    self.output_file = abs_ofp
-                    self.output_file_path = abs_ofp.parent
-                    self.output_file_type = abs_ofp.suffix
-                else:
-                    print(f"[-] Error: {self.output_file} is not a valid output file")
-                    sys.exit(1)
-            else:
-                print(f"[-] Error: {abs_ofp} is not a file")
-                sys.exit(1)
-        else:
-            print(f"[-] Error: {abs_ofp} does not exist")
+            print(f"[-] Error: {stig_file} is not a valid file")
             sys.exit(1)
 
     def is_valid_conversion(self, input_type, output_type):
         # Checks a dictionary of valid conversions
 
-        conversions = {
-            "ckl": ["csv", "json"],
-            "csv": ["json"],
-            "json": ["ckl"],
-        }
         try:
             # check to see if the input type is a key in the dictionary
-            if input_type in conversions.keys():
+            if input_type in self._conversions.keys():
                 # check to see if the output type is a value in the dictionary
-                if output_type in conversions[input_type]:
-                    return True
+                if output_type in self._conversions[input_type]:
+                    print("[*] Valid conversion [*]")
+                    self.ready = True
             else:
-                return False
+                print("[-] Invalid conversion [-]")
+                self.ready = False
         except KeyError as e:
             print(f"[-] File Error: {e}")
             sys.exit(1)
 
     def run_script(self):
         # Runs the script with the provided arguments
+        print("STIG Conversion Interface Test")
         print("[*] Running STIG Conversion... [*]")
         print(f"[*] Input file: {self.input_file}")
         print(f"[*] Output file: {self.output_file}")
         print(f"[*] Project name: {self.project_name}")
-        print("[*] Conversion complete... [*]")
 
 
 if __name__ == "__main__":
@@ -134,4 +129,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"[-] Error: {e}")
         exit()
-    print("[*] Interface created...")
+    print("[*] Interface test successful [*]")
