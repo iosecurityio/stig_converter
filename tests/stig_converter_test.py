@@ -1,8 +1,5 @@
 """
-Name: stig_converter.py
-Converts STIG Checklists to other various file formats
-Author: Allen Montgomery, IO Security 7/2023
-Version 2.11
+Name: stig_converter_test.py
 """
 
 import argparse
@@ -288,6 +285,7 @@ class Interface:
 
         try:
             # Parse arguments from the command line
+            print("Parsing arguments...")
             self.args = parser.parse_args()
 
             # Validate input file and output file
@@ -316,14 +314,14 @@ class Interface:
     def register_files(self, input_file, output_file):
         # Validate input file and output file
 
+        if input_file == output_file:
+            print(f"[-] Error: Input file: {input_file} and output file: {output_file} cannot be the same")
+            sys.exit(1)
+
         try:
             # Resolve the absolute path of the input and output files
             abs_input_file = Path(input_file).resolve()
             abs_output_file = Path(output_file).resolve()
-
-            if abs_input_file == abs_output_file:
-                print(f"[-] Error: Input file: {input_file} and output file: {output_file} cannot be the same")
-                sys.exit(1)
 
             # Ensures the input file extension is valid
             if abs_input_file.suffix[1:] in self._conversions.keys():
@@ -345,7 +343,7 @@ class Interface:
 
             # Check if its a valid conversion
             if self.output_file_type in self._conversions[self.input_file_type]:
-                self.ready = True
+                print("[*] Valid conversion [*]")
             else:
                 print(f"[-] Error: {self.output_file_type} is not a valid output file type")
                 sys.exit(1)
@@ -365,7 +363,7 @@ def main():
     """Main function to run the script"""
 
     try:
-        # Example command line usage:
+        # Current Argument Example:
         # python stig_converter.py -i "../data/stig_checklist.ckl" -o "../data/test_checklist.json"
 
         # Create the CLI and take arguments

@@ -21,7 +21,8 @@ def convert_ckl_to_json(ckl, json_path) -> str:
 
     filename = os.path.basename(ckl)
     new_filename = os.path.splitext(filename)
-    new_location = f"{json_path}{new_filename[0].replace(' ', '_')}-{DATE}.json"
+    # TODO Handle the / in the path
+    new_location = f"{json_path}/{new_filename[0].replace(' ', '_')}-{DATE}.json"
 
     with open(new_location, "w", newline="", encoding="utf-8") as jsonf:
         # Create an xml object from the ckl file
