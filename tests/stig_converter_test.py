@@ -23,18 +23,6 @@ class STIGConverter:
         self.encoding = "utf-8"
         self.date = datetime.now().strftime("%Y%m%d")
 
-    def parse_hostname(self, checklist, project_list) -> str:
-        """Takes a checklist location and a list of projects to look for in the path provided"""
-
-        # TODO refactor with pathlib
-        project_path = checklist.split(r"/")
-
-        # Check if the project is in the path and return empty string if not
-        for item in project_path:
-            if item.lower() in project_list:
-                return item
-        return ""
-
     def update_filename(self, filename) -> str:
         """Updates the timestamp of the checklist to the current date
         If the file already has a date in the filename, then it will replace it with the current date
@@ -265,6 +253,7 @@ class Interface:
 
     def __init__(self) -> None:
         self.args = None
+        self.event = False
         self.input_file = None
         self.input_file_path = None
         self.input_file_type = None
@@ -283,11 +272,10 @@ class Interface:
     def start_cli(self):
         """Runs the script with the provided arguments"""
 
+        # Create an argument parser to handle the CLI arguments
         parser = argparse.ArgumentParser(
             description="Process input checklist and generate output checklist."
         )
-        # Parse arguments
-
         parser.add_argument("-i", "--input", required=True, help="input file name")
         parser.add_argument(
             "-o", "--output", required=False, help="output file directory"
@@ -299,68 +287,75 @@ class Interface:
             # Parse arguments from the command line
             print("Parsing arguments...")
             self.args = parser.parse_args()
-        except argparse.ArgumentError as arg_error:
-            # TODO: Add logging and check proper way of argparse exception handling
-            parser.print_usage()
-            print(arg_error)
-            sys.exit(1)
 
-        try:
-            # Validate the command line input file and path
-            self.validate_file(self.args.input)
+            # Validate input file and output file
+            self.register_files(self.args.input, self.args.output)
 
-            # Validate the command line output file and path
-            self.validate_file(self.args.output)
+            # Set the project name (optional)
+            if self.args.name:
+                self.project_name = self.args.name
 
-            # Check if its a valid conversion
-            self.is_valid_conversion(self.input_file_type, self.output_file_type)
-
-            # Set the project name
-            self.project_name = self.args.name
+            # Set the event flag (optional)
+            if self.args.event:
+                self.event = True
 
             # if self.ready is true, then the script is ready to run
             self.ready = True
 
-        except Exception as e:
-            print(f"[-] Error: {e}")
-            sys.exit(1)
+        except argparse.ArgumentError as arg_error:
+            # TODO: Add logging and check proper way of argparse exception handling
+            print(f"[-] Argument Error: {arg_error}")
+            parser.print_usage()
 
-    def validate_file(self, stig_file):
+        except Exception as e:
+            print(f"[-] Interface Error: {e}")
+            parser.print_usage()
+
+    def register_files(self, input_file, output_file):
         # Validate input file and output file
 
-        # Converts the input file into an absolute file path
-        absolute_path = Path(stig_file).resolve()
-        # Ensures the file extension is valid
-        if absolute_path.suffix[1:] in self._conversions.keys():
-            # If the absolute path is a file already then it's the input
-            if absolute_path.is_file():
-                self.input_file_type = absolute_path.suffix[1:]
-                self.input_file = absolute_path.name
-                self.input_file_path = absolute_path
-            # if there is no file, then set the output file
-            else:
-                self.output_file_type = absolute_path.suffix[1:]
-                self.output_file = absolute_path.name
-                self.output_file_path = absolute_path
-        else:
-            print(f"[-] Error: {stig_file} is not a valid file")
+        if input_file == output_file:
+            print(f"[-] Error: Input file: {input_file} and output file: {output_file} cannot be the same")
             sys.exit(1)
 
-    def is_valid_conversion(self, input_type, output_type):
-        # Checks a dictionary of valid conversions
-
         try:
-            # check to see if the input type is a key in the dictionary
-            if input_type in self._conversions.keys():
-                # check to see if the output type is a value in the dictionary
-                if output_type in self._conversions[input_type]:
-                    print("[*] Valid conversion [*]")
-                    self.ready = True
+            # Resolve the absolute path of the input and output files
+            abs_input_file = Path(input_file).resolve()
+            abs_output_file = Path(output_file).resolve()
+
+            # Ensures the input file extension is valid
+            if abs_input_file.suffix[1:] in self._conversions.keys():
+                # Ensure your input file exists
+                if abs_input_file.is_file():
+                    self.input_file_path = abs_input_file
+                    self.input_file_type = abs_input_file.suffix[1:]
+                    self.input_file = abs_input_file.name
+                else:
+                    print(f"[-] Error: Input file: {input_file} does not exist")
+                    sys.exit(1)
             else:
-                print("[-] Invalid conversion [-]")
-                self.ready = False
-        except KeyError as e:
-            print(f"[-] File Error: {e}")
+                print(f"[-] Error: {input_file} is not a valid input file")
+                sys.exit(1)
+
+            self.output_file_path = abs_output_file
+            self.output_file_type = abs_output_file.suffix[1:]
+            self.output_file = abs_output_file.name
+
+            # Check if its a valid conversion
+            if self.output_file_type in self._conversions[self.input_file_type]:
+                print("[*] Valid conversion [*]")
+            else:
+                print(f"[-] Error: {self.output_file_type} is not a valid output file type")
+                sys.exit(1)
+
+        except KeyError as ke:
+            print(f"[-] Key Error: {ke}")
+            sys.exit(1)
+        except FileNotFoundError as fnf:
+            print(f"[-] File Not Found Error: {fnf}")
+            sys.exit(1)
+        except Exception as ge:
+            print(f"[-] General Error: {ge}")
             sys.exit(1)
 
 
@@ -368,10 +363,22 @@ def main():
     """Main function to run the script"""
 
     try:
+        # Current Argument Example:
         # python stig_converter.py -i "../data/stig_checklist.ckl" -o "../data/test_checklist.json"
+
+        # Create the CLI and take arguments
         config = Interface()
+
+        # Pass the CLI arguments to the STIGConverter class
         converter = STIGConverter(config)
+
+        # TODO: Consolidate named conversion scripts into a convert method
+
+        # Execute the conversions:
         converter.convert_ckl_to_json(config.input_file_path, config.output_file_path)
+        converter.convert_ckl_to_csv(config.input_file_path, "../data/test_checklist.csv")
+        converter.convert_csv_to_json("../data/test_checklist.csv", "../data/test_checklist_from_csv.json")
+        converter.convert_json_to_ckl("../data/test_checklist.json", "../data/test_checklist_from_json.ckl")
 
     except Exception as e:
         # TODO: Handle what happens when the output file already exists
