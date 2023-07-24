@@ -316,14 +316,14 @@ class Interface:
     def register_files(self, input_file, output_file):
         # Validate input file and output file
 
-        if input_file == output_file:
-            print(f"[-] Error: Input file: {input_file} and output file: {output_file} cannot be the same")
-            sys.exit(1)
-
         try:
             # Resolve the absolute path of the input and output files
             abs_input_file = Path(input_file).resolve()
             abs_output_file = Path(output_file).resolve()
+
+            if abs_input_file == abs_output_file:
+                print(f"[-] Error: Input file: {input_file} and output file: {output_file} cannot be the same")
+                sys.exit(1)
 
             # Ensures the input file extension is valid
             if abs_input_file.suffix[1:] in self._conversions.keys():
