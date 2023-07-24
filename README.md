@@ -2,7 +2,10 @@
 
 ## Overview and Features
 
-This is a Python script to convert DISA STIG Checklists into various formats.
+stig_converter converts DISA STIG Checklists into various file formats.
+This project is the result of a collection of individual Python scripts used to convert STIGs and is currently being sewn back together into one main script.
+
+Supported file formats:
 
 - convert `.ckl` file to `.csv` file
 
@@ -14,6 +17,8 @@ This is a Python script to convert DISA STIG Checklists into various formats.
 
 - pull down latest STIGs from www.stigviewer.com and convert them to a markdown format
 
+- send STIGs as splunk events _(coming soon)_
+
 ## Usage
 
 1. `git clone https://github.com/iosecurityio/stig_converter.git`
@@ -22,15 +27,11 @@ This is a Python script to convert DISA STIG Checklists into various formats.
 
 1. `pip install -r requirements.txt`
 
-```python
-usage: stig_converter.py [-h] -n NAME -i INPUT -o OUTPUT
-                         [-t TYPE] [-v VERBOSE]
-```
+`python stig_converter.py [-h]  -i INPUT.[.ckl|.json|.csv] -o OUTPUT.[.ckl|.json|.csv]`
 
 ## TODO
 
-- Refactor basically every script (:
-- Finish argparse and CLI
+- Refactor redundant code from scripts in stig_converter.py
 
 ---
 

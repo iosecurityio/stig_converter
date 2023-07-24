@@ -1,6 +1,6 @@
 """
 Name: stig_converter.py
-Converts STIG Checklists to/from various file formats
+Converts STIG Checklists to other various file formats
 Author: Allen Montgomery, IO Security 7/2023
 Version 2.11
 """
@@ -288,7 +288,6 @@ class Interface:
 
         try:
             # Parse arguments from the command line
-            print("Parsing arguments...")
             self.args = parser.parse_args()
 
             # Validate input file and output file
@@ -346,7 +345,7 @@ class Interface:
 
             # Check if its a valid conversion
             if self.output_file_type in self._conversions[self.input_file_type]:
-                print("[*] Valid conversion [*]")
+                self.ready = True
             else:
                 print(f"[-] Error: {self.output_file_type} is not a valid output file type")
                 sys.exit(1)
@@ -366,7 +365,7 @@ def main():
     """Main function to run the script"""
 
     try:
-        # Current Argument Example:
+        # Example command line usage:
         # python stig_converter.py -i "../data/stig_checklist.ckl" -o "../data/test_checklist.json"
 
         # Create the CLI and take arguments
