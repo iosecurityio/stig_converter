@@ -5,11 +5,13 @@ import csv
 from datetime import datetime
 import os
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 
-def convert_ckl_to_csv(ckl, csv_path) -> str:
-    """Converts a CKL file to a CSV file
-    :param ckl: The location of the .ckl file to convert
+def convert_ckl_to_csv(stig_checklist, csv_path) -> str:
+    """
+    Converts a CKL file to a CSV file
+    :param stig_checklist: The location of the STIG Checklist in .ckl file
     :param csv_path: The location to write the .csv file
     :return: The location of the new .csv file
     """
@@ -33,14 +35,14 @@ def convert_ckl_to_csv(ckl, csv_path) -> str:
         "Unique_ID",
     ]
     current_date = datetime.now().strftime('%Y%m%d')
-    filename = os.path.basename(ckl)
+    filename = os.path.basename(stig_checklist)
     new_filename = os.path.splitext(filename)
     new_csv = f"{csv_path}{new_filename[0].replace(' ', '_')}-{current_date}.csv"
 
     with open(new_csv, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        tree = ET.parse(ckl)
+        tree = ET.parse(stig_checklist)
         root = tree.getroot()
 
         # create a dictionary to hold findings
@@ -85,5 +87,5 @@ def convert_ckl_to_csv(ckl, csv_path) -> str:
 if __name__ == "__main__":
     INPUT_FILE = r"data/stig_checklist.ckl"
     OUTPUT_LOC = r"tests/"
-    out = convert_ckl_to_csv(ckl=INPUT_FILE, csv_path=OUTPUT_LOC)
+    out = convert_ckl_to_csv(stig_checklist=INPUT_FILE, csv_path=OUTPUT_LOC)
     print(f"[*] Success! Output: {out}")
