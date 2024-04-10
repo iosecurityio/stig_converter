@@ -142,3 +142,6 @@ dmypy.json
 # Built Visual Studio Code Extensions
 *.vsix
 *.code-workspace
+
+# custom IDEs
+.idea/
