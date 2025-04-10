@@ -1,8 +1,8 @@
 # Application Security and Development STIGs
 
-**Date:** 2022-09-21
+**Date:** 2024-12-06
 
-**Description:** This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via e-mail to the following address: disa.stig_spt@mail.mil.
+**Description:** This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via e-mail to the following address: disa.stig_spt@mail.mil.
 
 ---
 
@@ -44,7 +44,7 @@ Design and configure the application to specify the number of logon sessions tha
 
 **Vulnerability ID:**  V-222387
 
-**Rule ID:**  SV-222387r508029_rule
+**Rule ID:**  SV-222387r960735_rule
 
 ---
 
@@ -88,7 +88,7 @@ Design and configure the application to clear sensitive data from cookies and lo
 
 **Vulnerability ID:**  V-222388
 
-**Rule ID:**  SV-222388r849416_rule
+**Rule ID:**  SV-222388r1043182_rule
 
 ---
 
@@ -98,7 +98,7 @@ Design and configure the application to clear sensitive data from cookies and lo
 
 ### Description
 
-Leaving a userís application session established for an indefinite period of time increases the risk of session hijacking.
+Leaving a user‚Äôs application session established for an indefinite period of time increases the risk of session hijacking.
 
 Session termination terminates an individual user's logical application session after 15 minutes of application inactivity at which time the user must re-authenticate and a new session must be established if the user desires to continue work in the application.
 
@@ -122,7 +122,7 @@ Design and configure the application to terminate the non-privileged users sessi
 
 **Vulnerability ID:**  V-222389
 
-**Rule ID:**  SV-222389r849417_rule
+**Rule ID:**  SV-222389r1043182_rule
 
 ---
 
@@ -156,7 +156,7 @@ Design and configure the application to terminate the admin users session after 
 
 **Vulnerability ID:**  V-222390
 
-**Rule ID:**  SV-222390r849418_rule
+**Rule ID:**  SV-222390r1043182_rule
 
 ---
 
@@ -190,7 +190,7 @@ Design and configure the application to provide all users with the capability to
 
 **Vulnerability ID:**  V-222391
 
-**Rule ID:**  SV-222391r849419_rule
+**Rule ID:**  SV-222391r961224_rule
 
 ---
 
@@ -222,7 +222,7 @@ Design and configure the application to provide an explicit logoff message to us
 
 **Vulnerability ID:**  V-222392
 
-**Rule ID:**  SV-222392r849420_rule
+**Rule ID:**  SV-222392r961227_rule
 
 ---
 
@@ -266,7 +266,7 @@ Design and configure the application to assign data marking and ensure the marki
 
 **Vulnerability ID:**  V-222393
 
-**Rule ID:**  SV-222393r849421_rule
+**Rule ID:**  SV-222393r961269_rule
 
 ---
 
@@ -308,7 +308,7 @@ Design and configure the application to retain the data marking when processing 
 
 **Vulnerability ID:**  V-222394
 
-**Rule ID:**  SV-222394r849422_rule
+**Rule ID:**  SV-222394r961272_rule
 
 ---
 
@@ -350,7 +350,7 @@ Design and configure the application to retain the data marking when transmittin
 
 **Vulnerability ID:**  V-222395
 
-**Rule ID:**  SV-222395r849423_rule
+**Rule ID:**  SV-222395r961275_rule
 
 ---
 
@@ -388,7 +388,7 @@ Design and configure applications to use TLS encryption to protect the confident
 
 **Vulnerability ID:**  V-222396
 
-**Rule ID:**  SV-222396r508029_rule
+**Rule ID:**  SV-222396r960759_rule
 
 ---
 
@@ -426,7 +426,7 @@ Design and configure applications to use TLS encryption to protect the integrity
 
 **Vulnerability ID:**  V-222397
 
-**Rule ID:**  SV-222397r508029_rule
+**Rule ID:**  SV-222397r960762_rule
 
 ---
 
@@ -470,7 +470,7 @@ Design and configure the application to sign the following message elements for 
 
 **Vulnerability ID:**  V-222398
 
-**Rule ID:**  SV-222398r508029_rule
+**Rule ID:**  SV-222398r960762_rule
 
 ---
 
@@ -502,7 +502,7 @@ Design and configure applications using WS-Security messages to use time stamps 
 
 **Vulnerability ID:**  V-222399
 
-**Rule ID:**  SV-222399r508029_rule
+**Rule ID:**  SV-222399r960759_rule
 
 ---
 
@@ -536,7 +536,7 @@ Design and configure the application to use validity periods, ensure validity pe
 
 **Vulnerability ID:**  V-222400
 
-**Rule ID:**  SV-222400r508029_rule
+**Rule ID:**  SV-222400r960759_rule
 
 ---
 
@@ -546,7 +546,7 @@ Design and configure the application to use validity periods, ensure validity pe
 
 ### Description
 
-SAML is a standard for exchanging authentication and authorization data between security domains. SAML uses security tokens containing assertions to pass information about a principal (usually an end user) between a SAML authority, (identity provider), and a SAML consumer, (service provider). SAML assertions are usually made about a subject, (user) represented by the <Subject> element. SAML assertion identifiers should be unique across a system implementation. Duplicate SAML assertion identifiers could lead to unauthorized access to a web service.
+
 
 ### Check Text
 
@@ -570,7 +570,7 @@ Design and configure each SAML assertion authority to use unique assertion ident
 
 **Vulnerability ID:**  V-222401
 
-**Rule ID:**  SV-222401r508029_rule
+**Rule ID:**  SV-222401r960759_rule
 
 ---
 
@@ -580,9 +580,7 @@ Design and configure each SAML assertion authority to use unique assertion ident
 
 ### Description
 
-SAML is a standard for exchanging authentication and authorization data between security domains.  SAML uses security tokens containing assertions to pass information about a principal (usually an end user) between a SAML authority, (identity provider), and a SAML consumer, (service provider).  SAML assertions are usually made about a subject, (user) represented by the <Subject> element.   
 
-The confidentially of the data in a message as the message is passed through an intermediary web service may be required to be restricted by the intermediary web service. The intermediary web service may leak or distribute the data contained in a message if not encrypted or protected.
 
 ### Check Text
 
@@ -606,7 +604,7 @@ Encrypt assertions or use equivalent confidentiality when sensitive assertion da
 
 **Vulnerability ID:**  V-222402
 
-**Rule ID:**  SV-222402r508029_rule
+**Rule ID:**  SV-222402r960759_rule
 
 ---
 
@@ -616,9 +614,7 @@ Encrypt assertions or use equivalent confidentiality when sensitive assertion da
 
 ### Description
 
-SAML is a standard for exchanging authentication and authorization data between security domains.  SAML uses security tokens containing assertions to pass information about a principal (usually an end user) between a SAML authority, (identity provider), and a SAML consumer, (service provider).  SAML assertions are usually made about a subject, (user) represented by the <Subject> element.
 
-When a SAML assertion is used with a <SubjectConfirmation> element, a begin and end time for the <SubjectConfirmation> should be set to prevent reuse of the message at a later time. Not setting a specific time period for the <SubjectConfirmation>, may grant immediate access to an attacker and result in an immediate loss of confidentiality.
 
 ### Check Text
 
@@ -642,7 +638,7 @@ Design and configure the application to use the <NotOnOrAfter> condition when us
 
 **Vulnerability ID:**  V-222403
 
-**Rule ID:**  SV-222403r508029_rule
+**Rule ID:**  SV-222403r960759_rule
 
 ---
 
@@ -652,9 +648,7 @@ Design and configure the application to use the <NotOnOrAfter> condition when us
 
 ### Description
 
-SAML is a standard for exchanging authentication and authorization data between security domains.  SAML uses security tokens containing assertions to pass information about a principal (usually an end user) between a SAML authority, (identity provider), and a SAML consumer, (service provider).  SAML assertions are usually made about a subject, (user) represented by the <Subject> element.
 
-When a SAML assertion is used with a <Conditions> element, a begin and end time for the <Conditions> element should be set in order to specify a timeframe in which the assertion is valid. Not setting a specific time period for the <Conditions> element, the possibility exists of granting immediate access or elevated privileges to an attacker which results in an immediate loss of confidentiality.
 
 ### Check Text
 
@@ -678,7 +672,7 @@ Design and configure the application to implement the use of the <NotBefore> and
 
 **Vulnerability ID:**  V-222404
 
-**Rule ID:**  SV-222404r508029_rule
+**Rule ID:**  SV-222404r960759_rule
 
 ---
 
@@ -688,7 +682,7 @@ Design and configure the application to implement the use of the <NotBefore> and
 
 ### Description
 
-Multiple <OneTimeUse> elements used in a SAML assertion can lead to elevation of privileges, if the application does not process SAML assertions correctly.
+
 
 ### Check Text
 
@@ -712,7 +706,7 @@ When using OneTimeUse elements in a SAML assertion only allow one, OneTimeUse el
 
 **Vulnerability ID:**  V-222405
 
-**Rule ID:**  SV-222405r508029_rule
+**Rule ID:**  SV-222405r960759_rule
 
 ---
 
@@ -746,7 +740,7 @@ Encrypt messages when the SessionIndex is tied to privacy data.
 
 **Vulnerability ID:**  V-222406
 
-**Rule ID:**  SV-222406r508029_rule
+**Rule ID:**  SV-222406r960759_rule
 
 ---
 
@@ -794,7 +788,7 @@ Use automated processes and mechanisms for account management functions.
 
 **Vulnerability ID:**  V-222407
 
-**Rule ID:**  SV-222407r508029_rule
+**Rule ID:**  SV-222407r1043176_rule
 
 ---
 
@@ -810,7 +804,7 @@ If shared/group account credentials are not terminated when individuals leave th
 
 Review the application documentation and determine if there is a requirement for shared or group accounts.
 
-If there is no official requirement for shared or group application accounts, this requirement is not applicable.
+If there is no official requirement for shared or group application accounts, this requirement is Not Applicable.
 
 Interview the application representative and identify shared/group accounts.
 
@@ -820,7 +814,7 @@ Validate there is a procedure for deleting either member accounts or the entire 
 
 If there is no process for handling group account credentials, this is a finding.
 
-**Check ID:**  C-24078r493132_chk
+**Check ID:**  C-24078r985901_chk
 
 ### Fix Text 
 
@@ -830,7 +824,7 @@ Create a procedure for deleting either member accounts or the entire group accou
 
 **Vulnerability ID:**  V-222408
 
-**Rule ID:**  SV-222408r849424_rule
+**Rule ID:**  SV-222408r1015683_rule
 
 ---
 
@@ -872,7 +866,7 @@ Configure temporary accounts to be automatically removed or disabled after 72 ho
 
 **Vulnerability ID:**  V-222409
 
-**Rule ID:**  SV-222409r508029_rule
+**Rule ID:**  SV-222409r960771_rule
 
 ---
 
@@ -912,7 +906,7 @@ Identify accounts that are created in an emergency situation and ensure procedur
 
 **Vulnerability ID:**  V-222410
 
-**Rule ID:**  SV-222410r508029_rule
+**Rule ID:**  SV-222410r961863_rule
 
 ---
 
@@ -954,7 +948,7 @@ Design and configure the application to expire user accounts after 35 days of in
 
 **Vulnerability ID:**  V-222411
 
-**Rule ID:**  SV-222411r508029_rule
+**Rule ID:**  SV-222411r960774_rule
 
 ---
 
@@ -988,7 +982,7 @@ Design the application so unessential user accounts are not created during insta
 
 **Vulnerability ID:**  V-222412
 
-**Rule ID:**  SV-222412r508029_rule
+**Rule ID:**  SV-222412r960774_rule
 
 ---
 
@@ -1030,7 +1024,7 @@ At a minimum, ensure account name, date and time of the event are recorded.
 
 **Vulnerability ID:**  V-222413
 
-**Rule ID:**  SV-222413r508029_rule
+**Rule ID:**  SV-222413r960777_rule
 
 ---
 
@@ -1072,7 +1066,7 @@ At a minimum, ensure account name, date and time of the event are recorded.
 
 **Vulnerability ID:**  V-222414
 
-**Rule ID:**  SV-222414r508029_rule
+**Rule ID:**  SV-222414r960780_rule
 
 ---
 
@@ -1114,7 +1108,7 @@ At a minimum, ensure account name, date and time of the event are recorded.
 
 **Vulnerability ID:**  V-222415
 
-**Rule ID:**  SV-222415r508029_rule
+**Rule ID:**  SV-222415r960783_rule
 
 ---
 
@@ -1156,19 +1150,19 @@ At a minimum, ensure account name, date and time of the event are recorded.
 
 **Vulnerability ID:**  V-222416
 
-**Rule ID:**  SV-222416r508029_rule
+**Rule ID:**  SV-222416r960786_rule
 
 ---
 
-## The application must notify System Administrators and Information System Security Officers when accounts are created.
+## The application must notify system administrators (SAs) and information system security officers (ISSOs) when accounts are created.
 
 <span style="color:#b3b31a;font-size:150%;">Low Severity</span>
 
 ### Description
 
-Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and Information System Security Officers (ISSO) exists. Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.
+Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and ISSOs such accounts exist. This type of process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.
 
-To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to off-load those access control functions and focus on core application features and functionality.
+To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to offload those access control functions and focus on core application features and functionality.
 
 ### Check Text
 
@@ -1176,35 +1170,35 @@ Review the application and system documentation.
 
 Interview the application administrator and determine if the application is configured to utilize a centralized user management system like Active Directory for user management or if the application manages user accounts within the application.
 
-If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is not applicable.
+If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is Not Applicable.
 
-Ensure the application is configured to notify system administrators when new accounts are created by identifying system administrators who will be notified when new accounts are created, creating a test account and checking with system administrator to verify notification was received.
+Ensure the application is configured to notify SAs when new accounts are created by identifying SAs who will be notified, creating a test account, and checking with SAs to verify the notification was received.
 
-If system administrators and ISSOs are not notified when accounts are created, this is a finding.
+If SAs and ISSOs are not notified when accounts are created, this is a finding.
 
-**Check ID:**  C-24087r493159_chk
+**Check ID:**  C-24087r985903_chk
 
 ### Fix Text 
 
-Configure the application to notify the system administrator and the ISSO when application accounts are created.
+Configure the application to notify the SA and the ISSO when application accounts are created.
 
-**Fix ID:**  F-24076r493160_fix
+**Fix ID:**  F-24076r985904_fix
 
 **Vulnerability ID:**  V-222417
 
-**Rule ID:**  SV-222417r508029_rule
+**Rule ID:**  SV-222417r1015684_rule
 
 ---
 
-## The application must notify System Administrators and Information System Security Officers when accounts are modified.
+## The application must notify system administrators (SAs) and information system security officers (ISSOs) when accounts are modified.
 
 <span style="color:#b3b31a;font-size:150%;">Low Severity</span>
 
 ### Description
 
-Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and Information System Security Officers (ISSO) exists. Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.
+Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the modification of application user accounts and notifies administrators and ISSOs such accounts were modified. This type of process greatly reduces the risk that accounts will be surreptitiously modified and provides logging that can be used for forensic purposes.
 
-To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to off-load those access control functions and focus on core application features and functionality.
+To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to offload those access control functions and focus on core application features and functionality.
 
 ### Check Text
 
@@ -1212,37 +1206,37 @@ Review the application and system documentation.
 
 Interview the application administrator and determine if the application is configured to utilize a centralized user management system like Active Directory for user management or if the application manages user accounts within the application.
 
-If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is not applicable.
+If the application is configured to use an enterprise-based application user management capability that is STIG compliant, this requirement is Not Applicable.
 
-Ensure the application is configured to notify system administrators when accounts are modified by identifying system administrators who will be notified when accounts are modified.
+Ensure the application is configured to notify SAs when accounts are modified by identifying the SAs who will be notified when accounts are modified.
 
-Modify a test account and check with a system administrator to verify notification was received.
+Modify a test account and check with a SA to verify the notification was received.
 
-If system administrators and ISSOs are not notified when accounts are modified, this is a finding.
+If SAs and ISSOs are not notified when accounts are modified, this is a finding.
 
-**Check ID:**  C-24088r493162_chk
+**Check ID:**  C-24088r985906_chk
 
 ### Fix Text 
 
-Configure the application to notify the system administrator and the ISSO when application accounts are modified.
+Configure the application to notify the SA and the ISSO when application accounts are modified.
 
-**Fix ID:**  F-24077r493163_fix
+**Fix ID:**  F-24077r985907_fix
 
 **Vulnerability ID:**  V-222418
 
-**Rule ID:**  SV-222418r508029_rule
+**Rule ID:**  SV-222418r1015685_rule
 
 ---
 
-## The application must notify System Administrators and Information System Security Officers of account disabling actions.
+## The application must notify system administrators (SAs) and information system security officers (ISSOs) of account disabling actions.
 
 <span style="color:#b3b31a;font-size:150%;">Low Severity</span>
 
 ### Description
 
-Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and Information System Security Officers (ISSO) exists. Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes. 
+Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and ISSOs such accounts exist. This type of process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.
 
-To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to off-load those access control functions and focus on core application features and functionality.
+To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to offload those access control functions and focus on core application features and functionality.
 
 ### Check Text
 
@@ -1250,37 +1244,37 @@ Review the application and system documentation.
 
 Interview the application administrator and determine if the application is configured to utilize a centralized user management system like Active Directory for user management or if the application manages user accounts within the application.
 
-If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is not applicable.
+If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is Not Applicable.
 
-Ensure application is configured to notify system administrators when accounts are disabled by identifying system administrators who will be notified when accounts are disabled.
+Ensure the application is configured to notify SAs when accounts are disabled by identifying the SAs who will be notified when accounts are disabled.
 
-Disable a test account and check with a system administrator to verify notification was received.
+Disable a test account and check with a SA to verify the notification was received.
 
-If system administrators and ISSOs are not notified when accounts are disabled, this is a finding.
+If SAs and ISSOs are not notified when accounts are disabled, this is a finding.
 
-**Check ID:**  C-24089r493165_chk
+**Check ID:**  C-24089r985909_chk
 
 ### Fix Text 
 
-Configure the application to notify the system administrator and the ISSO when application accounts are disabled.
+Configure the application to notify the SA and the ISSO when application accounts are disabled.
 
-**Fix ID:**  F-24078r493166_fix
+**Fix ID:**  F-24078r985910_fix
 
 **Vulnerability ID:**  V-222419
 
-**Rule ID:**  SV-222419r508029_rule
+**Rule ID:**  SV-222419r1015686_rule
 
 ---
 
-## The application must notify System Administrators and Information System Security Officers of account removal actions.
+## The application must notify system administrators (SAs) and information system security officers (ISSOs) of account removal actions.
 
 <span style="color:#b3b31a;font-size:150%;">Low Severity</span>
 
 ### Description
 
-Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply create a new account. Notification of account creation is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the creation of application user accounts and notifies administrators and Information System Security Officers (ISSO) exists. Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.
+Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to remove an account. Notification of account removal is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the removal of application user accounts and notifies administrators and ISSOs such accounts no longer exist. This type of process greatly reduces the risk that accounts will be surreptitiously removed and provides logging that can be used for forensic purposes.
 
-To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to off-load those access control functions and focus on core application features and functionality.
+To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to offload those access control functions and focus on core application features and functionality.
 
 ### Check Text
 
@@ -1288,25 +1282,25 @@ Review the application and system documentation.
 
 Interview the application administrator and determine if the application is configured to utilize a centralized user management system like Active Directory for user management or if the application manages user accounts within the application.
 
-If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is not applicable.
+If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is Not Applicable.
 
-Ensure application is configured to notify system administrators when accounts are removed by identifying system administrators who will be notified when accounts are removed.
+Ensure the application is configured to notify SAs when accounts are removed by identifying the SAs who will be notified when accounts are removed.
 
-Remove a test account and check with a system administrator to verify notification was received.
+Remove a test account and check with a SA to verify the notification was received.
 
-If system administrators and ISSOs are not notified when accounts are removed, this is a finding.
+If SAs and ISSOs are not notified when accounts are removed, this is a finding.
 
-**Check ID:**  C-24090r493168_chk
+**Check ID:**  C-24090r985912_chk
 
 ### Fix Text 
 
-Configure the application to notify the system administrator and the ISSO when application accounts are removed.
+Configure the application to notify the SA and the ISSO when application accounts are removed.
 
-**Fix ID:**  F-24079r493169_fix
+**Fix ID:**  F-24079r985913_fix
 
 **Vulnerability ID:**  V-222420
 
-**Rule ID:**  SV-222420r508029_rule
+**Rule ID:**  SV-222420r1015687_rule
 
 ---
 
@@ -1324,6 +1318,10 @@ Application developers are encouraged to integrate their applications with enter
 
 Examine the application documentation or interview the application representative to identify how the application users are managed.
 
+Interview the application administrator and determine if the application is configured to utilize a centralized user management system such as Active Directory for user management or if the application manages user accounts within the application.
+
+If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is not applicable.
+
 Identify the location of the audit logs and review the end of the logs.
 
 Access the user account management functionality and enable a test user account.
@@ -1332,7 +1330,7 @@ Examine the log file again and determine if the account enable event was logged.
 
 If the account enabling event information was not logged, this is a finding.
 
-**Check ID:**  C-24091r493171_chk
+**Check ID:**  C-24091r918114_chk
 
 ### Fix Text 
 
@@ -1344,19 +1342,19 @@ At a minimum, ensure account name, date and time of the event are recorded.
 
 **Vulnerability ID:**  V-222421
 
-**Rule ID:**  SV-222421r849425_rule
+**Rule ID:**  SV-222421r961290_rule
 
 ---
 
-## The application must notify System Administrators and Information System Security Officers of account enabling actions.
+## The application must notify system administrators (SAs) and information system security officers (ISSOs) of account enabling actions.
 
 <span style="color:#b3b31a;font-size:150%;">Low Severity</span>
 
 ### Description
 
-Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to simply enable an existing account that has been previously disabled. Notification when account enabling actions occur is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the enabling of application user accounts and notifies administrators and Information System Security Officers (ISSO) exists. Such a process greatly reduces the risk that accounts will be surreptitiously created and provides logging that can be used for forensic purposes.
+Once an attacker establishes access to a system, the attacker often attempts to create a persistent method of re-establishing access. One way to accomplish this is for the attacker to enable an account. Notification of account enabling is one method for mitigating this risk. A comprehensive account management process will ensure an audit trail which documents the enabling of application user accounts and notifies administrators and ISSOs such accounts exist. This type of process greatly reduces the risk that accounts will be surreptitiously enabled and provides logging that can be used for forensic purposes.
 
-To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to off-load those access control functions and focus on core application features and functionality.
+To address access requirements, many application developers choose to integrate their applications with enterprise-level authentication/access/auditing mechanisms that meet or exceed access control policy requirements. Such integration allows the application developer to offload those access control functions and focus on core application features and functionality.
 
 ### Check Text
 
@@ -1364,25 +1362,25 @@ Review the application and system documentation.
 
 Interview application administrator and determine if the application is configured to utilize a centralized user management system like Active Directory for user management or if the application manages user accounts within the application.
 
-If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is not applicable.
+If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is Not Applicable.
 
-Ensure application is configured to notify system administrators when accounts are enabled by identifying system administrators who will be notified when accounts are enabled.
+Ensure the application is configured to notify SAs when accounts are enabled by identifying the SAs who will be notified when accounts are enabled.
 
-Disable and then enable a test account and check with system administrator to verify notification was received to indicate the account was enabled.
+Disable and then enable a test account and check with the SA to verify the notification was received to indicate the account was enabled.
 
-If system administrators and ISSOs are not notified when accounts are enabled, this is a finding.
+If SAs and ISSOs are not notified when accounts are enabled, this is a finding.
 
-**Check ID:**  C-24092r493174_chk
+**Check ID:**  C-24092r985915_chk
 
 ### Fix Text 
 
-Configure the application to notify the system administrator and the ISSO when application accounts are enabled.
+Configure the application to notify the SA and the ISSO when application accounts are enabled.
 
-**Fix ID:**  F-24081r493175_fix
+**Fix ID:**  F-24081r985916_fix
 
 **Vulnerability ID:**  V-222422
 
-**Rule ID:**  SV-222422r849426_rule
+**Rule ID:**  SV-222422r1015688_rule
 
 ---
 
@@ -1418,7 +1416,7 @@ Identify and document the application data elements and the data protection requ
 
 **Vulnerability ID:**  V-222423
 
-**Rule ID:**  SV-222423r849427_rule
+**Rule ID:**  SV-222423r961302_rule
 
 ---
 
@@ -1468,7 +1466,7 @@ Utilize and implement data mining protections when requirements specify it.
 
 **Vulnerability ID:**  V-222424
 
-**Rule ID:**  SV-222424r849428_rule
+**Rule ID:**  SV-222424r961305_rule
 
 ---
 
@@ -1528,7 +1526,7 @@ Design or configure the application to enforce access to application resources.
 
 **Vulnerability ID:**  V-222425
 
-**Rule ID:**  SV-222425r508029_rule
+**Rule ID:**  SV-222425r960792_rule
 
 ---
 
@@ -1576,7 +1574,7 @@ Design and configure the application to enforce discretionary access control pol
 
 **Vulnerability ID:**  V-222426
 
-**Rule ID:**  SV-222426r849429_rule
+**Rule ID:**  SV-222426r961317_rule
 
 ---
 
@@ -1631,7 +1629,7 @@ Configure the application to enforce data flow control in accordance with data f
 
 **Vulnerability ID:**  V-222427
 
-**Rule ID:**  SV-222427r508029_rule
+**Rule ID:**  SV-222427r960801_rule
 
 ---
 
@@ -1688,7 +1686,7 @@ Configure the application to enforce data flow control in accordance with data f
 
 **Vulnerability ID:**  V-222428
 
-**Rule ID:**  SV-222428r508029_rule
+**Rule ID:**  SV-222428r960804_rule
 
 ---
 
@@ -1704,7 +1702,7 @@ Privileged functions include, for example, establishing accounts, performing sys
 
 ### Check Text
 
-Identify the application user account(s) that the application uses to run. These accounts include the application processes (defined by Control Panel Services (Windows) or ps ñef (UNIX)) or for an n-tier application, the account that connects from one service (such as a web server) to another (such as a database server).
+Identify the application user account(s) that the application uses to run. These accounts include the application processes (defined by Control Panel Services (Windows) or ps ‚Äìef (UNIX)) or for an n-tier application, the account that connects from one service (such as a web server) to another (such as a database server).
 
 Determine the OS user groups in which each account is a member.
 
@@ -1736,7 +1734,7 @@ Modify the application to limit access and prevent the disabling or circumventio
 
 **Vulnerability ID:**  V-222429
 
-**Rule ID:**  SV-222429r849430_rule
+**Rule ID:**  SV-222429r961353_rule
 
 ---
 
@@ -1776,7 +1774,7 @@ Configure the application accounts with minimalist privileges. Do not allow the 
 
 **Vulnerability ID:**  V-222430
 
-**Rule ID:**  SV-222430r849431_rule
+**Rule ID:**  SV-222430r961359_rule
 
 ---
 
@@ -1814,7 +1812,7 @@ Configure the application to write log entries when privileged functions are exe
 
 **Vulnerability ID:**  V-222431
 
-**Rule ID:**  SV-222431r849432_rule
+**Rule ID:**  SV-222431r961362_rule
 
 ---
 
@@ -1856,7 +1854,7 @@ Configure the application to enforce an account lock after 3 failed logon attemp
 
 **Vulnerability ID:**  V-222432
 
-**Rule ID:**  SV-222432r508029_rule
+**Rule ID:**  SV-222432r960840_rule
 
 ---
 
@@ -1900,7 +1898,7 @@ Use that process when unlocking application user accounts.
 
 **Vulnerability ID:**  V-222433
 
-**Rule ID:**  SV-222433r849433_rule
+**Rule ID:**  SV-222433r961368_rule
 
 ---
 
@@ -1910,29 +1908,7 @@ Use that process when unlocking application user accounts.
 
 ### Description
 
-Display of the DoD-approved use notification before granting access to the application ensures privacy and security notification verbiage used is consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance.
 
-System use notifications are required only for access via logon interfaces with human users and are not required when such human interfaces do not exist.
-
-The banner must be formatted in accordance with DTM-08-060. Use the following verbiage for applications that can accommodate banners of 1300 characters:
-
-"You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
-
-By using this IS (which includes any device attached to this IS), you consent to the following conditions:
-
--The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
-
--At any time, the USG may inspect and seize data stored on this IS.
-
--Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
-
--This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
-
--Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details."
-
-Use the following verbiage for operating systems that have severe limitations on the number of characters that can be displayed in the banner:
-
-"I've read & consent to terms in IS user agreem't."
 
 ### Check Text
 
@@ -1956,7 +1932,7 @@ Configure the application to present the standard DoD-approved banner prior to g
 
 **Vulnerability ID:**  V-222434
 
-**Rule ID:**  SV-222434r508029_rule
+**Rule ID:**  SV-222434r960843_rule
 
 ---
 
@@ -1990,7 +1966,7 @@ Configure the application to retain the standard DoD-approved banner until the u
 
 **Vulnerability ID:**  V-222435
 
-**Rule ID:**  SV-222435r508029_rule
+**Rule ID:**  SV-222435r960846_rule
 
 ---
 
@@ -2000,29 +1976,7 @@ Configure the application to retain the standard DoD-approved banner until the u
 
 ### Description
 
-Display of a standardized and approved use notification before granting access to the publicly accessible application ensures privacy and security notification verbiage used is consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance.
 
-System use notifications are required only for access via logon interfaces with human users and are not required when such human interfaces do not exist.
-
-The banner must be formatted in accordance with DTM-08-060. Use the following verbiage for desktops, laptops, and other devices accommodating banners of 1300 characters:
-
-"You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
-
-By using this IS (which includes any device attached to this IS), you consent to the following conditions:
-
--The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
-
--At any time, the USG may inspect and seize data stored on this IS.
-
--Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
-
--This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
-
--Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details."
-
-Use the following verbiage for operating systems that have severe limitations on the number of characters that can be displayed in the banner:
-
-"I've read & consent to terms in IS user agreem't."
 
 ### Check Text
 
@@ -2042,7 +1996,7 @@ Configure the application to present the standard DoD-approved banner prior to g
 
 **Vulnerability ID:**  V-222436
 
-**Rule ID:**  SV-222436r508029_rule
+**Rule ID:**  SV-222436r960849_rule
 
 ---
 
@@ -2084,7 +2038,7 @@ Design and configure the application to display the date and time when the user 
 
 **Vulnerability ID:**  V-222437
 
-**Rule ID:**  SV-222437r508029_rule
+**Rule ID:**  SV-222437r987626_rule
 
 ---
 
@@ -2126,7 +2080,7 @@ Configure the application to provide users with a non-repudiation function in th
 
 **Vulnerability ID:**  V-222438
 
-**Rule ID:**  SV-222438r508029_rule
+**Rule ID:**  SV-222438r960864_rule
 
 ---
 
@@ -2168,7 +2122,7 @@ Configure the application to correlate time stamps when aggregating audit record
 
 **Vulnerability ID:**  V-222439
 
-**Rule ID:**  SV-222439r561233_rule
+**Rule ID:**  SV-222439r960873_rule
 
 ---
 
@@ -2212,7 +2166,7 @@ Enable session ID creation event auditing.
 
 **Vulnerability ID:**  V-222441
 
-**Rule ID:**  SV-222441r508029_rule
+**Rule ID:**  SV-222441r960879_rule
 
 ---
 
@@ -2250,7 +2204,7 @@ Enable session ID destruction event auditing.
 
 **Vulnerability ID:**  V-222442
 
-**Rule ID:**  SV-222442r508029_rule
+**Rule ID:**  SV-222442r960879_rule
 
 ---
 
@@ -2302,7 +2256,7 @@ Design or reconfigure the application to log session renewal events on those app
 
 **Vulnerability ID:**  V-222443
 
-**Rule ID:**  SV-222443r508029_rule
+**Rule ID:**  SV-222443r960879_rule
 
 ---
 
@@ -2344,7 +2298,7 @@ Design or reconfigure the application to not write sensitive data to the logs.
 
 **Vulnerability ID:**  V-222444
 
-**Rule ID:**  SV-222444r508029_rule
+**Rule ID:**  SV-222444r960879_rule
 
 ---
 
@@ -2398,7 +2352,7 @@ Configure the application to record session timeout events in the logs.
 
 **Vulnerability ID:**  V-222445
 
-**Rule ID:**  SV-222445r508029_rule
+**Rule ID:**  SV-222445r960879_rule
 
 ---
 
@@ -2426,7 +2380,7 @@ Configure the application to record the time the event occurred when recording t
 
 **Vulnerability ID:**  V-222446
 
-**Rule ID:**  SV-222446r508029_rule
+**Rule ID:**  SV-222446r960879_rule
 
 ---
 
@@ -2480,7 +2434,7 @@ Configure the web application and/or the web server to log HTTP headers.
 
 **Vulnerability ID:**  V-222447
 
-**Rule ID:**  SV-222447r508029_rule
+**Rule ID:**  SV-222447r960879_rule
 
 ---
 
@@ -2516,7 +2470,7 @@ Configure the application or application server to log all connecting IP address
 
 **Vulnerability ID:**  V-222448
 
-**Rule ID:**  SV-222448r508029_rule
+**Rule ID:**  SV-222448r960879_rule
 
 ---
 
@@ -2526,7 +2480,7 @@ Configure the application or application server to log all connecting IP address
 
 ### Description
 
-When users conduct activity within an application, that userís identity must be recorded in the audit log. Failing to record the identity of the user responsible for the activity within the application is detrimental to forensic analysis.
+When users conduct activity within an application, that user‚Äôs identity must be recorded in the audit log. Failing to record the identity of the user responsible for the activity within the application is detrimental to forensic analysis.
 
 ### Check Text
 
@@ -2548,7 +2502,7 @@ Configure the application to record the user ID of the user responsible for the 
 
 **Vulnerability ID:**  V-222449
 
-**Rule ID:**  SV-222449r508029_rule
+**Rule ID:**  SV-222449r960879_rule
 
 ---
 
@@ -2576,7 +2530,7 @@ Using an account with the appropriate privileges, grant the user a privilege the
 
 Attempt to grant privileges in a manner that will cause a failure event such as granting privileges to a non-existent user or attempting to grant privileges with an account that doesn't have the rights to do so.
 
-Review the application logs and ensure both events were captured in the logs. The event data should include the userís identity and the privilege that was granted and the privilege that failed to be granted.
+Review the application logs and ensure both events were captured in the logs. The event data should include the user‚Äôs identity and the privilege that was granted and the privilege that failed to be granted.
 
 If the application does not log when successful and unsuccessful attempts to grant privilege occur, this is a finding.
 
@@ -2590,7 +2544,7 @@ Configure the application to audit successful and unsuccessful attempts to grant
 
 **Vulnerability ID:**  V-222450
 
-**Rule ID:**  SV-222450r508029_rule
+**Rule ID:**  SV-222450r960885_rule
 
 ---
 
@@ -2631,7 +2585,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222451
 
-**Rule ID:**  SV-222451r508029_rule
+**Rule ID:**  SV-222451r961791_rule
 
 ---
 
@@ -2671,7 +2625,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222452
 
-**Rule ID:**  SV-222452r508029_rule
+**Rule ID:**  SV-222452r961794_rule
 
 ---
 
@@ -2717,7 +2671,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222453
 
-**Rule ID:**  SV-222453r508029_rule
+**Rule ID:**  SV-222453r961797_rule
 
 ---
 
@@ -2741,9 +2695,9 @@ Access and open the auditing logs.
 
 Using an admin account, modify the privileges of a privileged user.
 
-Attempt to modify privileges in a manner that will cause a failure event such as attempting to modify a userís privileges with an account that doesn't have the rights to do so.
+Attempt to modify privileges in a manner that will cause a failure event such as attempting to modify a user‚Äôs privileges with an account that doesn't have the rights to do so.
 
-Review the application logs and ensure both events were captured in the logs. The event data should include the userís identity and the privilege that was granted and the privilege that failed to be granted.
+Review the application logs and ensure both events were captured in the logs. The event data should include the user‚Äôs identity and the privilege that was granted and the privilege that failed to be granted.
 
 If the application does not log when successful and unsuccessful attempts to modify privileges occur, this is a finding.
 
@@ -2757,7 +2711,7 @@ Configure the application to audit successful and unsuccessful attempts to modif
 
 **Vulnerability ID:**  V-222454
 
-**Rule ID:**  SV-222454r508029_rule
+**Rule ID:**  SV-222454r961800_rule
 
 ---
 
@@ -2798,7 +2752,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222455
 
-**Rule ID:**  SV-222455r508029_rule
+**Rule ID:**  SV-222455r961803_rule
 
 ---
 
@@ -2842,7 +2796,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222456
 
-**Rule ID:**  SV-222456r508029_rule
+**Rule ID:**  SV-222456r961806_rule
 
 ---
 
@@ -2888,7 +2842,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222457
 
-**Rule ID:**  SV-222457r508029_rule
+**Rule ID:**  SV-222457r961809_rule
 
 ---
 
@@ -2912,9 +2866,9 @@ Access and open the auditing logs.
 
 Using an admin account, delete some or all of the privileges of a privileged user.
 
-Attempt to delete privileges in a manner that will cause a failure event such as attempting to delete a userís privileges with an account that doesn't have the rights to do so.
+Attempt to delete privileges in a manner that will cause a failure event such as attempting to delete a user‚Äôs privileges with an account that doesn't have the rights to do so.
 
-Review the application logs and ensure both events were captured in the logs. The event data should include the userís identity and the privilege that was granted and the privilege that failed to be granted.
+Review the application logs and ensure both events were captured in the logs. The event data should include the user‚Äôs identity and the privilege that was granted and the privilege that failed to be granted.
 
 If the application does not log when successful and unsuccessful attempts to delete privileges occur, this is a finding.
 
@@ -2928,7 +2882,7 @@ Configure the application to audit successful and unsuccessful attempts to delet
 
 **Vulnerability ID:**  V-222458
 
-**Rule ID:**  SV-222458r508029_rule
+**Rule ID:**  SV-222458r961812_rule
 
 ---
 
@@ -2972,7 +2926,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222459
 
-**Rule ID:**  SV-222459r508029_rule
+**Rule ID:**  SV-222459r961815_rule
 
 ---
 
@@ -3012,7 +2966,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222460
 
-**Rule ID:**  SV-222460r508029_rule
+**Rule ID:**  SV-222460r961818_rule
 
 ---
 
@@ -3058,7 +3012,7 @@ Configure the application to create an audit record for both successful and unsu
 
 **Vulnerability ID:**  V-222461
 
-**Rule ID:**  SV-222461r508029_rule
+**Rule ID:**  SV-222461r961821_rule
 
 ---
 
@@ -3078,7 +3032,7 @@ Knowing when a user successfully or unsuccessfully logged on to the application 
 
 Review and monitor the application logs.
 
-Authenticate to the application and observe if the log includes an entry to indicate the userís authentication was successful.
+Authenticate to the application and observe if the log includes an entry to indicate the user‚Äôs authentication was successful.
 
 Terminate the user session by logging out.
 
@@ -3096,7 +3050,7 @@ Configure the application or application server to write a log entry when succes
 
 **Vulnerability ID:**  V-222462
 
-**Rule ID:**  SV-222462r508029_rule
+**Rule ID:**  SV-222462r961824_rule
 
 ---
 
@@ -3116,7 +3070,7 @@ Privileged access does not include an application design which does not modify t
 
 Review and monitor the application logs.
 
-Authenticate to the application as a privileged user and observe if the log includes an entry to indicate the userís authentication was successful.
+Authenticate to the application as a privileged user and observe if the log includes an entry to indicate the user‚Äôs authentication was successful.
 
 Perform actions as an admin or other privileged user such as modifying the logging verbosity, or starting or stopping an application service, or terminating a test user session.
 
@@ -3132,7 +3086,7 @@ Configure the application to write a log entry when privileged activities or oth
 
 **Vulnerability ID:**  V-222463
 
-**Rule ID:**  SV-222463r508029_rule
+**Rule ID:**  SV-222463r961827_rule
 
 ---
 
@@ -3142,7 +3096,7 @@ Configure the application to write a log entry when privileged activities or oth
 
 ### Description
 
-Knowing when a userís application session began and when it ended is critical information that aids in forensic analysis.
+Knowing when a user‚Äôs application session began and when it ended is critical information that aids in forensic analysis.
 
 ### Check Text
 
@@ -3164,7 +3118,7 @@ Configure the application or application server to record the start and end time
 
 **Vulnerability ID:**  V-222464
 
-**Rule ID:**  SV-222464r508029_rule
+**Rule ID:**  SV-222464r961830_rule
 
 ---
 
@@ -3202,7 +3156,7 @@ Configure the application to log successful and unsuccessful access to applicati
 
 **Vulnerability ID:**  V-222465
 
-**Rule ID:**  SV-222465r508029_rule
+**Rule ID:**  SV-222465r961836_rule
 
 ---
 
@@ -3247,7 +3201,7 @@ Configure the application to log all direct access to the system.
 
 **Vulnerability ID:**  V-222466
 
-**Rule ID:**  SV-222466r508029_rule
+**Rule ID:**  SV-222466r961839_rule
 
 ---
 
@@ -3267,11 +3221,15 @@ Application developers are encouraged to integrate their applications with enter
 
 ### Check Text
 
-Log on to the application as an administrative user.
+Examine the application documentation or interview the application representative to identify how the application users are managed.
 
-Navigate to the user account management functionality. If no user management capability exists within the application, refer to the Enterprise Active Directory or LDAP user management interfaces.
+Interview the application administrator and determine if the application is configured to utilize a centralized user management system such as Active Directory for user management or if the application manages user accounts within the application.
 
-Monitor and review the log where the application's user activity is recorded.
+If the application is configured to use an enterprise-based application user management capability that is STIG compliant, the requirement is not applicable.
+
+Identify the location of the audit logs and review the end of the logs.
+
+Access the user account management functionality.
 
 Create an application test account and then review the log to ensure a log record that documents the event is created.
 
@@ -3279,15 +3237,15 @@ Modify the test account and then review the log to ensure a log record that docu
 
 Disable the test account and then review the log to ensure a log record that documents the event is created.
 
-Terminate/Remove the test account and then review the log to ensure a log record that documents the event is created.
+Terminate/remove the test account and then review the log to ensure a log record that documents the event is created.
 
 If log events are not created that document all of these events, this is a finding.
 
-If some, but not all of the aforementioned events are documented in the logs, this is a finding.
+If some but not all of the aforementioned events are documented in the logs, this is a finding.
 
 Findings should document which of the events was not logged.
 
-**Check ID:**  C-24137r493309_chk
+**Check ID:**  C-24137r918116_chk
 
 ### Fix Text 
 
@@ -3297,7 +3255,7 @@ Configure the application to log user account creation, modification, disabling,
 
 **Vulnerability ID:**  V-222467
 
-**Rule ID:**  SV-222467r508029_rule
+**Rule ID:**  SV-222467r961842_rule
 
 ---
 
@@ -3339,7 +3297,7 @@ Configure the application to begin logging application events as soon as the app
 
 **Vulnerability ID:**  V-222468
 
-**Rule ID:**  SV-222468r508029_rule
+**Rule ID:**  SV-222468r960888_rule
 
 ---
 
@@ -3373,7 +3331,7 @@ Configure the application or application server to record application shutdown e
 
 **Vulnerability ID:**  V-222469
 
-**Rule ID:**  SV-222469r508029_rule
+**Rule ID:**  SV-222469r960891_rule
 
 ---
 
@@ -3413,7 +3371,7 @@ Configure the application to record the destination IP address of the remote sys
 
 **Vulnerability ID:**  V-222470
 
-**Rule ID:**  SV-222470r508029_rule
+**Rule ID:**  SV-222470r960891_rule
 
 ---
 
@@ -3435,7 +3393,7 @@ If the application design documents include specific data elements that require 
 
 Utilize the application as a regular user and operate the application so as to access data elements contained within the application. This includes using the application user interface to browse through data elements, query/search data elements and using report generation capability if it exists.
 
-Observe and determine if the application log includes an entry to indicate the userís access to the data was recorded.
+Observe and determine if the application log includes an entry to indicate the user‚Äôs access to the data was recorded.
 
 If successful access to application data elements is not recorded in the logs, this is a finding.
 
@@ -3449,7 +3407,7 @@ Identify the specific data elements requiring protection and audit access to the
 
 **Vulnerability ID:**  V-222471
 
-**Rule ID:**  SV-222471r508029_rule
+**Rule ID:**  SV-222471r960891_rule
 
 ---
 
@@ -3487,7 +3445,7 @@ Configure the application to log all changes to application data.
 
 **Vulnerability ID:**  V-222472
 
-**Rule ID:**  SV-222472r508029_rule
+**Rule ID:**  SV-222472r960891_rule
 
 ---
 
@@ -3517,7 +3475,7 @@ Configure the application or application server to include the date and the time
 
 **Vulnerability ID:**  V-222473
 
-**Rule ID:**  SV-222473r508029_rule
+**Rule ID:**  SV-222473r960894_rule
 
 ---
 
@@ -3571,7 +3529,7 @@ Configure the application to log which component, feature or functionality of th
 
 **Vulnerability ID:**  V-222474
 
-**Rule ID:**  SV-222474r508029_rule
+**Rule ID:**  SV-222474r960897_rule
 
 ---
 
@@ -3613,7 +3571,7 @@ Configure the application logs or the centralized log storage facility so the ap
 
 **Vulnerability ID:**  V-222475
 
-**Rule ID:**  SV-222475r508029_rule
+**Rule ID:**  SV-222475r960900_rule
 
 ---
 
@@ -3653,7 +3611,7 @@ Configure the application to include the outcome of application functions or eve
 
 **Vulnerability ID:**  V-222476
 
-**Rule ID:**  SV-222476r508029_rule
+**Rule ID:**  SV-222476r960903_rule
 
 ---
 
@@ -3688,7 +3646,7 @@ Configure the application to log the identity of the user and/or the process ass
 
 **Vulnerability ID:**  V-222477
 
-**Rule ID:**  SV-222477r508029_rule
+**Rule ID:**  SV-222477r960906_rule
 
 ---
 
@@ -3730,7 +3688,7 @@ Configure the application to log the full text recording of privileged commands 
 
 **Vulnerability ID:**  V-222478
 
-**Rule ID:**  SV-222478r508029_rule
+**Rule ID:**  SV-222478r960909_rule
 
 ---
 
@@ -3762,7 +3720,7 @@ Configure the application database to utilize transactional logging.
 
 **Vulnerability ID:**  V-222479
 
-**Rule ID:**  SV-222479r508029_rule
+**Rule ID:**  SV-222479r960909_rule
 
 ---
 
@@ -3782,7 +3740,7 @@ This requirement applies to centralized management applications or similar types
 
 Review the application documentation and interview the application administrator to determine the logging architecture of the application.
 
-If the application is configured to log application event entries to a centralized, enterprise based logging solution that meets this requirement, the requirement is not applicable.
+If the application is configured to log application event entries to a centralized, enterprise based logging solution that meets this requirement, this requirement is Not Applicable.
 
 Review the application components and the log management capabilities of the application.
 
@@ -3790,7 +3748,7 @@ Verify the application log management interface includes the ability to centrall
 
 If the application does not provide the ability to centrally manage the content captured in the audit logs, this is a finding.
 
-**Check ID:**  C-24150r493348_chk
+**Check ID:**  C-24150r985971_chk
 
 ### Fix Text 
 
@@ -3800,7 +3758,7 @@ Configure the application to utilize a centralized log management system that pr
 
 **Vulnerability ID:**  V-222480
 
-**Rule ID:**  SV-222480r849434_rule
+**Rule ID:**  SV-222480r985972_rule
 
 ---
 
@@ -3842,7 +3800,7 @@ Configure the application to off-load audit records onto a different system as p
 
 **Vulnerability ID:**  V-222481
 
-**Rule ID:**  SV-222481r849435_rule
+**Rule ID:**  SV-222481r961395_rule
 
 ---
 
@@ -3878,7 +3836,7 @@ Configure the application to utilize a centralized log repository and ensure the
 
 **Vulnerability ID:**  V-222482
 
-**Rule ID:**  SV-222482r849436_rule
+**Rule ID:**  SV-222482r961860_rule
 
 ---
 
@@ -3918,7 +3876,7 @@ Configure the application to send an immediate alarm to the application admin/SA
 
 **Vulnerability ID:**  V-222483
 
-**Rule ID:**  SV-222483r865216_rule
+**Rule ID:**  SV-222483r961398_rule
 
 ---
 
@@ -3960,7 +3918,7 @@ Configure the log alerts to be immediately sent to the application admin/SA and 
 
 **Vulnerability ID:**  V-222484
 
-**Rule ID:**  SV-222484r849439_rule
+**Rule ID:**  SV-222484r961401_rule
 
 ---
 
@@ -4004,7 +3962,7 @@ Configure the application to send an alarm in the event the audit system has fai
 
 **Vulnerability ID:**  V-222485
 
-**Rule ID:**  SV-222485r508029_rule
+**Rule ID:**  SV-222485r960912_rule
 
 ---
 
@@ -4050,7 +4008,7 @@ Configure the application to cease processing if the audit system fails or confi
 
 **Vulnerability ID:**  V-222486
 
-**Rule ID:**  SV-222486r508029_rule
+**Rule ID:**  SV-222486r1043188_rule
 
 ---
 
@@ -4086,7 +4044,7 @@ Configure the application so all of the applications logs are available for revi
 
 **Vulnerability ID:**  V-222487
 
-**Rule ID:**  SV-222487r508029_rule
+**Rule ID:**  SV-222487r960918_rule
 
 ---
 
@@ -4135,7 +4093,7 @@ Configure the application filters to search event logs based on defined criteria
 
 **Vulnerability ID:**  V-222488
 
-**Rule ID:**  SV-222488r508029_rule
+**Rule ID:**  SV-222488r960924_rule
 
 ---
 
@@ -4188,7 +4146,7 @@ Configure the application to generate soft copy, hard copy and/or screen-based r
 
 **Vulnerability ID:**  V-222489
 
-**Rule ID:**  SV-222489r849440_rule
+**Rule ID:**  SV-222489r961056_rule
 
 ---
 
@@ -4241,7 +4199,7 @@ Configure the application to log to a centralized auditing capability that provi
 
 **Vulnerability ID:**  V-222490
 
-**Rule ID:**  SV-222490r849441_rule
+**Rule ID:**  SV-222490r961413_rule
 
 ---
 
@@ -4289,7 +4247,7 @@ Configure the application to provide an audit reduction capability that supports
 
 **Vulnerability ID:**  V-222491
 
-**Rule ID:**  SV-222491r849442_rule
+**Rule ID:**  SV-222491r961416_rule
 
 ---
 
@@ -4333,7 +4291,7 @@ Design or configure the application to provide an immediate audit review capabil
 
 **Vulnerability ID:**  V-222492
 
-**Rule ID:**  SV-222492r849443_rule
+**Rule ID:**  SV-222492r961419_rule
 
 ---
 
@@ -4375,7 +4333,7 @@ Design or configure the application to provide an on-demand report generation ca
 
 **Vulnerability ID:**  V-222493
 
-**Rule ID:**  SV-222493r849444_rule
+**Rule ID:**  SV-222493r961422_rule
 
 ---
 
@@ -4417,7 +4375,7 @@ Design or configure the application to provide after-the-fact report generation 
 
 **Vulnerability ID:**  V-222494
 
-**Rule ID:**  SV-222494r849445_rule
+**Rule ID:**  SV-222494r961425_rule
 
 ---
 
@@ -4465,7 +4423,7 @@ Configure the application to not alter original log content or time ordering of 
 
 **Vulnerability ID:**  V-222495
 
-**Rule ID:**  SV-222495r849446_rule
+**Rule ID:**  SV-222495r961428_rule
 
 ---
 
@@ -4513,7 +4471,7 @@ Configure and design the application to not modify source logs when filtering ev
 
 **Vulnerability ID:**  V-222496
 
-**Rule ID:**  SV-222496r849447_rule
+**Rule ID:**  SV-222496r961431_rule
 
 ---
 
@@ -4553,7 +4511,7 @@ Configure the application to use the hosting systems internal clock for audit re
 
 **Vulnerability ID:**  V-222497
 
-**Rule ID:**  SV-222497r508029_rule
+**Rule ID:**  SV-222497r960927_rule
 
 ---
 
@@ -4591,7 +4549,7 @@ Configure the application to use the underlying system clock that maps to releva
 
 **Vulnerability ID:**  V-222498
 
-**Rule ID:**  SV-222498r849448_rule
+**Rule ID:**  SV-222498r961443_rule
 
 ---
 
@@ -4625,7 +4583,7 @@ Configure the application to leverage the underlying operating system as the tim
 
 **Vulnerability ID:**  V-222499
 
-**Rule ID:**  SV-222499r849449_rule
+**Rule ID:**  SV-222499r961446_rule
 
 ---
 
@@ -4675,7 +4633,7 @@ Configure the application to protect audit data from unauthorized access. Limit 
 
 **Vulnerability ID:**  V-222500
 
-**Rule ID:**  SV-222500r508029_rule
+**Rule ID:**  SV-222500r960930_rule
 
 ---
 
@@ -4725,7 +4683,7 @@ Configure the application to protect audit data from unauthorized modification a
 
 **Vulnerability ID:**  V-222501
 
-**Rule ID:**  SV-222501r561239_rule
+**Rule ID:**  SV-222501r960933_rule
 
 ---
 
@@ -4775,7 +4733,7 @@ Configure the application to protect audit data from unauthorized deletion. Limi
 
 **Vulnerability ID:**  V-222502
 
-**Rule ID:**  SV-222502r508029_rule
+**Rule ID:**  SV-222502r960936_rule
 
 ---
 
@@ -4821,7 +4779,7 @@ Configure the application to protect audit data from unauthorized access. Limit 
 
 **Vulnerability ID:**  V-222503
 
-**Rule ID:**  SV-222503r561242_rule
+**Rule ID:**  SV-222503r960939_rule
 
 ---
 
@@ -4865,7 +4823,7 @@ Configure the application to protect audit tools from unauthorized modifications
 
 **Vulnerability ID:**  V-222504
 
-**Rule ID:**  SV-222504r561290_rule
+**Rule ID:**  SV-222504r960942_rule
 
 ---
 
@@ -4909,7 +4867,7 @@ Configure the application to protect audit tools from unauthorized deletions. Li
 
 **Vulnerability ID:**  V-222505
 
-**Rule ID:**  SV-222505r561245_rule
+**Rule ID:**  SV-222505r960945_rule
 
 ---
 
@@ -4947,7 +4905,7 @@ Configure application backup settings to backup application audit logs every 7 d
 
 **Vulnerability ID:**  V-222506
 
-**Rule ID:**  SV-222506r508029_rule
+**Rule ID:**  SV-222506r960948_rule
 
 ---
 
@@ -4987,7 +4945,7 @@ Configure the application to create an integrity check consisting of a cryptogra
 
 **Vulnerability ID:**  V-222507
 
-**Rule ID:**  SV-222507r508029_rule
+**Rule ID:**  SV-222507r960951_rule
 
 ---
 
@@ -5037,7 +4995,7 @@ Cryptographically hash the audit tool files used by the application. Store and p
 
 **Vulnerability ID:**  V-222508
 
-**Rule ID:**  SV-222508r508029_rule
+**Rule ID:**  SV-222508r961206_rule
 
 ---
 
@@ -5081,7 +5039,7 @@ Establish a process to periodically check the audit tool cryptographic hashes to
 
 **Vulnerability ID:**  V-222509
 
-**Rule ID:**  SV-222509r508029_rule
+**Rule ID:**  SV-222509r961206_rule
 
 ---
 
@@ -5091,21 +5049,21 @@ Establish a process to periodically check the audit tool cryptographic hashes to
 
 ### Description
 
-Allowing regular users to install software, without explicit privileges, creates the risk that untested or potentially malicious software will be installed on the system. Explicit privileges (escalated or administrative privileges) provide the regular user with explicit capabilities and control that exceeds the rights of a regular user.
+Allowing regular users to install software without explicit privileges creates the risk that untested or potentially malicious software will be installed on the system. Explicit privileges (escalated or administrative privileges) provide the regular user with explicit capabilities and control that exceeds the rights of a regular user.
 
 Application functionality will vary, and while users are not permitted to install unapproved applications, there may be instances where the organization allows the user to install approved software packages such as from an approved software repository.
 
 The application must enforce software installation by users based upon what types of software installations are permitted (e.g., updates and security patches to existing software) and what types of installations are prohibited (e.g., software whose pedigree with regard to being potentially malicious is unknown or suspect) by the organization.
 
-This requirement applies, for example, to applications that provide the ability to extend application functionality (e.g., plug-ins, add-ons) and software management applications.
+For example, this requirement applies to applications that provide the ability to extend application functionality (e.g., plug-ins, add-ons) and software management applications.
 
 ### Check Text
 
 Review the application documentation and interview the application administrator to determine the capabilities of the application as it relates to software installation or product function extension.
 
-Identify any software configuration change capabilities which are allowed by design and incorporated into the user interface. An example is utilizing a known software repository of tested and approved extensions, plugins or modules which can be used by application users to extend application features or functions.
+Identify any software configuration change capabilities which are allowed by design and incorporated into the user interface. An example is utilizing a known software repository of tested and approved extensions, plugins, or modules which can be used by application users to extend application features or functions.
 
-If the application does not provide the ability to install software components, modules, plugins, or extensions, the requirement is not applicable.
+If the application does not provide the ability to install software components, modules, plugins, or extensions, the requirement is Not Applicable.
 
 Access the application user interface as a regular user, navigate to the application screen that provides the software installation function and attempt to install software components, modules, extensions, or plugins.
 
@@ -5113,7 +5071,7 @@ If the application utilizes an approved repository of approved software that has
 
 If the application allows regular users to install untested or unapproved software components, extensions, modules, or plugins without explicit authorization, this is a finding.
 
-**Check ID:**  C-24180r493438_chk
+**Check ID:**  C-24180r985918_chk
 
 ### Fix Text 
 
@@ -5123,7 +5081,7 @@ Configure the application to prohibit user installation of software without expl
 
 **Vulnerability ID:**  V-222510
 
-**Rule ID:**  SV-222510r849450_rule
+**Rule ID:**  SV-222510r1015689_rule
 
 ---
 
@@ -5165,7 +5123,7 @@ Configure the application to limit access to configuration settings to only auth
 
 **Vulnerability ID:**  V-222511
 
-**Rule ID:**  SV-222511r849451_rule
+**Rule ID:**  SV-222511r961461_rule
 
 ---
 
@@ -5177,7 +5135,7 @@ Configure the application to limit access to configuration settings to only auth
 
 Without auditing the enforcement of access restrictions against changes to the application configuration, it will be difficult to identify attempted attacks and an audit trail will not be available for forensic investigation for after-the-fact actions.
 
-Enforcement actions are the methods or mechanisms used to prevent unauthorized changes to configuration settings. Enforcement action methods may be as simple as denying access to a file based on the application of file permissions (access restriction). Audit items may consist of lists of actions blocked by access restrictions or changes identified after-the-fact.
+Enforcement actions are the methods or mechanisms used to prevent unauthorized changes to configuration settings. Enforcement action methods may be as simple as denying access to a file based on the application of file permissions (access restriction). Audit items may consist of lists of actions blocked by access restrictions or changes identified after the fact.
 
 If application configuration is maintained by using a text editor to modify a configuration file, this function may be delegated to an operating system file monitoring/auditing capability.
 
@@ -5207,7 +5165,7 @@ Configure the application to create log entries that can be used to identify the
 
 **Vulnerability ID:**  V-222512
 
-**Rule ID:**  SV-222512r849452_rule
+**Rule ID:**  SV-222512r1015690_rule
 
 ---
 
@@ -5221,7 +5179,7 @@ Changes to any software components can have significant effects on the overall s
 
 Accordingly, patches, service packs, or application components must be signed with a certificate recognized and approved by the organization.
 
-Verifying the authenticity of the software prior to installation validates the integrity of the patch or upgrade received from a vendor. This ensures the software has not been tampered with and that it has been provided by a trusted vendor. Self-signed certificates are disallowed by this requirement. The application should not have to verify the software again. This requirement does not mandate DoD certificates for this purpose; however, the certificate used to verify the software must be from an approved CA.
+Verifying the authenticity of the software prior to installation validates the integrity of the patch or upgrade received from a vendor. This ensures the software has not been tampered with and that it has been provided by a trusted vendor. Self-signed certificates are disallowed by this requirement. The application should not have to verify the software again. This requirement does not mandate DOD certificates for this purpose; however, the certificate used to verify the software must be from an approved certificate authority (CA).
 
 If this capability is not present, the vendor must provide a cryptographic hash value that can be verified by a system administrator prior to installation.
 
@@ -5243,12 +5201,11 @@ Design and configure the application to have the capability to prevent unsigned 
 
 Provide a cryptographic hash value that can be verified by a system administrator prior to installation.
 
-
-**Fix ID:**  F-36210r602298_fix
+**Fix ID:**  F-36210r985921_fix
 
 **Vulnerability ID:**  V-222513
 
-**Rule ID:**  SV-222513r864575_rule
+**Rule ID:**  SV-222513r1015691_rule
 
 ---
 
@@ -5288,7 +5245,7 @@ Configure the application OS file permissions to restrict access to software lib
 
 **Vulnerability ID:**  V-222514
 
-**Rule ID:**  SV-222514r508029_rule
+**Rule ID:**  SV-222514r960960_rule
 
 ---
 
@@ -5347,7 +5304,7 @@ Configure the application vulnerability scanners to test all components of the a
 
 **Vulnerability ID:**  V-222515
 
-**Rule ID:**  SV-222515r508029_rule
+**Rule ID:**  SV-222515r961863_rule
 
 ---
 
@@ -5385,7 +5342,7 @@ Restrict application execution in accordance with the policy, terms, and conditi
 
 **Vulnerability ID:**  V-222516
 
-**Rule ID:**  SV-222516r849454_rule
+**Rule ID:**  SV-222516r961473_rule
 
 ---
 
@@ -5425,7 +5382,7 @@ Configure the application to utilize a deny-all, permit-by-exception policy when
 
 **Vulnerability ID:**  V-222517
 
-**Rule ID:**  SV-222517r849455_rule
+**Rule ID:**  SV-222517r961479_rule
 
 ---
 
@@ -5465,7 +5422,7 @@ Disable application extraneous application functionality that is not required in
 
 **Vulnerability ID:**  V-222518
 
-**Rule ID:**  SV-222518r508029_rule
+**Rule ID:**  SV-222518r960963_rule
 
 ---
 
@@ -5489,21 +5446,17 @@ Interview the application administrator.
 
 Identify the network ports and protocols that are utilized by the application.
 
-Using a combination of relevant OS commands and application configuration utilities identify the TCP/IP port numbers the application is configured to utilize and is utilizing.
+Using a combination of relevant OS commands and application configuration utilities, identify the TCP/IP port numbers the application is configured to utilize and is utilizing.
 
-Review the PPSM web page at:
+Review the PPSM Category Assurance List (CAL) at: 
 
-http://www.disa.mil/Network-Services/Enterprise-Connections/PPSM
-
-Review the PPSM Category Assurance List (CAL) directly at the following link: 
-
-https://disa.deps.mil/ext/cop/iase/ppsm/Pages/cal.aspx
+https://cyber.mil/ppsm/cal/
 
 Verify the ports used by the application are approved by the PPSM CAL.
 
 If the ports are not approved by the PPSM CAL, this is a finding.
 
-**Check ID:**  C-24189r493465_chk
+**Check ID:**  C-24189r918118_chk
 
 ### Fix Text 
 
@@ -5513,7 +5466,7 @@ Configure the application to utilize application ports approved by the PPSM CAL.
 
 **Vulnerability ID:**  V-222519
 
-**Rule ID:**  SV-222519r508029_rule
+**Rule ID:**  SV-222519r1043177_rule
 
 ---
 
@@ -5537,7 +5490,7 @@ In addition to the reauthentication requirements associated with session locks, 
 or
 (vi) Periodically.
 
-Within the DoD, the minimum circumstances requiring reauthentication are privilege escalation and role changes.
+Within the DOD, the minimum circumstances requiring reauthentication are privilege escalation and role changes.
 
 ### Check Text
 
@@ -5547,14 +5500,14 @@ Identify the application user roles.
 
 Identify the methods and manner in which an application user is allowed to escalate their privileges or change their role.
 
-Create or utilize an account that has 2 roles within the application, both should be non-administrator.
+Create or utilize an account that has two roles within the application, both should be nonadministrator.
 Example: User role and Report Creator role.
 
 Authenticate to the application as the user in the User role.
 
 Access the application functionality that allows the user to change their role and change from the User role to the Report Creator role.
 
-If the user is not prompted to reauthenticate before the userís role is changed, this is a finding.
+If the user is not prompted to reauthenticate before the user‚Äôs role is changed, this is a finding.
 
 Log out of the application and log back in as the User role.
 
@@ -5564,7 +5517,7 @@ Attempt to escalate the privileges of the user.
 
 If the user is not prompted to reauthenticate before the user is allowed to proceed with escalated privileges, this is a finding.
 
-**Check ID:**  C-24190r493468_chk
+**Check ID:**  C-24190r985923_chk
 
 ### Fix Text 
 
@@ -5574,7 +5527,7 @@ Configure the application to require reauthentication before user privilege is e
 
 **Vulnerability ID:**  V-222520
 
-**Rule ID:**  SV-222520r849456_rule
+**Rule ID:**  SV-222520r1050664_rule
 
 ---
 
@@ -5603,7 +5556,7 @@ Gateways and SOA applications are examples of where this requirement would apply
 
 Review the application guidance and interview the application administrator.
 
-Identify the methods and manner in which application devices such as an XML gateway, SOA application gateway, or application firewall is allowed to access the application. Most devices themselves will not change role or authenticators once they are established but will need to periodically re-authenticate.
+Identify the methods and manner in which application devices such as an XML gateway, SOA application gateway, or application firewall is allowed to access the application. Most devices themselves will not change role or authenticators once they are established but will need to periodically reauthenticate.
 
 Review the configuration setting in the application where the time period is set to force the device to reauthenticate.
 
@@ -5611,7 +5564,7 @@ Review local policy requirements to determine if reauthentication intervals are 
 
 If the device is not forced to reauthenticate periodically, this is a finding.
 
-**Check ID:**  C-24191r493471_chk
+**Check ID:**  C-24191r985973_chk
 
 ### Fix Text 
 
@@ -5621,7 +5574,7 @@ Configure the application to require reauthentication periodically.
 
 **Vulnerability ID:**  V-222521
 
-**Rule ID:**  SV-222521r849457_rule
+**Rule ID:**  SV-222521r985974_rule
 
 ---
 
@@ -5662,7 +5615,7 @@ Configure the application to uniquely identify and authenticate users and user p
 
 **Vulnerability ID:**  V-222522
 
-**Rule ID:**  SV-222522r508029_rule
+**Rule ID:**  SV-222522r1051115_rule
 
 ---
 
@@ -5709,7 +5662,7 @@ Configure the application to use an Alt. Token when providing network access to 
 
 **Vulnerability ID:**  V-222523
 
-**Rule ID:**  SV-222523r508029_rule
+**Rule ID:**  SV-222523r960972_rule
 
 ---
 
@@ -5745,7 +5698,7 @@ Configure the application to require CAC authentication.
 
 **Vulnerability ID:**  V-222524
 
-**Rule ID:**  SV-222524r849458_rule
+**Rule ID:**  SV-222524r961494_rule
 
 ---
 
@@ -5785,7 +5738,7 @@ Configure the application to require CAC authentication.
 
 **Vulnerability ID:**  V-222525
 
-**Rule ID:**  SV-222525r849459_rule
+**Rule ID:**  SV-222525r961497_rule
 
 ---
 
@@ -5835,7 +5788,7 @@ Configure the application to require CAC or Alt. Token authentication for non-pr
 
 **Vulnerability ID:**  V-222526
 
-**Rule ID:**  SV-222526r508029_rule
+**Rule ID:**  SV-222526r960975_rule
 
 ---
 
@@ -5845,16 +5798,16 @@ Configure the application to require CAC or Alt. Token authentication for non-pr
 
 ### Description
 
-Multifactor authentication requires using two or more factors to achieve authentication and access.
+Multifactor authentication (MFA) requires using two or more factors to achieve authentication and access.
 
 Factors include:
 (i) something a user knows (e.g., password/PIN);
 (ii) something a user has (e.g., cryptographic identification device, token); or
 (iii) something a user is (e.g., biometric).
 
-Multifactor authentication decreases the attack surface by virtue of the fact that attackers must obtain two factors, a physical token or a biometric and a PIN, in order to authenticate.  It is not enough to simply steal a user's password to obtain access.  
+MFA decreases the attack surface by virtue of the fact that attackers must obtain two factors, a physical token or a biometric and a PIN, in order to authenticate. It is not enough to simply steal a user's password to obtain access. 
 
-A privileged account is defined as an information system account with authorizations of a privileged user.  
+A privileged account is defined as an information system account with authorizations of a privileged user.
 
 An Alt. Token is a separate CAC or token used specifically for administrative account access and serves as a separate identifier much like a separate user account.
 
@@ -5864,17 +5817,17 @@ Local access is defined as access to an organizational information system by a u
 
 Review the application documentation and interview the application administrator to identify application access methods.
 
-Ask the application administrator to present both their primary CAC and their Alt. Token.  Ask the application administrator to log on to the application using the local application console.  
+Ask the application administrator to present both their primary CAC and their Alt. Token. Ask the application administrator to log on to the application using the local application console. 
 
-Attempt to use both the CAC and Alt. Tokens to authenticate to the application. 
+Attempt to use both the CAC and Alt. Tokens to authenticate to the application.
 
 Validate the application requests the user to input their CAC PIN and that they cannot perform administrative functions.
 
-Have user logoff and reauthenticate with their Alt. Token and that they can perform administrative functions.
+Have user log off and reauthenticate with their Alt. Token and verify they can perform administrative functions.
 
 If the application allows administrative access to the application without requiring an Alt. Token, this is a finding.
 
-**Check ID:**  C-24197r493489_chk
+**Check ID:**  C-24197r985925_chk
 
 ### Fix Text 
 
@@ -5884,38 +5837,38 @@ Configure the application to only use Alt. Tokens when locally accessing privile
 
 **Vulnerability ID:**  V-222527
 
-**Rule ID:**  SV-222527r508029_rule
+**Rule ID:**  SV-222527r1015693_rule
 
 ---
 
-## The application must use multifactor (e.g., CAC, Alt. Token) authentication for local access to non-privileged accounts.
+## The application must use multifactor (e.g., CAC, Alt. Token) authentication for local access to nonprivileged accounts.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
 ### Description
 
-To assure accountability, prevent unauthenticated access, and prevent misuse of the system, privileged users must utilize multifactor authentication for local access.
+To assure accountability, prevent unauthenticated access, and prevent misuse of the system, privileged users must utilize multifactor authentication (MFA) for local access.
 
-Multifactor authentication is defined as: using two or more factors to achieve authentication.
+MFA is defined as using two or more factors to achieve authentication.
 
 Factors include:
 (i) Something a user knows (e.g., password/PIN);
 (ii) Something a user has (e.g., cryptographic identification device, token); or
 (iii) Something a user is (e.g., biometric).
 
-A non-privileged account is defined as an information system account with authorizations of a regular or non-privileged user.
+A nonprivileged account is defined as an information system account with authorizations of a regular or nonprivileged user.
 
 Local access is defined as access to an organizational information system by a user (or process acting on behalf of a user) communicating through a direct connection without the use of a network.
 
-Applications integrating with the DoD Active Directory and utilize the DoD CAC are examples of compliant multifactor authentication solutions.
+Applications integrating with the DOD Active Directory and utilize the DOD CAC are examples of compliant multifactor authentication solutions.
 
 ### Check Text
 
 Review the application documentation and interview the application administrator to identify application access methods.
 
-If the application is not PK-enabled due to the hosted data being publicly releasable, this check is not applicable.
+If the application is not PKI-enabled due to the hosted data being publicly releasable, this check is Not Applicable.
 
-Ask the application administrator to log on to the application. Have the application admin use their non-privileged credentials.
+Ask the application administrator to log on to the application. Have the application admin use their nonprivileged credentials.
 
 Validate the application prompts the user to provide a certificate from the CAC.
 
@@ -5923,17 +5876,17 @@ Validate the application requests the user to input their CAC PIN.
 
 If the application allows access without requiring a CAC or Alt. Token, this is a finding.
 
-**Check ID:**  C-24198r493492_chk
+**Check ID:**  C-24198r985927_chk
 
 ### Fix Text 
 
-Configure the application to require CAC or Alt. Token authentication for non-privileged network access.
+Configure the application to require CAC or Alt. Token authentication for nonprivileged network access.
 
-**Fix ID:**  F-24187r493493_fix
+**Fix ID:**  F-24187r985928_fix
 
 **Vulnerability ID:**  V-222528
 
-**Rule ID:**  SV-222528r508029_rule
+**Rule ID:**  SV-222528r1015694_rule
 
 ---
 
@@ -5943,7 +5896,7 @@ Configure the application to require CAC or Alt. Token authentication for non-pr
 
 ### Description
 
-To assure individual accountability and prevent unauthorized access, application users must be individually identified and authenticated. Individual accountability mandates that each user is uniquely identified.
+To ensure individual accountability and prevent unauthorized access, application users must be individually identified and authenticated. Individual accountability mandates that each user is uniquely identified.
 
 A group authenticator is a shared account or some other form of authentication that allows multiple unique individuals to access the application using a single account.
 
@@ -5955,9 +5908,9 @@ There may also be instances when specific user actions need to be performed on t
 
 ### Check Text
 
-Review the application documentation, examine user accounts, group membership and interview the application administrator to identify group or shared accounts. Document the group or shared account information.
+Review the application documentation, examine user accounts and group membership, and interview the application administrator to identify group or shared accounts. Document the group or shared account information.
 
-If the application does not use group or shared accounts, this requirement is not applicable.
+If the application does not use group or shared accounts, this requirement is Not Applicable.
 
 Create a test account or use an existing group member account.
 
@@ -5965,7 +5918,7 @@ Ensure the test account is not authenticated to the application and attempt to a
 
 If the application allows access without first requiring the group member to authenticate with their individual credentials, this is a finding.
 
-**Check ID:**  C-24199r493495_chk
+**Check ID:**  C-24199r985930_chk
 
 ### Fix Text 
 
@@ -5975,7 +5928,7 @@ Design and configure the application to individually authenticate group account 
 
 **Vulnerability ID:**  V-222529
 
-**Rule ID:**  SV-222529r508029_rule
+**Rule ID:**  SV-222529r1015695_rule
 
 ---
 
@@ -6027,11 +5980,11 @@ Design and configure the application to utilize replay-resistant mechanisms when
 
 **Vulnerability ID:**  V-222530
 
-**Rule ID:**  SV-222530r849460_rule
+**Rule ID:**  SV-222530r960993_rule
 
 ---
 
-## The application must implement replay-resistant authentication mechanisms for network access to non-privileged accounts.
+## The application must implement replay-resistant authentication mechanisms for network access to nonprivileged accounts.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
@@ -6043,17 +5996,17 @@ The protection methods selected to protect against a replay attack will vary acc
 
 An authentication process resists replay attacks if it is impractical to achieve a successful authentication by recording and replaying a previous authentication message.
 
-A non-privileged account is any operating system account with authorizations of a non-privileged user.
+A nonprivileged account is any operating system account with authorizations of a nonprivileged user.
 
-Techniques used to address this include protocols using nonces (e.g., numbers generated for a specific one time use) or challenges (e.g., TLS, WS_Security) and PKI certificates. Additional techniques include time-synchronous or challenge-response one-time authenticators.
+Techniques used to address this include protocols using nonces (e.g., numbers generated for a specific one time use), challenges (e.g., TLS, WS_Security), and PKI certificates. Additional techniques include time-synchronous or challenge-response one-time authenticators.
 
 ### Check Text
 
 Review the application documentation and interview the application administrator to identify what authentication mechanisms are used when accessing the application.
 
-If the application is hosting publicly releasable information that does not require authentication, or if the application users are not eligible for a DoD CAC as per DoD 8520, this requirement is not applicable.
+If the application is hosting publicly releasable information that does not require authentication, or if the application users are not eligible for a DOD CAC as per DOD 8520, this requirement is Not Applicable.
 
-Review to ensure the application is utilizing TLSV1.2 or greater to protect communication and non-privileged user authentication traffic.
+Review to ensure the application is utilizing TLSV1.2 or greater to protect communication and nonprivileged user authentication traffic.
 
 Verify the application utilizes a strong authentication mechanism such as Kerberos, IPSEC, or Secure Shell (SSH).
 
@@ -6071,17 +6024,17 @@ Verify identified issues have been remediated.
 
 If the application is not implementing replay-resistant authentication methods applicable to the application architecture, this is a finding.
 
-**Check ID:**  C-36246r602302_chk
+**Check ID:**  C-36246r985932_chk
 
 ### Fix Text 
 
-Design and configure the application to utilize replay-resistant mechanisms when authenticating non-privileged accounts.
+Design and configure the application to utilize replay-resistant mechanisms when authenticating nonprivileged accounts.
 
-**Fix ID:**  F-24190r493502_fix
+**Fix ID:**  F-24190r985933_fix
 
 **Vulnerability ID:**  V-222531
 
-**Rule ID:**  SV-222531r849461_rule
+**Rule ID:**  SV-222531r1015696_rule
 
 ---
 
@@ -6095,7 +6048,7 @@ Without identifying devices, unidentified or unknown devices may be introduced, 
 
 With one way SSL authentication which is the typical form of SSL authentication done between a web browser client and a web server, the client requests the server certificate to validate the server's identity and establish a secure connection.
 
-When SSL mutual authentication is used, the server is configured to request the clientís certificate as well so the server can also identify the client.
+When SSL mutual authentication is used, the server is configured to request the client‚Äôs certificate as well so the server can also identify the client.
 
 For distributed architectures (e.g., service-oriented architectures), the decisions regarding the validation of identification claims may be made by services separate from the services acting on those decisions. In such situations, it is necessary to provide the identification decisions (as opposed to the actual identifiers) to the services that need to act on those decisions.
 
@@ -6140,7 +6093,7 @@ Configure the application to utilize mutual authentication when specified by dat
 
 **Vulnerability ID:**  V-222532
 
-**Rule ID:**  SV-222532r508029_rule
+**Rule ID:**  SV-222532r960999_rule
 
 ---
 
@@ -6189,7 +6142,7 @@ Configure the application to authenticate all network connected endpoint devices
 
 **Vulnerability ID:**  V-222533
 
-**Rule ID:**  SV-222533r849462_rule
+**Rule ID:**  SV-222533r961503_rule
 
 ---
 
@@ -6203,7 +6156,7 @@ Without identifying devices, unidentified or unknown devices may be introduced, 
 
 One way SSL/TLS authentication is the typical form of  authentication done between a web browser client and a web server. The client requests the server certificate to validate the server's identity and establish a secure connection.
 
-When SSL/TLS mutual authentication is used, the server is configured to request the clientís certificate as well so the server can also identify the client. This form of authentication is normally chosen for system to system communications that leverage HTTP as the transport.
+When SSL/TLS mutual authentication is used, the server is configured to request the client‚Äôs certificate as well so the server can also identify the client. This form of authentication is normally chosen for system to system communications that leverage HTTP as the transport.
 
 It should be noted that SSL is being deprecated and replaced with TLS.
 
@@ -6245,7 +6198,7 @@ Configure the application to utilize mutual authentication when the application 
 
 **Vulnerability ID:**  V-222534
 
-**Rule ID:**  SV-222534r849463_rule
+**Rule ID:**  SV-222534r961506_rule
 
 ---
 
@@ -6255,17 +6208,17 @@ Configure the application to utilize mutual authentication when the application 
 
 ### Description
 
-Device identifiers are used to identify hardware devices that interact with the application much like a user account is used to identify an application user.  Examples of hardware devices include but are not limited to mobile phones, application gateways or other types of smart hardware.  
+Device identifiers are used to identify hardware devices that interact with the application much like a user account is used to identify an application user. Examples of hardware devices include but are not limited to mobile phones, application gateways, or other types of smart hardware.
 
-This requirement does not apply to individual application user accounts.  
+This requirement does not apply to individual application user accounts.
 
-This requirement is not applicable to shared information system accounts, application groups, roles (e.g., guest and anonymous accounts) that are used by the application itself in order to function.  Care must be taken to not disable identifiers that are used by the application in order to function.
+This requirement is not applicable to shared information system accounts, application groups, or roles (e.g., guest and anonymous accounts) that are used by the application itself in order to function. Care must be taken to not disable identifiers that are used by the application in order to function.
 
-Inactive device identifiers pose a risk to systems and applications. Attackers that are able to exploit an inactive identifier can potentially obtain and maintain undetected access to the application. 
+Inactive device identifiers pose a risk to systems and applications. Attackers that are able to exploit an inactive identifier can potentially obtain and maintain undetected access to the application.
 
-Applications need to track periods of device inactivity and disable the device identifier after 35 days of inactivity.  This is usually accomplished by disabling the account used by the device to access the application.
+Applications need to track periods of device inactivity and disable the device identifier after 35 days of inactivity. This is usually accomplished by disabling the account used by the device to access the application.
 
-Applications that utilize cryptographic certificates for device authentication may use the expiration date assigned to the certificate to meet this requirement with the understanding that the certificate is created and managed in accordance with DoD PKI policy and can be revoked by a trusted CA.
+Applications that use cryptographic certificates for device authentication may use the expiration date assigned to the certificate to meet this requirement with the understanding that the certificate is created and managed in accordance with DOD PKI policy and can be revoked by a trusted certificate authority (CA).
 
 To avoid having to build complex device management capabilities directly into their application, developers should leverage the underlying OS or other account management infrastructure (AD, LDAP) that is already in place within the organization and meets organizational user account management requirements.
 
@@ -6275,7 +6228,7 @@ Applications are encouraged to utilize a centralized data store such as Active D
 
 Review the application documentation and interview the application administrator.
 
-If the application is not designed to authenticate devices (such as mobile phones, gateways or other smart devices), or uses DoD PKI certificates to authenticate these devices, this requirement is NA.
+If the application is not designed to authenticate devices (such as mobile phones, gateways or other smart devices), or uses DOD PKI certificates to authenticate these devices, this requirement is Not Applicable.
 
 Access the user management interface for the application.
 
@@ -6291,17 +6244,17 @@ Verify the application is configured to disable device accounts that have not be
 
 If the application does not disable accounts used to authenticate devices after 35 days of inactivity, this is a finding.
 
-**Check ID:**  C-24205r493513_chk
+**Check ID:**  C-24205r985935_chk
 
 ### Fix Text 
 
-Configure the application to disable device accounts after 35 days of inactivity or to utilize DoD PKI certificates that provide an expiration date.
+Configure the application to disable device accounts after 35 days of inactivity or to utilize DOD PKI certificates that provide an expiration date.
 
-**Fix ID:**  F-24194r493514_fix
+**Fix ID:**  F-24194r985936_fix
 
 **Vulnerability ID:**  V-222535
 
-**Rule ID:**  SV-222535r508029_rule
+**Rule ID:**  SV-222535r1015697_rule
 
 ---
 
@@ -6317,12 +6270,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks. Password length is one factor of several that helps to determine strength and how long it takes to crack a password. The shorter the password, the lower the number of possible combinations that need to be tested before the password is compromised.
@@ -6333,15 +6282,15 @@ Use of more characters in a password helps to exponentially increase the time an
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
-Access the application management interface and create a test user account or logon to the system with a test account and access the functionality that provides password change capabilities.
+Access the application management interface and create a test user account or log on to the system with a test account and access the functionality that provides password change capabilities.
 
 When prompted to provide the password, attempt to create a password shorter than 15 characters in length.
 
 If a password shorter than 15 characters can be created, this is a finding.
 
-**Check ID:**  C-24206r493516_chk
+**Check ID:**  C-24206r985938_chk
 
 ### Fix Text 
 
@@ -6351,11 +6300,11 @@ Configure the application to require 15 characters in the password.
 
 **Vulnerability ID:**  V-222536
 
-**Rule ID:**  SV-222536r508029_rule
+**Rule ID:**  SV-222536r1015698_rule
 
 ---
 
-## The application must enforce password complexity by requiring that at least one upper-case character be used.
+## The application must enforce password complexity by requiring that at least one uppercase character be used.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
@@ -6365,12 +6314,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.
@@ -6381,29 +6326,29 @@ Password complexity is one factor of several that determine how long it takes to
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and create a test user account or logon to the system with a test account and access the functionality that provides password change capabilities.
 
-When prompted to provide the password, attempt to create a password that does not have one upper-case character.
+When prompted to provide the password, attempt to create a password that does not have one uppercase character.
 
 If a password without at least one upper-case character can be created, this is a finding.
 
-**Check ID:**  C-24207r493519_chk
+**Check ID:**  C-24207r985940_chk
 
 ### Fix Text 
 
-Configure the application to require at least one upper-case character in the password.
+Configure the application to require at least one uppercase character in the password.
 
-**Fix ID:**  F-24196r493520_fix
+**Fix ID:**  F-24196r985941_fix
 
 **Vulnerability ID:**  V-222537
 
-**Rule ID:**  SV-222537r508029_rule
+**Rule ID:**  SV-222537r1015699_rule
 
 ---
 
-## The application must enforce password complexity by requiring that at least one lower-case character be used.
+## The application must enforce password complexity by requiring that at least one lowercase character be used.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
@@ -6413,12 +6358,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.
@@ -6429,25 +6370,25 @@ Password complexity is one factor of several that determine how long it takes to
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and create a test user account or logon to the system with a test account and access the functionality that provides password change capabilities.
 
-When prompted to provide the password, attempt to create a password that does not have one lower-case character.
+When prompted to provide the password, attempt to create a password that does not have one lowercase character.
 
 If a password without at least one lower-case character can be created, this is a finding.
 
-**Check ID:**  C-24208r493522_chk
+**Check ID:**  C-24208r985943_chk
 
 ### Fix Text 
 
-Configure the application to require at least one lower-case character in the password.
+Configure the application to require at least one lowercase character in the password.
 
-**Fix ID:**  F-24197r493523_fix
+**Fix ID:**  F-24197r985944_fix
 
 **Vulnerability ID:**  V-222538
 
-**Rule ID:**  SV-222538r508029_rule
+**Rule ID:**  SV-222538r1015700_rule
 
 ---
 
@@ -6461,12 +6402,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.
@@ -6477,7 +6414,7 @@ Password complexity is one factor of several that determine how long it takes to
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and create a test user account or logon to the system with a test account and access the functionality that provides password change capabilities.
 
@@ -6485,7 +6422,7 @@ When prompted to provide the password, attempt to create a password that does no
 
 If a password without at least one numeric character can be created, this is a finding.
 
-**Check ID:**  C-24209r493525_chk
+**Check ID:**  C-24209r985946_chk
 
 ### Fix Text 
 
@@ -6495,7 +6432,7 @@ Configure the application to require at least one numeric character in the passw
 
 **Vulnerability ID:**  V-222539
 
-**Rule ID:**  SV-222539r508029_rule
+**Rule ID:**  SV-222539r1015701_rule
 
 ---
 
@@ -6509,12 +6446,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.
@@ -6525,7 +6458,7 @@ Password complexity is one factor of several that determine how long it takes to
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and create a test user account or logon to the system with a test account and access the functionality that provides password change capabilities.
 
@@ -6533,7 +6466,7 @@ When prompted to provide the password, attempt to create a password that does no
 
 If a password without at least one special character can be created, this is a finding.
 
-**Check ID:**  C-24210r493528_chk
+**Check ID:**  C-24210r985948_chk
 
 ### Fix Text 
 
@@ -6543,11 +6476,11 @@ Configure the application to require at least one special character in the passw
 
 **Vulnerability ID:**  V-222540
 
-**Rule ID:**  SV-222540r508029_rule
+**Rule ID:**  SV-222540r1015702_rule
 
 ---
 
-## The application must require the change of at least 8 of the total number of characters when passwords are changed.
+## The application must require the change of at least eight of the total number of characters when passwords are changed.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
@@ -6557,12 +6490,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Use of a complex password helps to increase the time and resources required to compromise the password. Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.
@@ -6573,7 +6502,7 @@ Password complexity is one factor of several that determine how long it takes to
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and create a test user account or logon to the system with a test account and access the functionality that provides password change capabilities.
 
@@ -6581,17 +6510,17 @@ When prompted to provide the password, attempt to change less than 8 characters 
 
 If less than 8 characters of the password are changed, this is a finding.
 
-**Check ID:**  C-24211r493531_chk
+**Check ID:**  C-24211r985950_chk
 
 ### Fix Text 
 
-Configure the application to require the change of at least 8 characters in the password when passwords are changed.
+Configure the application to require the change of at least eight characters in the password when passwords are changed.
 
-**Fix ID:**  F-24200r493532_fix
+**Fix ID:**  F-24200r985951_fix
 
 **Vulnerability ID:**  V-222541
 
-**Rule ID:**  SV-222541r508029_rule
+**Rule ID:**  SV-222541r1043189_rule
 
 ---
 
@@ -6605,19 +6534,15 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
-Passwords need to be protected at all times and using a strong one-way hashing encryption algorithm with a salt is the standard method for providing a means to validate a user's password without having to store the actual password.  
+Passwords need to be protected at all times and using a strong one-way hashing encryption algorithm with a salt is the standard method for providing a means to validate a user's password without having to store the actual password. 
 
-Performance and time required to access are factors that must be considered and the one way hash is the most feasible means of securing the password and providing an acceptable measure of password security.  If passwords are stored in clear text, they can be plainly read and easily compromised.
+Performance and time required to access are factors that must be considered and the one way hash is the most feasible means of securing the password and providing an acceptable measure of password security. If passwords are stored in clear text, they can be plainly read and easily compromised.
 
-In many instances, verifying the user knows a password is performed using a password verifier. In its simplest form, a password verifier is a computational function that is capable of creating a hash of a password and determining if the value provided by the user matches the hash.  
+In many instances, verifying the user knows a password is performed using a password verifier. In its simplest form, a password verifier is a computational function that is capable of creating a hash of a password and determining if the value provided by the user matches the hash. 
 
 A more secure version of verifying a user knowing a password is to store the result of an iterating hash function and a large random SALT value as follows:
 
@@ -6626,9 +6551,9 @@ Hn = H(Hn-1,H(salt))
 
 Where n is a cryptographically-strong random [*3] number. Hn is stored, along with the salt. When the application wishes to verify that the user knows a password, it simply repeats the process and compares Hn with the stored Hn.
 
-A SALT is essentially a fixed-length cryptographically-strong random value.  
+A SALT is essentially a fixed-length cryptographically-strong random value. 
 
-Another method used is utilizing a keyed hash message authentication code (HMAC).  HMAC calculates a message authentication code via a cryptographic hash function used in conjunction with an encryption key.  The key must be protected as with any private key.
+Another method used is utilizing a keyed hash message authentication code (HMAC). HMAC calculates a message authentication code via a cryptographic hash function used in conjunction with an encryption key. The key must be protected as with any private key.
  
 Applications must only store passwords that have been cryptographically protected.
 
@@ -6636,17 +6561,17 @@ Applications must only store passwords that have been cryptographically protecte
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
-Have the application administrator identify the application's password storage locations.  Potential locations include the local file system where the application is stored or in an application-related database table that should not be accessible to application users.
+Have the application administrator identify the application's password storage locations. Potential locations include the local file system where the application is stored or in an application-related database table that should not be accessible to application users.
 
-Review application files and folders using a text editor or by using a database tool that allows you to view data stored in database tables.  Look for indications of stored user information and review that information.  Determine if password strings are readable/discernable.
+Review application files and folders using a text editor or by using a database tool that allows you to view data stored in database tables. Look for indications of stored user information and review that information. Determine if password strings are readable/discernable.
 
 Determine if the application uses the MD5 hashing algorithm to create password hashes.
 
 If the passwords are readable or there is no indication the application utilizes cryptographic hashing to protect passwords, or if the MD5 hash algorithm is used to create password hashes, this is a finding.
 
-**Check ID:**  C-24212r493534_chk
+**Check ID:**  C-24212r985953_chk
 
 ### Fix Text 
 
@@ -6660,7 +6585,7 @@ Ensure strong access control permissions on data files containing authentication
 
 **Vulnerability ID:**  V-222542
 
-**Rule ID:**  SV-222542r508029_rule
+**Rule ID:**  SV-222542r1015704_rule
 
 ---
 
@@ -6696,7 +6621,7 @@ Identify when the application transmits passwords. This will most likely be when
 
 Access the application management interface with a test account and access the functionality that requires a password be provided. If the interface is via a web browser, verify the web browser has gone secure prior to entering any password or authentication information.
 
-This can be done by viewing the browser and observing a ìlockî icon displayed somewhere in the browser as well as an https:// to indicate an SSL connection. Most browsers display this in the upper left hand corner.
+This can be done by viewing the browser and observing a ‚Äúlock‚Äù icon displayed somewhere in the browser as well as an https:// to indicate an SSL connection. Most browsers display this in the upper left hand corner.
 
 If the application is transmitting the password rather than the user, obtain design documentation from the application admin that provides the details on how they are protecting the password during transmission. This will usually be via a TLS/SSL tunneled connection or VPN.
 
@@ -6712,7 +6637,7 @@ Configure the application to encrypt passwords when they are being transmitted.
 
 **Vulnerability ID:**  V-222543
 
-**Rule ID:**  SV-222543r508029_rule
+**Rule ID:**  SV-222543r961029_rule
 
 ---
 
@@ -6726,12 +6651,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Enforcing a minimum password lifetime helps prevent repeated password changes to defeat the password reuse or history enforcement requirement.
@@ -6742,7 +6663,7 @@ Restricting this setting limits the user's ability to change their password. Pas
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and create a test user account or logon to the system with a test account and access the functionality that provides password change capabilities.
 
@@ -6750,7 +6671,7 @@ Attempt to change the password more than once.
 
 If a password can be changed more than once within 24 hours, the minimum lifetime setting is not set and this is a finding.
 
-**Check ID:**  C-24214r493540_chk
+**Check ID:**  C-24214r985955_chk
 
 ### Fix Text 
 
@@ -6760,7 +6681,7 @@ Configure the application to have a minimum password lifetime of 24 hours.
 
 **Vulnerability ID:**  V-222544
 
-**Rule ID:**  SV-222544r508029_rule
+**Rule ID:**  SV-222544r1015705_rule
 
 ---
 
@@ -6774,12 +6695,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Any password, no matter how complex, can eventually be cracked. Therefore, passwords need to be changed at specific intervals.
@@ -6792,7 +6709,7 @@ This requirement does not include emergency administration accounts which are me
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and view the user password settings page.
 
@@ -6800,7 +6717,7 @@ Review user password settings and validate the application is configured to expi
 
 If user passwords are not configured to expire after 60 days, or if the application does not have the ability to control this setting, this is a finding.
 
-**Check ID:**  C-24215r493543_chk
+**Check ID:**  C-24215r985957_chk
 
 ### Fix Text 
 
@@ -6810,7 +6727,7 @@ Configure the application to have a maximum password lifetime of 60 days.
 
 **Vulnerability ID:**  V-222545
 
-**Rule ID:**  SV-222545r508029_rule
+**Rule ID:**  SV-222545r1043190_rule
 
 ---
 
@@ -6824,12 +6741,8 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
 Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts at guessing and brute-force attacks.
@@ -6842,25 +6755,25 @@ If the information system or application allows the user to consecutively reuse 
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and view the user password settings page.
 
-Review user password settings and validate the application is configured to prohibit password reuse for a minimum of 5 password generations.
+Review user password settings and validate the application is configured to prohibit password reuse for a minimum of five password generations.
 
-If the application does not prevent users from reusing their previous 5 passwords, or if the application does not have the ability to control this setting, this is a finding.
+If the application does not prevent users from reusing their previous five passwords, or if the application does not have the ability to control this setting, this is a finding.
 
-**Check ID:**  C-24216r493546_chk
+**Check ID:**  C-24216r985959_chk
 
 ### Fix Text 
 
-Configure the application to prohibit password reuse for up to 5 passwords.
+Configure the application to prohibit password reuse for up to five passwords.
 
-**Fix ID:**  F-24205r493547_fix
+**Fix ID:**  F-24205r985960_fix
 
 **Vulnerability ID:**  V-222546
 
-**Rule ID:**  SV-222546r508029_rule
+**Rule ID:**  SV-222546r1015267_rule
 
 ---
 
@@ -6874,15 +6787,11 @@ Use of passwords for application authentication is intended only for limited sit
 
 Examples of situations where a user ID and password might be used include but are not limited to:
 
-- When the application user base does not have a CAC and is not a current DoD employee, member of the military, or a DoD contractor.
-
+- When the application user base does not have a CAC and is not a current DOD employee, member of the military, or a DOD contractor.
 - When an application user has been officially designated as a Temporary Exception User; one who is temporarily unable to present a CAC for some reason (lost, damaged, not yet issued, broken card reader) and to satisfy urgent organizational needs must be temporarily permitted to use user ID/password authentication until the problem with CAC use has been remedied.
-
-and
-
 - When the application is publicly available and or hosting publicly releasable data requiring some degree of need-to-know protection.
 
-Without providing this capability, an account may be created without a password. Non-repudiation cannot be guaranteed once an account is created if a user is not forced to change the temporary password upon initial logon.
+Without providing this capability, an account may be created without a password. Nonrepudiation cannot be guaranteed once an account is created if a user is not forced to change the temporary password upon initial logon.
 
 Temporary passwords are typically used to allow access to applications when new accounts are created or passwords are changed. It is common practice for administrators to create temporary passwords for user accounts which allow the users to log on, yet force them to change the password once they have successfully authenticated.
 
@@ -6890,15 +6799,15 @@ Temporary passwords are typically used to allow access to applications when new 
 
 Review the application documentation and interview the application administrator to identify if the application uses passwords for user authentication.
 
-If the application does not use passwords, the requirement is not applicable.
+If the application does not use passwords, this requirement is Not Applicable.
 
 Access the application management interface and view the user password settings page.
 
-Review user password settings and validate the application is configured to specify when a password is temporary and force a password change when the administrator either creates a new user account or changes a userís password.
+Review user password settings and validate the application is configured to specify when a password is temporary and force a password change when the administrator either creates a new user account or changes a user‚Äôs password.
 
 If the application can not specify a password as temporary and force the user to change the temporary password upon successful authentication, this is a finding.
 
-**Check ID:**  C-24217r493549_chk
+**Check ID:**  C-24217r985975_chk
 
 ### Fix Text 
 
@@ -6908,7 +6817,7 @@ Configure the application to specify when a password is temporary and change the
 
 **Vulnerability ID:**  V-222547
 
-**Rule ID:**  SV-222547r849464_rule
+**Rule ID:**  SV-222547r985976_rule
 
 ---
 
@@ -6960,7 +6869,7 @@ Ensure users are only allowed to change their own passwords.
 
 **Vulnerability ID:**  V-222548
 
-**Rule ID:**  SV-222548r865212_rule
+**Rule ID:**  SV-222548r961863_rule
 
 ---
 
@@ -7000,7 +6909,7 @@ Configure the application to terminate existing sessions of users whose accounts
 
 **Vulnerability ID:**  V-222549
 
-**Rule ID:**  SV-222549r849465_rule
+**Rule ID:**  SV-222549r961521_rule
 
 ---
 
@@ -7040,7 +6949,7 @@ Design the application to construct a certification path to an accepted trust an
 
 **Vulnerability ID:**  V-222550
 
-**Rule ID:**  SV-222550r508029_rule
+**Rule ID:**  SV-222550r961038_rule
 
 ---
 
@@ -7086,7 +6995,7 @@ Configure the application or relevant access control mechanism to enforce author
 
 **Vulnerability ID:**  V-222551
 
-**Rule ID:**  SV-222551r508029_rule
+**Rule ID:**  SV-222551r961041_rule
 
 ---
 
@@ -7120,7 +7029,7 @@ Configure the application to map certificate information to individual users or 
 
 **Vulnerability ID:**  V-222552
 
-**Rule ID:**  SV-222552r508029_rule
+**Rule ID:**  SV-222552r961044_rule
 
 ---
 
@@ -7130,7 +7039,7 @@ Configure the application to map certificate information to individual users or 
 
 ### Description
 
-A local cache of revocation data is also known as a CRL list. This list contains a list of revoked certificates and can be periodically downloaded to ensure certificates can still be checked for revocation when network access is not available or access to the Online Certificate Status Protocol OCSP server is not available.
+A local cache of revocation data is also known as a CRL list. This list contains a list of revoked certificates and can be periodically downloaded to ensure certificates can still be checked for revocation when network access is not available or access to the Online Certificate Status Protocol (OCSP) server is not available.
 
 Without configuring a local cache of revocation data, there is the potential to allow access to users who are no longer authorized (users with revoked certificates).
 
@@ -7138,7 +7047,7 @@ Without configuring a local cache of revocation data, there is the potential to 
 
 Review the application documentation and interview the system administrator to identify how the application checks certificate revocation.
 
-If the application resides on the SIPRNET and does not have access to the root CAs this requirement is not applicable.
+If the application resides on the SIPRnet and does not have access to the root CAs, this requirement is Not Applicable.
 
 Different application frameworks may handle this requirement for the developer or the developer may have chosen to implement their own implementation for managing and implementing the CRL.
 
@@ -7150,17 +7059,17 @@ Have the administrator demonstrate the configuration setting that enables CRL ch
 
 If the application is not configured to implement a CRL, this is a finding.
 
-**Check ID:**  C-24223r493567_chk
+**Check ID:**  C-24223r985962_chk
 
 ### Fix Text 
 
-Implement a Certificate Revocation List (CRL) import process and configure the application to check the CRL if OCSP is not available.
+Implement a CRL import process and configure the application to check the CRL if OCSP is not available.
 
-**Fix ID:**  F-24212r493568_fix
+**Fix ID:**  F-24212r985963_fix
 
 **Vulnerability ID:**  V-222553
 
-**Rule ID:**  SV-222553r849466_rule
+**Rule ID:**  SV-222553r1015707_rule
 
 ---
 
@@ -7204,7 +7113,7 @@ Design the application so obfuscated passwords cannot be copied and then pasted 
 
 **Vulnerability ID:**  V-222554
 
-**Rule ID:**  SV-222554r508029_rule
+**Rule ID:**  SV-222554r961047_rule
 
 ---
 
@@ -7218,7 +7127,7 @@ A cryptographic module is a hardware or software device or component that perfor
 Based on the criticality of the application, system designers might choose to utilize a hardware based cryptographic module due to the protections and security benefits a hardware based solution provides over a software based solution. Due to various factors, including expense, hardware based encryption modules are usually relegated to only those applications where the system requirements specify it as a required protection. Examples include applications that handle extremely sensitive data or those used in life and death situations, e.g., weapons systems. 
 
 General purpose applications such as a web site will often opt to leverage an underlying software based encryption capability that is offered by the OS, database or application development framework.  Operating systems or database products often provide their own cryptographic modules that are FIPS 140-2 compliant and can meet the authentication to the crypto module requirement via their Role Based Access Controls (users and groups) built into the product.  
-In all cases, userís accessing the cryptographic module must be authenticated and granted the appropriate rights in order to access the encryption module.  Any encryption utilized by the access control mechanisms must be FIPS 140-2 compliant.
+In all cases, user‚Äôs accessing the cryptographic module must be authenticated and granted the appropriate rights in order to access the encryption module.  Any encryption utilized by the access control mechanisms must be FIPS 140-2 compliant.
 
 ### Check Text
 
@@ -7244,7 +7153,7 @@ Use FIPS-approved cryptographic modules.
 
 **Vulnerability ID:**  V-222555
 
-**Rule ID:**  SV-222555r865215_rule
+**Rule ID:**  SV-222555r961050_rule
 
 ---
 
@@ -7284,7 +7193,7 @@ Configure the application to identify and authenticate all non-organizational us
 
 **Vulnerability ID:**  V-222556
 
-**Rule ID:**  SV-222556r508029_rule
+**Rule ID:**  SV-222556r961053_rule
 
 ---
 
@@ -7322,7 +7231,7 @@ Configure the application to accept PIV credentials when utilizing authenticatio
 
 **Vulnerability ID:**  V-222557
 
-**Rule ID:**  SV-222557r849467_rule
+**Rule ID:**  SV-222557r961527_rule
 
 ---
 
@@ -7360,95 +7269,95 @@ Configure the application to verify the PIV credentials presented when utilizing
 
 **Vulnerability ID:**  V-222558
 
-**Rule ID:**  SV-222558r849468_rule
+**Rule ID:**  SV-222558r961530_rule
 
 ---
 
-## The application must accept FICAM-approved third-party credentials.
+## The application must accept Federal Identity, Credential, and Access Management (FICAM)-approved third-party credentials.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
 ### Description
 
-FICAM establishes a federated identity framework for the Federal Government. FICAM provides Government-wide services for common Identity, Credential and Access Management (ICAM) requirements.  The FICAM Trust Framework Solutions (TFS) is the federated identity framework for the U.S. federal government.
- The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the Government.  
+FICAM establishes a federated identity framework for the federal government. FICAM provides government-wide services for common Identity, Credential and Access Management (ICAM) requirements. The FICAM Trust Framework Solutions (TFS) is the federated identity framework for the U.S. federal government.
+ The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the government. 
 
-A Trust Framework that is comparable to federal standards is adopted through this process, which allows Federal Government Relying Parties (Federal Government web sites or RP's) to trust Credential Service Providers a.k.a. Identity Providers that have been assessed under that particular trust framework.  This allows federal government relying parties to trust such credentials at their approved assurance levels. 
+A Trust Framework that is comparable to federal standards is adopted through this process, which allows federal government Relying Parties (Federal Government websites or RP's) to trust Credential Service Providers (a.k.a. Identity Providers) that have been assessed under that particular trust framework. This allows federal government relying parties to trust such credentials at their approved assurance levels. 
 
-This requirement only applies to applications that are intended to be accessible to non-federal government agencies and other partners through FICAM. 
+This requirement only applies to applications that are intended to be accessible to nonfederal government agencies and other partners through FICAM. 
 
-Third-party credentials are those credentials issued by non-federal government entities approved by the Federal Identity, Credential, and Access Management (FICAM) Trust Framework Solutions initiative.
+Third-party credentials are those credentials issued by nonfederal government entities approved by the FICAM TFS initiative.
 
 ### Check Text
 
 Review the application documentation and interview the application administrator to identify application access methods.
 
-If the application is not PK-enabled due to the hosted data being publicly releasable, this check is not applicable.
+If the application is not PKI-enabled due to the hosted data being publicly releasable, this check is Not Applicable.
 
-If the application is only deployed to SIPRNet, this requirement is not applicable.
+If the application is only deployed to SIPRNet, this requirement is Not Applicable.
 
-If the application is not intended to be available to Federal government partners this requirement is not applicable.
+If the application is not intended to be available to federal government partners this requirement is Not Applicable.
 
 Ask the application administrator to demonstrate how the application is configured to allow the use of third-party credentials, verify the third-party credentials are FICAM approved.
 
-If the application does not accept FICAM approved credentials when accepting third-party credentials, this is a finding.
+If the application does not accept FICAM-approved credentials when accepting third-party credentials, this is a finding.
 
-**Check ID:**  C-24229r493585_chk
+**Check ID:**  C-24229r985965_chk
 
 ### Fix Text 
 
-Configure applications  intended to be accessible to non-federal government agencies to use FICAM-approved third-party credentials.
+Configure applications intended to be accessible to nonfederal government agencies to use FICAM-approved third-party credentials.
 
-**Fix ID:**  F-24218r493586_fix
+**Fix ID:**  F-24218r985966_fix
 
 **Vulnerability ID:**  V-222559
 
-**Rule ID:**  SV-222559r849469_rule
+**Rule ID:**  SV-222559r1015708_rule
 
 ---
 
-## The application must conform to FICAM-issued profiles.
+## The application must conform to Federal Identity, Credential, and Access Management (FICAM)-issued profiles.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
 ### Description
 
-FICAM establishes a federated identity framework for the Federal Government. FICAM provides Government-wide services for common Identity, Credential, and Access Management (ICAM) requirements.  The FICAM Trust Framework Solutions (TFS) is the federated identity framework for the U.S. federal government.
- The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the Government.  
+FICAM establishes a federated identity framework for the federal government. FICAM provides government-wide services for common Identity, Credential, and Access Management (ICAM) requirements. The FICAM Trust Framework Solutions (TFS) is the federated identity framework for the U.S. federal government.
+ The TFS is a process by which Industry Trust Frameworks (The codification of requirements for credentials and their issuance, privacy and security requirements, as well as auditing qualifications and processes) are evaluated and assessed for potential use by the government. 
 
-This requirement only applies to applications that are intended to be accessible to non-federal government agencies and other partners or non-organizational (non-DoD) users.
+This requirement only applies to applications that are intended to be accessible to nonfederal government agencies and other partners or nonorganizational (non-DOD) users.
 
 Without conforming to FICAM-issued profiles, the information system may not be interoperable with FICAM-authentication protocols, such as SAML 2.0, OpenID 2.0 or other protocols such as the FICAM backend Attribute Exchange.
 
-This requirement addresses open identity management standards.  More information regarding these standards is available by pointing your web browser to: info.idmanagement.gov/2012/10/what-are-ficam-technical-profiles-and.html
+This requirement addresses open identity management standards. More information regarding these standards is available here: info.idmanagement.gov/2012/10/what-are-ficam-technical-profiles-and.html
 
 ### Check Text
 
 Review the application documentation and interview the application administrator to identify application access methods.
 
-If the application is not PK-enabled due to the hosted data being publicly releasable, this check is not applicable.
+If the application is not PKI-enabled due to the hosted data being publicly releasable, this check is Not Applicable.
 
-If the application is only deployed to SIPRNet, this requirement is not applicable.
+If the application is only deployed to SIPRnet, this requirement is Not Applicable.
 
-If the application is not intended to be available to Federal government partners this requirement is not applicable.
+If the application is not intended to be available to federal government partners this requirement is Not Applicable.
 
-This requirement applies to DoD service providers who are relying parties of external (Federal Government) identity providers.
+This requirement applies to DOD service providers who are relying parties of external (federal government) identity providers.
  
-Ask the application administrator to demonstrate how the application conforms to FICAM issued profiles such as SAML or OPENID.  
+Ask the application administrator to demonstrate how the application conforms to FICAM issued profiles such as SAML or OPENID. 
 
 If the application is designed to be a service provider utilizing an external identify provider and doesn't conform to FICAM-issued profiles, this is a finding.
 
-**Check ID:**  C-24230r493588_chk
+**Check ID:**  C-24230r985968_chk
 
 ### Fix Text 
 
-Configure the application to conform to FICAM-issued technical profiles when providing services that rely on external (Federal Government) identity providers.
+Configure the application to conform to FICAM-issued technical profiles when providing services that rely on external (federal government) identity providers.
 
-**Fix ID:**  F-24219r493589_fix
+**Fix ID:**  F-24219r985969_fix
 
 **Vulnerability ID:**  V-222560
 
-**Rule ID:**  SV-222560r849470_rule
+**Rule ID:**  SV-222560r1015709_rule
 
 ---
 
@@ -7492,7 +7401,7 @@ Configure the application to log when application maintenance functionality is e
 
 **Vulnerability ID:**  V-222561
 
-**Rule ID:**  SV-222561r849471_rule
+**Rule ID:**  SV-222561r961548_rule
 
 ---
 
@@ -7536,7 +7445,7 @@ Configure the application to encrypt remote application maintenance sessions.
 
 **Vulnerability ID:**  V-222562
 
-**Rule ID:**  SV-222562r849472_rule
+**Rule ID:**  SV-222562r961554_rule
 
 ---
 
@@ -7578,7 +7487,7 @@ Configure the application to encrypt remote application maintenance sessions.
 
 **Vulnerability ID:**  V-222563
 
-**Rule ID:**  SV-222563r849473_rule
+**Rule ID:**  SV-222563r961557_rule
 
 ---
 
@@ -7638,7 +7547,7 @@ Configure the application to verify termination of remote maintenance sessions.
 
 **Vulnerability ID:**  V-222564
 
-**Rule ID:**  SV-222564r849474_rule
+**Rule ID:**  SV-222564r961560_rule
 
 ---
 
@@ -7686,11 +7595,11 @@ Configure the application to use strong authentication (CAC) when accessing the 
 
 **Vulnerability ID:**  V-222565
 
-**Rule ID:**  SV-222565r508029_rule
+**Rule ID:**  SV-222565r961062_rule
 
 ---
 
-## The application must terminate all sessions and network connections when non-local maintenance is completed.
+## The application must terminate all sessions and network connections when nonlocal maintenance is completed.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
@@ -7698,7 +7607,7 @@ Configure the application to use strong authentication (CAC) when accessing the 
 
 If a maintenance session or connection remains open after maintenance is completed, it may be hijacked by an attacker and used to compromise or damage the system.
 
-Non-local maintenance and diagnostic activities are those activities conducted by individuals communicating through a network, either an external network (e.g., the Internet) or an internal network. Local maintenance and diagnostic activities are those activities carried out by individuals physically present at the information system or information system component and not communicating across a network connection.
+Nonlocal maintenance and diagnostic activities are those activities conducted by individuals communicating through a network, either an external network (e.g., the Internet) or an internal network. Local maintenance and diagnostic activities are those activities carried out by individuals physically present at the information system or information system component and not communicating across a network connection.
 
 This requirement applies to hardware/software diagnostic test equipment or tools. This requirement does not cover hardware/software components that may support information system maintenance, yet are a part of the system (e.g., the software implementing "ping," "ls," "ipconfig," or the hardware and software implementing the monitoring port of an Ethernet switch).
 
@@ -7706,11 +7615,11 @@ This requirement applies to hardware/software diagnostic test equipment or tools
 
 Review the application documentation and interview the system administrator to determine how the application is configured to terminate network sessions after sessions have been idle for a period of time. Identify any documented exceptions.
 
-If the application does not provide non-local maintenance and diagnostic capability, this requirement is not applicable.
+If the application does not provide nonlocal maintenance and diagnostic capability, this requirement is Not Applicable.
 
 For privileged management sessions the period of time is 10 minutes of inactivity.
 
-For regular user or non-privileged sessions, the period of time is 15 minutes of inactivity.
+For regular user or nonprivileged sessions, the period of time is 15 minutes of inactivity.
 
 Authenticate to the application using normal in-band access methods and as an application admin.
 
@@ -7722,7 +7631,7 @@ If necessary, logout of the application, clear the browser cache, and repeat the
 
 If the application does not deny access after each user session has exceeded the relevant idle timeout period and there is no documented risk exceptions needed to fulfill mission requirements, this is a finding.
 
-**Check ID:**  C-24236r493606_chk
+**Check ID:**  C-24236r985977_chk
 
 ### Fix Text 
 
@@ -7732,7 +7641,7 @@ Configure the application to expire idle user sessions after 10 minutes of inact
 
 **Vulnerability ID:**  V-222566
 
-**Rule ID:**  SV-222566r508029_rule
+**Rule ID:**  SV-222566r985978_rule
 
 ---
 
@@ -7780,7 +7689,7 @@ Validate that variable values do not change while a switch event is occurring.
 
 **Vulnerability ID:**  V-222567
 
-**Rule ID:**  SV-222567r849475_rule
+**Rule ID:**  SV-222567r961863_rule
 
 ---
 
@@ -7830,7 +7739,7 @@ Configure or design the application to terminate application network sessions at
 
 **Vulnerability ID:**  V-222568
 
-**Rule ID:**  SV-222568r508029_rule
+**Rule ID:**  SV-222568r961068_rule
 
 ---
 
@@ -7872,7 +7781,7 @@ Utilize FIPS-validated algorithms when signing application components.
 
 **Vulnerability ID:**  V-222570
 
-**Rule ID:**  SV-222570r849476_rule
+**Rule ID:**  SV-222570r961857_rule
 
 ---
 
@@ -7912,7 +7821,7 @@ Configure the application to use a FIPS-validated hashing algorithm when creatin
 
 **Vulnerability ID:**  V-222571
 
-**Rule ID:**  SV-222571r849477_rule
+**Rule ID:**  SV-222571r961857_rule
 
 ---
 
@@ -7946,7 +7855,7 @@ Configure the application to use a FIPS-validated cryptographic module.
 
 **Vulnerability ID:**  V-222572
 
-**Rule ID:**  SV-222572r849478_rule
+**Rule ID:**  SV-222572r961857_rule
 
 ---
 
@@ -7984,7 +7893,7 @@ Configure the application to use a FIPS-validated cryptographic module.
 
 **Vulnerability ID:**  V-222573
 
-**Rule ID:**  SV-222573r849479_rule
+**Rule ID:**  SV-222573r961857_rule
 
 ---
 
@@ -8020,7 +7929,7 @@ Configure the application so user interface to the application and management in
 
 **Vulnerability ID:**  V-222574
 
-**Rule ID:**  SV-222574r508029_rule
+**Rule ID:**  SV-222574r961095_rule
 
 ---
 
@@ -8056,7 +7965,7 @@ Access the application website and establish an application session.
 
 Access the page that sets the session cookie.
 
-Press ìF12î to open Developer Tools.
+Press ‚ÄúF12‚Äù to open Developer Tools.
 
 Select "cache" and then "view cookie information".
 
@@ -8076,7 +7985,7 @@ Configure the application to set the HTTPOnly flag on session cookies.
 
 **Vulnerability ID:**  V-222575
 
-**Rule ID:**  SV-222575r508029_rule
+**Rule ID:**  SV-222575r1043178_rule
 
 ---
 
@@ -8123,7 +8032,7 @@ Configure the application to ensure the secure flag is set on session cookies.
 
 **Vulnerability ID:**  V-222576
 
-**Rule ID:**  SV-222576r508029_rule
+**Rule ID:**  SV-222576r1043178_rule
 
 ---
 
@@ -8167,7 +8076,7 @@ Configure the application to protect session IDs from interception or from manip
 
 **Vulnerability ID:**  V-222577
 
-**Rule ID:**  SV-222577r508029_rule
+**Rule ID:**  SV-222577r1043178_rule
 
 ---
 
@@ -8205,7 +8114,7 @@ Configure the application to destroy session ID cookies once the application ses
 
 **Vulnerability ID:**  V-222578
 
-**Rule ID:**  SV-222578r508029_rule
+**Rule ID:**  SV-222578r1043179_rule
 
 ---
 
@@ -8215,7 +8124,7 @@ Configure the application to destroy session ID cookies once the application ses
 
 ### Description
 
-Session fixation allows an attacker to hijack a valid userís application session. The attack focuses on the manner in which a web application manages the userís session ID. Applications become vulnerable when they do not assign a new session ID when authenticating users thereby using the existing session ID.
+Session fixation allows an attacker to hijack a valid user‚Äôs application session. The attack focuses on the manner in which a web application manages the user‚Äôs session ID. Applications become vulnerable when they do not assign a new session ID when authenticating users thereby using the existing session ID.
 
 Many web development frameworks such as PHP, .NET, and ASP include their own mechanisms for session management. Whenever possible it is recommended to utilize the provided session management framework.
 
@@ -8247,7 +8156,7 @@ Design the application to generate new session IDs with unique values when authe
 
 **Vulnerability ID:**  V-222579
 
-**Rule ID:**  SV-222579r508029_rule
+**Rule ID:**  SV-222579r1043180_rule
 
 ---
 
@@ -8279,7 +8188,7 @@ Configure the application to configure user session identifiers.
 
 **Vulnerability ID:**  V-222580
 
-**Rule ID:**  SV-222580r508029_rule
+**Rule ID:**  SV-222580r1043180_rule
 
 ---
 
@@ -8319,7 +8228,7 @@ Configure the application to transmit session ID information via cookies.
 
 **Vulnerability ID:**  V-222581
 
-**Rule ID:**  SV-222581r508029_rule
+**Rule ID:**  SV-222581r1043180_rule
 
 ---
 
@@ -8331,7 +8240,7 @@ Configure the application to transmit session ID information via cookies.
 
 Many web development frameworks such as PHP, .NET, and ASP include their own mechanisms for session management. Whenever possible it is recommended to utilize the provided session management framework.
 
-Session identifiers are assigned to application users so they can be uniquely identified. This allows the user to customize their web application experience and also allows the developer to differentiate between users thereby providing the opportunity to customize the userís features and functions.
+Session identifiers are assigned to application users so they can be uniquely identified. This allows the user to customize their web application experience and also allows the developer to differentiate between users thereby providing the opportunity to customize the user‚Äôs features and functions.
 
 Once a user has logged out of the application or had their session terminated, their session IDs should not be re-used. Session IDs should also not be used for other purposes such as creating unique file names and they should also not be re-assigned to other users once the original user has logged out or otherwise quit the application.
 
@@ -8363,49 +8272,41 @@ Design the application to not re-use session IDs.
 
 **Vulnerability ID:**  V-222582
 
-**Rule ID:**  SV-222582r508029_rule
+**Rule ID:**  SV-222582r1043180_rule
 
 ---
 
-## The application must use the Federal Information Processing Standard (FIPS) 140-2-validated cryptographic modules and random number generator if the application implements encryption, key exchange, digital signature, and hash functionality.
+## The application must generate a unique session identifier using a FIPS 140-2/140-3 approved random number generator.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
 ### Description
 
-Sequentially generated session IDs can be easily guessed by an attacker. Employing the concept of randomness in the generation of unique session identifiers helps to protect against brute-force attacks to determine future session identifiers.
+The application server will use session IDs to communicate between modules or applications within the application server and between the application server and users. The session ID allows the application to track the communications along with credentials that may have been used to authenticate users or modules.
+
+Unique session IDs are the opposite of sequentially generated session IDs, which can be easily guessed by an attacker. Unique session identifiers help to reduce predictability of those identifiers.
 
 Unique session IDs address man-in-the-middle attacks, including session hijacking or insertion of false information into a session. If the attacker is unable to identify or guess the session information related to pending application traffic, they will have more difficulty in hijacking the session or otherwise manipulating valid sessions.
 
-This requirement focuses on communications protection for the application session rather than for the network packet.
-
-This requirement applies to applications that utilize communications sessions. This includes, but is not limited to, web-based applications and Service-Oriented Architectures (SOA).
-
 ### Check Text
 
-Review the application documentation and interview the application administrator.
+Review the application server configuration and documentation to determine if the application server uses a FIPS 140-2/140-3 approved random number generator to create unique session identifiers.
 
-Identify if the application implements encryption, key exchange, digital signature, or hash functionality.
+Have a user log on to the application server to determine if the session IDs generated are random and unique.
 
-Identify the cryptographic modules utilized by the application for these functions. The application may be designed to use the crypto functionality of the underlying OS or it may be a product of the application itself.
+If the application server does not generate unique session identifiers and does not use a FIPS 140-2/140-3 random number generator to create the randomness of the session ID, this is a finding.
 
-Identify the cryptographic service provider utilized by the application and reference the NIST validation website to ensure the algorithms utilized are approved.
-
-http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm
-
-If the application does not use FIPS 140-2-approved encryption algorithms, this is a finding.
-
-**Check ID:**  C-24253r493657_chk
+**Check ID:**  C-24253r1051268_chk
 
 ### Fix Text 
 
-Configure the application to use FIPS 140-2-validated cryptographic modules when the application implements encryption, key exchange, digital signatures, random number generators, and hash functionality.
+Configure the application server to generate unique session identifiers and to use a FIPS 140-2/140-3 random number generator to generate the randomness of the session identifiers.
 
-**Fix ID:**  F-24242r493658_fix
+**Fix ID:**  F-24242r1051269_fix
 
 **Vulnerability ID:**  V-222583
 
-**Rule ID:**  SV-222583r508029_rule
+**Rule ID:**  SV-222583r1051270_rule
 
 ---
 
@@ -8429,15 +8330,15 @@ Review the application documentation and interview the application administrator
 
 Internet Explorer can be used to view certificate information:
 
-Select ìToolsî
-Select ìInternet Optionsî
-Select ìContentî tab
-Select ìCertificatesî
+Select ‚ÄúTools‚Äù
+Select ‚ÄúInternet Options‚Äù
+Select ‚ÄúContent‚Äù tab
+Select ‚ÄúCertificates‚Äù
 Select the certificate used for authentication:
 
-Click ìViewî
-Select ìDetailsî tab
-Select ìIssuerî
+Click ‚ÄúView‚Äù
+Select ‚ÄúDetails‚Äù tab
+Select ‚ÄúIssuer‚Äù
 
 If the application utilizes PKI certificates other than DoD-approved PKI and ECA certificates, this is a finding.
 
@@ -8451,7 +8352,7 @@ Configure the application to utilize DoD-approved PKI established CAs when verif
 
 **Vulnerability ID:**  V-222584
 
-**Rule ID:**  SV-222584r849480_rule
+**Rule ID:**  SV-222584r961596_rule
 
 ---
 
@@ -8507,7 +8408,7 @@ Fix any vulnerability found when the application is an insecure state (initializ
 
 **Vulnerability ID:**  V-222585
 
-**Rule ID:**  SV-222585r508029_rule
+**Rule ID:**  SV-222585r961122_rule
 
 ---
 
@@ -8541,7 +8442,7 @@ Create operational configuration documentation that identifies information neede
 
 **Vulnerability ID:**  V-222586
 
-**Rule ID:**  SV-222586r508029_rule
+**Rule ID:**  SV-222586r961125_rule
 
 ---
 
@@ -8587,7 +8488,7 @@ Identify data elements that require protection. Document the data types and spec
 
 **Vulnerability ID:**  V-222587
 
-**Rule ID:**  SV-222587r508029_rule
+**Rule ID:**  SV-222587r961128_rule
 
 ---
 
@@ -8633,7 +8534,7 @@ Encrypt data according to DoD policy or data owner requirements.
 
 **Vulnerability ID:**  V-222588
 
-**Rule ID:**  SV-222588r849481_rule
+**Rule ID:**  SV-222588r961599_rule
 
 ---
 
@@ -8681,7 +8582,7 @@ Encrypt classified data using Type 1, Suite B, or other NSA-approved encryption 
 
 **Vulnerability ID:**  V-222589
 
-**Rule ID:**  SV-222589r849482_rule
+**Rule ID:**  SV-222589r961602_rule
 
 ---
 
@@ -8719,7 +8620,7 @@ Implement controls within the application that limits access to security configu
 
 **Vulnerability ID:**  V-222590
 
-**Rule ID:**  SV-222590r508029_rule
+**Rule ID:**  SV-222590r961131_rule
 
 ---
 
@@ -8753,7 +8654,7 @@ Design and configure applications to maintain a separate execution domain for ea
 
 **Vulnerability ID:**  V-222591
 
-**Rule ID:**  SV-222591r849483_rule
+**Rule ID:**  SV-222591r961608_rule
 
 ---
 
@@ -8783,13 +8684,13 @@ If the application does not prevent unauthorized and unintended information tran
 
 ### Fix Text 
 
-†Configure or design the application to utilize a security control that will implement a boundary that will prevent unauthorized and unintended information transfer via shared system resources.
+¬†Configure or design the application to utilize a security control that will implement a boundary that will prevent unauthorized and unintended information transfer via shared system resources.
 
 **Fix ID:**  F-24251r493685_fix
 
 **Vulnerability ID:**  V-222592
 
-**Rule ID:**  SV-222592r508029_rule
+**Rule ID:**  SV-222592r961149_rule
 
 ---
 
@@ -8843,7 +8744,7 @@ Implement:
 
 **Vulnerability ID:**  V-222593
 
-**Rule ID:**  SV-222593r864576_rule
+**Rule ID:**  SV-222593r961620_rule
 
 ---
 
@@ -8889,7 +8790,7 @@ Design and deploy the application to utilize controls that will prevent the appl
 
 **Vulnerability ID:**  V-222594
 
-**Rule ID:**  SV-222594r561257_rule
+**Rule ID:**  SV-222594r961152_rule
 
 ---
 
@@ -8935,7 +8836,7 @@ Build the application to address issues that are found in a redundant environmen
 
 **Vulnerability ID:**  V-222595
 
-**Rule ID:**  SV-222595r508029_rule
+**Rule ID:**  SV-222595r961155_rule
 
 ---
 
@@ -8981,7 +8882,7 @@ Configure all of the application systems to require TLS encryption in accordance
 
 **Vulnerability ID:**  V-222596
 
-**Rule ID:**  SV-222596r849486_rule
+**Rule ID:**  SV-222596r961632_rule
 
 ---
 
@@ -9025,7 +8926,7 @@ Configure the application to use cryptographic protections to prevent unauthoriz
 
 **Vulnerability ID:**  V-222597
 
-**Rule ID:**  SV-222597r864577_rule
+**Rule ID:**  SV-222597r961635_rule
 
 ---
 
@@ -9061,7 +8962,7 @@ Configure all of the application systems to require TLS encryption.
 
 **Vulnerability ID:**  V-222598
 
-**Rule ID:**  SV-222598r849488_rule
+**Rule ID:**  SV-222598r961638_rule
 
 ---
 
@@ -9097,7 +8998,7 @@ Configure all of the application systems to require TLS encryption.
 
 **Vulnerability ID:**  V-222599
 
-**Rule ID:**  SV-222599r849489_rule
+**Rule ID:**  SV-222599r961641_rule
 
 ---
 
@@ -9137,7 +9038,7 @@ Configure the application to not display technical details about the application
 
 **Vulnerability ID:**  V-222600
 
-**Rule ID:**  SV-222600r849490_rule
+**Rule ID:**  SV-222600r961638_rule
 
 ---
 
@@ -9175,7 +9076,7 @@ Encrypt sensitive information stored in hidden fields using DoD-approved encrypt
 
 **Vulnerability ID:**  V-222601
 
-**Rule ID:**  SV-222601r849491_rule
+**Rule ID:**  SV-222601r961638_rule
 
 ---
 
@@ -9185,21 +9086,7 @@ Encrypt sensitive information stored in hidden fields using DoD-approved encrypt
 
 ### Description
 
-XSS attacks are essentially code injection attacks against the various language interpreters contained within the browser. XSS can be executed via HTML, JavaScript, VBScript, ActiveX; essentially any scripting language a browser is capable of processing.
 
-XSS vulnerabilities are created when a website does not properly sanitize, escape, or encode user input. For example, "&lt;" is the HTML encoding for the "<" character. If the encoding is performed, the script code will not execute.
-
-There are 3 parties involved in an XSS attack, the attacker, the trusted and vulnerable website, and the victim. An attacker will take advantage of a vulnerable website that does not properly validate user input by inserting malicious code into any data entry field.
-
-When the victim visits the trusted website and clicks on the malicious link left by the attacker, the attackerís script is executed in the victims browser with the trust permissions assigned to the site.
-
-There are several different types of XSS attack and the complete details regarding XSS cannot be described completely here.
-
-To address the issue of XSS, web application developers must escape, encode or otherwise validate all user input that is processed and output by the web server. They should also use web templates or a web development framework that provides the capability to encode or otherwise validate user input.
-
-Examples of XSS vulnerabilities can be obtained from the Open Web Application Security Project (OWASP) website.
-  
-The site is available by pointing your browser to https://www.owasp.org.
 
 ### Check Text
 
@@ -9236,7 +9123,7 @@ Develop your application using a web template system or a web application develo
 
 **Vulnerability ID:**  V-222602
 
-**Rule ID:**  SV-222602r561263_rule
+**Rule ID:**  SV-222602r961158_rule
 
 ---
 
@@ -9248,7 +9135,7 @@ Develop your application using a web template system or a web application develo
 
 Cross-Site Request Forgery (CSRF) is an attack where a website user is forced to execute an unwanted action on a website that he or she is currently authenticated to. An attacker, through social engineering (e.g., e-mail or chat) creates a hyperlink which executes unwanted actions on the website the victim is authenticated to and sends it to the victim. If the victim clicks on the link, the action is executed unbeknownst to the victim.
 
-A CSRF attack executes a website request on behalf of the user which can lead to a compromise of the userís data. What is needed to be successful is for the attacker to know the URL, an authenticated application user, and trick the user into clicking the malicious link.
+A CSRF attack executes a website request on behalf of the user which can lead to a compromise of the user‚Äôs data. What is needed to be successful is for the attacker to know the URL, an authenticated application user, and trick the user into clicking the malicious link.
 
 While XSS is not needed for a CSRF attack to work, XSS vulnerabilities can provide the attacker with a vector to obtain information from the user that may be used in mitigating the risk. The application must not be vulnerable to XSS as an XSS attack can be used to help defeat token, double-submit cookie, referrer and origin-based CSRF defenses.
 
@@ -9280,7 +9167,7 @@ Configure the application to use unpredictable challenge tokens and check the HT
 
 **Vulnerability ID:**  V-222603
 
-**Rule ID:**  SV-222603r508029_rule
+**Rule ID:**  SV-222603r961158_rule
 
 ---
 
@@ -9302,7 +9189,7 @@ http://sitename/cgi-bin/userData.pl?doc=user1.txt
 Example URL modified: 
 http://sitename/cgi-bin/userData.pl?doc=/bin/ls|
 
-The result is the execution of the command ì/bin/lsî which could allow the attacker to list contents of the directory via the browser.
+The result is the execution of the command ‚Äú/bin/ls‚Äù which could allow the attacker to list contents of the directory via the browser.
 
 The following is a list of functions vulnerable to command injection sorted according to language.  
 
@@ -9340,7 +9227,7 @@ Modify the application so as to escape/sanitize special character input or confi
 
 **Vulnerability ID:**  V-222604
 
-**Rule ID:**  SV-222604r508029_rule
+**Rule ID:**  SV-222604r961158_rule
 
 ---
 
@@ -9382,11 +9269,11 @@ HTTP Gets. Depends on the previously rendered page and per-browser implementatio
 
 .NET: Unicode (little endian)
 
-JSP implementations, such as Tomcat: UTF8 - see ìjavaEncodingî in web.xml by many servlet containers
+JSP implementations, such as Tomcat: UTF8 - see ‚ÄújavaEncoding‚Äù in web.xml by many servlet containers
 
 Java: Unicode (UTF-16, big endian, or depends on the OS during JVM startup)
 
-PHP: Set in php.ini, ISO 8859-1î
+PHP: Set in php.ini, ISO 8859-1‚Äù
 
 If the results are not provided or the application representative cannot demonstrate that the application does not use Unicode encoding, this is a finding.
 
@@ -9402,7 +9289,7 @@ Security checks should be carried out after decoding is completed. Moreover, it 
 
 **Vulnerability ID:**  V-222605
 
-**Rule ID:**  SV-222605r561266_rule
+**Rule ID:**  SV-222605r961158_rule
 
 ---
 
@@ -9456,7 +9343,7 @@ Design and configure the application to validate input prior to executing comman
 
 **Vulnerability ID:**  V-222606
 
-**Rule ID:**  SV-222606r508029_rule
+**Rule ID:**  SV-222606r961158_rule
 
 ---
 
@@ -9512,7 +9399,7 @@ Modify the application and remove SQL injection vulnerabilities.
 
 **Vulnerability ID:**  V-222607
 
-**Rule ID:**  SV-222607r508029_rule
+**Rule ID:**  SV-222607r961158_rule
 
 ---
 
@@ -9564,7 +9451,7 @@ Patch the application components when vulnerabilities are discovered.
 
 **Vulnerability ID:**  V-222608
 
-**Rule ID:**  SV-222608r508029_rule
+**Rule ID:**  SV-222608r961158_rule
 
 ---
 
@@ -9634,7 +9521,7 @@ Remediate identified vulnerabilities and obtain documented risk acceptance for t
 
 **Vulnerability ID:**  V-222609
 
-**Rule ID:**  SV-222609r864578_rule
+**Rule ID:**  SV-222609r961656_rule
 
 ---
 
@@ -9674,7 +9561,7 @@ Use generic error messages.
 
 **Vulnerability ID:**  V-222610
 
-**Rule ID:**  SV-222610r508029_rule
+**Rule ID:**  SV-222610r961167_rule
 
 ---
 
@@ -9718,7 +9605,7 @@ Use generic error messages for non-privileged users.
 
 **Vulnerability ID:**  V-222611
 
-**Rule ID:**  SV-222611r508029_rule
+**Rule ID:**  SV-222611r961170_rule
 
 ---
 
@@ -9771,7 +9658,7 @@ Patch applications when overflows are identified in vendor products.
 
 **Vulnerability ID:**  V-222612
 
-**Rule ID:**  SV-222612r864579_rule
+**Rule ID:**  SV-222612r961665_rule
 
 ---
 
@@ -9803,7 +9690,7 @@ Configure or design the application to remove old components when updating.
 
 **Vulnerability ID:**  V-222613
 
-**Rule ID:**  SV-222613r849496_rule
+**Rule ID:**  SV-222613r961677_rule
 
 ---
 
@@ -9813,13 +9700,7 @@ Configure or design the application to remove old components when updating.
 
 ### Description
 
-Security flaws with software applications are discovered daily. Vendors are constantly updating and patching their products to address newly discovered security vulnerabilities. Organizations (including any contractor to the organization) are required to promptly install security-relevant software updates (e.g., patches, service packs, and hot fixes). Flaws discovered during security assessments, continuous monitoring, incident response activities, or information system error handling must also be addressed expeditiously.
 
-Organization-defined time periods for updating security-relevant software may vary based on a variety of factors including, for example, the security category of the information system or the criticality of the update (i.e., severity of the vulnerability related to the discovered flaw).
-
-This requirement will apply to software patch management solutions that are used to install patches across the enclave and also to applications themselves that are not part of that patch management solution. For example, many browsers today provide the capability to install their own patch software. Patch criticality, as well as system criticality will vary. Therefore, the tactical situations regarding the patch management process will also vary. This means that the time period utilized must be a configurable parameter. Time frames for application of security-relevant software updates may be dependent upon the Information Assurance Vulnerability Management (IAVM) process.
-
-The application, or the patch management solution that is configured to patch the application, must be configured to check for and install security-relevant software updates and patches at least weekly. Patches must be applied immediately or in accordance with POA&Ms, IAVMs, CTOs, DTMs or other authoritative patching guidelines or sources.
 
 ### Check Text
 
@@ -9841,7 +9722,7 @@ Check for application updates at least weekly and apply patches immediately or i
 
 **Vulnerability ID:**  V-222614
 
-**Rule ID:**  SV-222614r849497_rule
+**Rule ID:**  SV-222614r961683_rule
 
 ---
 
@@ -9879,7 +9760,7 @@ Design the application to verify the correct operation of security functions.
 
 **Vulnerability ID:**  V-222615
 
-**Rule ID:**  SV-222615r849498_rule
+**Rule ID:**  SV-222615r961731_rule
 
 ---
 
@@ -9919,7 +9800,7 @@ Design the application to verify the correct operation of security functions on 
 
 **Vulnerability ID:**  V-222616
 
-**Rule ID:**  SV-222616r849499_rule
+**Rule ID:**  SV-222616r961734_rule
 
 ---
 
@@ -9963,7 +9844,7 @@ Configure the application to send notices to the ISSO and ISSM indicating the ap
 
 **Vulnerability ID:**  V-222617
 
-**Rule ID:**  SV-222617r508029_rule
+**Rule ID:**  SV-222617r961185_rule
 
 ---
 
@@ -9989,13 +9870,13 @@ Review the application documentation and interview the application administrator
 
 If the application does not contain mobile code, or if the mobile code executes within the client browser, this is not applicable.
 
-The URL of the application must be added to the Trusted Sites zone. This is accomplished via the Tools, Internet Options, and ìSecurityî Tab.
+The URL of the application must be added to the Trusted Sites zone. This is accomplished via the Tools, Internet Options, and ‚ÄúSecurity‚Äù Tab.
 
-Select the ìTrusted Sitesî zone.
-Click the ìsitesî button.
-Enter the URL into the text box below the ìAdd this site to this zoneî message.
-Click "Addî.
-Click ìOKî.
+Select the ‚ÄúTrusted Sites‚Äù zone.
+Click the ‚Äúsites‚Äù button.
+Enter the URL into the text box below the ‚ÄúAdd this site to this zone‚Äù message.
+Click "Add‚Äù.
+Click ‚ÄúOK‚Äù.
 
 Note: This requires administrator privileges to add URL to sites on a STIG compliant workstation.
 
@@ -10015,7 +9896,7 @@ Configure the application so Category 1A mobile code is signed.
 
 **Vulnerability ID:**  V-222618
 
-**Rule ID:**  SV-222618r508029_rule
+**Rule ID:**  SV-222618r961083_rule
 
 ---
 
@@ -10045,7 +9926,7 @@ Establish an account management process.
 
 **Vulnerability ID:**  V-222619
 
-**Rule ID:**  SV-222619r864404_rule
+**Rule ID:**  SV-222619r961863_rule
 
 ---
 
@@ -10108,7 +9989,7 @@ Separate web server from other application tiers and place it on a separate netw
 
 **Vulnerability ID:**  V-222620
 
-**Rule ID:**  SV-222620r864405_rule
+**Rule ID:**  SV-222620r961863_rule
 
 ---
 
@@ -10136,7 +10017,7 @@ Retain application audit log files for one year and five years for SAMI data.
 
 **Vulnerability ID:**  V-222621
 
-**Rule ID:**  SV-222621r864406_rule
+**Rule ID:**  SV-222621r961863_rule
 
 ---
 
@@ -10166,7 +10047,7 @@ Maintain a log or records of dates and times audit logs are reviewed.
 
 **Vulnerability ID:**  V-222622
 
-**Rule ID:**  SV-222622r864407_rule
+**Rule ID:**  SV-222622r961863_rule
 
 ---
 
@@ -10194,7 +10075,7 @@ Create and maintain a policy to report IA violations.
 
 **Vulnerability ID:**  V-222623
 
-**Rule ID:**  SV-222623r864408_rule
+**Rule ID:**  SV-222623r961863_rule
 
 ---
 
@@ -10224,19 +10105,19 @@ Ask the application representative to provide vulnerability test procedures and 
 
 Ask the application representative to provide the settings that were used to conduct the vulnerability testing.
 
-Verify the automated vulnerability scanning tool was appropriately configured to assure as complete a test as possible of the application architecture components. E.g., if the application includes a web server, web server tests must be included.
+Verify the automated vulnerability scanning tool was appropriately configured to ensure as complete a test as possible of the application architecture components (e.g., if the application includes a web server, web server tests must be included).
 
-If the vulnerability scan report includes informational and/or non-critical results this is not a finding.
+If the vulnerability scan report includes informational and/or noncritical results, this is not a finding.
 
 If previously identified vulnerabilities have subsequently been resolved, this is not a finding.
 
-If the application test procedures and test results do not include active vulnerability and fuzz testing this is a finding.
+If the application test procedures and test results do not include active vulnerability and fuzz testing, this is a finding.
 
-If the vulnerability scan results include critical vulnerabilities, this is a finding.
+If the vulnerability scan results include critical vulnerabilities 21 business days or older, this is a finding.
 
 If the vulnerability scanning tests are not relevant to the architecture of the application, this is a finding.
 
-**Check ID:**  C-24294r493780_chk
+**Check ID:**  C-24294r1051271_chk
 
 ### Fix Text 
 
@@ -10250,7 +10131,7 @@ Address discovered vulnerabilities.
 
 **Vulnerability ID:**  V-222624
 
-**Rule ID:**  SV-222624r864409_rule
+**Rule ID:**  SV-222624r1051272_rule
 
 ---
 
@@ -10294,7 +10175,7 @@ Develop web services to account for deadlock issues.
 
 **Vulnerability ID:**  V-222625
 
-**Rule ID:**  SV-222625r508029_rule
+**Rule ID:**  SV-222625r961863_rule
 
 ---
 
@@ -10330,7 +10211,7 @@ Separate the application user data into a different directory than the applicati
 
 **Vulnerability ID:**  V-222626
 
-**Rule ID:**  SV-222626r864410_rule
+**Rule ID:**  SV-222626r961863_rule
 
 ---
 
@@ -10373,7 +10254,7 @@ Configure the application according to the product STIG or when a STIG is not av
 
 **Vulnerability ID:**  V-222627
 
-**Rule ID:**  SV-222627r864411_rule
+**Rule ID:**  SV-222627r961863_rule
 
 ---
 
@@ -10422,7 +10303,7 @@ Verify that all ports, protocols, and services are used in accordance with the D
 
 **Vulnerability ID:**  V-222628
 
-**Rule ID:**  SV-222628r864412_rule
+**Rule ID:**  SV-222628r961863_rule
 
 ---
 
@@ -10450,7 +10331,7 @@ Register the application and ports in the Ports and Protocols Database.
 
 **Vulnerability ID:**  V-222629
 
-**Rule ID:**  SV-222629r864413_rule
+**Rule ID:**  SV-222629r961863_rule
 
 ---
 
@@ -10490,7 +10371,7 @@ Patch the CM system when new security patches are made available and apply the r
 
 **Vulnerability ID:**  V-222630
 
-**Rule ID:**  SV-222630r864414_rule
+**Rule ID:**  SV-222630r961863_rule
 
 ---
 
@@ -10534,7 +10415,7 @@ Review access privileges to the CM repository at least every three months.
 
 **Vulnerability ID:**  V-222631
 
-**Rule ID:**  SV-222631r864415_rule
+**Rule ID:**  SV-222631r961863_rule
 
 ---
 
@@ -10707,7 +10588,7 @@ Create and update a SCM plan describing the configuration control and change man
 
 **Vulnerability ID:**  V-222632
 
-**Rule ID:**  SV-222632r864416_rule
+**Rule ID:**  SV-222632r961863_rule
 
 ---
 
@@ -10749,7 +10630,7 @@ Setup and maintain a Configuration Control Board.
 
 **Vulnerability ID:**  V-222633
 
-**Rule ID:**  SV-222633r864417_rule
+**Rule ID:**  SV-222633r961863_rule
 
 ---
 
@@ -10779,7 +10660,7 @@ Design application to be compliant with all Department of Defense (DoD) Informat
 
 **Vulnerability ID:**  V-222634
 
-**Rule ID:**  SV-222634r849507_rule
+**Rule ID:**  SV-222634r987685_rule
 
 ---
 
@@ -10811,41 +10692,43 @@ Deploy mission critical applications on servers that are not shared by other les
 
 **Vulnerability ID:**  V-222635
 
-**Rule ID:**  SV-222635r864418_rule
+**Rule ID:**  SV-222635r961863_rule
 
 ---
 
-## A disaster recovery/continuity plan must exist in accordance with DoD policy based on the applications availability requirements.
+## A contingency plan must exist in accordance with DOD policy based on the application's availability requirements.
 
 <span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
 
 ### Description
 
-All applications must document disaster recovery/continuity  procedures to include business recovery plans, system contingency plans, facility disaster recovery plans, and plan acceptance.
+Contingency planning for systems is part of an overall program for achieving continuity of operations for organizational mission and business functions. Contingency planning addresses system restoration and implementation of alternative mission or business processes when systems are compromised or breached. 
+
+All applications must document procedures to include business recovery plans, system contingency plans, facility disaster recovery plans, and plan acceptance.
 
 ### Check Text
 
-Review disaster recovery/continuity plans.
+Review contingency plans.
 
-For high risk applications, verify the disaster plan exists and provides for the smooth transfer of all mission or business essential functions to an alternate site for the duration of an event with little or no loss of operational continuity.
+For high availability applications, verify the contingency plan exists and provides for the smooth transfer of all mission or business essential functions to an alternate site for the duration of an event with little or no loss of operational continuity.
  
-For moderate risk applications, verify the disaster recovery/continuity plan exists and provides for the resumption of mission or business essential functions within 24 hours activation.
+For moderate availability applications, verify the contingency plan exists and provides for the resumption of mission or business essential functions within 12 hours activation or as defined in the contingency plan.
 
-For low risk applications, verify the disaster recovery/continuity plan exists and provides for the partial resumption of mission or business essential functions within 5 days of activation.
+For low availability applications, verify the contingency plan exists and provides for the partial resumption of mission or business essential functions within 5 to 30 days of activation as defined in the contingency plan.
  
-If the disaster recovery/continuity plan does not exist or does not meet the severity level requirements, this is a finding.
+If the contingency plan does not exist or does not meet the severity level requirements, this is a finding.
 
-**Check ID:**  C-24306r493816_chk
+**Check ID:**  C-24306r1051323_chk
 
 ### Fix Text 
 
-Create and maintain the disaster recovery/continuity plan.
+Create and maintain a contingency plan that identifies essential mission and business functions and associated contingency requirements.
 
-**Fix ID:**  F-24295r493817_fix
+**Fix ID:**  F-24295r1051274_fix
 
 **Vulnerability ID:**  V-222636
 
-**Rule ID:**  SV-222636r864419_rule
+**Rule ID:**  SV-222636r1051323_rule
 
 ---
 
@@ -10857,7 +10740,7 @@ Create and maintain the disaster recovery/continuity plan.
 
 Without a disaster recovery plan, the application is susceptible to interruption in service due to damage within the processing site.
 
-If the application is part of the siteís disaster recovery plan, ensure that the plan contains detailed instructions pertaining to the application. Verify that recovery procedures indicate the steps needed for secure and trusted recovery.
+If the application is part of the site‚Äôs disaster recovery plan, ensure that the plan contains detailed instructions pertaining to the application. Verify that recovery procedures indicate the steps needed for secure and trusted recovery.
 
 ### Check Text
 
@@ -10867,7 +10750,7 @@ Verify that a disaster recovery plan is in place for the application.
 
 Verify that the recovery procedures include any special considerations for trusted recovery.
 
-If the application is not part of the siteís disaster recovery plan, or if any special considerations for trusted recovery are not documented, this is a finding.
+If the application is not part of the site‚Äôs disaster recovery plan, or if any special considerations for trusted recovery are not documented, this is a finding.
 
 **Check ID:**  C-24307r493819_chk
 
@@ -10879,7 +10762,7 @@ Create and maintain a disaster recovery plan.
 
 **Vulnerability ID:**  V-222637
 
-**Rule ID:**  SV-222637r864420_rule
+**Rule ID:**  SV-222637r961863_rule
 
 ---
 
@@ -10935,7 +10818,7 @@ Develop and implement backup procedures based on risk level of the system and in
 
 **Vulnerability ID:**  V-222638
 
-**Rule ID:**  SV-222638r864421_rule
+**Rule ID:**  SV-222638r961863_rule
 
 ---
 
@@ -10973,7 +10856,7 @@ Store a back-up copy of the application software and source code in a fire-rated
 
 **Vulnerability ID:**  V-222639
 
-**Rule ID:**  SV-222639r864422_rule
+**Rule ID:**  SV-222639r961863_rule
 
 ---
 
@@ -10983,7 +10866,7 @@ Store a back-up copy of the application software and source code in a fire-rated
 
 ### Description
 
-Protection of backup and restoration assets is essential for the successful restore of operations after a catastrophic failure or damage to the system or data files. Failure to follow proper procedures may result in the permanent loss of system data and/or the loss of system capability resulting in failure of the customerís mission.
+Protection of backup and restoration assets is essential for the successful restore of operations after a catastrophic failure or damage to the system or data files. Failure to follow proper procedures may result in the permanent loss of system data and/or the loss of system capability resulting in failure of the customer‚Äôs mission.
 
 ### Check Text
 
@@ -11003,7 +10886,7 @@ Develop and implement procedures to insure that backup and restoration assets ar
 
 **Vulnerability ID:**  V-222640
 
-**Rule ID:**  SV-222640r864423_rule
+**Rule ID:**  SV-222640r961863_rule
 
 ---
 
@@ -11035,7 +10918,7 @@ Use encryption for key exchange.
 
 **Vulnerability ID:**  V-222641
 
-**Rule ID:**  SV-222641r864424_rule
+**Rule ID:**  SV-222641r961863_rule
 
 ---
 
@@ -11069,7 +10952,7 @@ Remove embedded authentication data stored in code, configuration files, scripts
 
 **Vulnerability ID:**  V-222642
 
-**Rule ID:**  SV-222642r849509_rule
+**Rule ID:**  SV-222642r961863_rule
 
 ---
 
@@ -11085,11 +10968,11 @@ Failure to properly mark output could result in a disclosure of sensitive or cla
 
 Review the application documentation and interview the application administrator.
 
-Ask the application representative for the applicationís classification guide. This guide should document the data elements and their classification.
+Ask the application representative for the application‚Äôs classification guide. This guide should document the data elements and their classification.
 
 Determine which application functions to examine, giving preference to report generation capabilities and the most common user transactions that involve sensitive data (FOUO, secret or above).
 
-Log on to the application and perform these in sequence, printing output when applicable. The application representativeís assistance may be required to perform these steps. For each function, note whether the appropriate markings appear on the displayed and printed output. If a classification document does not exist, data must be marked at the highest classification of the system.
+Log on to the application and perform these in sequence, printing output when applicable. The application representative‚Äôs assistance may be required to perform these steps. For each function, note whether the appropriate markings appear on the displayed and printed output. If a classification document does not exist, data must be marked at the highest classification of the system.
 
 Appropriate markings for an application are as follows: For classified data, markings are required at a minimum at the top and the bottom of screens and reports.
 
@@ -11103,7 +10986,7 @@ If it is not technically feasible to meet the minimum marking requirement and no
 
 In any case of a finding, the finding details should specify which functions failed to produce the desired results.
 
-After completing the test, destroy all printed output using the siteís preferred method for disposal. For example: utilizing a shredder or disposal in burn bags.
+After completing the test, destroy all printed output using the site‚Äôs preferred method for disposal. For example: utilizing a shredder or disposal in burn bags.
 
 **Check ID:**  C-24313r493837_chk
 
@@ -11115,7 +10998,7 @@ Enable the application to adequately mark sensitive/classified output.
 
 **Vulnerability ID:**  V-222643
 
-**Rule ID:**  SV-222643r864425_rule
+**Rule ID:**  SV-222643r961863_rule
 
 ---
 
@@ -11147,7 +11030,7 @@ Execute tests plans prior to release or patch update.
 
 **Vulnerability ID:**  V-222644
 
-**Rule ID:**  SV-222644r864426_rule
+**Rule ID:**  SV-222644r961863_rule
 
 ---
 
@@ -11179,7 +11062,7 @@ Get-FileHash
 [-Algorithm <String>]
 [<CommonParameters>] 
 
-A validation process involves obtaining the application filesí cryptographic hash value from the programs author or other authoritative source such as the application's website. A utility like the "sha256sum" utility is then run using the downloaded application file name as the argument. The output is the files' hash value. The two hash values are compared and if they match, then file integrity is ensured.
+A validation process involves obtaining the application files‚Äô cryptographic hash value from the programs author or other authoritative source such as the application's website. A utility like the "sha256sum" utility is then run using the downloaded application file name as the argument. The output is the files' hash value. The two hash values are compared and if they match, then file integrity is ensured.
 
 If the application being reviewed is a COTS product and the vendor used a SHA1 or MD5 algorithm to generate a hash value, this is not a finding.
 
@@ -11199,7 +11082,7 @@ Application Admins validate cryptographic hashes prior to deploying the applicat
 
 **Vulnerability ID:**  V-222645
 
-**Rule ID:**  SV-222645r864427_rule
+**Rule ID:**  SV-222645r961863_rule
 
 ---
 
@@ -11233,7 +11116,7 @@ Designate personnel to conduct security testing on the applications.
 
 **Vulnerability ID:**  V-222646
 
-**Rule ID:**  SV-222646r864428_rule
+**Rule ID:**  SV-222646r961863_rule
 
 ---
 
@@ -11267,7 +11150,7 @@ Create test procedures to test the security state of the application and exercis
 
 **Vulnerability ID:**  V-222647
 
-**Rule ID:**  SV-222647r864429_rule
+**Rule ID:**  SV-222647r961863_rule
 
 ---
 
@@ -11335,7 +11218,7 @@ Conduct and document code reviews on the application during development and iden
 
 **Vulnerability ID:**  V-222648
 
-**Rule ID:**  SV-222648r864430_rule
+**Rule ID:**  SV-222648r961863_rule
 
 ---
 
@@ -11377,7 +11260,7 @@ Track application testing and maintain statistics that show how much of the appl
 
 **Vulnerability ID:**  V-222649
 
-**Rule ID:**  SV-222649r864431_rule
+**Rule ID:**  SV-222649r961863_rule
 
 ---
 
@@ -11411,7 +11294,7 @@ Track software defects in a defect tracking system.
 
 **Vulnerability ID:**  V-222650
 
-**Rule ID:**  SV-222650r864432_rule
+**Rule ID:**  SV-222650r961863_rule
 
 ---
 
@@ -11443,7 +11326,7 @@ Review IA impact to the system prior to implementing changes.
 
 **Vulnerability ID:**  V-222651
 
-**Rule ID:**  SV-222651r864433_rule
+**Rule ID:**  SV-222651r961863_rule
 
 ---
 
@@ -11479,7 +11362,7 @@ Address security flaws within a project plan to ensure they are tracked and addr
 
 **Vulnerability ID:**  V-222652
 
-**Rule ID:**  SV-222652r864434_rule
+**Rule ID:**  SV-222652r961863_rule
 
 ---
 
@@ -11528,7 +11411,7 @@ Include programming best practices based on the languages being used for applica
 
 **Vulnerability ID:**  V-222653
 
-**Rule ID:**  SV-222653r864580_rule
+**Rule ID:**  SV-222653r961863_rule
 
 ---
 
@@ -11586,7 +11469,7 @@ Create and maintain the Design Document for each release of the application and 
 
 **Vulnerability ID:**  V-222654
 
-**Rule ID:**  SV-222654r864581_rule
+**Rule ID:**  SV-222654r961863_rule
 
 ---
 
@@ -11648,7 +11531,7 @@ Establish and maintain threat models and review for each application release and
 
 **Vulnerability ID:**  V-222655
 
-**Rule ID:**  SV-222655r864437_rule
+**Rule ID:**  SV-222655r961863_rule
 
 ---
 
@@ -11686,7 +11569,7 @@ Ensure proper return code and exception handling is implemented throughout the a
 
 **Vulnerability ID:**  V-222656
 
-**Rule ID:**  SV-222656r864438_rule
+**Rule ID:**  SV-222656r961863_rule
 
 ---
 
@@ -11737,7 +11620,7 @@ The development team creates an application incident response plan documenting a
 
 **Vulnerability ID:**  V-222657
 
-**Rule ID:**  SV-222657r864582_rule
+**Rule ID:**  SV-222657r961863_rule
 
 ---
 
@@ -11777,7 +11660,7 @@ Remove or decommission all unsupported software products in the application.
 
 **Vulnerability ID:**  V-222658
 
-**Rule ID:**  SV-222658r864440_rule
+**Rule ID:**  SV-222658r961863_rule
 
 ---
 
@@ -11807,7 +11690,7 @@ Ensure there is maintenance for the application.
 
 **Vulnerability ID:**  V-222659
 
-**Rule ID:**  SV-222659r864441_rule
+**Rule ID:**  SV-222659r961863_rule
 
 ---
 
@@ -11837,7 +11720,7 @@ Create and establish procedures to notify users when an application is decommiss
 
 **Vulnerability ID:**  V-222660
 
-**Rule ID:**  SV-222660r864442_rule
+**Rule ID:**  SV-222660r961863_rule
 
 ---
 
@@ -11875,7 +11758,7 @@ Disable unnecessary built-in userids, use other strong authentication when possi
 
 **Vulnerability ID:**  V-222661
 
-**Rule ID:**  SV-222661r864443_rule
+**Rule ID:**  SV-222661r961863_rule
 
 ---
 
@@ -11905,7 +11788,7 @@ Configure the application to use strong authenticators instead of passwords when
 
 **Vulnerability ID:**  V-222662
 
-**Rule ID:**  SV-222662r864444_rule
+**Rule ID:**  SV-222662r961863_rule
 
 ---
 
@@ -11987,7 +11870,7 @@ Verify the application configuration guide is distributed along  with the applic
 
 **Vulnerability ID:**  V-222663
 
-**Rule ID:**  SV-222663r864445_rule
+**Rule ID:**  SV-222663r961863_rule
 
 ---
 
@@ -12005,17 +11888,17 @@ If the application does not process classified information, this check is not ap
  
 The application may already be covered by a higher level program or other classification guide. If the classification guide is not written specifically to the application, the sensitive application data should be reviewed to determine whether it is contained in the classification guide.
 
-DoD 5200.01R identifies requirements for security classification and/or declassification guides.
+DOD 5200.01 Volume 1 identifies requirements for security classification and declassification guides.
 
-http://www.dtic.mil/whs/directives/corres/pdf/520001_vol1.pdf
+https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodm/520001m_vol1.pdf
 
-Security classification guides shall provide the following information:
+Security classification guides must provide the following information:
 
 Identify specific items, elements, or categories of information to be protected.
 
 State the specific classification to be assigned to each item or element of information and, when useful, specify items of information that are unclassified.
 
-Provide declassification instructions for each item or element of information, to include the applicable exemption category for information exempted from automatic declassification.
+Provide declassification instructions for each item or element of information, including the applicable exemption category for information exempted from automatic declassification.
 
 State a concise reason for classification for each item, element, or category of information that, at a minimum, cites the applicable classification categories in Section 1.5 of E.O. 12958.
 
@@ -12023,13 +11906,13 @@ Identify any special handling caveats that apply to items, elements, or categori
 
 Identify, by name or personal identifier and position title, the original classification authority approving the guide and the date of that approval.
 
-Provide a point-of-contact for questions about the guide and suggestions for improvement.
+Provide a point of contact for questions about the guide and suggestions for improvement.
 
 For information exempted from automatic declassification because its disclosure would reveal foreign government information or violate a statute, treaty, or international agreement, the security classification guide will identify the government or specify the applicable statute, treaty, or international agreement, as appropriate.
 
 If the security classification guide does not exist, or does not contain application data elements and their classification, this is a finding.
 
-**Check ID:**  C-24334r493900_chk
+**Check ID:**  C-24334r1051276_chk
 
 ### Fix Text 
 
@@ -12039,7 +11922,7 @@ Create and maintain a security classification guide.
 
 **Vulnerability ID:**  V-222664
 
-**Rule ID:**  SV-222664r864446_rule
+**Rule ID:**  SV-222664r1051277_rule
 
 ---
 
@@ -12103,7 +11986,7 @@ Remove uncategorized or emerging mobile code from the application or obtain a wa
 
 **Vulnerability ID:**  V-222665
 
-**Rule ID:**  SV-222665r864447_rule
+**Rule ID:**  SV-222665r961863_rule
 
 ---
 
@@ -12137,7 +12020,7 @@ Remove sensitive data from production database exports.
 
 **Vulnerability ID:**  V-222666
 
-**Rule ID:**  SV-222666r864448_rule
+**Rule ID:**  SV-222666r961863_rule
 
 ---
 
@@ -12171,7 +12054,7 @@ Implement mitigations from the threat model for DOS attacks.
 
 **Vulnerability ID:**  V-222667
 
-**Rule ID:**  SV-222667r864449_rule
+**Rule ID:**  SV-222667r961863_rule
 
 ---
 
@@ -12201,7 +12084,7 @@ Implement mechanisms to alert system administrators about a low resource conditi
 
 **Vulnerability ID:**  V-222668
 
-**Rule ID:**  SV-222668r864450_rule
+**Rule ID:**  SV-222668r961863_rule
 
 ---
 
@@ -12233,7 +12116,7 @@ Register administrators to receive update notifications so they can patch and up
 
 **Vulnerability ID:**  V-222669
 
-**Rule ID:**  SV-222669r864451_rule
+**Rule ID:**  SV-222669r961863_rule
 
 ---
 
@@ -12275,7 +12158,7 @@ Include a description of the issue, a summary of risk as well as potential mitig
 
 **Vulnerability ID:**  V-222670
 
-**Rule ID:**  SV-222670r864452_rule
+**Rule ID:**  SV-222670r961863_rule
 
 ---
 
@@ -12303,7 +12186,7 @@ Setup a DMZ between DoD and public networks.
 
 **Vulnerability ID:**  V-222671
 
-**Rule ID:**  SV-222671r864453_rule
+**Rule ID:**  SV-222671r961863_rule
 
 ---
 
@@ -12339,7 +12222,7 @@ Configure the application to log concurrent logons from different workstations.
 
 **Vulnerability ID:**  V-222672
 
-**Rule ID:**  SV-222672r508029_rule
+**Rule ID:**  SV-222672r961833_rule
 
 ---
 
@@ -12388,7 +12271,7 @@ Provide application development/operational related security specific annual tra
 
 **Vulnerability ID:**  V-222673
 
-**Rule ID:**  SV-222673r864454_rule
+**Rule ID:**  SV-222673r961863_rule
 
 ---
 
@@ -12452,7 +12335,7 @@ NSA-validated type-1 encryption must be used for all SAMI data stored in the enc
 
 If the application is not configured to utilize the NSA-approved cryptographic modules in accordance with data protection requirements specified in the security plan, this is a finding.
 
-**Check ID:**  C-24239r588004_chk
+**Check ID:**  C-69551r997305_chk
 
 ### Fix Text 
 
@@ -12462,11 +12345,11 @@ Encrypt stored, non-SAMI classified information using NIST FIPS 140-2-validated 
 
 Implement NSA-validated type-1 encryption of all SAMI data stored in the enclave.
 
-**Fix ID:**  F-24228r588005_fix
+**Fix ID:**  F-69459r997306_fix
 
-**Vulnerability ID:**  V-254803
+**Vulnerability ID:**  V-265634
 
-**Rule ID:**  SV-254803r865217_rule
+**Rule ID:**  SV-265634r997307_rule
 
 ---
 
