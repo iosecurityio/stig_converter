@@ -1,8 +1,9 @@
 """
 Name: stig_converter.py
-Converts STIG Checklists to other various file formats
-Author: Allen Montgomery, IO Security 7/2023
-Version 2.11
+TLDR: Converts STIG Checklists to other various file formats
+Author: Allen Montgomery, IO Security
+Version: 2.2
+Date: Jan 2025
 """
 
 import argparse
@@ -13,10 +14,13 @@ import sys
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
+import httpx
 
 
 class STIGConverter:
-    """Converts STIG Checklists to/from various file formats (CSV, JSON, CKL)"""
+    """
+    Converts STIG Checklists to/from various file formats (CSV, JSON, CKL)
+    """
 
     def __init__(self, interface_opts) -> None:
         self.config = interface_opts
@@ -27,7 +31,8 @@ class STIGConverter:
         self.date = datetime.now().strftime("%Y%m%d")
 
     def update_filename(self, filename) -> str:
-        """Updates the timestamp of the checklist to the current date
+        """
+        Updates the timestamp of the checklist to the current date
         If the file already has a date in the filename, then it will replace it with the current date
         If the file doesn't have a date in the filename, then it will append the current date to the end
         Example: stig_checklist-20210723.ckl -> stig_checklist-20210724.ckl
@@ -51,21 +56,31 @@ class STIGConverter:
             return updated_filename
 
     def convert_json_to_ckl(self, input_file, output_file):
-        """Populates a STIG Checklist with the JSON equivalent values"""
+        """
+        Populates a STIG Checklist with the JSON equivalent values
+        """
 
         # We need a base checklist to populate with the JSON data
         # TODO: handle the filename and path without relative path
-        base_ckl = "../data/stig_checklist.ckl"
-
+        base_ckl = Path("../data/stig_checklist.ckl")
+        
         try:
             # Read in the JSON Data
-            with open(input_file, "r") as read_file:
+            with open(input_file, "r", encoding=self.encoding) as read_file:
                 loaded_data = json.load(read_file)
+            
             # Read in the STIG Checklist we are using as a template
             ckl_tree = ET.parse(base_ckl)
             ckl_root = ckl_tree.getroot()
+            
             # List of elements under the ASSET element in the CKL/XML structure
-            asset = ["HOST_NAME", "HOST_IP", "HOST_MAC", "HOST_FQDN", "TARGET_COMMENT"]
+            asset = ["HOST_NAME", 
+                     "HOST_IP", 
+                     "HOST_MAC", 
+                     "HOST_FQDN", 
+                     "TARGET_COMMENT",
+                     ]
+            
             for element in ckl_root.iter("ASSET"):
                 # Populate the element in the ASSET section
                 if element.tag in asset:
@@ -77,8 +92,8 @@ class STIGConverter:
                 for json_finding in loaded_data:
                     for stig_data in vuln.iter("STIG_DATA"):
                         if (
-                                stig_data.tag == "VULN_ATTRIBUTE"
-                                and stig_data.text in json_finding
+                            stig_data.tag == "VULN_ATTRIBUTE"
+                            and stig_data.text in json_finding
                         ):
                             attribute_data = stig_data.find("ATTRIBUTE_DATA")
                             attribute_data.text = json_finding[stig_data.text]
@@ -89,8 +104,14 @@ class STIGConverter:
             # Write the modified XML to the new file
             with open(output_file, "wb") as output_file:
                 # Custom header for xml declaration and STIG header comment
-                output_file.write(f'<?xml version="1.0" encoding="{self.encoding.upper()}"?>\n'.encode(self.encoding))
-                output_file.write("<!--DISA STIG Viewer :: 2.16-->\n".encode(self.encoding))
+                output_file.write(
+                    f'<?xml version="1.0" encoding="{self.encoding.upper()}"?>\n'.encode(
+                        self.encoding
+                    )
+                )
+                output_file.write(
+                    "<!--DISA STIG Viewer :: 2.16-->\n".encode(self.encoding)
+                )
                 output_file.write(new_xml)
 
         except UnboundLocalError as unbound_error:
@@ -106,7 +127,9 @@ class STIGConverter:
             print(f"[X] Invalid checklist {base_ckl}:\n\t{e}")
 
     def convert_csv_to_json(self, input_file, output_file, as_event=False):
-        """Converts .csv to .json file out or Splunk events"""
+        """
+        Converts .csv to .json file out or Splunk events
+        """
 
         # Create a list of findings
         json_array = []
@@ -131,7 +154,9 @@ class STIGConverter:
         return output_file
 
     def convert_ckl_to_json(self, input_file, output_file, as_event=False):
-        """Converts a STIG Checklist .CKL file to .JSON file"""
+        """
+        Converts a STIG Checklist .CKL file to .JSON file
+        """
 
         with open(output_file, "w", newline="", encoding=self.encoding) as jsonf:
             # Create an xml object from the ckl file
@@ -185,7 +210,9 @@ class STIGConverter:
         return output_file
 
     def convert_ckl_to_csv(self, input_file, output_file) -> str:
-        """Converts a CKL file to a CSV file"""
+        """
+        Converts a CKL file to a CSV file
+        """
 
         # CKL is a custom XML and these are the field names we will pull from the document
         # Define your table headers as fieldnames
@@ -244,15 +271,34 @@ class STIGConverter:
                 finding["FINDING_DETAILS"] = vuln.find("./FINDING_DETAILS").text
                 finding["COMMENTS"] = vuln.find("./COMMENTS").text
                 # Append a unique ID to map for each finding
-                finding["Unique_ID"] = f"{finding['HOST_NAME']}-{finding['Rule_ID']}-{finding['DATE']}"
+                finding["Unique_ID"] = (
+                    f"{finding['HOST_NAME']}-{finding['Rule_ID']}-{finding['DATE']}"
+                )
                 # Write the finding to the CSV
                 writer.writerow(finding)
         # Return the location of the new CSV
         return output_file
 
+    def get_stigviewer_json(self, output_file):
+        """
+        Pulls down the latest STIGViewer JSON file
+        """
+
+        # TODO: Unable to call function due to your convoluted argparse, refactor XD
+        url = "https://stigviewer.com/stig/application_security_and_development/2024-06-05/MAC-3_Sensitive/json"
+        with httpx.Client() as client:
+            response = client.get(url)
+            if response.status_code == 200:
+                data = response.json()
+
+                with open(output_file, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=4)
+
 
 class Interface:
-    """Command line interface for stig_converter.py"""
+    """
+    Command line interface for stig_converter.py
+    """
 
     def __init__(self) -> None:
         self.args = None
@@ -273,18 +319,26 @@ class Interface:
         self.start_cli()
 
     def start_cli(self):
-        """Runs the script with the provided arguments"""
+        """
+        Runs the script with the provided arguments
+        """
 
         # Create an argument parser to handle the CLI arguments
         parser = argparse.ArgumentParser(
             description="Process input checklist and generate output checklist."
         )
-        parser.add_argument("-i", "--input", required=True, help="input file name")
+        parser.add_argument(
+            "-i", "--input", required=True, help="input file name"
+            )
         parser.add_argument(
             "-o", "--output", required=False, help="output file directory"
-        )
-        parser.add_argument("-n", "--name", required=False, help="project name")
-        parser.add_argument("-e", "--event", required=False, help="print live events")
+            )
+        parser.add_argument(
+            "-n", "--name", required=False, help="project name"
+            )
+        parser.add_argument(
+            "-e", "--event", required=False, help="print live events"
+            )
 
         try:
             # Parse arguments from the command line
@@ -314,7 +368,9 @@ class Interface:
             parser.print_usage()
 
     def register_files(self, input_file, output_file):
-        # Validate input file and output file
+        """
+        Validate input file and output file
+        """
 
         try:
             # Resolve the absolute path of the input and output files
@@ -322,7 +378,9 @@ class Interface:
             abs_output_file = Path(output_file).resolve()
 
             if abs_input_file == abs_output_file:
-                print(f"[-] Error: Input file: {input_file} and output file: {output_file} cannot be the same")
+                print(
+                    f"[-] Error: Input file: {input_file} and output file: {output_file} cannot be the same"
+                )
                 sys.exit(1)
 
             # Ensures the input file extension is valid
@@ -347,7 +405,9 @@ class Interface:
             if self.output_file_type in self._conversions[self.input_file_type]:
                 self.ready = True
             else:
-                print(f"[-] Error: {self.output_file_type} is not a valid output file type")
+                print(
+                    f"[-] Error: {self.output_file_type} is not a valid output file type"
+                )
                 sys.exit(1)
 
         except KeyError as ke:
@@ -377,10 +437,18 @@ def main():
         # TODO: Consolidate named conversion scripts into a convert method
 
         # Execute the conversions:
-        converter.convert_ckl_to_json(config.input_file_path, config.output_file_path)
-        converter.convert_ckl_to_csv(config.input_file_path, "../data/test_checklist.csv")
-        converter.convert_csv_to_json("../data/test_checklist.csv", "../data/test_checklist_from_csv.json")
-        converter.convert_json_to_ckl("../data/test_checklist.json", "../data/test_checklist_from_json.ckl")
+        converter.convert_ckl_to_json(
+            config.input_file_path, config.output_file_path
+            )
+        converter.convert_ckl_to_csv(
+            config.input_file_path, "../data/test_checklist.csv"
+            )
+        converter.convert_csv_to_json(
+            "../data/test_checklist.csv", "../data/test_checklist_from_csv.json"
+            )
+        converter.convert_json_to_ckl(
+            "../data/test_checklist.json", "../data/test_checklist_from_json.ckl"
+            )
 
     except Exception as e:
         # TODO: Handle what happens when the output file already exists

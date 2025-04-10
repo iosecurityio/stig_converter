@@ -1,13 +1,13 @@
 # json_to_ckl
 # Convert .json to STIG checklist .ckl file
 
-from datetime import datetime
 import json
 import xml.etree.ElementTree as ET
+from datetime import datetime
 
 
 def convert_json_to_ckl(
-    json_data, ckl_path, base_ckl=r"data/stig_checklist.ckl"
+        json_data, ckl_path, base_ckl=r"data/stig_checklist.ckl"
 ) -> str:
     """Populates a STIG Checklist with the JSON equivalent values"""
 
@@ -41,8 +41,8 @@ def convert_json_to_ckl(
             for json_finding in loaded_data:
                 for stig_data in vuln.iter("STIG_DATA"):
                     if (
-                        stig_data.tag == "VULN_ATTRIBUTE"
-                        and stig_data.text in json_finding
+                            stig_data.tag == "VULN_ATTRIBUTE"
+                            and stig_data.text in json_finding
                     ):
                         attribute_data = stig_data.find("ATTRIBUTE_DATA")
                         attribute_data.text = json_finding[stig_data.text]
