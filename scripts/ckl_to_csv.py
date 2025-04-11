@@ -2,16 +2,15 @@
 # Convert STIGs .ckl checklists to .csv file
 
 import csv
-from datetime import datetime
-import os
 import xml.etree.ElementTree as ET
+from datetime import datetime
 from pathlib import Path
 
 
-def convert_ckl_to_csv(stig_checklist, csv_path) -> str:
+def convert_ckl_to_csv(ckl_file, csv_path) -> str:
     """
     Converts a CKL file to a CSV file
-    :param stig_checklist: The location of the STIG Checklist in .ckl file
+    :param ckl_file: The location of the STIG Checklist in .ckl file
     :param csv_path: The location to write the .csv file
     :return: The location of the new .csv file
     """
@@ -35,14 +34,27 @@ def convert_ckl_to_csv(stig_checklist, csv_path) -> str:
         "Unique_ID",
     ]
     current_date = datetime.now().strftime('%Y%m%d')
-    filename = os.path.basename(stig_checklist)
-    new_filename = os.path.splitext(filename)
-    new_csv = f"{csv_path}{new_filename[0].replace(' ', '_')}-{current_date}.csv"
 
-    with open(new_csv, "w", newline="", encoding="utf-8") as csvfile:
+    ckl_path = Path(ckl_file)
+    csv_path = Path(csv_path)
+
+    # Check that the input CKL file exists and is a file
+    if not ckl_path.is_file():
+        raise FileNotFoundError(f"CKL file does not exist: {ckl_path}")
+
+    # If csv_path is a directory, construct a default CSV filename
+    if csv_path.is_dir():
+        new_csv_path = csv_path / f"{ckl_file.stem}-{current_date}.csv"
+    else:
+        # If parent directory doesn't exist, raise an error
+        if not csv_path.parent.exists():
+            raise FileNotFoundError(f"[X] Destination directory does not exist: {csv_path.parent}")
+        new_csv_path = csv_path
+    print(f"[*] Converting CKL: {ckl_path}")
+    with open(new_csv_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        tree = ET.parse(stig_checklist)
+        tree = ET.parse(ckl_file)
         root = tree.getroot()
 
         # create a dictionary to hold findings
@@ -76,16 +88,20 @@ def convert_ckl_to_csv(stig_checklist, csv_path) -> str:
             finding["STATUS"] = vuln.find("./STATUS").text
             finding["FINDING_DETAILS"] = vuln.find("./FINDING_DETAILS").text
             finding["COMMENTS"] = vuln.find("./COMMENTS").text
-            # Append a unique ID to map for each finding
-            finding["Unique_ID"] = f"{finding['HOST_NAME']}-{finding['Rule_ID']}-{current_date}"
+
+            # (Optionally) Append a unique ID to map for each finding
+            # This may be useful to differentiate findings across hosts if aggregating STIGs (e.g. Splunk)
+            # finding["Unique_ID"] = f"{finding['HOST_NAME']}-{finding['Rule_ID']}-{current_date}"
+
             # Write the finding to the CSV
             writer.writerow(finding)
+
     # Return the location of the new CSV
-    return new_csv
+    print(f"[*] New CSV created: {new_csv_path}")
+    return new_csv_path
 
 
 if __name__ == "__main__":
-    INPUT_FILE = r"data/stig_checklist.ckl"
-    OUTPUT_LOC = r"tests/"
-    out = convert_ckl_to_csv(stig_checklist=INPUT_FILE, csv_path=OUTPUT_LOC)
-    print(f"[*] Success! Output: {out}")
+    data_dir = Path(__file__).parent.parent / "data"
+    input_file = data_dir / "stig_checklist.ckl"
+    out = convert_ckl_to_csv(ckl_file=input_file, csv_path=data_dir)
