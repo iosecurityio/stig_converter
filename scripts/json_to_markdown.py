@@ -58,6 +58,7 @@ def write_stigs(json_file, markdown_file):
 
 
 if __name__ == "__main__":
-    MARKDOWN_FILE = Path().cwd().parent / "data" / "application_security_development.md"
-    JSON_FILE = Path().cwd().parent / "data" / "application_security_development.json"
-    write_stigs(json_file=JSON_FILE, markdown_file=MARKDOWN_FILE)
+    data_dir = Path(__file__).parent.parent / "data"
+    markdown_file = data_dir / "application_security_development.md"
+    json_file = data_dir / "application_security_development.json"
+    write_stigs(json_file=json_file, markdown_file=markdown_file)
