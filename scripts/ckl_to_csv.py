@@ -40,7 +40,7 @@ def convert_ckl_to_csv(ckl_file, csv_path) -> str:
 
     # Check that the input CKL file exists and is a file
     if not ckl_path.is_file():
-        raise FileNotFoundError(f"CKL file does not exist: {ckl_path}")
+        raise FileNotFoundError(f"[X] CKL file does not exist: {ckl_path}")
 
     # If csv_path is a directory, construct a default CSV filename
     if csv_path.is_dir():
@@ -50,6 +50,7 @@ def convert_ckl_to_csv(ckl_file, csv_path) -> str:
         if not csv_path.parent.exists():
             raise FileNotFoundError(f"[X] Destination directory does not exist: {csv_path.parent}")
         new_csv_path = csv_path
+
     print(f"[*] Converting CKL: {ckl_path}")
     with open(new_csv_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
