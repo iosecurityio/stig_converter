@@ -15,21 +15,20 @@ def convert_ckl_to_json(ckl_file, json_path) -> str:
     """
 
     current_date = datetime.now().strftime("%Y%m%d")
-
     ckl_path = Path(ckl_file)
     json_path = Path(json_path)
 
     if not ckl_path.is_file():
         raise FileNotFoundError(f"[X] CKL file does not exist: {ckl_path}")
     if json_path.is_dir():
-        new_json_path = json_path / f"{ckl_file.stem}-{current_date}.json"
+        new_json_path = json_path / f"{ckl_path.stem}-{current_date}.json"
     else:
         if not json_path.parent.exists():
             raise FileNotFoundError(f"[X] Destination directory does not exist: {json_path}")
         new_json_path = json_path
 
     print(f"[*] Converting CKL: {ckl_path}")
-    with open(new_json_path, "w", newline="", encoding="utf-8") as jsonfile:
+    with open(new_json_path, "w", newline="", encoding="utf-8") as json_file:
         # Create an xml object from the ckl file
         tree = ET.parse(ckl_file)
         root = tree.getroot()
@@ -78,7 +77,7 @@ def convert_ckl_to_json(ckl_file, json_path) -> str:
             findings.append(finding)
 
         # Dump the finding dictionary into the file we are creating
-        json.dump(findings, jsonfile, indent=4)
+        json.dump(findings, json_file, indent=4)
 
     # Return the location of the new json doc
     print(f"[*] New JSON Created: {new_json_path}")

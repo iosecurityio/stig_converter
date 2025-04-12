@@ -34,7 +34,6 @@ def convert_ckl_to_csv(ckl_file, csv_path) -> str:
         "Unique_ID",
     ]
     current_date = datetime.now().strftime('%Y%m%d')
-
     ckl_path = Path(ckl_file)
     csv_path = Path(csv_path)
 
@@ -44,7 +43,7 @@ def convert_ckl_to_csv(ckl_file, csv_path) -> str:
 
     # If csv_path is a directory, construct a default CSV filename
     if csv_path.is_dir():
-        new_csv_path = csv_path / f"{ckl_file.stem}-{current_date}.csv"
+        new_csv_path = csv_path / f"{ckl_path.stem}-{current_date}.csv"
     else:
         # If parent directory doesn't exist, raise an error
         if not csv_path.parent.exists():
@@ -52,10 +51,10 @@ def convert_ckl_to_csv(ckl_file, csv_path) -> str:
         new_csv_path = csv_path
 
     print(f"[*] Converting CKL: {ckl_path}")
-    with open(new_csv_path, "w", newline="", encoding="utf-8") as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    with open(new_csv_path, "w", newline="", encoding="utf-8") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
-        tree = ET.parse(ckl_file)
+        tree = ET.parse(ckl_path)
         root = tree.getroot()
 
         # create a dictionary to hold findings

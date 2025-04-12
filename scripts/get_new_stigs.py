@@ -32,7 +32,7 @@ def get_stig_zip(file_name):
     """
 
     # Create a Path object for the file
-    file_path =  Path(file_name)
+    file_path = Path(file_name)
 
     # Check if the file already exists
     if file_path.exists():

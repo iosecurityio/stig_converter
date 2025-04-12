@@ -4,28 +4,44 @@
 import json
 import xml.etree.ElementTree as ET
 from datetime import datetime
+from pathlib import Path
 
 
-def convert_json_to_ckl(
-        json_data, ckl_path, base_ckl=r"data/stig_checklist.ckl"
-) -> str:
-    """Populates a STIG Checklist with the JSON equivalent values"""
+def convert_json_to_ckl(json_file, ckl_path, base_ckl) -> str:
+    """
+    Populates a pre-existing STIG Checklist with the values of the equivalent items in a JSON file
+    """
+
+    current_date = datetime.now().strftime("%Y%m%d")
+    json_path = Path(json_file)
+    ckl_path = Path(ckl_path)
+    base_ckl_path = Path(base_ckl)
+
+    if not json_path.exists():
+        raise FileNotFoundError(f"[X] JSON file does not exist: {json_path}")
+    if not base_ckl_path.exists():
+        raise FileNotFoundError(f"[X] Base checklist does not exist: {base_ckl_path}")
+
+    if ckl_path.is_dir():
+        new_ckl_path = ckl_path / f"{json_path.stem}-{current_date}.ckl"
+    else:
+        if not ckl_path.parent.exists():
+            raise FileNotFoundError(f"[X] Destination directory does not exist: {ckl_path.parent}")
+        new_ckl_path = ckl_path
 
     # Read in the JSON Data
     try:
-        with open(json_data, "r") as read_file:
+        with open(json_path, "r") as read_file:
             loaded_data = json.load(read_file)
-    except FileNotFoundError as fnf:
-        print(f"[X] JSON didn't load properly: {fnf}")
     except KeyError as ke:
         print(f"[X] JSON didn't load properly: {ke}")
 
     try:
         # Read in the STIG Checklist we are using as a template
-        ckl_tree = ET.parse(base_ckl)
+        ckl_tree = ET.parse(base_ckl_path)
         ckl_root = ckl_tree.getroot()
     except Exception as e:
-        print(f"[X] Invalid checklist {base_ckl}:\n\t{e}")
+        print(f"[X] Invalid checklist {base_ckl_path}:\n\t{e}")
 
     # List of elements under the Asset element in the XML structure
     ASSET = ["HOST_NAME", "HOST_IP", "HOST_MAC", "HOST_FQDN", "TARGET_COMMENT"]
@@ -47,27 +63,26 @@ def convert_json_to_ckl(
                         attribute_data = stig_data.find("ATTRIBUTE_DATA")
                         attribute_data.text = json_finding[stig_data.text]
     except UnboundLocalError as unbound_error:
-        print(f"[X] Error parsing {base_ckl}:\n\t{unbound_error}")
+        print(f"[X] Error parsing {base_ckl_path}:\n\t{unbound_error}")
 
     # Turn the XML Root back into a string for writing
     encoding = "utf-8"
     new_xml = ET.tostring(ckl_root, encoding=encoding)
 
     # Write the modified XML to the new file
-    with open(ckl_path, "wb") as output_file:
+    with open(new_ckl_path, "wb") as ckl_file:
         # Custom header for xml declaration and STIG header comment
-        output_file.write('<?xml version="1.0" encoding="UTF-8"?>\n'.encode(encoding))
-        output_file.write("<!--DISA STIG Viewer :: 2.16-->\n".encode(encoding))
-        output_file.write(new_xml)
+        ckl_file.write('<?xml version="1.0" encoding="UTF-8"?>\n'.encode(encoding))
+        ckl_file.write("<!--DISA STIG Viewer :: 2.16-->\n".encode(encoding))
+        ckl_file.write(new_xml)
+
+    # Return the location of the new CKL
+    print(f"[*] New CKL created: {new_ckl_path}")
+    return new_ckl_path
 
 
 if __name__ == "__main__":
-    JSON_DATA = r"tests/stig_checklist-20230620.json"
-    # TODO: Handle output of filename in this script
-    OUTPUT_LOC = r"tests/stig_checklist-20230620.ckl"
-    # Current date timestamp to append to filename
-    DATE = datetime.now().strftime("%Y%m%d")
-
-    print("[*] Converting JSON to CKL...")
-    convert_json_to_ckl(json_data=JSON_DATA, ckl_path=OUTPUT_LOC)
-    print(f"[*] Converted! {OUTPUT_LOC}")
+    data_dir = Path(__file__).parent.parent / "data"
+    json_file = data_dir / "stig_checklist-20230620.json"
+    base_ckl = data_dir / "stig_checklist.ckl"
+    convert_json_to_ckl(json_file=json_file, ckl_path=data_dir, base_ckl=base_ckl)

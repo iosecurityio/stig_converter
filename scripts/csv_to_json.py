@@ -17,7 +17,6 @@ def convert_csv_to_json(csv_file, json_path):
     # Create a list of findings
     json_array = []
     current_date = datetime.now().strftime("%Y%m%d")
-
     csv_path = Path(csv_file)
     json_path = Path(json_path)
 
@@ -33,8 +32,8 @@ def convert_csv_to_json(csv_file, json_path):
 
     # Read in the CSV
     print(f"[*] Converting CSV: {csv_path}")
-    with open(csv_path, encoding="utf-8") as csv_file:
-        csv_reader = csv.DictReader(csv_file)
+    with open(csv_path, encoding="utf-8") as read_file:
+        csv_reader = csv.DictReader(read_file)
         for row in csv_reader:
             json_array.append(row)
         # Create a JSON file
