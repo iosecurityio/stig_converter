@@ -2,14 +2,9 @@
 # Convert STIGs in .csv to .json
 
 import csv
-from datetime import datetime
 import json
-import os
-
-INPUT_FILE = r"tests/stig_checklist-20230620.csv"
-OUTPUT_LOC = r"tests/"
-# Current date timestamp to append to filename
-DATE = datetime.now().strftime("%Y%m%d")
+from datetime import datetime
+from pathlib import Path
 
 
 def convert_csv_to_json(csv_file, json_path):
@@ -21,36 +16,38 @@ def convert_csv_to_json(csv_file, json_path):
 
     # Create a list of findings
     json_array = []
+    current_date = datetime.now().strftime("%Y%m%d")
+
+    csv_path = Path(csv_file)
+    json_path = Path(json_path)
+
+    if not csv_path.is_file():
+        raise FileNotFoundError(f"[X] CSV file does not exist: {csv_path}")
+
+    if json_path.is_dir():
+        new_json_path = json_path / f"{csv_path.stem}-{current_date}.json"
+    else:
+        if not json_path.exists():
+            raise FileNotFoundError(f"[X] JSON directory does not exist: {json_path.parent}")
+        new_json_path = json_path
 
     # Read in the CSV
-    with open(csv_file, encoding="utf-8") as csvf:
-        csv_reader = csv.DictReader(csvf)
-
+    print(f"[*] Converting CSV: {csv_path}")
+    with open(csv_path, encoding="utf-8") as csv_file:
+        csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             json_array.append(row)
-
-    # If you pass None as location, it will print to stdout for Splunk events
-    if json_path is None:
-        for entry in json_array:
-            print(entry)
-    else:
-        filename = os.path.basename(csv_file)
-        new_name = os.path.splitext(filename)
-        new_location = f"{json_path}{new_name[0].replace(' ', '_')}-{DATE}.json"
-        # Open the new file and dump the list of findings
-        with open(new_location, "w", encoding="utf-8") as jsonf:
+        # Create a JSON file
+        with open(new_json_path, "w", encoding="utf-8") as json_file:
             json_string = json.dumps(json_array, indent=4)
-            jsonf.write(json_string)
+            json_file.write(json_string)
 
-    return new_location
+    # Return the location of the new JSON file
+    print(f"[*] New JSON file created: {new_json_path}")
+    return new_json_path
 
 
 if __name__ == "__main__":
-    try:
-        if not INPUT_FILE or not OUTPUT_LOC:
-            print("[X] Specify both input file and output location.")
-            exit()
-        out = convert_csv_to_json(INPUT_FILE, OUTPUT_LOC)
-        print(f"[*] Success! Output: {out}")
-    except Exception as e:
-        print(f"[X] Failed: {e}")
+    data_dir = Path(__file__).parent.parent / "data"
+    input_file = data_dir / "stig_checklist-20240406.csv"
+    out = convert_csv_to_json(csv_file=input_file, json_path=data_dir)
