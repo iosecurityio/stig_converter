@@ -9,15 +9,17 @@ Supported file formats:
 
 - convert `.ckl` file to `.csv` file
 
-- convert `.csv` file to `.json` file
-
 - convert `.ckl` file to `.json` file
+
+- convert `.csv` file to `.json` file
 
 - convert `.json` file to `.ckl` file
 
-- pull down latest STIGs from www.stigviewer.com and convert them to a markdown format
+- convert `.json` file to `.md` file
 
-- send STIGs as splunk events _(coming soon)_
+- get latest STIGs from [www.stigviewer.com](https://stigviewer.com) in `.json`
+
+- get latest STIGs from DISA Cyber Exchange in `.zip`
 
 ## Usage
 
@@ -25,13 +27,15 @@ Supported file formats:
 
 1. `cd stig_converter`
 
-1. `pip install -r requirements.txt`
+1. `python3 -m venv venv`
 
-`python stig_converter.py [-h]  -i INPUT.[.ckl|.json|.csv] -o OUTPUT.[.ckl|.json|.csv]`
+1. `source venv/bin/activate`
+
+1. `pip install -r requirements.txt`
 
 ## TODO
 
-- Refactor redundant code from scripts in stig_converter.py
+- Fix `stig_converter.py`
 
 ---
 
