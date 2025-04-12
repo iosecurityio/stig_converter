@@ -148,3 +148,5 @@ dmypy.json
 
 # Zips
 *.zip
+
+.DS_Store
