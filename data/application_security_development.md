@@ -8,7 +8,9 @@
 
 ## The application must provide a capability to limit the number of logon sessions per user.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222387|SV-222387r960735_rule|
 
 ### Description
 
@@ -34,23 +36,25 @@ For development environments;  have the developer provide design documentation o
 
 If the application is not configured to limit the number of logon sessions per user as defined by the organization, this is a finding.
 
-**Check ID:**  C-24057r493069_chk
+|Check ID|
+|---|
+|C-24057r493069_chk|
 
 ### Fix Text 
 
 Design and configure the application to specify the number of logon sessions that are allowed per user.
 
-**Fix ID:**  F-24046r493070_fix
-
-**Vulnerability ID:**  V-222387
-
-**Rule ID:**  SV-222387r960735_rule
+|Fix ID|
+|---|
+|F-24046r493070_fix|
 
 ---
 
 ## The application must clear temporary storage and cookies when the session is terminated.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222388|SV-222388r1043182_rule|
 
 ### Description
 
@@ -78,23 +82,25 @@ If the web application prompts the user to save their password, or if a username
 
 The application may use means other than cookies to store user information. If the reviewer detects an alternative mechanism for storing information locally, examine the data storage to ensure no authentication or other sensitive information is present.
 
-**Check ID:**  C-24058r493072_chk
+|Check ID|
+|---|
+|C-24058r493072_chk|
 
 ### Fix Text 
 
 Design and configure the application to clear sensitive data from cookies and local storage when the user logs out of the application.
 
-**Fix ID:**  F-24047r493073_fix
-
-**Vulnerability ID:**  V-222388
-
-**Rule ID:**  SV-222388r1043182_rule
+|Fix ID|
+|---|
+|F-24047r493073_fix|
 
 ---
 
 ## The application must automatically terminate the non-privileged user session and log off non-privileged users after a 15 minute idle time period has elapsed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222389|SV-222389r1043182_rule|
 
 ### Description
 
@@ -112,23 +118,25 @@ Attempt to access the application after 15 minutes of inactivity.
 
 If the configuration setting is not set to time out user sessions after 15 minutes of inactivity, or if the regular user session used for testing does not time out after 15 minutes of inactivity, this is a finding.
 
-**Check ID:**  C-24059r493075_chk
+|Check ID|
+|---|
+|C-24059r493075_chk|
 
 ### Fix Text 
 
 Design and configure the application to terminate the non-privileged users session after 15 minutes of inactivity.
 
-**Fix ID:**  F-24048r493076_fix
-
-**Vulnerability ID:**  V-222389
-
-**Rule ID:**  SV-222389r1043182_rule
+|Fix ID|
+|---|
+|F-24048r493076_fix|
 
 ---
 
 ## The application must automatically terminate the admin user session and log off admin users after a 10 minute idle time period is exceeded.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222390|SV-222390r1043182_rule|
 
 ### Description
 
@@ -146,23 +154,25 @@ Attempt to access the application after 10 minutes of inactivity.
 
 If the configuration setting is not set to time out admin user sessions after 10 minutes of inactivity, or if the session used for testing does not time out after 10 minutes of inactivity, this is a finding.
 
-**Check ID:**  C-24060r493078_chk
+|Check ID|
+|---|
+|C-24060r493078_chk|
 
 ### Fix Text 
 
 Design and configure the application to terminate the admin users session after 10 minutes of inactivity.
 
-**Fix ID:**  F-24049r493079_fix
-
-**Vulnerability ID:**  V-222390
-
-**Rule ID:**  SV-222390r1043182_rule
+|Fix ID|
+|---|
+|F-24049r493079_fix|
 
 ---
 
 ## Applications requiring user access authentication must provide a logoff capability for user initiated communication session.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222391|SV-222391r961224_rule|
 
 ### Description
 
@@ -180,23 +190,25 @@ Observe user interface and attempt to interact with the application.  Confirm us
 
 If the user session is not terminated or if the logoff function does not exist, this is a finding.
 
-**Check ID:**  C-24061r493081_chk
+|Check ID|
+|---|
+|C-24061r493081_chk|
 
 ### Fix Text 
 
 Design and configure the application to provide all users with the capability to manually terminate their application session.
 
-**Fix ID:**  F-24050r493082_fix
-
-**Vulnerability ID:**  V-222391
-
-**Rule ID:**  SV-222391r961224_rule
+|Fix ID|
+|---|
+|F-24050r493082_fix|
 
 ---
 
 ## The application must display an explicit logoff message to users indicating the reliable termination of authenticated communications sessions.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222392|SV-222392r961227_rule|
 
 ### Description
 
@@ -212,23 +224,25 @@ Activate the user logoff function.
 
 If the application does not provide an explicit logoff message indicating the user session has been terminated, this is a finding.
 
-**Check ID:**  C-24062r493084_chk
+|Check ID|
+|---|
+|C-24062r493084_chk|
 
 ### Fix Text 
 
 Design and configure the application to provide an explicit logoff message to users indicating a successful logoff has occurred upon user session termination.
 
-**Fix ID:**  F-24051r493085_fix
-
-**Vulnerability ID:**  V-222392
-
-**Rule ID:**  SV-222392r961227_rule
+|Fix ID|
+|---|
+|F-24051r493085_fix|
 
 ---
 
 ## The application must associate organization-defined types of security attributes having organization-defined security attribute values with information in storage.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222393|SV-222393r961269_rule|
 
 ### Description
 
@@ -256,23 +270,25 @@ Typical methods for marking data include utilizing a table or data base field th
 
 If application data required to be marked is not marked and does not retain its marking while it is being stored, this is a finding.
 
-**Check ID:**  C-24063r493087_chk
+|Check ID|
+|---|
+|C-24063r493087_chk|
 
 ### Fix Text 
 
 Design and configure the application to assign data marking and ensure the marking is retained when the data is stored.
 
-**Fix ID:**  F-24052r493088_fix
-
-**Vulnerability ID:**  V-222393
-
-**Rule ID:**  SV-222393r961269_rule
+|Fix ID|
+|---|
+|F-24052r493088_fix|
 
 ---
 
 ## The application must associate organization-defined types of security attributes having organization-defined security attribute values with information in process.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222394|SV-222394r961272_rule|
 
 ### Description
 
@@ -298,23 +314,25 @@ For example, create a test record and assign a data marking to the data element.
 
 If application data required to be marked does not retain its marking while it is being processed by the application, this is a finding.
 
-**Check ID:**  C-24064r493090_chk
+|Check ID|
+|---|
+|C-24064r493090_chk|
 
 ### Fix Text 
 
 Design and configure the application to retain the data marking when processing data.
 
-**Fix ID:**  F-24053r493091_fix
-
-**Vulnerability ID:**  V-222394
-
-**Rule ID:**  SV-222394r961272_rule
+|Fix ID|
+|---|
+|F-24053r493091_fix|
 
 ---
 
 ## The application must associate organization-defined types of security attributes having organization-defined security attribute values with information in transmission.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222395|SV-222395r961275_rule|
 
 ### Description
 
@@ -340,23 +358,25 @@ E.g., create a test record and assign a data marking to the data element. Save t
 
 If application data required to be marked does not retain its marking when it is being transmitted by the application, this is a finding.
 
-**Check ID:**  C-24065r493093_chk
+|Check ID|
+|---|
+|C-24065r493093_chk|
 
 ### Fix Text 
 
 Design and configure the application to retain the data marking when transmitting data.
 
-**Fix ID:**  F-24054r493094_fix
-
-**Vulnerability ID:**  V-222395
-
-**Rule ID:**  SV-222395r961275_rule
+|Fix ID|
+|---|
+|F-24054r493094_fix|
 
 ---
 
 ## The application must implement DoD-approved encryption to protect the confidentiality of remote access sessions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222396|SV-222396r960759_rule|
 
 ### Description
 
@@ -378,23 +398,25 @@ For non-web based applications, determine the TCP/IP port, protocol and method u
 
 If the connection is not secured with TLS, this is a finding.
 
-**Check ID:**  C-24066r493096_chk
+|Check ID|
+|---|
+|C-24066r493096_chk|
 
 ### Fix Text 
 
 Design and configure applications to use TLS encryption to protect the confidentiality of remote access sessions.
 
-**Fix ID:**  F-24055r493097_fix
-
-**Vulnerability ID:**  V-222396
-
-**Rule ID:**  SV-222396r960759_rule
+|Fix ID|
+|---|
+|F-24055r493097_fix|
 
 ---
 
 ## The application must implement cryptographic mechanisms to protect the integrity of remote access sessions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222397|SV-222397r960762_rule|
 
 ### Description
 
@@ -416,23 +438,25 @@ For non-web based applications, determine the TCP/IP port, protocol and method u
 
 If the connection is not secured with TLS, this is a finding.
 
-**Check ID:**  C-24067r493099_chk
+|Check ID|
+|---|
+|C-24067r493099_chk|
 
 ### Fix Text 
 
 Design and configure applications to use TLS encryption to protect the integrity of remote access sessions.
 
-**Fix ID:**  F-24056r493100_fix
-
-**Vulnerability ID:**  V-222397
-
-**Rule ID:**  SV-222397r960762_rule
+|Fix ID|
+|---|
+|F-24056r493100_fix|
 
 ---
 
 ## Applications with SOAP messages requiring integrity must include the following message elements:-Message ID-Service Request-Timestamp-SAML Assertion (optionally included in messages) and all elements of the message must be digitally signed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222398|SV-222398r960762_rule|
 
 ### Description
 
@@ -454,7 +478,9 @@ If they are included, verify they are signed with a certificate.
 
 If SOAP messages requiring integrity do not have the Message ID, Service Request, Timestamp, and SAML Assertion signed, or if any part of the message is not digitally signed, this is a finding.
 
-**Check ID:**  C-24068r493102_chk
+|Check ID|
+|---|
+|C-24068r493102_chk|
 
 ### Fix Text 
 
@@ -466,17 +492,17 @@ Design and configure the application to sign the following message elements for 
 - SAML Assertion
 - Message elements
 
-**Fix ID:**  F-24057r493103_fix
-
-**Vulnerability ID:**  V-222398
-
-**Rule ID:**  SV-222398r960762_rule
+|Fix ID|
+|---|
+|F-24057r493103_fix|
 
 ---
 
 ## Messages protected with WS_Security must use time stamps with creation and expiration times.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222399|SV-222399r960759_rule|
 
 ### Description
 
@@ -492,23 +518,25 @@ Examine the contents of a SOAP message using WS Security; all messages should co
 
 If messages using WS Security do not contain time stamps, sequence numbers, and expiration, this is a finding.
 
-**Check ID:**  C-24069r493105_chk
+|Check ID|
+|---|
+|C-24069r493105_chk|
 
 ### Fix Text 
 
 Design and configure applications using WS-Security messages to use time stamps with creation and expiration times and sequence numbers.
 
-**Fix ID:**  F-24058r493106_fix
-
-**Vulnerability ID:**  V-222399
-
-**Rule ID:**  SV-222399r960759_rule
+|Fix ID|
+|---|
+|F-24058r493106_fix|
 
 ---
 
 ## Validity periods must be verified on all application messages using WS-Security or SAML assertions.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222400|SV-222400r960759_rule|
 
 ### Description
 
@@ -526,23 +554,25 @@ Review the design document and verify validity periods are checked on all messag
 
 If the design document does not exist, or does not indicate validity periods are checked on messages using WS-Security or SAML assertions, this is a finding.
 
-**Check ID:**  C-24070r493108_chk
+|Check ID|
+|---|
+|C-24070r493108_chk|
 
 ### Fix Text 
 
 Design and configure the application to use validity periods, ensure validity periods are verified on all WS-Security token profiles and SAML Assertions.
 
-**Fix ID:**  F-24059r493109_fix
-
-**Vulnerability ID:**  V-222400
-
-**Rule ID:**  SV-222400r960759_rule
+|Fix ID|
+|---|
+|F-24059r493109_fix|
 
 ---
 
 ## The application must ensure each unique asserting party provides unique assertion ID references for each SAML assertion.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222401|SV-222401r960759_rule|
 
 ### Description
 
@@ -560,23 +590,25 @@ Review the design document and verify SAML assertion identifiers are not reused 
 
 If the design document does not exist, or does not indicate SAML assertion identifiers which are unique for each asserting party, this is a finding.
 
-**Check ID:**  C-24071r493111_chk
+|Check ID|
+|---|
+|C-24071r493111_chk|
 
 ### Fix Text 
 
 Design and configure each SAML assertion authority to use unique assertion identifiers.
 
-**Fix ID:**  F-24060r493112_fix
-
-**Vulnerability ID:**  V-222401
-
-**Rule ID:**  SV-222401r960759_rule
+|Fix ID|
+|---|
+|F-24060r493112_fix|
 
 ---
 
 ## The application must ensure encrypted assertions, or equivalent confidentiality protections are used when assertion data is passed through an intermediary, and confidentiality of the assertion data is required when passing through the intermediary.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222402|SV-222402r960759_rule|
 
 ### Description
 
@@ -594,23 +626,25 @@ Verify all WS-Security tokens are transmitted via an approved encryption method.
 
 If the design document does not exist, or does not indicate all WS-Security tokens are only transmitted via an approved encryption method, this is a finding.
 
-**Check ID:**  C-24072r493114_chk
+|Check ID|
+|---|
+|C-24072r493114_chk|
 
 ### Fix Text 
 
 Encrypt assertions or use equivalent confidentiality when sensitive assertion data is passed through an intermediary.
 
-**Fix ID:**  F-24061r493115_fix
-
-**Vulnerability ID:**  V-222402
-
-**Rule ID:**  SV-222402r960759_rule
+|Fix ID|
+|---|
+|F-24061r493115_fix|
 
 ---
 
 ## The application must use the NotOnOrAfter condition when using the SubjectConfirmation element in a SAML assertion.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222403|SV-222403r960759_rule|
 
 ### Description
 
@@ -628,23 +662,25 @@ Examine the contents of a SOAP message using the <SubjectConfirmation> element. 
 
 If SOAP messages do not contain <NotOnOrAfter> elements, this is a finding.
 
-**Check ID:**  C-24073r493117_chk
+|Check ID|
+|---|
+|C-24073r493117_chk|
 
 ### Fix Text 
 
 Design and configure the application to use the <NotOnOrAfter> condition when using the <SubjectConfirmation> element in a SAML assertion.
 
-**Fix ID:**  F-24062r493118_fix
-
-**Vulnerability ID:**  V-222403
-
-**Rule ID:**  SV-222403r960759_rule
+|Fix ID|
+|---|
+|F-24062r493118_fix|
 
 ---
 
 ## The application must use both the NotBefore and NotOnOrAfter elements or OneTimeUse element when using the Conditions element in a SAML assertion.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222404|SV-222404r960759_rule|
 
 ### Description
 
@@ -662,23 +698,25 @@ Examine the contents of a SOAP message using the <Conditions> element; all messa
 
 If SOAP using the <Conditions> element does not contain <NotBefore> and <NotOnOrAfter> or <OneTimeUse> elements, this is a finding.
 
-**Check ID:**  C-24074r493120_chk
+|Check ID|
+|---|
+|C-24074r493120_chk|
 
 ### Fix Text 
 
 Design and configure the application to implement the use of the <NotBefore> and <NotOnOrAfter> or <OneTimeUse> when using the <Conditions> element in a SAML assertion.
 
-**Fix ID:**  F-24063r493121_fix
-
-**Vulnerability ID:**  V-222404
-
-**Rule ID:**  SV-222404r960759_rule
+|Fix ID|
+|---|
+|F-24063r493121_fix|
 
 ---
 
 ## The application must ensure if a OneTimeUse element is used in an assertion, there is only one of the same used in the Conditions element portion of an assertion.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222405|SV-222405r960759_rule|
 
 ### Description
 
@@ -696,23 +734,25 @@ Examine the contents of a SOAP message using the OneTimeUse element; all message
 
 If SOAP message uses more than one, OneTimeUse element in a SAML assertion, this is a finding.
 
-**Check ID:**  C-24075r493123_chk
+|Check ID|
+|---|
+|C-24075r493123_chk|
 
 ### Fix Text 
 
 When using OneTimeUse elements in a SAML assertion only allow one, OneTimeUse element to be used in the conditions element of a SAML assertion.
 
-**Fix ID:**  F-24064r493124_fix
-
-**Vulnerability ID:**  V-222405
-
-**Rule ID:**  SV-222405r960759_rule
+|Fix ID|
+|---|
+|F-24064r493124_fix|
 
 ---
 
 ## The application must ensure messages are encrypted when the SessionIndex is tied to privacy data.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222406|SV-222406r960759_rule|
 
 ### Description
 
@@ -730,23 +770,25 @@ Examine the contents of a SOAP message using a SessionIndex in the SAML element 
 
 If the SessionIndex is tied to privacy information, and it is not encrypted, this is a finding.
 
-**Check ID:**  C-24076r493126_chk
+|Check ID|
+|---|
+|C-24076r493126_chk|
 
 ### Fix Text 
 
 Encrypt messages when the SessionIndex is tied to privacy data.
 
-**Fix ID:**  F-24065r493127_fix
-
-**Vulnerability ID:**  V-222406
-
-**Rule ID:**  SV-222406r960759_rule
+|Fix ID|
+|---|
+|F-24065r493127_fix|
 
 ---
 
 ## The application must provide automated mechanisms for supporting account management functions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222407|SV-222407r1043176_rule|
 
 ### Description
 
@@ -778,23 +820,25 @@ Verify the action that is taken is automated and repeatable.
 
 If the account management process is manual in nature, this is a finding.
 
-**Check ID:**  C-24077r493129_chk
+|Check ID|
+|---|
+|C-24077r493129_chk|
 
 ### Fix Text 
 
 Use automated processes and mechanisms for account management functions.
 
-**Fix ID:**  F-24066r493130_fix
-
-**Vulnerability ID:**  V-222407
-
-**Rule ID:**  SV-222407r1043176_rule
+|Fix ID|
+|---|
+|F-24066r493130_fix|
 
 ---
 
 ## Shared/group account credentials must be terminated when members leave the group.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222408|SV-222408r1015683_rule|
 
 ### Description
 
@@ -814,23 +858,25 @@ Validate there is a procedure for deleting either member accounts or the entire 
 
 If there is no process for handling group account credentials, this is a finding.
 
-**Check ID:**  C-24078r985901_chk
+|Check ID|
+|---|
+|C-24078r985901_chk|
 
 ### Fix Text 
 
 Create a procedure for deleting either member accounts or the entire group account when members leave the group.
 
-**Fix ID:**  F-24067r493133_fix
-
-**Vulnerability ID:**  V-222408
-
-**Rule ID:**  SV-222408r1015683_rule
+|Fix ID|
+|---|
+|F-24067r493133_fix|
 
 ---
 
 ## The application must automatically remove or disable temporary user accounts 72 hours after account creation.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222409|SV-222409r960771_rule|
 
 ### Description
 
@@ -856,23 +902,25 @@ Determine if there is an available setting to expire the account after a period 
 
 If the application has no ability to specify a user account as being temporary in nature, or if the account has no ability to automatically disable or remove the account after 72 hours after account creation, this is a finding.
 
-**Check ID:**  C-24079r493135_chk
+|Check ID|
+|---|
+|C-24079r493135_chk|
 
 ### Fix Text 
 
 Configure temporary accounts to be automatically removed or disabled after 72 hours after account creation.
 
-**Fix ID:**  F-24068r493136_fix
-
-**Vulnerability ID:**  V-222409
-
-**Rule ID:**  SV-222409r960771_rule
+|Fix ID|
+|---|
+|F-24068r493136_fix|
 
 ---
 
 ## The application must have a process, feature or function that prevents removal or disabling of emergency accounts. 
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222410|SV-222410r961863_rule|
 
 ### Description
 
@@ -896,23 +944,25 @@ Examples include but are not limited to adding a flag to the account to ensure i
 
 If a process, procedure, function or feature designed to prevent emergency accounts from being  deleted or disabled during a crisis situation is not available, this is a finding.
 
-**Check ID:**  C-24080r493138_chk
+|Check ID|
+|---|
+|C-24080r493138_chk|
 
 ### Fix Text 
 
 Identify accounts that are created in an emergency situation and ensure procedures or processes are in place to prevent disabling or deleting the account while the emergency is underway.
 
-**Fix ID:**  F-24069r493139_fix
-
-**Vulnerability ID:**  V-222410
-
-**Rule ID:**  SV-222410r961863_rule
+|Fix ID|
+|---|
+|F-24069r493139_fix|
 
 ---
 
 ## The application must automatically disable accounts after a 35 day period of account inactivity.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222411|SV-222411r960774_rule|
 
 ### Description
 
@@ -938,23 +988,25 @@ Confirm this setting is active.
 
 If the application is not set to expire inactive accounts after 35 days, or if the application has no ability to expire accounts after 35 days of inactivity, this is a finding.
 
-**Check ID:**  C-24081r493141_chk
+|Check ID|
+|---|
+|C-24081r493141_chk|
 
 ### Fix Text 
 
 Design and configure the application to expire user accounts after 35 days of inactivity.
 
-**Fix ID:**  F-24070r493142_fix
-
-**Vulnerability ID:**  V-222411
-
-**Rule ID:**  SV-222411r960774_rule
+|Fix ID|
+|---|
+|F-24070r493142_fix|
 
 ---
 
 ## Unnecessary application accounts must be disabled, or deleted.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222412|SV-222412r960774_rule|
 
 ### Description
 
@@ -972,23 +1024,25 @@ Have the application administrator identify and validate all user accounts.
 
 If any accounts cannot be validated and are deemed to be unnecessary, this is a finding.
 
-**Check ID:**  C-24082r493144_chk
+|Check ID|
+|---|
+|C-24082r493144_chk|
 
 ### Fix Text 
 
 Design the application so unessential user accounts are not created during installation. Disable or delete all unnecessary application user accounts.
 
-**Fix ID:**  F-24071r493145_fix
-
-**Vulnerability ID:**  V-222412
-
-**Rule ID:**  SV-222412r960774_rule
+|Fix ID|
+|---|
+|F-24071r493145_fix|
 
 ---
 
 ## The application must automatically audit account creation.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222413|SV-222413r960777_rule|
 
 ### Description
 
@@ -1012,7 +1066,9 @@ Examine the log file again and determine if the account creation event was logge
 
 If the account creation event was not logged, this is a finding.
 
-**Check ID:**  C-24083r493147_chk
+|Check ID|
+|---|
+|C-24083r493147_chk|
 
 ### Fix Text 
 
@@ -1020,17 +1076,17 @@ Configure the application to write a log entry when a new user account is create
 
 At a minimum, ensure account name, date and time of the event are recorded.
 
-**Fix ID:**  F-24072r493148_fix
-
-**Vulnerability ID:**  V-222413
-
-**Rule ID:**  SV-222413r960777_rule
+|Fix ID|
+|---|
+|F-24072r493148_fix|
 
 ---
 
 ## The application must automatically audit account modification.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222414|SV-222414r960780_rule|
 
 ### Description
 
@@ -1054,7 +1110,9 @@ Examine the log file again and determine if the account event was logged. The in
 
 If the account modification event information was not logged, this is a finding.
 
-**Check ID:**  C-24084r493150_chk
+|Check ID|
+|---|
+|C-24084r493150_chk|
 
 ### Fix Text 
 
@@ -1062,17 +1120,17 @@ Configure the application to write a log entry when a user account is modified.
 
 At a minimum, ensure account name, date and time of the event are recorded.
 
-**Fix ID:**  F-24073r493151_fix
-
-**Vulnerability ID:**  V-222414
-
-**Rule ID:**  SV-222414r960780_rule
+|Fix ID|
+|---|
+|F-24073r493151_fix|
 
 ---
 
 ## The application must automatically audit account disabling actions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222415|SV-222415r960783_rule|
 
 ### Description
 
@@ -1096,7 +1154,9 @@ Examine the log file again and determine if the account disable event was logged
 
 If the account disabling event information was not logged, this is a finding.
 
-**Check ID:**  C-24085r493153_chk
+|Check ID|
+|---|
+|C-24085r493153_chk|
 
 ### Fix Text 
 
@@ -1104,17 +1164,17 @@ Configure the application to write a log entry when a user account is disabled.
 
 At a minimum, ensure account name, date and time of the event are recorded.
 
-**Fix ID:**  F-24074r493154_fix
-
-**Vulnerability ID:**  V-222415
-
-**Rule ID:**  SV-222415r960783_rule
+|Fix ID|
+|---|
+|F-24074r493154_fix|
 
 ---
 
 ## The application must automatically audit account removal actions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222416|SV-222416r960786_rule|
 
 ### Description
 
@@ -1138,7 +1198,9 @@ Examine the log file again and determine if the account removal event was logged
 
 If the account removal event information was not logged, this is a finding.
 
-**Check ID:**  C-24086r493156_chk
+|Check ID|
+|---|
+|C-24086r493156_chk|
 
 ### Fix Text 
 
@@ -1146,17 +1208,17 @@ Configure the application to write a log entry when a user account is removed.
 
 At a minimum, ensure account name, date and time of the event are recorded.
 
-**Fix ID:**  F-24075r493157_fix
-
-**Vulnerability ID:**  V-222416
-
-**Rule ID:**  SV-222416r960786_rule
+|Fix ID|
+|---|
+|F-24075r493157_fix|
 
 ---
 
 ## The application must notify system administrators (SAs) and information system security officers (ISSOs) when accounts are created.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222417|SV-222417r1015684_rule|
 
 ### Description
 
@@ -1176,23 +1238,25 @@ Ensure the application is configured to notify SAs when new accounts are created
 
 If SAs and ISSOs are not notified when accounts are created, this is a finding.
 
-**Check ID:**  C-24087r985903_chk
+|Check ID|
+|---|
+|C-24087r985903_chk|
 
 ### Fix Text 
 
 Configure the application to notify the SA and the ISSO when application accounts are created.
 
-**Fix ID:**  F-24076r985904_fix
-
-**Vulnerability ID:**  V-222417
-
-**Rule ID:**  SV-222417r1015684_rule
+|Fix ID|
+|---|
+|F-24076r985904_fix|
 
 ---
 
 ## The application must notify system administrators (SAs) and information system security officers (ISSOs) when accounts are modified.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222418|SV-222418r1015685_rule|
 
 ### Description
 
@@ -1214,23 +1278,25 @@ Modify a test account and check with a SA to verify the notification was receive
 
 If SAs and ISSOs are not notified when accounts are modified, this is a finding.
 
-**Check ID:**  C-24088r985906_chk
+|Check ID|
+|---|
+|C-24088r985906_chk|
 
 ### Fix Text 
 
 Configure the application to notify the SA and the ISSO when application accounts are modified.
 
-**Fix ID:**  F-24077r985907_fix
-
-**Vulnerability ID:**  V-222418
-
-**Rule ID:**  SV-222418r1015685_rule
+|Fix ID|
+|---|
+|F-24077r985907_fix|
 
 ---
 
 ## The application must notify system administrators (SAs) and information system security officers (ISSOs) of account disabling actions.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222419|SV-222419r1015686_rule|
 
 ### Description
 
@@ -1252,23 +1318,25 @@ Disable a test account and check with a SA to verify the notification was receiv
 
 If SAs and ISSOs are not notified when accounts are disabled, this is a finding.
 
-**Check ID:**  C-24089r985909_chk
+|Check ID|
+|---|
+|C-24089r985909_chk|
 
 ### Fix Text 
 
 Configure the application to notify the SA and the ISSO when application accounts are disabled.
 
-**Fix ID:**  F-24078r985910_fix
-
-**Vulnerability ID:**  V-222419
-
-**Rule ID:**  SV-222419r1015686_rule
+|Fix ID|
+|---|
+|F-24078r985910_fix|
 
 ---
 
 ## The application must notify system administrators (SAs) and information system security officers (ISSOs) of account removal actions.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222420|SV-222420r1015687_rule|
 
 ### Description
 
@@ -1290,23 +1358,25 @@ Remove a test account and check with a SA to verify the notification was receive
 
 If SAs and ISSOs are not notified when accounts are removed, this is a finding.
 
-**Check ID:**  C-24090r985912_chk
+|Check ID|
+|---|
+|C-24090r985912_chk|
 
 ### Fix Text 
 
 Configure the application to notify the SA and the ISSO when application accounts are removed.
 
-**Fix ID:**  F-24079r985913_fix
-
-**Vulnerability ID:**  V-222420
-
-**Rule ID:**  SV-222420r1015687_rule
+|Fix ID|
+|---|
+|F-24079r985913_fix|
 
 ---
 
 ## The application must automatically audit account enabling actions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222421|SV-222421r961290_rule|
 
 ### Description
 
@@ -1330,7 +1400,9 @@ Examine the log file again and determine if the account enable event was logged.
 
 If the account enabling event information was not logged, this is a finding.
 
-**Check ID:**  C-24091r918114_chk
+|Check ID|
+|---|
+|C-24091r918114_chk|
 
 ### Fix Text 
 
@@ -1338,17 +1410,17 @@ Configure the application to write a log entry when a user account is enabled.
 
 At a minimum, ensure account name, date and time of the event are recorded.
 
-**Fix ID:**  F-24080r493172_fix
-
-**Vulnerability ID:**  V-222421
-
-**Rule ID:**  SV-222421r961290_rule
+|Fix ID|
+|---|
+|F-24080r493172_fix|
 
 ---
 
 ## The application must notify system administrators (SAs) and information system security officers (ISSOs) of account enabling actions.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222422|SV-222422r1015688_rule|
 
 ### Description
 
@@ -1370,23 +1442,25 @@ Disable and then enable a test account and check with the SA to verify the notif
 
 If SAs and ISSOs are not notified when accounts are enabled, this is a finding.
 
-**Check ID:**  C-24092r985915_chk
+|Check ID|
+|---|
+|C-24092r985915_chk|
 
 ### Fix Text 
 
 Configure the application to notify the SA and the ISSO when application accounts are enabled.
 
-**Fix ID:**  F-24081r985916_fix
-
-**Vulnerability ID:**  V-222422
-
-**Rule ID:**  SV-222422r1015688_rule
+|Fix ID|
+|---|
+|F-24081r985916_fix|
 
 ---
 
 ## Application data protection requirements must be identified and documented.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222423|SV-222423r961302_rule|
 
 ### Description
 
@@ -1406,23 +1480,25 @@ Ask the application representative for the documentation that identifies the app
 
 If the application data protection requirements are not documented, this is a finding.
 
-**Check ID:**  C-24093r493177_chk
+|Check ID|
+|---|
+|C-24093r493177_chk|
 
 ### Fix Text 
 
 Identify and document the application data elements and the data protection requirements.
 
-**Fix ID:**  F-24082r493178_fix
-
-**Vulnerability ID:**  V-222423
-
-**Rule ID:**  SV-222423r961302_rule
+|Fix ID|
+|---|
+|F-24082r493178_fix|
 
 ---
 
 ## The application must utilize organization-defined data mining detection techniques for organization-defined data storage objects to adequately detect data mining attempts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222424|SV-222424r961305_rule|
 
 ### Description
 
@@ -1456,23 +1532,25 @@ Not allowing data dumps.
 
 If the application requirements specify protections for data mining and the application administrator is unable to identify or demonstrate that the protections are in place, this is a finding.
 
-**Check ID:**  C-24094r493180_chk
+|Check ID|
+|---|
+|C-24094r493180_chk|
 
 ### Fix Text 
 
 Utilize and implement data mining protections when requirements specify it.
 
-**Fix ID:**  F-24083r493181_fix
-
-**Vulnerability ID:**  V-222424
-
-**Rule ID:**  SV-222424r961305_rule
+|Fix ID|
+|---|
+|F-24083r493181_fix|
 
 ---
 
 ## The application must enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222425|SV-222425r960792_rule|
 
 ### Description
 
@@ -1516,23 +1594,25 @@ Try to access an application resource that is not configured to allow access. Ac
 
 If the enforcement of configured access restrictions is not performed, this is a finding.
 
-**Check ID:**  C-24095r493183_chk
+|Check ID|
+|---|
+|C-24095r493183_chk|
 
 ### Fix Text 
 
 Design or configure the application to enforce access to application resources.
 
-**Fix ID:**  F-24084r493184_fix
-
-**Vulnerability ID:**  V-222425
-
-**Rule ID:**  SV-222425r960792_rule
+|Fix ID|
+|---|
+|F-24084r493184_fix|
 
 ---
 
 ## The application must enforce organization-defined discretionary access control policies over defined subjects and objects.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222426|SV-222426r961317_rule|
 
 ### Description
 
@@ -1564,23 +1644,25 @@ Authenticate as test user 3 and attempt to access the application resource where
 
 If the enforcement of configured access restrictions is not performed, this is a finding.
 
-**Check ID:**  C-24096r493186_chk
+|Check ID|
+|---|
+|C-24096r493186_chk|
 
 ### Fix Text 
 
 Design and configure the application to enforce discretionary access control policies.
 
-**Fix ID:**  F-24085r493187_fix
-
-**Vulnerability ID:**  V-222426
-
-**Rule ID:**  SV-222426r961317_rule
+|Fix ID|
+|---|
+|F-24085r493187_fix|
 
 ---
 
 ## The application must enforce approved authorizations for controlling the flow of information within the system based on organization-defined information flow control policies.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222427|SV-222427r960801_rule|
 
 ### Description
 
@@ -1619,23 +1701,25 @@ Verify the flow control policy was enforced and the data was not transmitted.
 
 If the application does not enforce the approved authorizations for controlling data flow, this is a finding.
 
-**Check ID:**  C-24097r493189_chk
+|Check ID|
+|---|
+|C-24097r493189_chk|
 
 ### Fix Text 
 
 Configure the application to enforce data flow control in accordance with data flow control policies.
 
-**Fix ID:**  F-24086r493190_fix
-
-**Vulnerability ID:**  V-222427
-
-**Rule ID:**  SV-222427r960801_rule
+|Fix ID|
+|---|
+|F-24086r493190_fix|
 
 ---
 
 ## The application must enforce approved authorizations for controlling the flow of information between interconnected systems based on organization-defined information flow control policies.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222428|SV-222428r960804_rule|
 
 ### Description
 
@@ -1676,23 +1760,25 @@ Verify the flow control policy was enforced and the data was not transmitted.
 
 If the application does not enforce the approved authorizations for controlling data flow, this is a finding.
 
-**Check ID:**  C-24098r493192_chk
+|Check ID|
+|---|
+|C-24098r493192_chk|
 
 ### Fix Text 
 
 Configure the application to enforce data flow control in accordance with data flow control policies.
 
-**Fix ID:**  F-24087r493193_fix
-
-**Vulnerability ID:**  V-222428
-
-**Rule ID:**  SV-222428r960804_rule
+|Fix ID|
+|---|
+|F-24087r493193_fix|
 
 ---
 
 ## The application must prevent non-privileged users from executing privileged functions to include disabling, circumventing, or altering implemented security safeguards/countermeasures.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222429|SV-222429r961353_rule|
 
 ### Description
 
@@ -1724,23 +1810,25 @@ If there are instances of unnecessary ownership or permissions, this is a findin
 
 The finding details should note the full path of the file(s) and the associated issue (i.e., outside scope, permissions improperly granted to user X, etc.).
 
-**Check ID:**  C-24099r493195_chk
+|Check ID|
+|---|
+|C-24099r493195_chk|
 
 ### Fix Text 
 
 Modify the application to limit access and prevent the disabling or circumvention of security safeguards.
 
-**Fix ID:**  F-24088r493196_fix
-
-**Vulnerability ID:**  V-222429
-
-**Rule ID:**  SV-222429r961353_rule
+|Fix ID|
+|---|
+|F-24088r493196_fix|
 
 ---
 
 ## The application must execute without excessive account permissions.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222430|SV-222430r961359_rule|
 
 ### Description
 
@@ -1764,23 +1852,25 @@ Locate the application user account used to access the database and examine the 
 
 If the application user account has excessive OS privileges such as being in the admin group, database privileges such as being in the DBA role, has the ability to create, drop, alter the database (not application database tables), or if the application user account has other excessive or undefined system privileges, this is a finding.
 
-**Check ID:**  C-24100r493198_chk
+|Check ID|
+|---|
+|C-24100r493198_chk|
 
 ### Fix Text 
 
 Configure the application accounts with minimalist privileges. Do not allow the application to operate with admin credentials.
 
-**Fix ID:**  F-24089r493199_fix
-
-**Vulnerability ID:**  V-222430
-
-**Rule ID:**  SV-222430r961359_rule
+|Fix ID|
+|---|
+|F-24089r493199_fix|
 
 ---
 
 ## The application must audit the execution of privileged functions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222431|SV-222431r961362_rule|
 
 ### Description
 
@@ -1802,23 +1892,25 @@ Ensure the specific action taken, date and time or event is recorded.
 
 If the execution of privileged functionality is not logged, this is a finding.
 
-**Check ID:**  C-24101r493201_chk
+|Check ID|
+|---|
+|C-24101r493201_chk|
 
 ### Fix Text 
 
 Configure the application to write log entries when privileged functions are executed. At a minimum, ensure the specific action taken, date and time of event are recorded.
 
-**Fix ID:**  F-24090r493202_fix
-
-**Vulnerability ID:**  V-222431
-
-**Rule ID:**  SV-222431r961362_rule
+|Fix ID|
+|---|
+|F-24090r493202_fix|
 
 ---
 
 ## The application must enforce the limit of three consecutive invalid logon attempts by a user during a 15 minute time period.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222432|SV-222432r960840_rule|
 
 ### Description
 
@@ -1844,23 +1936,25 @@ Using the correct user password or pin, attempt to logon a 4th time.
 
 If the logon is successful upon the 4th attempt the account was not locked after the third failed attempt and this is a finding.
 
-**Check ID:**  C-24102r493204_chk
+|Check ID|
+|---|
+|C-24102r493204_chk|
 
 ### Fix Text 
 
 Configure the application to enforce an account lock after 3 failed logon attempts occurring within a 15-minute window.
 
-**Fix ID:**  F-24091r493205_fix
-
-**Vulnerability ID:**  V-222432
-
-**Rule ID:**  SV-222432r960840_rule
+|Fix ID|
+|---|
+|F-24091r493205_fix|
 
 ---
 
 ## The application administrator must follow an approved process to unlock locked user accounts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222433|SV-222433r961368_rule|
 
 ### Description
 
@@ -1886,7 +1980,9 @@ The process may involve a manual or automated reset after the locked out user ha
 
 If the admin does not unlock the account following the approved process, and if the process does not have documented ISSO and ISSM approvals, this is a finding.
 
-**Check ID:**  C-24103r493207_chk
+|Check ID|
+|---|
+|C-24103r493207_chk|
 
 ### Fix Text 
 
@@ -1894,17 +1990,17 @@ Create a standard approved process for unlocking locked application accounts whi
 
 Use that process when unlocking application user accounts.
 
-**Fix ID:**  F-24092r493208_fix
-
-**Vulnerability ID:**  V-222433
-
-**Rule ID:**  SV-222433r961368_rule
+|Fix ID|
+|---|
+|F-24092r493208_fix|
 
 ---
 
 ## The application must display the Standard Mandatory DoD Notice and Consent Banner before granting access to the application.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222434|SV-222434r960843_rule|
 
 ### Description
 
@@ -1922,23 +2018,25 @@ If the only way to access the application is through the OS console, e.g., a fat
 
 If the standard DoD-approved banner is not displayed prior to obtaining access, this is a finding.
 
-**Check ID:**  C-24104r493210_chk
+|Check ID|
+|---|
+|C-24104r493210_chk|
 
 ### Fix Text 
 
 Configure the application to present the standard DoD-approved banner prior to granting access to the application.
 
-**Fix ID:**  F-24093r493211_fix
-
-**Vulnerability ID:**  V-222434
-
-**Rule ID:**  SV-222434r960843_rule
+|Fix ID|
+|---|
+|F-24093r493211_fix|
 
 ---
 
 ## The application must retain the Standard Mandatory DoD Notice and Consent Banner on the screen until users acknowledge the usage conditions and take explicit actions to log on for further access.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222435|SV-222435r960846_rule|
 
 ### Description
 
@@ -1956,23 +2054,25 @@ Access the application and authenticate if necessary. Verify the banner is displ
 
 If the banner is not displayed or no action must be taken to accept terms of use, this is a finding.
 
-**Check ID:**  C-24105r493213_chk
+|Check ID|
+|---|
+|C-24105r493213_chk|
 
 ### Fix Text 
 
 Configure the application to retain the standard DoD-approved banner until the user accepts the usage conditions prior to granting access to the application.
 
-**Fix ID:**  F-24094r493214_fix
-
-**Vulnerability ID:**  V-222435
-
-**Rule ID:**  SV-222435r960846_rule
+|Fix ID|
+|---|
+|F-24094r493214_fix|
 
 ---
 
 ## The publicly accessible application must display the Standard Mandatory DoD Notice and Consent Banner before granting access to the application.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222436|SV-222436r960849_rule|
 
 ### Description
 
@@ -1986,23 +2086,25 @@ Access the application and observe the screen to ensure the DoD-approved banner 
 
 If the standard DoD-approved banner is not displayed prior to obtaining access, this is a finding.
 
-**Check ID:**  C-24106r493216_chk
+|Check ID|
+|---|
+|C-24106r493216_chk|
 
 ### Fix Text 
 
 Configure the application to present the standard DoD-approved banner prior to granting access to the application.
 
-**Fix ID:**  F-24095r493217_fix
-
-**Vulnerability ID:**  V-222436
-
-**Rule ID:**  SV-222436r960849_rule
+|Fix ID|
+|---|
+|F-24095r493217_fix|
 
 ---
 
 ## The application must display the time and date of the users last successful logon.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222437|SV-222437r987626_rule|
 
 ### Description
 
@@ -2028,23 +2130,25 @@ Validate the last logon date and time is displayed in the user interface.
 
 If the date and time the user account was last granted access to the application is not displayed in the user interface, this is a finding.
 
-**Check ID:**  C-24107r493219_chk
+|Check ID|
+|---|
+|C-24107r493219_chk|
 
 ### Fix Text 
 
 Design and configure the application to display the date and time when the user was last successfully granted access to the application.
 
-**Fix ID:**  F-24096r493220_fix
-
-**Vulnerability ID:**  V-222437
-
-**Rule ID:**  SV-222437r987626_rule
+|Fix ID|
+|---|
+|F-24096r493220_fix|
 
 ---
 
 ## The application must protect against an individual (or process acting on behalf of an individual) falsely denying having performed organization-defined actions to be covered by non-repudiation.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222438|SV-222438r960864_rule|
 
 ### Description
 
@@ -2070,23 +2174,25 @@ Access the application as a test user or observe the application administrator a
 
 If the application is required to provide non-repudiation services and does not, or if the non-repudiation functionality fails on demonstration, this is a finding.
 
-**Check ID:**  C-24108r493222_chk
+|Check ID|
+|---|
+|C-24108r493222_chk|
 
 ### Fix Text 
 
 Configure the application to provide users with a non-repudiation function in the form of digital signatures when it is required by the organization or by the application design and architecture.
 
-**Fix ID:**  F-24097r493223_fix
-
-**Vulnerability ID:**  V-222438
-
-**Rule ID:**  SV-222438r960864_rule
+|Fix ID|
+|---|
+|F-24097r493223_fix|
 
 ---
 
 ## For applications providing audit record aggregation, the application must compile audit records from organization-defined information system components into a system-wide audit trail that is time-correlated with an organization-defined level of tolerance for the relationship between time stamps of individual records in the audit trail.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222439|SV-222439r960873_rule|
 
 ### Description
 
@@ -2112,23 +2218,25 @@ Access the server providing the log aggregation. Access the application logs tha
 
 If the log dates and times do not correlate when the logs are aggregated, this is a finding.
 
-**Check ID:**  C-36237r602277_chk
+|Check ID|
+|---|
+|C-36237r602277_chk|
 
 ### Fix Text 
 
 Configure the application to correlate time stamps when aggregating audit records.
 
-**Fix ID:**  F-36204r602278_fix
-
-**Vulnerability ID:**  V-222439
-
-**Rule ID:**  SV-222439r960873_rule
+|Fix ID|
+|---|
+|F-36204r602278_fix|
 
 ---
 
 ## The application must provide audit record generation capability for the creation of session IDs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222441|SV-222441r960879_rule|
 
 ### Description
 
@@ -2156,23 +2264,25 @@ If a web-based application delegates session ID creation to an application serve
 
 If the application generates session ID creation event logs by default, and that behavior cannot be disabled, this is not a finding.
 
-**Check ID:**  C-24111r493231_chk
+|Check ID|
+|---|
+|C-24111r493231_chk|
 
 ### Fix Text 
 
 Enable session ID creation event auditing.
 
-**Fix ID:**  F-24100r493232_fix
-
-**Vulnerability ID:**  V-222441
-
-**Rule ID:**  SV-222441r960879_rule
+|Fix ID|
+|---|
+|F-24100r493232_fix|
 
 ---
 
 ## The application must provide audit record generation capability for the destruction of session IDs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222442|SV-222442r960879_rule|
 
 ### Description
 
@@ -2194,23 +2304,25 @@ If a web-based application delegates session ID destruction to an application se
 
 If the application generates audit logs by default when session IDs are destroyed, and that behavior cannot be disabled, this is not a finding.
 
-**Check ID:**  C-24112r493234_chk
+|Check ID|
+|---|
+|C-24112r493234_chk|
 
 ### Fix Text 
 
 Enable session ID destruction event auditing.
 
-**Fix ID:**  F-24101r493235_fix
-
-**Vulnerability ID:**  V-222442
-
-**Rule ID:**  SV-222442r960879_rule
+|Fix ID|
+|---|
+|F-24101r493235_fix|
 
 ---
 
 ## The application must provide audit record generation capability for the renewal of session IDs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222443|SV-222443r960879_rule|
 
 ### Description
 
@@ -2246,23 +2358,25 @@ If a web-based application delegates session ID renewals to an application serve
 
 If the application is not configured to log session ID renewal events this is a finding.
 
-**Check ID:**  C-24113r493237_chk
+|Check ID|
+|---|
+|C-24113r493237_chk|
 
 ### Fix Text 
 
 Design or reconfigure the application to log session renewal events on those application events that provide changes in the users privileges or permissions to the application.
 
-**Fix ID:**  F-24102r493238_fix
-
-**Vulnerability ID:**  V-222443
-
-**Rule ID:**  SV-222443r960879_rule
+|Fix ID|
+|---|
+|F-24102r493238_fix|
 
 ---
 
 ## The application must not write sensitive data into the application logs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222444|SV-222444r960879_rule|
 
 ### Description
 
@@ -2288,23 +2402,25 @@ Use regular expressions to aid in searching log files. All search syntax cannot 
 
 If the application logs sensitive data such as session IDs, application source code, encryption keys, or passwords, this is a finding.
 
-**Check ID:**  C-24114r493240_chk
+|Check ID|
+|---|
+|C-24114r493240_chk|
 
 ### Fix Text 
 
 Design or reconfigure the application to not write sensitive data to the logs.
 
-**Fix ID:**  F-24103r493241_fix
-
-**Vulnerability ID:**  V-222444
-
-**Rule ID:**  SV-222444r960879_rule
+|Fix ID|
+|---|
+|F-24103r493241_fix|
 
 ---
 
 ## The application must provide audit record generation capability for session timeouts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222445|SV-222445r960879_rule|
 
 ### Description
 
@@ -2342,23 +2458,25 @@ If a web-based application delegates session timeout auditing to an application 
 
 If the session timeout event is not recorded in the logs, this is a finding.
 
-**Check ID:**  C-24115r493243_chk
+|Check ID|
+|---|
+|C-24115r493243_chk|
 
 ### Fix Text 
 
 Configure the application to record session timeout events in the logs.
 
-**Fix ID:**  F-24104r493244_fix
-
-**Vulnerability ID:**  V-222445
-
-**Rule ID:**  SV-222445r960879_rule
+|Fix ID|
+|---|
+|F-24104r493244_fix|
 
 ---
 
 ## The application must record a time stamp indicating when the event occurred.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222446|SV-222446r960879_rule|
 
 ### Description
 
@@ -2370,23 +2488,25 @@ Review the application logs.
 
 If the time the event occurred is not included as part of the event, this is a finding.
 
-**Check ID:**  C-24116r493246_chk
+|Check ID|
+|---|
+|C-24116r493246_chk|
 
 ### Fix Text 
 
 Configure the application to record the time the event occurred when recording the event.
 
-**Fix ID:**  F-24105r493247_fix
-
-**Vulnerability ID:**  V-222446
-
-**Rule ID:**  SV-222446r960879_rule
+|Fix ID|
+|---|
+|F-24105r493247_fix|
 
 ---
 
 ## The application must provide audit record generation capability for HTTP headers including User-Agent, Referer, GET, and POST.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222447|SV-222447r960879_rule|
 
 ### Description
 
@@ -2424,23 +2544,25 @@ Expires:
 
 If HTTP headers are not logged, this is a finding.
 
-**Check ID:**  C-24117r493249_chk
+|Check ID|
+|---|
+|C-24117r493249_chk|
 
 ### Fix Text 
 
 Configure the web application and/or the web server to log HTTP headers.
 
-**Fix ID:**  F-24106r493250_fix
-
-**Vulnerability ID:**  V-222447
-
-**Rule ID:**  SV-222447r960879_rule
+|Fix ID|
+|---|
+|F-24106r493250_fix|
 
 ---
 
 ## The application must provide audit record generation capability for connecting system IP addresses.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222448|SV-222448r960879_rule|
 
 ### Description
 
@@ -2460,23 +2582,25 @@ If connecting IP addresses are not seen in the logs, connect to the application 
 
 If the IP addresses of the systems that connect to the application are not recorded in the logs, this is a finding.
 
-**Check ID:**  C-24118r493252_chk
+|Check ID|
+|---|
+|C-24118r493252_chk|
 
 ### Fix Text 
 
 Configure the application or application server to log all connecting IP address information
 
-**Fix ID:**  F-24107r493253_fix
-
-**Vulnerability ID:**  V-222448
-
-**Rule ID:**  SV-222448r960879_rule
+|Fix ID|
+|---|
+|F-24107r493253_fix|
 
 ---
 
 ## The application must record the username or user ID of the user associated with the event.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222449|SV-222449r960879_rule|
 
 ### Description
 
@@ -2492,23 +2616,25 @@ Observe if the log includes an entry to indicate the user ID of the user that co
 
 If the user ID is not recorded along with the event in the event log, this is a finding.
 
-**Check ID:**  C-24119r493255_chk
+|Check ID|
+|---|
+|C-24119r493255_chk|
 
 ### Fix Text 
 
 Configure the application to record the user ID of the user responsible for the log event entry.
 
-**Fix ID:**  F-24108r493256_fix
-
-**Vulnerability ID:**  V-222449
-
-**Rule ID:**  SV-222449r960879_rule
+|Fix ID|
+|---|
+|F-24108r493256_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to grant privileges occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222450|SV-222450r960885_rule|
 
 ### Description
 
@@ -2534,23 +2660,25 @@ Review the application logs and ensure both events were captured in the logs. Th
 
 If the application does not log when successful and unsuccessful attempts to grant privilege occur, this is a finding.
 
-**Check ID:**  C-24120r493258_chk
+|Check ID|
+|---|
+|C-24120r493258_chk|
 
 ### Fix Text 
 
 Configure the application to audit successful and unsuccessful attempts to grant privileges.
 
-**Fix ID:**  F-24109r493259_fix
-
-**Vulnerability ID:**  V-222450
-
-**Rule ID:**  SV-222450r960885_rule
+|Fix ID|
+|---|
+|F-24109r493259_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to access security objects occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222451|SV-222451r961791_rule|
 
 ### Description
 
@@ -2575,23 +2703,25 @@ Review the log data and ensure both the successful and unsuccessful access attem
 
 If the application does not generate an audit record when successful and unsuccessful attempts to access security objects occur, this is a finding.
 
-**Check ID:**  C-24121r493261_chk
+|Check ID|
+|---|
+|C-24121r493261_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to access security objects.
 
-**Fix ID:**  F-24110r493262_fix
-
-**Vulnerability ID:**  V-222451
-
-**Rule ID:**  SV-222451r961791_rule
+|Fix ID|
+|---|
+|F-24110r493262_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to access security levels occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222452|SV-222452r961794_rule|
 
 ### Description
 
@@ -2615,23 +2745,25 @@ Review the log data and ensure both the successful and unsuccessful access attem
 
 If the application does not generate an audit record when successful and unsuccessful attempts to access security levels occur, this is a finding.
 
-**Check ID:**  C-24122r493264_chk
+|Check ID|
+|---|
+|C-24122r493264_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to access security levels.
 
-**Fix ID:**  F-24111r493265_fix
-
-**Vulnerability ID:**  V-222452
-
-**Rule ID:**  SV-222452r961794_rule
+|Fix ID|
+|---|
+|F-24111r493265_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to access categories of information (e.g., classification levels) occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222453|SV-222453r961797_rule|
 
 ### Description
 
@@ -2661,23 +2793,25 @@ Review the log data and ensure both the successful and unsuccessful access attem
 
 If the application does not generate an audit record when successful and unsuccessful attempts to access categories of information occur, this is a finding.
 
-**Check ID:**  C-24123r493267_chk
+|Check ID|
+|---|
+|C-24123r493267_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to access protected categories of information.
 
-**Fix ID:**  F-24112r493268_fix
-
-**Vulnerability ID:**  V-222453
-
-**Rule ID:**  SV-222453r961797_rule
+|Fix ID|
+|---|
+|F-24112r493268_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to modify privileges occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222454|SV-222454r961800_rule|
 
 ### Description
 
@@ -2701,23 +2835,25 @@ Review the application logs and ensure both events were captured in the logs. Th
 
 If the application does not log when successful and unsuccessful attempts to modify privileges occur, this is a finding.
 
-**Check ID:**  C-24124r493270_chk
+|Check ID|
+|---|
+|C-24124r493270_chk|
 
 ### Fix Text 
 
 Configure the application to audit successful and unsuccessful attempts to modify privileges.
 
-**Fix ID:**  F-24113r493271_fix
-
-**Vulnerability ID:**  V-222454
-
-**Rule ID:**  SV-222454r961800_rule
+|Fix ID|
+|---|
+|F-24113r493271_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to modify security objects occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222455|SV-222455r961803_rule|
 
 ### Description
 
@@ -2742,23 +2878,25 @@ Review the log data and ensure the modification events both successful and unsuc
 
 If the application does not generate an audit record when successful and unsuccessful attempts to modify security objects occur, this is a finding.
 
-**Check ID:**  C-24125r493273_chk
+|Check ID|
+|---|
+|C-24125r493273_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to modify security objects.
 
-**Fix ID:**  F-24114r493274_fix
-
-**Vulnerability ID:**  V-222455
-
-**Rule ID:**  SV-222455r961803_rule
+|Fix ID|
+|---|
+|F-24114r493274_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to modify security levels occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222456|SV-222456r961806_rule|
 
 ### Description
 
@@ -2786,23 +2924,25 @@ Review the log data and ensure the modify events, both successful and unsuccessf
 
 If the application does not generate an audit record when successful and unsuccessful attempts to modify the permissions regarding the security levels occur, this is a finding.
 
-**Check ID:**  C-24126r493276_chk
+|Check ID|
+|---|
+|C-24126r493276_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to modify security levels.
 
-**Fix ID:**  F-24115r493277_fix
-
-**Vulnerability ID:**  V-222456
-
-**Rule ID:**  SV-222456r961806_rule
+|Fix ID|
+|---|
+|F-24115r493277_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to modify categories of information (e.g., classification levels) occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222457|SV-222457r961809_rule|
 
 ### Description
 
@@ -2832,23 +2972,25 @@ Review the log data and ensure both the successful and unsuccessful modification
 
 If the application does not generate an audit record when successful and unsuccessful attempts to modify categories of information occur, this is a finding.
 
-**Check ID:**  C-24127r493279_chk
+|Check ID|
+|---|
+|C-24127r493279_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to modify protected categories of information.
 
-**Fix ID:**  F-24116r493280_fix
-
-**Vulnerability ID:**  V-222457
-
-**Rule ID:**  SV-222457r961809_rule
+|Fix ID|
+|---|
+|F-24116r493280_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to delete privileges occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222458|SV-222458r961812_rule|
 
 ### Description
 
@@ -2872,23 +3014,25 @@ Review the application logs and ensure both events were captured in the logs. Th
 
 If the application does not log when successful and unsuccessful attempts to delete privileges occur, this is a finding.
 
-**Check ID:**  C-24128r493282_chk
+|Check ID|
+|---|
+|C-24128r493282_chk|
 
 ### Fix Text 
 
 Configure the application to audit successful and unsuccessful attempts to delete privileges.
 
-**Fix ID:**  F-24117r493283_fix
-
-**Vulnerability ID:**  V-222458
-
-**Rule ID:**  SV-222458r961812_rule
+|Fix ID|
+|---|
+|F-24117r493283_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to delete security levels occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222459|SV-222459r961815_rule|
 
 ### Description
 
@@ -2916,23 +3060,25 @@ Review the log data and ensure the deletion events, both successful and unsucces
 
 If the application does not generate an audit record when successful and unsuccessful attempts to delete permissions regarding the security levels occur, this is a finding.
 
-**Check ID:**  C-24129r493285_chk
+|Check ID|
+|---|
+|C-24129r493285_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to delete security levels.
 
-**Fix ID:**  F-24118r493286_fix
-
-**Vulnerability ID:**  V-222459
-
-**Rule ID:**  SV-222459r961815_rule
+|Fix ID|
+|---|
+|F-24118r493286_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to delete application database security objects occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222460|SV-222460r961818_rule|
 
 ### Description
 
@@ -2956,23 +3102,25 @@ Review the log data and ensure the deletion events, both successful and unsucces
 
 If the application does not generate an audit record when successful and unsuccessful attempts to delete database security objects occur, this is a finding.
 
-**Check ID:**  C-24130r493288_chk
+|Check ID|
+|---|
+|C-24130r493288_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to delete database security objects.
 
-**Fix ID:**  F-24119r493289_fix
-
-**Vulnerability ID:**  V-222460
-
-**Rule ID:**  SV-222460r961818_rule
+|Fix ID|
+|---|
+|F-24119r493289_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful attempts to delete categories of information (e.g., classification levels) occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222461|SV-222461r961821_rule|
 
 ### Description
 
@@ -3002,23 +3150,25 @@ Review the log data and ensure both the successful and unsuccessful deletion att
 
 If the application does not generate an audit record when successful and unsuccessful attempts to delete categories of information occur, this is a finding.
 
-**Check ID:**  C-24131r493291_chk
+|Check ID|
+|---|
+|C-24131r493291_chk|
 
 ### Fix Text 
 
 Configure the application to create an audit record for both successful and unsuccessful attempts to delete protected categories of information.
 
-**Fix ID:**  F-24120r493292_fix
-
-**Vulnerability ID:**  V-222461
-
-**Rule ID:**  SV-222461r961821_rule
+|Fix ID|
+|---|
+|F-24120r493292_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful logon attempts occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222462|SV-222462r961824_rule|
 
 ### Description
 
@@ -3040,23 +3190,25 @@ Reauthenticate using invalid user credentials and observe if the log includes an
 
 If successful and unsuccessful logon events are not recorded in the logs, this is a finding.
 
-**Check ID:**  C-24132r493294_chk
+|Check ID|
+|---|
+|C-24132r493294_chk|
 
 ### Fix Text 
 
 Configure the application or application server to write a log entry when successful and unsuccessful logon events occur.
 
-**Fix ID:**  F-24121r493295_fix
-
-**Vulnerability ID:**  V-222462
-
-**Rule ID:**  SV-222462r961824_rule
+|Fix ID|
+|---|
+|F-24121r493295_fix|
 
 ---
 
 ## The application must generate audit records for privileged activities or other system-level access.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222463|SV-222463r961827_rule|
 
 ### Description
 
@@ -3076,23 +3228,25 @@ Perform actions as an admin or other privileged user such as modifying the loggi
 
 If log events that correspond with the actions performed are not recorded in the logs, this is a finding.
 
-**Check ID:**  C-24133r493297_chk
+|Check ID|
+|---|
+|C-24133r493297_chk|
 
 ### Fix Text 
 
 Configure the application to write a log entry when privileged activities or other system-level events occur.
 
-**Fix ID:**  F-24122r493298_fix
-
-**Vulnerability ID:**  V-222463
-
-**Rule ID:**  SV-222463r961827_rule
+|Fix ID|
+|---|
+|F-24122r493298_fix|
 
 ---
 
 ## The application must generate audit records showing starting and ending time for user access to the system.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222464|SV-222464r961830_rule|
 
 ### Description
 
@@ -3108,23 +3262,25 @@ Terminate the user session and observe if the log includes a time stamp showing 
 
 If the start and the end time of the session are not recorded in the logs, this is a finding.
 
-**Check ID:**  C-24134r493300_chk
+|Check ID|
+|---|
+|C-24134r493300_chk|
 
 ### Fix Text 
 
 Configure the application or application server to record the start and end time of user session activity.
 
-**Fix ID:**  F-24123r493301_fix
-
-**Vulnerability ID:**  V-222464
-
-**Rule ID:**  SV-222464r961830_rule
+|Fix ID|
+|---|
+|F-24123r493301_fix|
 
 ---
 
 ## The application must generate audit records when successful/unsuccessful accesses to objects occur.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222465|SV-222465r961836_rule|
 
 ### Description
 
@@ -3146,23 +3302,25 @@ Review the logs and identify if the application is logging both successful and u
 
 If the application does not log application object access, this is a finding.
 
-**Check ID:**  C-24135r493303_chk
+|Check ID|
+|---|
+|C-24135r493303_chk|
 
 ### Fix Text 
 
 Configure the application to log successful and unsuccessful access to application objects.
 
-**Fix ID:**  F-24124r493304_fix
-
-**Vulnerability ID:**  V-222465
-
-**Rule ID:**  SV-222465r961836_rule
+|Fix ID|
+|---|
+|F-24124r493304_fix|
 
 ---
 
 ## The application must generate audit records for all direct access to the information system.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222466|SV-222466r961839_rule|
 
 ### Description
 
@@ -3191,23 +3349,25 @@ Log information must include the user responsible for executing the action, the 
 
 If the application does not log all direct access to the system, this is a finding.
 
-**Check ID:**  C-24136r493306_chk
+|Check ID|
+|---|
+|C-24136r493306_chk|
 
 ### Fix Text 
 
 Configure the application to log all direct access to the system.
 
-**Fix ID:**  F-24125r493307_fix
-
-**Vulnerability ID:**  V-222466
-
-**Rule ID:**  SV-222466r961839_rule
+|Fix ID|
+|---|
+|F-24125r493307_fix|
 
 ---
 
 ## The application must generate audit records for all account creations, modifications, disabling, and termination events.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222467|SV-222467r961842_rule|
 
 ### Description
 
@@ -3245,23 +3405,25 @@ If some but not all of the aforementioned events are documented in the logs, thi
 
 Findings should document which of the events was not logged.
 
-**Check ID:**  C-24137r918116_chk
+|Check ID|
+|---|
+|C-24137r918116_chk|
 
 ### Fix Text 
 
 Configure the application to log user account creation, modification, disabling, and termination events.
 
-**Fix ID:**  F-24126r493310_fix
-
-**Vulnerability ID:**  V-222467
-
-**Rule ID:**  SV-222467r961842_rule
+|Fix ID|
+|---|
+|F-24126r493310_fix|
 
 ---
 
 ## The application must initiate session auditing upon startup.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222468|SV-222468r960888_rule|
 
 ### Description
 
@@ -3287,23 +3449,25 @@ Determine if the log events correlate with the time the application was started 
 
 If the application does not begin logging events upon start up, this is a finding.
 
-**Check ID:**  C-24138r493312_chk
+|Check ID|
+|---|
+|C-24138r493312_chk|
 
 ### Fix Text 
 
 Configure the application to begin logging application events as soon as the application starts up.
 
-**Fix ID:**  F-24127r493313_fix
-
-**Vulnerability ID:**  V-222468
-
-**Rule ID:**  SV-222468r960888_rule
+|Fix ID|
+|---|
+|F-24127r493313_fix|
 
 ---
 
 ## The application must log application shutdown events.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222469|SV-222469r960891_rule|
 
 ### Description
 
@@ -3321,23 +3485,25 @@ Alternatively, check for a setting within the application that controls applicat
 
 If the application is not recording application shutdown events in either the application or system log, or if the application is not configured to record shutdown events, this is a finding.
 
-**Check ID:**  C-36238r602280_chk
+|Check ID|
+|---|
+|C-36238r602280_chk|
 
 ### Fix Text 
 
 Configure the application or application server to record application shutdown events in the event logs.
 
-**Fix ID:**  F-24128r493316_fix
-
-**Vulnerability ID:**  V-222469
-
-**Rule ID:**  SV-222469r960891_rule
+|Fix ID|
+|---|
+|F-24128r493316_fix|
 
 ---
 
 ## The application must log destination IP addresses.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222470|SV-222470r960891_rule|
 
 ### Description
 
@@ -3361,23 +3527,25 @@ Observe the log activity and determine if the log includes an entry to indicate 
 
 If the IP address of the remote system is not recorded along with the event in the event log, this is a finding.
 
-**Check ID:**  C-24140r493318_chk
+|Check ID|
+|---|
+|C-24140r493318_chk|
 
 ### Fix Text 
 
 Configure the application to record the destination IP address of the remote system.
 
-**Fix ID:**  F-24129r493319_fix
-
-**Vulnerability ID:**  V-222470
-
-**Rule ID:**  SV-222470r960891_rule
+|Fix ID|
+|---|
+|F-24129r493319_fix|
 
 ---
 
 ## The application must log user actions involving access to data.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222471|SV-222471r960891_rule|
 
 ### Description
 
@@ -3397,23 +3565,25 @@ Observe and determine if the application log includes an entry to indicate the u
 
 If successful access to application data elements is not recorded in the logs, this is a finding.
 
-**Check ID:**  C-24141r493321_chk
+|Check ID|
+|---|
+|C-24141r493321_chk|
 
 ### Fix Text 
 
 Identify the specific data elements requiring protection and audit access to the data.
 
-**Fix ID:**  F-24130r493322_fix
-
-**Vulnerability ID:**  V-222471
-
-**Rule ID:**  SV-222471r960891_rule
+|Fix ID|
+|---|
+|F-24130r493322_fix|
 
 ---
 
 ## The application must log user actions involving changes to data.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222472|SV-222472r960891_rule|
 
 ### Description
 
@@ -3435,23 +3605,25 @@ Observe and determine if the application log includes an entry to indicate the u
 
 If successful changes/modifications to application data elements are not recorded in the logs, this is a finding.
 
-**Check ID:**  C-24142r493324_chk
+|Check ID|
+|---|
+|C-24142r493324_chk|
 
 ### Fix Text 
 
 Configure the application to log all changes to application data.
 
-**Fix ID:**  F-24131r493325_fix
-
-**Vulnerability ID:**  V-222472
-
-**Rule ID:**  SV-222472r960891_rule
+|Fix ID|
+|---|
+|F-24131r493325_fix|
 
 ---
 
 ## The application must produce audit records containing information to establish when (date and time) the events occurred.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222473|SV-222473r960894_rule|
 
 ### Description
 
@@ -3465,23 +3637,25 @@ Access the application logs and review the log entries for date and time. Each e
 
 If the audit logs do not have a corresponding date and time associated with each event, this is a finding.
 
-**Check ID:**  C-24143r493327_chk
+|Check ID|
+|---|
+|C-24143r493327_chk|
 
 ### Fix Text 
 
 Configure the application or application server to include the date and the time of the event in the audit logs.
 
-**Fix ID:**  F-24132r493328_fix
-
-**Vulnerability ID:**  V-222473
-
-**Rule ID:**  SV-222473r960894_rule
+|Fix ID|
+|---|
+|F-24132r493328_fix|
 
 ---
 
 ## The application must produce audit records containing enough information to establish which component, feature or function of the application triggered the audit event.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222474|SV-222474r960897_rule|
 
 ### Description
 
@@ -3519,23 +3693,25 @@ Events written into the log must be able to be traced back to the originating co
 
 If the audit logs do not contain enough data in the logs to establish which component, feature or functionality of the application triggered the event, this is a finding.
 
-**Check ID:**  C-24144r493330_chk
+|Check ID|
+|---|
+|C-24144r493330_chk|
 
 ### Fix Text 
 
 Configure the application to log which component, feature or functionality of the application triggered the event.
 
-**Fix ID:**  F-24133r493331_fix
-
-**Vulnerability ID:**  V-222474
-
-**Rule ID:**  SV-222474r960897_rule
+|Fix ID|
+|---|
+|F-24133r493331_fix|
 
 ---
 
 ## When using centralized logging; the application must include a unique identifier in order to distinguish itself from other application logs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222475|SV-222475r960900_rule|
 
 ### Description
 
@@ -3561,23 +3737,25 @@ Ensure the hosts or client names hosting the application are also identified.  E
 
 If the application name and the hosts or client names are not identified, this is a finding.
 
-**Check ID:**  C-24145r493333_chk
+|Check ID|
+|---|
+|C-24145r493333_chk|
 
 ### Fix Text 
 
 Configure the application logs or the centralized log storage facility so the application name and the hosts hosting the application are uniquely identified in the logs.
 
-**Fix ID:**  F-24134r493334_fix
-
-**Vulnerability ID:**  V-222475
-
-**Rule ID:**  SV-222475r960900_rule
+|Fix ID|
+|---|
+|F-24134r493334_fix|
 
 ---
 
 ## The application must produce audit records that contain information to establish the outcome of the events.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222476|SV-222476r960903_rule|
 
 ### Description
 
@@ -3601,23 +3779,25 @@ Operation outcomes may also be indicated by numeric code where a "1" might indic
 
 If the application does not produce audit records that contain information regarding the results of application operations, this is a finding.
 
-**Check ID:**  C-24146r493336_chk
+|Check ID|
+|---|
+|C-24146r493336_chk|
 
 ### Fix Text 
 
 Configure the application to include the outcome of application functions or events.
 
-**Fix ID:**  F-24135r493337_fix
-
-**Vulnerability ID:**  V-222476
-
-**Rule ID:**  SV-222476r960903_rule
+|Fix ID|
+|---|
+|F-24135r493337_fix|
 
 ---
 
 ## The application must generate audit records containing information that establishes the identity of any individual or process associated with the event.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222477|SV-222477r960906_rule|
 
 ### Description
 
@@ -3636,23 +3816,25 @@ Review application logs. Ensure the application event logs include an identifier
 
 If the event logs do not include the appropriate identifier or identifiers, this is a finding.
 
-**Check ID:**  C-24147r493339_chk
+|Check ID|
+|---|
+|C-24147r493339_chk|
 
 ### Fix Text 
 
 Configure the application to log the identity of the user and/or the process associated with the event.
 
-**Fix ID:**  F-24136r493340_fix
-
-**Vulnerability ID:**  V-222477
-
-**Rule ID:**  SV-222477r960906_rule
+|Fix ID|
+|---|
+|F-24136r493340_fix|
 
 ---
 
 ## The application must generate audit records containing the full-text recording of privileged commands or the individual identities of group account users.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222478|SV-222478r960909_rule|
 
 ### Description
 
@@ -3678,23 +3860,25 @@ Review group account users, review logs to determine if the individual users of 
 
 If the application does not log the full text recording of privileged commands or if the application does not identify and log the individuals associated with group accounts, this is a finding.
 
-**Check ID:**  C-24148r493342_chk
+|Check ID|
+|---|
+|C-24148r493342_chk|
 
 ### Fix Text 
 
 Configure the application to log the full text recording of privileged commands or the individual identities of group users.
 
-**Fix ID:**  F-24137r493343_fix
-
-**Vulnerability ID:**  V-222478
-
-**Rule ID:**  SV-222478r960909_rule
+|Fix ID|
+|---|
+|F-24137r493343_fix|
 
 ---
 
 ## The application must implement transaction recovery logs when transaction based.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222479|SV-222479r960909_rule|
 
 ### Description
 
@@ -3710,23 +3894,25 @@ Review configuration settings for the location of transaction specific logs and 
 
 If the application is not configured to utilize transaction logging, this is a finding.
 
-**Check ID:**  C-24149r493345_chk
+|Check ID|
+|---|
+|C-24149r493345_chk|
 
 ### Fix Text 
 
 Configure the application database to utilize transactional logging.
 
-**Fix ID:**  F-24138r493346_fix
-
-**Vulnerability ID:**  V-222479
-
-**Rule ID:**  SV-222479r960909_rule
+|Fix ID|
+|---|
+|F-24138r493346_fix|
 
 ---
 
 ## The application must provide centralized management and configuration of the content to be captured in audit records generated by all application components.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222480|SV-222480r985972_rule|
 
 ### Description
 
@@ -3748,23 +3934,25 @@ Verify the application log management interface includes the ability to centrall
 
 If the application does not provide the ability to centrally manage the content captured in the audit logs, this is a finding.
 
-**Check ID:**  C-24150r985971_chk
+|Check ID|
+|---|
+|C-24150r985971_chk|
 
 ### Fix Text 
 
 Configure the application to utilize a centralized log management system that provides the capability to configure the content of audit records.
 
-**Fix ID:**  F-24139r493349_fix
-
-**Vulnerability ID:**  V-222480
-
-**Rule ID:**  SV-222480r985972_rule
+|Fix ID|
+|---|
+|F-24139r493349_fix|
 
 ---
 
 ## The application must off-load audit records onto a different system or media than the system being audited.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222481|SV-222481r961395_rule|
 
 ### Description
 
@@ -3790,23 +3978,25 @@ Review risk acceptance documentation for not utilizing a centralized logging sol
 
 If the logs are not automatically moved off the system as per approved schedule, or if there is no formal risk acceptance documentation, this is a finding.
 
-**Check ID:**  C-24151r493351_chk
+|Check ID|
+|---|
+|C-24151r493351_chk|
 
 ### Fix Text 
 
 Configure the application to off-load audit records onto a different system as per approved schedule.
 
-**Fix ID:**  F-24140r493352_fix
-
-**Vulnerability ID:**  V-222481
-
-**Rule ID:**  SV-222481r961395_rule
+|Fix ID|
+|---|
+|F-24140r493352_fix|
 
 ---
 
 ## The application must be configured to write application logs to a centralized log repository.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222482|SV-222482r961860_rule|
 
 ### Description
 
@@ -3826,23 +4016,25 @@ Evaluate application log management processes and determine if the system is con
 
 If the system is not configured to write the application logs to the centralized log management repository in an expeditious manner, this is a finding.
 
-**Check ID:**  C-24152r493354_chk
+|Check ID|
+|---|
+|C-24152r493354_chk|
 
 ### Fix Text 
 
 Configure the application to utilize a centralized log repository and ensure the logs are off-loaded from the application system as quickly as possible.
 
-**Fix ID:**  F-24141r493355_fix
-
-**Vulnerability ID:**  V-222482
-
-**Rule ID:**  SV-222482r961860_rule
+|Fix ID|
+|---|
+|F-24141r493355_fix|
 
 ---
 
 ## The application must provide an immediate warning to the SA and ISSO (at a minimum) when allocated audit record storage volume reaches 75% of repository maximum audit record storage capacity.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222483|SV-222483r961398_rule|
 
 ### Description
 
@@ -3866,23 +4058,25 @@ Ensure the alarm will be sent to the ISSO and the application administrator when
 
 If the application is not configured to send an alarm when storage volume exceeds 75% of disc capacity or if the designated alarm recipients did not receive an alarm when the test was conducted, this is a finding.
 
-**Check ID:**  C-36239r602282_chk
+|Check ID|
+|---|
+|C-36239r602282_chk|
 
 ### Fix Text 
 
 Configure the application to send an immediate alarm to the application admin/SA and the ISSO when the allocated log storage capacity exceeds 75% of usage or exceeds the capacity value the SA and ISSO have determined will provide adequate time to plan for capacity expansion.
 
-**Fix ID:**  F-36205r865216_fix
-
-**Vulnerability ID:**  V-222483
-
-**Rule ID:**  SV-222483r961398_rule
+|Fix ID|
+|---|
+|F-36205r865216_fix|
 
 ---
 
 ## Applications categorized as having a moderate or high impact must provide an immediate real-time alert to the SA and ISSO (at a minimum) for all audit failure events.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222484|SV-222484r961401_rule|
 
 ### Description
 
@@ -3906,7 +4100,9 @@ Identify audit failure events and associated alarming configuration.
 
 If the application is categorized as having a moderate or high impact and is not configured to provide a real-time alert that indicates the audit system has failed or is failing, this is a finding.
 
-**Check ID:**  C-24154r493360_chk
+|Check ID|
+|---|
+|C-24154r493360_chk|
 
 ### Fix Text 
 
@@ -3914,17 +4110,17 @@ Configure the log alerts to send an alarm when the audit system is in danger of 
 
 Configure the log alerts to be immediately sent to the application admin/SA and ISSO.
 
-**Fix ID:**  F-24143r493361_fix
-
-**Vulnerability ID:**  V-222484
-
-**Rule ID:**  SV-222484r961401_rule
+|Fix ID|
+|---|
+|F-24143r493361_fix|
 
 ---
 
 ## The application must alert the ISSO and SA (at a minimum) in the event of an audit processing failure.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222485|SV-222485r960912_rule|
 
 ### Description
 
@@ -3952,23 +4148,25 @@ audit storage errors
 
 If the application is not configured to alarm on alerts that indicate the audit system has failed or is failing, this is a finding.
 
-**Check ID:**  C-24155r493363_chk
+|Check ID|
+|---|
+|C-24155r493363_chk|
 
 ### Fix Text 
 
 Configure the application to send an alarm in the event the audit system has failed or is failing.
 
-**Fix ID:**  F-24144r493364_fix
-
-**Vulnerability ID:**  V-222485
-
-**Rule ID:**  SV-222485r960912_rule
+|Fix ID|
+|---|
+|F-24144r493364_fix|
 
 ---
 
 ## The application must shut down by default upon audit failure (unless availability is an overriding concern).
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222486|SV-222486r1043188_rule|
 
 ### Description
 
@@ -3998,23 +4196,25 @@ Ensure the application is configured to locally spool/queue audit events in the 
 
 If the application does not shut down processing when an audit failure is detected, or if the application does not take steps needed to ensure audit events are not lost due to audit failure, this is a finding.
 
-**Check ID:**  C-24156r493366_chk
+|Check ID|
+|---|
+|C-24156r493366_chk|
 
 ### Fix Text 
 
 Configure the application to cease processing if the audit system fails or configure the application to continue logging in a manner that compensates for the audit failure.
 
-**Fix ID:**  F-24145r493367_fix
-
-**Vulnerability ID:**  V-222486
-
-**Rule ID:**  SV-222486r1043188_rule
+|Fix ID|
+|---|
+|F-24145r493367_fix|
 
 ---
 
 ## The application must provide the capability to centrally review and analyze audit records from multiple components within the system.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222487|SV-222487r960918_rule|
 
 ### Description
 
@@ -4034,23 +4234,25 @@ Access the application's log management utility and review the log files.  Ensur
 
 If all of the application logs are not reviewable from a central location, this is a finding.
 
-**Check ID:**  C-24157r493369_chk
+|Check ID|
+|---|
+|C-24157r493369_chk|
 
 ### Fix Text 
 
 Configure the application so all of the applications logs are available for review from one centralized location.
 
-**Fix ID:**  F-24146r493370_fix
-
-**Vulnerability ID:**  V-222487
-
-**Rule ID:**  SV-222487r960918_rule
+|Fix ID|
+|---|
+|F-24146r493370_fix|
 
 ---
 
 ## The application must provide the capability to filter audit records for events of interest based upon organization-defined criteria.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222488|SV-222488r960924_rule|
 
 ### Description
 
@@ -4083,23 +4285,25 @@ Additional details may be logged as needed or prescribed by operational requirem
 
 If the application does not provide the ability to filter audit events, this is a finding.
 
-**Check ID:**  C-24158r493372_chk
+|Check ID|
+|---|
+|C-24158r493372_chk|
 
 ### Fix Text 
 
 Configure the application filters to search event logs based on defined criteria.
 
-**Fix ID:**  F-24147r493373_fix
-
-**Vulnerability ID:**  V-222488
-
-**Rule ID:**  SV-222488r960924_rule
+|Fix ID|
+|---|
+|F-24147r493373_fix|
 
 ---
 
 ## The application must provide an audit reduction capability that supports on-demand reporting requirements.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222489|SV-222489r961056_rule|
 
 ### Description
 
@@ -4136,23 +4340,25 @@ Event level categories: e.g., high, critical, warning, error
 
 If the application does not provide on demand reports based on the filtered audit event data, this is a finding.
 
-**Check ID:**  C-24159r493375_chk
+|Check ID|
+|---|
+|C-24159r493375_chk|
 
 ### Fix Text 
 
 Configure the application to generate soft copy, hard copy and/or screen-based reports based on the selected filtered event data.
 
-**Fix ID:**  F-24148r493376_fix
-
-**Vulnerability ID:**  V-222489
-
-**Rule ID:**  SV-222489r961056_rule
+|Fix ID|
+|---|
+|F-24148r493376_fix|
 
 ---
 
 ## The application must provide an audit reduction capability that supports on-demand audit review and analysis.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222490|SV-222490r961413_rule|
 
 ### Description
 
@@ -4189,23 +4395,25 @@ Event level categories: e.g., high, critical, warning, error
 
 If the application does not provide an audit reduction capability that supports on-demand reports based on the filtered audit event data, this is a finding.
 
-**Check ID:**  C-24160r493378_chk
+|Check ID|
+|---|
+|C-24160r493378_chk|
 
 ### Fix Text 
 
 Configure the application to log to a centralized auditing capability that provides on-demand reports based on the filtered audit event data or design or configure the application to meet the requirement.
 
-**Fix ID:**  F-24149r493379_fix
-
-**Vulnerability ID:**  V-222490
-
-**Rule ID:**  SV-222490r961413_rule
+|Fix ID|
+|---|
+|F-24149r493379_fix|
 
 ---
 
 ## The application must provide an audit reduction capability that supports after-the-fact investigations of security incidents.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222491|SV-222491r961416_rule|
 
 ### Description
 
@@ -4237,23 +4445,25 @@ Review the records and ensure the application provides the ability to filter on 
 
 If the application does not provide an audit reduction (event filtering) capability, this is a finding.
 
-**Check ID:**  C-24161r493381_chk
+|Check ID|
+|---|
+|C-24161r493381_chk|
 
 ### Fix Text 
 
 Configure the application to provide an audit reduction capability that supports forensic investigations.
 
-**Fix ID:**  F-24150r493382_fix
-
-**Vulnerability ID:**  V-222491
-
-**Rule ID:**  SV-222491r961416_rule
+|Fix ID|
+|---|
+|F-24150r493382_fix|
 
 ---
 
 ## The application must provide a report generation capability that supports on-demand audit review and analysis.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222492|SV-222492r961419_rule|
 
 ### Description
 
@@ -4281,23 +4491,25 @@ Review the report and ensure the data in the report coincides with event filters
 
 If the application does not provide an immediate, ad-hoc audit review and analysis capability, this is a finding.
 
-**Check ID:**  C-24162r493384_chk
+|Check ID|
+|---|
+|C-24162r493384_chk|
 
 ### Fix Text 
 
 Design or configure the application to provide an immediate audit review capability or utilize a centralized utility designed for the purpose of on-demand log management and reporting.
 
-**Fix ID:**  F-24151r493385_fix
-
-**Vulnerability ID:**  V-222492
-
-**Rule ID:**  SV-222492r961419_rule
+|Fix ID|
+|---|
+|F-24151r493385_fix|
 
 ---
 
 ## The application must provide a report generation capability that supports on-demand reporting requirements.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222493|SV-222493r961422_rule|
 
 ### Description
 
@@ -4323,23 +4535,25 @@ Review the report and ensure the data in the report coincides with event filters
 
 If the application does not provide customizable, immediate, ad-hoc audit log reporting, this is a finding.
 
-**Check ID:**  C-24163r493387_chk
+|Check ID|
+|---|
+|C-24163r493387_chk|
 
 ### Fix Text 
 
 Design or configure the application to provide an on-demand report generation capability or utilize a centralized utility designed for the purpose of on-demand log management and reporting.
 
-**Fix ID:**  F-24152r493388_fix
-
-**Vulnerability ID:**  V-222493
-
-**Rule ID:**  SV-222493r961422_rule
+|Fix ID|
+|---|
+|F-24152r493388_fix|
 
 ---
 
 ## The application must provide a report generation capability that supports after-the-fact investigations of security incidents.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222494|SV-222494r961425_rule|
 
 ### Description
 
@@ -4365,23 +4579,25 @@ Review the report and ensure the data in the report coincides with event filters
 
 If the application does not have a report generation capability that supports after the fact security investigations, this is a finding.
 
-**Check ID:**  C-24164r493390_chk
+|Check ID|
+|---|
+|C-24164r493390_chk|
 
 ### Fix Text 
 
 Design or configure the application to provide after-the-fact report generation capability or utilize a centralized utility designed for the purpose of log management and reporting.
 
-**Fix ID:**  F-24153r493391_fix
-
-**Vulnerability ID:**  V-222494
-
-**Rule ID:**  SV-222494r961425_rule
+|Fix ID|
+|---|
+|F-24153r493391_fix|
 
 ---
 
 ## The application must provide an audit reduction capability that does not alter original content or time ordering of audit records.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222495|SV-222495r961428_rule|
 
 ### Description
 
@@ -4413,23 +4629,25 @@ Review the records and ensure nothing in the records has changed. Once validated
 
 If the application of event filters modifies the original log records, this is a finding.
 
-**Check ID:**  C-24165r493393_chk
+|Check ID|
+|---|
+|C-24165r493393_chk|
 
 ### Fix Text 
 
 Configure the application to not alter original log content or time ordering of audit records.
 
-**Fix ID:**  F-24154r493394_fix
-
-**Vulnerability ID:**  V-222495
-
-**Rule ID:**  SV-222495r961428_rule
+|Fix ID|
+|---|
+|F-24154r493394_fix|
 
 ---
 
 ## The application must provide a report generation capability that does not alter original content or time ordering of audit records.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222496|SV-222496r961431_rule|
 
 ### Description
 
@@ -4461,23 +4679,25 @@ Review the records and ensure nothing in the records has changed. Once validated
 
 If the application of event filters modifies the original log records, this is a finding.
 
-**Check ID:**  C-24166r493396_chk
+|Check ID|
+|---|
+|C-24166r493396_chk|
 
 ### Fix Text 
 
 Configure and design the application to not modify source logs when filtering events.
 
-**Fix ID:**  F-24155r493397_fix
-
-**Vulnerability ID:**  V-222496
-
-**Rule ID:**  SV-222496r961431_rule
+|Fix ID|
+|---|
+|F-24155r493397_fix|
 
 ---
 
 ## The applications must use internal system clocks to generate time stamps for audit records.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222497|SV-222497r960927_rule|
 
 ### Description
 
@@ -4501,23 +4721,25 @@ Perform an action in the application that causes a log event to be written and r
 
 If the application doesn't use the internal system clocks to generate time stamps for the audit event logs, this is a finding.
 
-**Check ID:**  C-24167r493399_chk
+|Check ID|
+|---|
+|C-24167r493399_chk|
 
 ### Fix Text 
 
 Configure the application to use the hosting systems internal clock for audit record generation.
 
-**Fix ID:**  F-24156r493400_fix
-
-**Vulnerability ID:**  V-222497
-
-**Rule ID:**  SV-222497r960927_rule
+|Fix ID|
+|---|
+|F-24156r493400_fix|
 
 ---
 
 ## The application must record time stamps for audit records that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222498|SV-222498r961443_rule|
 
 ### Description
 
@@ -4539,23 +4761,25 @@ Access the configuration settings and determine if the application is configured
 
 If the application is not configured to map to UTC or GMT, this is a finding.
 
-**Check ID:**  C-24168r493402_chk
+|Check ID|
+|---|
+|C-24168r493402_chk|
 
 ### Fix Text 
 
 Configure the application to use the underlying system clock that maps to relevant UTC or GMT timezone.
 
-**Fix ID:**  F-24157r493403_fix
-
-**Vulnerability ID:**  V-222498
-
-**Rule ID:**  SV-222498r961443_rule
+|Fix ID|
+|---|
+|F-24157r493403_fix|
 
 ---
 
 ## The application must record time stamps for audit records that meet a granularity of one second for a minimum degree of precision.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222499|SV-222499r961446_rule|
 
 ### Description
 
@@ -4573,23 +4797,25 @@ Access and review log files over a period of at least 10 minutes; compare time s
 
 If the application audit log time stamps differ from the OS time source by more than one second, this is a finding.
 
-**Check ID:**  C-24169r493405_chk
+|Check ID|
+|---|
+|C-24169r493405_chk|
 
 ### Fix Text 
 
 Configure the application to leverage the underlying operating system as the time source when recording time stamps or design the application to ensure granularity of 1 second as the minimum degree of precision.
 
-**Fix ID:**  F-24158r493406_fix
-
-**Vulnerability ID:**  V-222499
-
-**Rule ID:**  SV-222499r961446_rule
+|Fix ID|
+|---|
+|F-24158r493406_fix|
 
 ---
 
 ## The application must protect audit information from any type of unauthorized read access.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222500|SV-222500r960930_rule|
 
 ### Description
 
@@ -4623,23 +4849,25 @@ For application-oriented and database access: Identify the application module th
 
 If a non-privileged user account is allowed to access the audit data or the audit configuration settings, this is a finding.
 
-**Check ID:**  C-24170r493408_chk
+|Check ID|
+|---|
+|C-24170r493408_chk|
 
 ### Fix Text 
 
 Configure the application to protect audit data from unauthorized access. Limit users to roles that are assigned the rights to view, edit or copy audit data, and establish permissions that control access to the audit logs and audit configuration settings.
 
-**Fix ID:**  F-24159r493409_fix
-
-**Vulnerability ID:**  V-222500
-
-**Rule ID:**  SV-222500r960930_rule
+|Fix ID|
+|---|
+|F-24159r493409_fix|
 
 ---
 
 ## The application must protect audit information from unauthorized modification.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222501|SV-222501r960933_rule|
 
 ### Description
 
@@ -4673,23 +4901,25 @@ For application oriented and database access: Identify the application module th
 
 If a non-privileged user account is allowed to modify the audit data or the audit configuration settings, this is a finding.
 
-**Check ID:**  C-36240r602285_chk
+|Check ID|
+|---|
+|C-36240r602285_chk|
 
 ### Fix Text 
 
 Configure the application to protect audit data from unauthorized modification and changes. Limit users to roles that are assigned the rights to edit audit data and establish permissions that control access to the audit logs and audit configuration settings.
 
-**Fix ID:**  F-36206r602286_fix
-
-**Vulnerability ID:**  V-222501
-
-**Rule ID:**  SV-222501r960933_rule
+|Fix ID|
+|---|
+|F-36206r602286_fix|
 
 ---
 
 ## The application must protect audit information from unauthorized deletion.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222502|SV-222502r960936_rule|
 
 ### Description
 
@@ -4723,23 +4953,25 @@ For application oriented and database access: Identify the application module th
 
 If a non-privileged user account is allowed to delete the audit data or the audit configuration settings, this is a finding.
 
-**Check ID:**  C-24172r493414_chk
+|Check ID|
+|---|
+|C-24172r493414_chk|
 
 ### Fix Text 
 
 Configure the application to protect audit data from unauthorized deletion. Limit users to roles that are assigned the rights to delete audit data and establish permissions that control access to the audit logs and audit configuration settings.
 
-**Fix ID:**  F-24161r493415_fix
-
-**Vulnerability ID:**  V-222502
-
-**Rule ID:**  SV-222502r960936_rule
+|Fix ID|
+|---|
+|F-24161r493415_fix|
 
 ---
 
 ## The application must protect audit tools from unauthorized access.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222503|SV-222503r960939_rule|
 
 ### Description
 
@@ -4769,23 +5001,25 @@ For circumstances where audit tools are accessed via application sub-modules or 
 
 If a non-privileged user account is allowed to access the audit data or the audit configuration settings, this is a finding.
 
-**Check ID:**  C-36241r602288_chk
+|Check ID|
+|---|
+|C-36241r602288_chk|
 
 ### Fix Text 
 
 Configure the application to protect audit data from unauthorized access. Limit users to roles that are assigned the rights to view, edit or copy audit data, and establish file permissions that control access to the audit tools and audit tool capabilities and configuration settings.
 
-**Fix ID:**  F-36207r602289_fix
-
-**Vulnerability ID:**  V-222503
-
-**Rule ID:**  SV-222503r960939_rule
+|Fix ID|
+|---|
+|F-36207r602289_fix|
 
 ---
 
 ## The application must protect audit tools from unauthorized modification.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222504|SV-222504r960942_rule|
 
 ### Description
 
@@ -4813,23 +5047,25 @@ File permissions must be configured to limit access to only those users who have
 
 If file permissions are configured so as to allow unapproved modifications to the audit tools, this is a finding.
 
-**Check ID:**  C-36242r602291_chk
+|Check ID|
+|---|
+|C-36242r602291_chk|
 
 ### Fix Text 
 
 Configure the application to protect audit tools from unauthorized modifications. Limit users to roles that are assigned the rights to edit or update audit tools and establish file permissions that control access to the audit tools and audit tool capabilities and configuration settings.
 
-**Fix ID:**  F-36208r602292_fix
-
-**Vulnerability ID:**  V-222504
-
-**Rule ID:**  SV-222504r960942_rule
+|Fix ID|
+|---|
+|F-36208r602292_fix|
 
 ---
 
 ## The application must protect audit tools from unauthorized deletion.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222505|SV-222505r960945_rule|
 
 ### Description
 
@@ -4857,23 +5093,25 @@ File permissions must be configured to limit access to only those users who have
 
 If file permissions are configured to allow unapproved deletions of the audit tools, this is a finding.
 
-**Check ID:**  C-36243r602294_chk
+|Check ID|
+|---|
+|C-36243r602294_chk|
 
 ### Fix Text 
 
 Configure the application to protect audit tools from unauthorized deletions. Limit users to roles that are assigned the rights to edit or delete audit tools and establish file permissions that control access to the audit tools and audit tool capabilities and configuration settings.
 
-**Fix ID:**  F-36209r602295_fix
-
-**Vulnerability ID:**  V-222505
-
-**Rule ID:**  SV-222505r960945_rule
+|Fix ID|
+|---|
+|F-36209r602295_fix|
 
 ---
 
 ## The application must back up audit records at least every seven days onto a different system or system component than the system or component being audited.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222506|SV-222506r960948_rule|
 
 ### Description
 
@@ -4895,23 +5133,25 @@ Access the management interface for configuring application audit logs and revie
 
 If the application backup settings are not configured to backup application audit records every 7 days, this is a finding.
 
-**Check ID:**  C-24176r493426_chk
+|Check ID|
+|---|
+|C-24176r493426_chk|
 
 ### Fix Text 
 
 Configure application backup settings to backup application audit logs every 7 days.
 
-**Fix ID:**  F-24165r493427_fix
-
-**Vulnerability ID:**  V-222506
-
-**Rule ID:**  SV-222506r960948_rule
+|Fix ID|
+|---|
+|F-24165r493427_fix|
 
 ---
 
 ## The application must use cryptographic mechanisms to protect the integrity of audit information.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222507|SV-222507r960951_rule|
 
 ### Description
 
@@ -4935,23 +5175,25 @@ Verify when application logs are stored on the file system, a process that inclu
 
 If an integrity check is not created to protect the integrity of the audit information, this is a finding.
 
-**Check ID:**  C-24177r493429_chk
+|Check ID|
+|---|
+|C-24177r493429_chk|
 
 ### Fix Text 
 
 Configure the application to create an integrity check consisting of a cryptographic hash or one-way digest that can be used to establish the integrity when storing log files.
 
-**Fix ID:**  F-24166r493430_fix
-
-**Vulnerability ID:**  V-222507
-
-**Rule ID:**  SV-222507r960951_rule
+|Fix ID|
+|---|
+|F-24166r493430_fix|
 
 ---
 
 ## Application audit tools must be cryptographically hashed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222508|SV-222508r961206_rule|
 
 ### Description
 
@@ -4985,23 +5227,25 @@ Ask the application administrator to provide the list of checksum values and the
 
 If a cryptographic checksum or hash value of the audit tool file is not created for future reference, this is a finding.
 
-**Check ID:**  C-24178r493432_chk
+|Check ID|
+|---|
+|C-24178r493432_chk|
 
 ### Fix Text 
 
 Cryptographically hash the audit tool files used by the application. Store and protect the generated hash values for future reference.
 
-**Fix ID:**  F-24167r493433_fix
-
-**Vulnerability ID:**  V-222508
-
-**Rule ID:**  SV-222508r961206_rule
+|Fix ID|
+|---|
+|F-24167r493433_fix|
 
 ---
 
 ## The integrity of the audit tools must be validated by checking the files for changes in the cryptographic hash value.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222509|SV-222509r961206_rule|
 
 ### Description
 
@@ -5029,23 +5273,25 @@ Ask the application administrator to provide their process for periodically chec
 
 If a cryptographic checksum or hash value of the audit tool file is not periodically checked to ensure the integrity of audit tools, this is a finding.
 
-**Check ID:**  C-24179r493435_chk
+|Check ID|
+|---|
+|C-24179r493435_chk|
 
 ### Fix Text 
 
 Establish a process to periodically check the audit tool cryptographic hashes to ensure the audit tools have not been tampered with.
 
-**Fix ID:**  F-24168r493436_fix
-
-**Vulnerability ID:**  V-222509
-
-**Rule ID:**  SV-222509r961206_rule
+|Fix ID|
+|---|
+|F-24168r493436_fix|
 
 ---
 
 ## The application must prohibit user installation of software without explicit privileged status.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222510|SV-222510r1015689_rule|
 
 ### Description
 
@@ -5071,23 +5317,25 @@ If the application utilizes an approved repository of approved software that has
 
 If the application allows regular users to install untested or unapproved software components, extensions, modules, or plugins without explicit authorization, this is a finding.
 
-**Check ID:**  C-24180r985918_chk
+|Check ID|
+|---|
+|C-24180r985918_chk|
 
 ### Fix Text 
 
 Configure the application to prohibit user installation of software without explicit permission.
 
-**Fix ID:**  F-24169r493439_fix
-
-**Vulnerability ID:**  V-222510
-
-**Rule ID:**  SV-222510r1015689_rule
+|Fix ID|
+|---|
+|F-24169r493439_fix|
 
 ---
 
 ## The application must enforce access restrictions associated with changes to application configuration.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222511|SV-222511r961461_rule|
 
 ### Description
 
@@ -5113,23 +5361,25 @@ Examine the file permission settings and determine who has access to the configu
 
 If access permissions to configuration files are not restricted to application administrators, this is a finding.
 
-**Check ID:**  C-24181r493441_chk
+|Check ID|
+|---|
+|C-24181r493441_chk|
 
 ### Fix Text 
 
 Configure the application to limit access to configuration settings to only authorized users.
 
-**Fix ID:**  F-24170r493442_fix
-
-**Vulnerability ID:**  V-222511
-
-**Rule ID:**  SV-222511r961461_rule
+|Fix ID|
+|---|
+|F-24170r493442_fix|
 
 ---
 
 ## The application must audit who makes configuration changes to the application.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222512|SV-222512r1015690_rule|
 
 ### Description
 
@@ -5155,23 +5405,25 @@ If the user account is not logged, or is a group account such as "root", this is
 
 If the user account used to make the changes is not logged in the audit records, this is a finding.
 
-**Check ID:**  C-24182r493444_chk
+|Check ID|
+|---|
+|C-24182r493444_chk|
 
 ### Fix Text 
 
 Configure the application to create log entries that can be used to identify the user accounts that make application configuration changes.
 
-**Fix ID:**  F-24171r493445_fix
-
-**Vulnerability ID:**  V-222512
-
-**Rule ID:**  SV-222512r1015690_rule
+|Fix ID|
+|---|
+|F-24171r493445_fix|
 
 ---
 
 ## The application must have the capability to prevent the installation of patches, service packs, or application components without verification the software component has been digitally signed using a certificate that is recognized and approved by the organization.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222513|SV-222513r1015691_rule|
 
 ### Description
 
@@ -5193,7 +5445,9 @@ Review commands and procedures used to patch the application and ensure a capabi
 
 If the application is not capable of preventing installation of patches and packages that are not signed, or if the vendor does not provide a cryptographic hash value that can be manually checked prior to installation, this is a finding.
 
-**Check ID:**  C-36244r602297_chk
+|Check ID|
+|---|
+|C-36244r602297_chk|
 
 ### Fix Text 
 
@@ -5201,17 +5455,17 @@ Design and configure the application to have the capability to prevent unsigned 
 
 Provide a cryptographic hash value that can be verified by a system administrator prior to installation.
 
-**Fix ID:**  F-36210r985921_fix
-
-**Vulnerability ID:**  V-222513
-
-**Rule ID:**  SV-222513r1015691_rule
+|Fix ID|
+|---|
+|F-36210r985921_fix|
 
 ---
 
 ## The applications must limit privileges to change the software resident within software libraries.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222514|SV-222514r960960_rule|
 
 ### Description
 
@@ -5235,23 +5489,25 @@ Review user roles and access rights within the application to determine if acces
 
 If file restrictions do not limit write access to library files and if the application does not restrict access to library update functionality, this is a finding.
 
-**Check ID:**  C-24184r493450_chk
+|Check ID|
+|---|
+|C-24184r493450_chk|
 
 ### Fix Text 
 
 Configure the application OS file permissions to restrict access to software libraries and configure the application to restrict user access regarding software library update functionality to only authorized users or processes.
 
-**Fix ID:**  F-24173r493451_fix
-
-**Vulnerability ID:**  V-222514
-
-**Rule ID:**  SV-222514r960960_rule
+|Fix ID|
+|---|
+|F-24173r493451_fix|
 
 ---
 
 ## An application vulnerability assessment must be conducted.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222515|SV-222515r961863_rule|
 
 ### Description
 
@@ -5294,23 +5550,25 @@ If high risk security vulnerabilities are identified in the scan results, reques
 
 If the high risk issues identified in the report have not been fixed or mitigated to a level accepted by the ISSO and the ISSM, or if the application administrator cannot produce vulnerability security testing results that cover the range of application functionality, this is a finding.
 
-**Check ID:**  C-24185r493453_chk
+|Check ID|
+|---|
+|C-24185r493453_chk|
 
 ### Fix Text 
 
 Configure the application vulnerability scanners to test all components of the application, conduct vulnerability scans on a regular basis and remediate identified issues.  Retain scan results for compliance verification.
 
-**Fix ID:**  F-24174r493454_fix
-
-**Vulnerability ID:**  V-222515
-
-**Rule ID:**  SV-222515r961863_rule
+|Fix ID|
+|---|
+|F-24174r493454_fix|
 
 ---
 
 ## The application must prevent program execution in accordance with organization-defined policies regarding software program usage and restrictions, and/or rules authorizing the terms and conditions of software program usage.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222516|SV-222516r961473_rule|
 
 ### Description
 
@@ -5332,23 +5590,25 @@ Have the application administrator demonstrate how the program execution is rest
 
 If application requirements or policy documents specify application execution restriction requirements and the execution of the application or its subcomponents are not restricted in accordance with requirements or policy, this is a finding.
 
-**Check ID:**  C-24186r493456_chk
+|Check ID|
+|---|
+|C-24186r493456_chk|
 
 ### Fix Text 
 
 Restrict application execution in accordance with the policy, terms, and conditions specified.
 
-**Fix ID:**  F-24175r493457_fix
-
-**Vulnerability ID:**  V-222516
-
-**Rule ID:**  SV-222516r961473_rule
+|Fix ID|
+|---|
+|F-24175r493457_fix|
 
 ---
 
 ## The application must employ a deny-all, permit-by-exception (whitelist) policy to allow the execution of authorized software programs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222517|SV-222517r961479_rule|
 
 ### Description
 
@@ -5372,23 +5632,25 @@ Some methods for restricting execution include but are not limited to the use of
 
 If application whitelisting is not utilized or does not follow a deny-all, permit-by-exception (whitelist) policy, this is a finding.
 
-**Check ID:**  C-24187r493459_chk
+|Check ID|
+|---|
+|C-24187r493459_chk|
 
 ### Fix Text 
 
 Configure the application to utilize a deny-all, permit-by-exception policy when allowing the execution of authorized software.
 
-**Fix ID:**  F-24176r493460_fix
-
-**Vulnerability ID:**  V-222517
-
-**Rule ID:**  SV-222517r961479_rule
+|Fix ID|
+|---|
+|F-24176r493460_fix|
 
 ---
 
 ## The application must be configured to disable non-essential capabilities.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222518|SV-222518r960963_rule|
 
 ### Description
 
@@ -5412,23 +5674,25 @@ Using the relevant OS commands, identify services running on the system and have
 
 If the application is operating with extraneous capabilities that have not been defined as required in order to meet mission objectives, this is a finding.
 
-**Check ID:**  C-24188r493462_chk
+|Check ID|
+|---|
+|C-24188r493462_chk|
 
 ### Fix Text 
 
 Disable application extraneous application functionality that is not required in order to fulfill the application's mission.
 
-**Fix ID:**  F-24177r493463_fix
-
-**Vulnerability ID:**  V-222518
-
-**Rule ID:**  SV-222518r960963_rule
+|Fix ID|
+|---|
+|F-24177r493463_fix|
 
 ---
 
 ## The application must be configured to use only functions, ports, and protocols permitted to it in the PPSM CAL.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222519|SV-222519r1043177_rule|
 
 ### Description
 
@@ -5456,23 +5720,25 @@ Verify the ports used by the application are approved by the PPSM CAL.
 
 If the ports are not approved by the PPSM CAL, this is a finding.
 
-**Check ID:**  C-24189r918118_chk
+|Check ID|
+|---|
+|C-24189r918118_chk|
 
 ### Fix Text 
 
 Configure the application to utilize application ports approved by the PPSM CAL.
 
-**Fix ID:**  F-24178r493466_fix
-
-**Vulnerability ID:**  V-222519
-
-**Rule ID:**  SV-222519r1043177_rule
+|Fix ID|
+|---|
+|F-24178r493466_fix|
 
 ---
 
 ## The application must require users to reauthenticate when organization-defined circumstances or situations require reauthentication.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222520|SV-222520r1050664_rule|
 
 ### Description
 
@@ -5517,23 +5783,25 @@ Attempt to escalate the privileges of the user.
 
 If the user is not prompted to reauthenticate before the user is allowed to proceed with escalated privileges, this is a finding.
 
-**Check ID:**  C-24190r985923_chk
+|Check ID|
+|---|
+|C-24190r985923_chk|
 
 ### Fix Text 
 
 Configure the application to require reauthentication before user privilege is escalated and user roles are changed.
 
-**Fix ID:**  F-24179r493469_fix
-
-**Vulnerability ID:**  V-222520
-
-**Rule ID:**  SV-222520r1050664_rule
+|Fix ID|
+|---|
+|F-24179r493469_fix|
 
 ---
 
 ## The application must require devices to reauthenticate when organization-defined circumstances or situations requiring reauthentication.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222521|SV-222521r985974_rule|
 
 ### Description
 
@@ -5564,23 +5832,25 @@ Review local policy requirements to determine if reauthentication intervals are 
 
 If the device is not forced to reauthenticate periodically, this is a finding.
 
-**Check ID:**  C-24191r985973_chk
+|Check ID|
+|---|
+|C-24191r985973_chk|
 
 ### Fix Text 
 
 Configure the application to require reauthentication periodically.
 
-**Fix ID:**  F-24180r493472_fix
-
-**Vulnerability ID:**  V-222521
-
-**Rule ID:**  SV-222521r985974_rule
+|Fix ID|
+|---|
+|F-24180r493472_fix|
 
 ---
 
 ## The application must uniquely identify and authenticate organizational users (or processes acting on behalf of organizational users).
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222522|SV-222522r1051115_rule|
 
 ### Description
 
@@ -5605,23 +5875,25 @@ Attempt to access the application and confirm that a unique user account and pas
 
 If the application does not uniquely identify and authenticate users, this is a finding.
 
-**Check ID:**  C-24192r493474_chk
+|Check ID|
+|---|
+|C-24192r493474_chk|
 
 ### Fix Text 
 
 Configure the application to uniquely identify and authenticate users and user processes.
 
-**Fix ID:**  F-24181r493475_fix
-
-**Vulnerability ID:**  V-222522
-
-**Rule ID:**  SV-222522r1051115_rule
+|Fix ID|
+|---|
+|F-24181r493475_fix|
 
 ---
 
 ## The application must use multifactor (Alt. Token) authentication for network access to privileged accounts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222523|SV-222523r960972_rule|
 
 ### Description
 
@@ -5652,23 +5924,25 @@ Have user logoff and reauthenticate with their Alt. Token and that they can perf
 
 If the application allows administrative access to the application without requiring an Alt. Token, this is a finding.
 
-**Check ID:**  C-24193r493477_chk
+|Check ID|
+|---|
+|C-24193r493477_chk|
 
 ### Fix Text 
 
 Configure the application to use an Alt. Token when providing network access to privileged application accounts.
 
-**Fix ID:**  F-24182r493478_fix
-
-**Vulnerability ID:**  V-222523
-
-**Rule ID:**  SV-222523r960972_rule
+|Fix ID|
+|---|
+|F-24182r493478_fix|
 
 ---
 
 ## The application must accept Personal Identity Verification (PIV) credentials.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222524|SV-222524r961494_rule|
 
 ### Description
 
@@ -5688,23 +5962,25 @@ Validate the application prompts the user to provide a certificate from the CAC.
 
 If the application allows access without requiring a CAC, this is a finding.
 
-**Check ID:**  C-24194r493480_chk
+|Check ID|
+|---|
+|C-24194r493480_chk|
 
 ### Fix Text 
 
 Configure the application to require CAC authentication.
 
-**Fix ID:**  F-24183r493481_fix
-
-**Vulnerability ID:**  V-222524
-
-**Rule ID:**  SV-222524r961494_rule
+|Fix ID|
+|---|
+|F-24183r493481_fix|
 
 ---
 
 ## The application must electronically verify Personal Identity Verification (PIV) credentials.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222525|SV-222525r961497_rule|
 
 ### Description
 
@@ -5728,23 +6004,25 @@ Validate the application requests the user to input their CAC PIN.
 
 If the application allows access without requiring a CAC, this is a finding.
 
-**Check ID:**  C-24195r493483_chk
+|Check ID|
+|---|
+|C-24195r493483_chk|
 
 ### Fix Text 
 
 Configure the application to require CAC authentication.
 
-**Fix ID:**  F-24184r493484_fix
-
-**Vulnerability ID:**  V-222525
-
-**Rule ID:**  SV-222525r961497_rule
+|Fix ID|
+|---|
+|F-24184r493484_fix|
 
 ---
 
 ## The application must use multifactor (e.g., CAC, Alt. Token) authentication for network access to non-privileged accounts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222526|SV-222526r960975_rule|
 
 ### Description
 
@@ -5778,23 +6056,25 @@ Validate the application requests the user to input their CAC PIN.
 
 If the application allows access without requiring a CAC or Alt. Token, this is a finding.
 
-**Check ID:**  C-24196r493486_chk
+|Check ID|
+|---|
+|C-24196r493486_chk|
 
 ### Fix Text 
 
 Configure the application to require CAC or Alt. Token authentication for non-privileged network access to non-privileged accounts.
 
-**Fix ID:**  F-24185r493487_fix
-
-**Vulnerability ID:**  V-222526
-
-**Rule ID:**  SV-222526r960975_rule
+|Fix ID|
+|---|
+|F-24185r493487_fix|
 
 ---
 
 ## The application must use multifactor (Alt. Token) authentication for local access to privileged accounts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222527|SV-222527r1015693_rule|
 
 ### Description
 
@@ -5827,23 +6107,25 @@ Have user log off and reauthenticate with their Alt. Token and verify they can p
 
 If the application allows administrative access to the application without requiring an Alt. Token, this is a finding.
 
-**Check ID:**  C-24197r985925_chk
+|Check ID|
+|---|
+|C-24197r985925_chk|
 
 ### Fix Text 
 
 Configure the application to only use Alt. Tokens when locally accessing privileged application accounts.
 
-**Fix ID:**  F-24186r493490_fix
-
-**Vulnerability ID:**  V-222527
-
-**Rule ID:**  SV-222527r1015693_rule
+|Fix ID|
+|---|
+|F-24186r493490_fix|
 
 ---
 
 ## The application must use multifactor (e.g., CAC, Alt. Token) authentication for local access to nonprivileged accounts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222528|SV-222528r1015694_rule|
 
 ### Description
 
@@ -5876,23 +6158,25 @@ Validate the application requests the user to input their CAC PIN.
 
 If the application allows access without requiring a CAC or Alt. Token, this is a finding.
 
-**Check ID:**  C-24198r985927_chk
+|Check ID|
+|---|
+|C-24198r985927_chk|
 
 ### Fix Text 
 
 Configure the application to require CAC or Alt. Token authentication for nonprivileged network access.
 
-**Fix ID:**  F-24187r985928_fix
-
-**Vulnerability ID:**  V-222528
-
-**Rule ID:**  SV-222528r1015694_rule
+|Fix ID|
+|---|
+|F-24187r985928_fix|
 
 ---
 
 ## The application must ensure users are authenticated with an individual authenticator prior to using a group authenticator.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222529|SV-222529r1015695_rule|
 
 ### Description
 
@@ -5918,23 +6202,25 @@ Ensure the test account is not authenticated to the application and attempt to a
 
 If the application allows access without first requiring the group member to authenticate with their individual credentials, this is a finding.
 
-**Check ID:**  C-24199r985930_chk
+|Check ID|
+|---|
+|C-24199r985930_chk|
 
 ### Fix Text 
 
 Design and configure the application to individually authenticate group account members prior to allowing access.
 
-**Fix ID:**  F-24188r493496_fix
-
-**Vulnerability ID:**  V-222529
-
-**Rule ID:**  SV-222529r1015695_rule
+|Fix ID|
+|---|
+|F-24188r493496_fix|
 
 ---
 
 ## The application must implement replay-resistant authentication mechanisms for network access to privileged accounts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222530|SV-222530r960993_rule|
 
 ### Description
 
@@ -5970,23 +6256,25 @@ Verify identified issues have been remediated.
 
 If the application is not implementing replay-resistant authentication methods applicable to the application architecture, this is a finding.
 
-**Check ID:**  C-36245r602300_chk
+|Check ID|
+|---|
+|C-36245r602300_chk|
 
 ### Fix Text 
 
 Design and configure the application to utilize replay-resistant mechanisms when authenticating privileged accounts.
 
-**Fix ID:**  F-24189r493499_fix
-
-**Vulnerability ID:**  V-222530
-
-**Rule ID:**  SV-222530r960993_rule
+|Fix ID|
+|---|
+|F-24189r493499_fix|
 
 ---
 
 ## The application must implement replay-resistant authentication mechanisms for network access to nonprivileged accounts.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222531|SV-222531r1015696_rule|
 
 ### Description
 
@@ -6024,23 +6312,25 @@ Verify identified issues have been remediated.
 
 If the application is not implementing replay-resistant authentication methods applicable to the application architecture, this is a finding.
 
-**Check ID:**  C-36246r985932_chk
+|Check ID|
+|---|
+|C-36246r985932_chk|
 
 ### Fix Text 
 
 Design and configure the application to utilize replay-resistant mechanisms when authenticating nonprivileged accounts.
 
-**Fix ID:**  F-24190r985933_fix
-
-**Vulnerability ID:**  V-222531
-
-**Rule ID:**  SV-222531r1015696_rule
+|Fix ID|
+|---|
+|F-24190r985933_fix|
 
 ---
 
 ## The application must utilize mutual authentication when endpoint device non-repudiation protections are required by DoD policy or by the data owner.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222532|SV-222532r960999_rule|
 
 ### Description
 
@@ -6083,23 +6373,25 @@ Verify the application deployment descriptor for the application and the resourc
 
 If SSL mutual authentication is required and is not being utilized, this is a finding.
 
-**Check ID:**  C-24202r493504_chk
+|Check ID|
+|---|
+|C-24202r493504_chk|
 
 ### Fix Text 
 
 Configure the application to utilize mutual authentication when specified by data protection requirements.
 
-**Fix ID:**  F-24191r493505_fix
-
-**Vulnerability ID:**  V-222532
-
-**Rule ID:**  SV-222532r960999_rule
+|Fix ID|
+|---|
+|F-24191r493505_fix|
 
 ---
 
 ## The application must authenticate all network connected endpoint devices before establishing any connection.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222533|SV-222533r961503_rule|
 
 ### Description
 
@@ -6132,23 +6424,25 @@ The Basic Authentication method provides insufficient protection for authenticat
 
 If no authentication mechanism is used to authenticate remote service consumers/devices, or if Basic Authentication is used to authentication remote service consumers/devices, this is a finding.
 
-**Check ID:**  C-24203r493507_chk
+|Check ID|
+|---|
+|C-24203r493507_chk|
 
 ### Fix Text 
 
 Configure the application to authenticate all network connected endpoint devices/service consumers before establishing connections.
 
-**Fix ID:**  F-24192r493508_fix
-
-**Vulnerability ID:**  V-222533
-
-**Rule ID:**  SV-222533r961503_rule
+|Fix ID|
+|---|
+|F-24192r493508_fix|
 
 ---
 
 ## Service-Oriented Applications handling non-releasable data must authenticate endpoint devices via mutual SSL/TLS.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222534|SV-222534r961506_rule|
 
 ### Description
 
@@ -6188,23 +6482,25 @@ Open the web.xml file using a text editor and verify the application deployment 
 
 If SSL/TLS mutual authentication is required due to the application processing non-releasable data and SSL/TLS mutual authentication not being utilized, this is a finding.
 
-**Check ID:**  C-24204r493510_chk
+|Check ID|
+|---|
+|C-24204r493510_chk|
 
 ### Fix Text 
 
 Configure the application to utilize mutual authentication when the application is processing non-releasable data.
 
-**Fix ID:**  F-24193r493511_fix
-
-**Vulnerability ID:**  V-222534
-
-**Rule ID:**  SV-222534r961506_rule
+|Fix ID|
+|---|
+|F-24193r493511_fix|
 
 ---
 
 ## The application must disable device identifiers after 35 days of inactivity unless a cryptographic certificate is used for authentication.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222535|SV-222535r1015697_rule|
 
 ### Description
 
@@ -6244,23 +6540,25 @@ Verify the application is configured to disable device accounts that have not be
 
 If the application does not disable accounts used to authenticate devices after 35 days of inactivity, this is a finding.
 
-**Check ID:**  C-24205r985935_chk
+|Check ID|
+|---|
+|C-24205r985935_chk|
 
 ### Fix Text 
 
 Configure the application to disable device accounts after 35 days of inactivity or to utilize DOD PKI certificates that provide an expiration date.
 
-**Fix ID:**  F-24194r985936_fix
-
-**Vulnerability ID:**  V-222535
-
-**Rule ID:**  SV-222535r1015697_rule
+|Fix ID|
+|---|
+|F-24194r985936_fix|
 
 ---
 
 ## The application must enforce a minimum 15-character password length.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222536|SV-222536r1015698_rule|
 
 ### Description
 
@@ -6290,23 +6588,25 @@ When prompted to provide the password, attempt to create a password shorter than
 
 If a password shorter than 15 characters can be created, this is a finding.
 
-**Check ID:**  C-24206r985938_chk
+|Check ID|
+|---|
+|C-24206r985938_chk|
 
 ### Fix Text 
 
 Configure the application to require 15 characters in the password.
 
-**Fix ID:**  F-24195r493517_fix
-
-**Vulnerability ID:**  V-222536
-
-**Rule ID:**  SV-222536r1015698_rule
+|Fix ID|
+|---|
+|F-24195r493517_fix|
 
 ---
 
 ## The application must enforce password complexity by requiring that at least one uppercase character be used.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222537|SV-222537r1015699_rule|
 
 ### Description
 
@@ -6334,23 +6634,25 @@ When prompted to provide the password, attempt to create a password that does no
 
 If a password without at least one upper-case character can be created, this is a finding.
 
-**Check ID:**  C-24207r985940_chk
+|Check ID|
+|---|
+|C-24207r985940_chk|
 
 ### Fix Text 
 
 Configure the application to require at least one uppercase character in the password.
 
-**Fix ID:**  F-24196r985941_fix
-
-**Vulnerability ID:**  V-222537
-
-**Rule ID:**  SV-222537r1015699_rule
+|Fix ID|
+|---|
+|F-24196r985941_fix|
 
 ---
 
 ## The application must enforce password complexity by requiring that at least one lowercase character be used.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222538|SV-222538r1015700_rule|
 
 ### Description
 
@@ -6378,23 +6680,25 @@ When prompted to provide the password, attempt to create a password that does no
 
 If a password without at least one lower-case character can be created, this is a finding.
 
-**Check ID:**  C-24208r985943_chk
+|Check ID|
+|---|
+|C-24208r985943_chk|
 
 ### Fix Text 
 
 Configure the application to require at least one lowercase character in the password.
 
-**Fix ID:**  F-24197r985944_fix
-
-**Vulnerability ID:**  V-222538
-
-**Rule ID:**  SV-222538r1015700_rule
+|Fix ID|
+|---|
+|F-24197r985944_fix|
 
 ---
 
 ## The application must enforce password complexity by requiring that at least one numeric character be used.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222539|SV-222539r1015701_rule|
 
 ### Description
 
@@ -6422,23 +6726,25 @@ When prompted to provide the password, attempt to create a password that does no
 
 If a password without at least one numeric character can be created, this is a finding.
 
-**Check ID:**  C-24209r985946_chk
+|Check ID|
+|---|
+|C-24209r985946_chk|
 
 ### Fix Text 
 
 Configure the application to require at least one numeric character in the password.
 
-**Fix ID:**  F-24198r493526_fix
-
-**Vulnerability ID:**  V-222539
-
-**Rule ID:**  SV-222539r1015701_rule
+|Fix ID|
+|---|
+|F-24198r493526_fix|
 
 ---
 
 ## The application must enforce password complexity by requiring that at least one special character be used.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222540|SV-222540r1015702_rule|
 
 ### Description
 
@@ -6466,23 +6772,25 @@ When prompted to provide the password, attempt to create a password that does no
 
 If a password without at least one special character can be created, this is a finding.
 
-**Check ID:**  C-24210r985948_chk
+|Check ID|
+|---|
+|C-24210r985948_chk|
 
 ### Fix Text 
 
 Configure the application to require at least one special character in the password.
 
-**Fix ID:**  F-24199r493529_fix
-
-**Vulnerability ID:**  V-222540
-
-**Rule ID:**  SV-222540r1015702_rule
+|Fix ID|
+|---|
+|F-24199r493529_fix|
 
 ---
 
 ## The application must require the change of at least eight of the total number of characters when passwords are changed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222541|SV-222541r1043189_rule|
 
 ### Description
 
@@ -6510,23 +6818,25 @@ When prompted to provide the password, attempt to change less than 8 characters 
 
 If less than 8 characters of the password are changed, this is a finding.
 
-**Check ID:**  C-24211r985950_chk
+|Check ID|
+|---|
+|C-24211r985950_chk|
 
 ### Fix Text 
 
 Configure the application to require the change of at least eight characters in the password when passwords are changed.
 
-**Fix ID:**  F-24200r985951_fix
-
-**Vulnerability ID:**  V-222541
-
-**Rule ID:**  SV-222541r1043189_rule
+|Fix ID|
+|---|
+|F-24200r985951_fix|
 
 ---
 
 ## The application must only store cryptographic representations of passwords.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222542|SV-222542r1015704_rule|
 
 ### Description
 
@@ -6571,7 +6881,9 @@ Determine if the application uses the MD5 hashing algorithm to create password h
 
 If the passwords are readable or there is no indication the application utilizes cryptographic hashing to protect passwords, or if the MD5 hash algorithm is used to create password hashes, this is a finding.
 
-**Check ID:**  C-24212r985953_chk
+|Check ID|
+|---|
+|C-24212r985953_chk|
 
 ### Fix Text 
 
@@ -6581,17 +6893,17 @@ Utilize random salt values when creating the password hash.
 
 Ensure strong access control permissions on data files containing authentication data.
 
-**Fix ID:**  F-24201r493535_fix
-
-**Vulnerability ID:**  V-222542
-
-**Rule ID:**  SV-222542r1015704_rule
+|Fix ID|
+|---|
+|F-24201r493535_fix|
 
 ---
 
 ## The application must transmit only cryptographically-protected passwords.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222543|SV-222543r961029_rule|
 
 ### Description
 
@@ -6627,23 +6939,25 @@ If the application is transmitting the password rather than the user, obtain des
 
 If the passwords are not encrypted when being transmitted, this is a finding.
 
-**Check ID:**  C-24213r493537_chk
+|Check ID|
+|---|
+|C-24213r493537_chk|
 
 ### Fix Text 
 
 Configure the application to encrypt passwords when they are being transmitted.
 
-**Fix ID:**  F-24202r493538_fix
-
-**Vulnerability ID:**  V-222543
-
-**Rule ID:**  SV-222543r961029_rule
+|Fix ID|
+|---|
+|F-24202r493538_fix|
 
 ---
 
 ## The application must enforce 24 hours/1 day as the minimum password lifetime.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222544|SV-222544r1015705_rule|
 
 ### Description
 
@@ -6671,23 +6985,25 @@ Attempt to change the password more than once.
 
 If a password can be changed more than once within 24 hours, the minimum lifetime setting is not set and this is a finding.
 
-**Check ID:**  C-24214r985955_chk
+|Check ID|
+|---|
+|C-24214r985955_chk|
 
 ### Fix Text 
 
 Configure the application to have a minimum password lifetime of 24 hours.
 
-**Fix ID:**  F-24203r493541_fix
-
-**Vulnerability ID:**  V-222544
-
-**Rule ID:**  SV-222544r1015705_rule
+|Fix ID|
+|---|
+|F-24203r493541_fix|
 
 ---
 
 ## The application must enforce a 60-day maximum password lifetime restriction.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222545|SV-222545r1043190_rule|
 
 ### Description
 
@@ -6717,23 +7033,25 @@ Review user password settings and validate the application is configured to expi
 
 If user passwords are not configured to expire after 60 days, or if the application does not have the ability to control this setting, this is a finding.
 
-**Check ID:**  C-24215r985957_chk
+|Check ID|
+|---|
+|C-24215r985957_chk|
 
 ### Fix Text 
 
 Configure the application to have a maximum password lifetime of 60 days.
 
-**Fix ID:**  F-24204r493544_fix
-
-**Vulnerability ID:**  V-222545
-
-**Rule ID:**  SV-222545r1043190_rule
+|Fix ID|
+|---|
+|F-24204r493544_fix|
 
 ---
 
 ## The application must prohibit password reuse for a minimum of five generations.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222546|SV-222546r1015267_rule|
 
 ### Description
 
@@ -6763,23 +7081,25 @@ Review user password settings and validate the application is configured to proh
 
 If the application does not prevent users from reusing their previous five passwords, or if the application does not have the ability to control this setting, this is a finding.
 
-**Check ID:**  C-24216r985959_chk
+|Check ID|
+|---|
+|C-24216r985959_chk|
 
 ### Fix Text 
 
 Configure the application to prohibit password reuse for up to five passwords.
 
-**Fix ID:**  F-24205r985960_fix
-
-**Vulnerability ID:**  V-222546
-
-**Rule ID:**  SV-222546r1015267_rule
+|Fix ID|
+|---|
+|F-24205r985960_fix|
 
 ---
 
 ## The application must allow the use of a temporary password for system logons with an immediate change to a permanent password.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222547|SV-222547r985976_rule|
 
 ### Description
 
@@ -6807,23 +7127,25 @@ Review user password settings and validate the application is configured to spec
 
 If the application can not specify a password as temporary and force the user to change the temporary password upon successful authentication, this is a finding.
 
-**Check ID:**  C-24217r985975_chk
+|Check ID|
+|---|
+|C-24217r985975_chk|
 
 ### Fix Text 
 
 Configure the application to specify when a password is temporary and change the temporary password on the first use.
 
-**Fix ID:**  F-24206r493550_fix
-
-**Vulnerability ID:**  V-222547
-
-**Rule ID:**  SV-222547r985976_rule
+|Fix ID|
+|---|
+|F-24206r493550_fix|
 
 ---
 
 ## The application password must not be changeable by users other than the administrator or the user with which the password is associated.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222548|SV-222548r961863_rule|
 
 ### Description
 
@@ -6853,7 +7175,9 @@ Obtain two application test accounts, referred to here as User A and User B. Acc
 
 If User A is allowed to change or force a reset of User B's password, this is a finding.
 
-**Check ID:**  C-36247r602304_chk
+|Check ID|
+|---|
+|C-36247r602304_chk|
 
 ### Fix Text 
 
@@ -6865,17 +7189,17 @@ Ensure verification processes exist that allow users to validate the change requ
 
 Ensure users are only allowed to change their own passwords.
 
-**Fix ID:**  F-36211r865212_fix
-
-**Vulnerability ID:**  V-222548
-
-**Rule ID:**  SV-222548r961863_rule
+|Fix ID|
+|---|
+|F-36211r865212_fix|
 
 ---
 
 ## The application must terminate existing user sessions upon account deletion.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222549|SV-222549r961521_rule|
 
 ### Description
 
@@ -6899,23 +7223,25 @@ Verify the test user application sessions are terminated by attempting to perfor
 
 If the test user retains access after the test account has been deleted, this is a finding.
 
-**Check ID:**  C-24219r493555_chk
+|Check ID|
+|---|
+|C-24219r493555_chk|
 
 ### Fix Text 
 
 Configure the application to terminate existing sessions of users whose accounts are deleted.
 
-**Fix ID:**  F-24208r493556_fix
-
-**Vulnerability ID:**  V-222549
-
-**Rule ID:**  SV-222549r961521_rule
+|Fix ID|
+|---|
+|F-24208r493556_fix|
 
 ---
 
 ## The application, when utilizing PKI-based authentication, must validate certificates by constructing a certification path (which includes status information) to an accepted trust anchor.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222550|SV-222550r961038_rule|
 
 ### Description
 
@@ -6939,23 +7265,25 @@ The certification path will include the intermediary certificate CAs along with 
 
 If the application does not construct a certificate path to an accepted trust anchor, this is a finding.
 
-**Check ID:**  C-24220r493558_chk
+|Check ID|
+|---|
+|C-24220r493558_chk|
 
 ### Fix Text 
 
 Design the application to construct a certification path to an accepted trust anchor when using PKI-based authentication.
 
-**Fix ID:**  F-24209r493559_fix
-
-**Vulnerability ID:**  V-222550
-
-**Rule ID:**  SV-222550r961038_rule
+|Fix ID|
+|---|
+|F-24209r493559_fix|
 
 ---
 
 ## The application, when using PKI-based authentication, must enforce authorized access to the corresponding private key.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222551|SV-222551r961041_rule|
 
 ### Description
 
@@ -6985,23 +7313,25 @@ Verify access to the keys is denied.
 
 If unauthorized access is granted to the private key(s), this is a finding.
 
-**Check ID:**  C-24221r493561_chk
+|Check ID|
+|---|
+|C-24221r493561_chk|
 
 ### Fix Text 
 
 Configure the application or relevant access control mechanism to enforce authorized access to the application private key(s).
 
-**Fix ID:**  F-24210r493562_fix
-
-**Vulnerability ID:**  V-222551
-
-**Rule ID:**  SV-222551r961041_rule
+|Fix ID|
+|---|
+|F-24210r493562_fix|
 
 ---
 
 ## The application must map the authenticated identity to the individual user or group account for PKI-based authentication.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222552|SV-222552r961044_rule|
 
 ### Description
 
@@ -7019,23 +7349,25 @@ If the application only logs certificate information which contains no discernab
 
 If the application does not map the certificate data to an individual user or group, or if the administrator has no automated process established for determining the identity of the user, this is a finding.
 
-**Check ID:**  C-24222r493564_chk
+|Check ID|
+|---|
+|C-24222r493564_chk|
 
 ### Fix Text 
 
 Configure the application to map certificate information to individual users or group accounts or create a process for automatically determining the individual user or group based on certificate information provided in the logs.
 
-**Fix ID:**  F-24211r493565_fix
-
-**Vulnerability ID:**  V-222552
-
-**Rule ID:**  SV-222552r961044_rule
+|Fix ID|
+|---|
+|F-24211r493565_fix|
 
 ---
 
 ## The application, for PKI-based authentication, must implement a local cache of revocation data to support path discovery and validation in case of the inability to access revocation information via the network.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222553|SV-222553r1015707_rule|
 
 ### Description
 
@@ -7059,23 +7391,25 @@ Have the administrator demonstrate the configuration setting that enables CRL ch
 
 If the application is not configured to implement a CRL, this is a finding.
 
-**Check ID:**  C-24223r985962_chk
+|Check ID|
+|---|
+|C-24223r985962_chk|
 
 ### Fix Text 
 
 Implement a CRL import process and configure the application to check the CRL if OCSP is not available.
 
-**Fix ID:**  F-24212r985963_fix
-
-**Vulnerability ID:**  V-222553
-
-**Rule ID:**  SV-222553r1015707_rule
+|Fix ID|
+|---|
+|F-24212r985963_fix|
 
 ---
 
 ## The application must not display passwords/PINs as clear text.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222554|SV-222554r961047_rule|
 
 ### Description
 
@@ -7101,7 +7435,9 @@ Using a text editor, copy the obfuscated password and paste to a text file.  Do 
 
 If the application displays clear text when the password/PIN is entered, or if the time period for displayed feedback exceeds fractions of a second, or if the clear text password/PIN is displayed when pasted, this is a finding.
 
-**Check ID:**  C-24224r493570_chk
+|Check ID|
+|---|
+|C-24224r493570_chk|
 
 ### Fix Text 
 
@@ -7109,17 +7445,17 @@ Configure the application to obfuscate passwords and PINs when they are being en
 
 Design the application so obfuscated passwords cannot be copied and then pasted as clear text.
 
-**Fix ID:**  F-24213r493571_fix
-
-**Vulnerability ID:**  V-222554
-
-**Rule ID:**  SV-222554r961047_rule
+|Fix ID|
+|---|
+|F-24213r493571_fix|
 
 ---
 
 ## The application must use mechanisms meeting the requirements of applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance for authentication to a cryptographic module.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222555|SV-222555r961050_rule|
 
 ### Description
 
@@ -7143,23 +7479,25 @@ http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm
 
 If the cryptographic module that requires authentication is not on the FIPS-approved module list, this is a finding.
 
-**Check ID:**  C-24225r493573_chk
+|Check ID|
+|---|
+|C-24225r493573_chk|
 
 ### Fix Text 
 
 Use FIPS-approved cryptographic modules.
 
-**Fix ID:**  F-24214r493574_fix
-
-**Vulnerability ID:**  V-222555
-
-**Rule ID:**  SV-222555r961050_rule
+|Fix ID|
+|---|
+|F-24214r493574_fix|
 
 ---
 
 ## The application must uniquely identify and authenticate non-organizational users (or processes acting on behalf of non-organizational users).
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222556|SV-222556r961053_rule|
 
 ### Description
 
@@ -7183,23 +7521,25 @@ Review risk acceptance documentation to determine if there are specific accesses
 
 If the application does not identify and authenticate non-organizational users and there is no risk acceptance documentation approving the exception, this is a finding.
 
-**Check ID:**  C-24226r493576_chk
+|Check ID|
+|---|
+|C-24226r493576_chk|
 
 ### Fix Text 
 
 Configure the application to identify and authenticate all non-organizational users.
 
-**Fix ID:**  F-24215r493577_fix
-
-**Vulnerability ID:**  V-222556
-
-**Rule ID:**  SV-222556r961053_rule
+|Fix ID|
+|---|
+|F-24215r493577_fix|
 
 ---
 
 ## The application must accept Personal Identity Verification (PIV) credentials from other federal agencies.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222557|SV-222557r961527_rule|
 
 ### Description
 
@@ -7221,23 +7561,25 @@ Ask the application administrator to demonstrate how the application is configur
 
 If the application is required to provide authenticated access to Federal agencies and it does not accept a PIV, this is a finding.
 
-**Check ID:**  C-24227r493579_chk
+|Check ID|
+|---|
+|C-24227r493579_chk|
 
 ### Fix Text 
 
 Configure the application to accept PIV credentials when utilizing authentication provided by Federal (Non-DoD) agencies.
 
-**Fix ID:**  F-24216r493580_fix
-
-**Vulnerability ID:**  V-222557
-
-**Rule ID:**  SV-222557r961527_rule
+|Fix ID|
+|---|
+|F-24216r493580_fix|
 
 ---
 
 ## The application must electronically verify Personal Identity Verification (PIV) credentials from other federal agencies.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222558|SV-222558r961530_rule|
 
 ### Description
 
@@ -7259,23 +7601,25 @@ Ask the application administrator to demonstrate how the application is configur
 
 If the application is required to provide authenticated access to Federal agencies and it does not verify the PIV, this is a finding.
 
-**Check ID:**  C-24228r493582_chk
+|Check ID|
+|---|
+|C-24228r493582_chk|
 
 ### Fix Text 
 
 Configure the application to verify the PIV credentials presented when utilizing authentication provided by Federal (Non-DoD) agencies.
 
-**Fix ID:**  F-24217r493583_fix
-
-**Vulnerability ID:**  V-222558
-
-**Rule ID:**  SV-222558r961530_rule
+|Fix ID|
+|---|
+|F-24217r493583_fix|
 
 ---
 
 ## The application must accept Federal Identity, Credential, and Access Management (FICAM)-approved third-party credentials.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222559|SV-222559r1015708_rule|
 
 ### Description
 
@@ -7302,23 +7646,25 @@ Ask the application administrator to demonstrate how the application is configur
 
 If the application does not accept FICAM-approved credentials when accepting third-party credentials, this is a finding.
 
-**Check ID:**  C-24229r985965_chk
+|Check ID|
+|---|
+|C-24229r985965_chk|
 
 ### Fix Text 
 
 Configure applications intended to be accessible to nonfederal government agencies to use FICAM-approved third-party credentials.
 
-**Fix ID:**  F-24218r985966_fix
-
-**Vulnerability ID:**  V-222559
-
-**Rule ID:**  SV-222559r1015708_rule
+|Fix ID|
+|---|
+|F-24218r985966_fix|
 
 ---
 
 ## The application must conform to Federal Identity, Credential, and Access Management (FICAM)-issued profiles.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222560|SV-222560r1015709_rule|
 
 ### Description
 
@@ -7347,23 +7693,25 @@ Ask the application administrator to demonstrate how the application conforms to
 
 If the application is designed to be a service provider utilizing an external identify provider and doesn't conform to FICAM-issued profiles, this is a finding.
 
-**Check ID:**  C-24230r985968_chk
+|Check ID|
+|---|
+|C-24230r985968_chk|
 
 ### Fix Text 
 
 Configure the application to conform to FICAM-issued technical profiles when providing services that rely on external (federal government) identity providers.
 
-**Fix ID:**  F-24219r985969_fix
-
-**Vulnerability ID:**  V-222560
-
-**Rule ID:**  SV-222560r1015709_rule
+|Fix ID|
+|---|
+|F-24219r985969_fix|
 
 ---
 
 ## Applications used for non-local maintenance sessions must audit non-local maintenance and diagnostic sessions for organization-defined auditable events.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222561|SV-222561r961548_rule|
 
 ### Description
 
@@ -7391,23 +7739,25 @@ Accessing the application in the appropriate role to execute maintenance tasks, 
 
 If the application provides maintenance functions and capabilities and those functions are not logged when they are executed, this is a finding.
 
-**Check ID:**  C-24231r493591_chk
+|Check ID|
+|---|
+|C-24231r493591_chk|
 
 ### Fix Text 
 
 Configure the application to log when application maintenance functionality is executed remotely.
 
-**Fix ID:**  F-24220r493592_fix
-
-**Vulnerability ID:**  V-222561
-
-**Rule ID:**  SV-222561r961548_rule
+|Fix ID|
+|---|
+|F-24220r493592_fix|
 
 ---
 
 ## Applications used for non-local maintenance sessions must implement cryptographic mechanisms to protect the integrity of non-local maintenance and diagnostic communications.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222562|SV-222562r961554_rule|
 
 ### Description
 
@@ -7435,23 +7785,25 @@ For example, observe the browser to ensure the session is being encrypted with T
 
 If the application provides remote access to maintenance functions and capabilities and the remote access methods are not encrypted, this is a finding.
 
-**Check ID:**  C-24232r493594_chk
+|Check ID|
+|---|
+|C-24232r493594_chk|
 
 ### Fix Text 
 
 Configure the application to encrypt remote application maintenance sessions.
 
-**Fix ID:**  F-24221r493595_fix
-
-**Vulnerability ID:**  V-222562
-
-**Rule ID:**  SV-222562r961554_rule
+|Fix ID|
+|---|
+|F-24221r493595_fix|
 
 ---
 
 ## Applications used for non-local maintenance sessions must implement cryptographic mechanisms to protect the confidentiality of non-local maintenance and diagnostic communications.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222563|SV-222563r961557_rule|
 
 ### Description
 
@@ -7477,23 +7829,25 @@ For example, observe the browser to ensure the session is being encrypted with T
 
 If the application provides remote access to maintenance functions and capabilities and the remote access methods are not encrypted, this is a finding.
 
-**Check ID:**  C-24233r493597_chk
+|Check ID|
+|---|
+|C-24233r493597_chk|
 
 ### Fix Text 
 
 Configure the application to encrypt remote application maintenance sessions.
 
-**Fix ID:**  F-24222r493598_fix
-
-**Vulnerability ID:**  V-222563
-
-**Rule ID:**  SV-222563r961557_rule
+|Fix ID|
+|---|
+|F-24222r493598_fix|
 
 ---
 
 ## Applications used for non-local maintenance sessions must verify remote disconnection at the termination of non-local maintenance and diagnostic sessions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222564|SV-222564r961560_rule|
 
 ### Description
 
@@ -7537,23 +7891,25 @@ Review the application logs to ensure the application has logged the disconnecti
 
 If the application provides remote access to maintenance functions and capabilities and the remote access connections are not terminated and then verified, this is a finding.
 
-**Check ID:**  C-24234r493600_chk
+|Check ID|
+|---|
+|C-24234r493600_chk|
 
 ### Fix Text 
 
 Configure the application to verify termination of remote maintenance sessions.
 
-**Fix ID:**  F-24223r493601_fix
-
-**Vulnerability ID:**  V-222564
-
-**Rule ID:**  SV-222564r961560_rule
+|Fix ID|
+|---|
+|F-24223r493601_fix|
 
 ---
 
 ## The application must employ strong authenticators in the establishment of non-local maintenance and diagnostic sessions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222565|SV-222565r961062_rule|
 
 ### Description
 
@@ -7585,23 +7941,25 @@ If the application administrator is prevented from accessing the OS by policy re
 
 If a CAC is not used when remotely accessing the application for maintenance or diagnostic sessions, this is a finding.
 
-**Check ID:**  C-24235r493603_chk
+|Check ID|
+|---|
+|C-24235r493603_chk|
 
 ### Fix Text 
 
 Configure the application to use strong authentication (CAC) when accessing the application for maintenance purposes.
 
-**Fix ID:**  F-24224r493604_fix
-
-**Vulnerability ID:**  V-222565
-
-**Rule ID:**  SV-222565r961062_rule
+|Fix ID|
+|---|
+|F-24224r493604_fix|
 
 ---
 
 ## The application must terminate all sessions and network connections when nonlocal maintenance is completed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222566|SV-222566r985978_rule|
 
 ### Description
 
@@ -7631,23 +7989,25 @@ If necessary, logout of the application, clear the browser cache, and repeat the
 
 If the application does not deny access after each user session has exceeded the relevant idle timeout period and there is no documented risk exceptions needed to fulfill mission requirements, this is a finding.
 
-**Check ID:**  C-24236r985977_chk
+|Check ID|
+|---|
+|C-24236r985977_chk|
 
 ### Fix Text 
 
 Configure the application to expire idle user sessions after 10 minutes of inactivity for admin users and after 15 minutes of inactivity for regular users.
 
-**Fix ID:**  F-24225r493607_fix
-
-**Vulnerability ID:**  V-222566
-
-**Rule ID:**  SV-222566r985978_rule
+|Fix ID|
+|---|
+|F-24225r493607_fix|
 
 ---
 
 ## The application must not be vulnerable to race conditions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222567|SV-222567r961863_rule|
 
 ### Description
 
@@ -7677,7 +8037,9 @@ If race conditions are identified in the test results, verify the latest test re
 
 If the test results show race conditions exist and no remediation evidence is presented, or if test results are not available, this is a finding.
 
-**Check ID:**  C-24237r493609_chk
+|Check ID|
+|---|
+|C-24237r493609_chk|
 
 ### Fix Text 
 
@@ -7685,17 +8047,17 @@ Be aware of potential timing issues related to application programming calls whe
 
 Validate that variable values do not change while a switch event is occurring.
 
-**Fix ID:**  F-24226r493610_fix
-
-**Vulnerability ID:**  V-222567
-
-**Rule ID:**  SV-222567r961863_rule
+|Fix ID|
+|---|
+|F-24226r493610_fix|
 
 ---
 
 ## The application must terminate all network connections associated with a communications session at the end of the session.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222568|SV-222568r961068_rule|
 
 ### Description
 
@@ -7729,23 +8091,25 @@ If the application does not terminate network connections when application sessi
 
 If exceptions are documented with no mitigation this is a finding.
 
-**Check ID:**  C-24238r493612_chk
+|Check ID|
+|---|
+|C-24238r493612_chk|
 
 ### Fix Text 
 
 Configure or design the application to terminate application network sessions at the end of the session.
 
-**Fix ID:**  F-24227r493613_fix
-
-**Vulnerability ID:**  V-222568
-
-**Rule ID:**  SV-222568r961068_rule
+|Fix ID|
+|---|
+|F-24227r493613_fix|
 
 ---
 
 ## The application must utilize FIPS-validated cryptographic modules when signing application components.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222570|SV-222570r961857_rule|
 
 ### Description
 
@@ -7771,23 +8135,25 @@ While SHA1 is currently FIPS-140-2 approved, due to known vulnerabilities with t
 
 If the application signing process does not use FIPS validated cryptographic modules, or if the signing process includes SHA1 or MD5 hashing algorithms, this is a finding.
 
-**Check ID:**  C-24240r493618_chk
+|Check ID|
+|---|
+|C-24240r493618_chk|
 
 ### Fix Text 
 
 Utilize FIPS-validated algorithms when signing application components.
 
-**Fix ID:**  F-24229r493619_fix
-
-**Vulnerability ID:**  V-222570
-
-**Rule ID:**  SV-222570r961857_rule
+|Fix ID|
+|---|
+|F-24229r493619_fix|
 
 ---
 
 ## The application must utilize FIPS-validated cryptographic modules when generating cryptographic hashes.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222571|SV-222571r961857_rule|
 
 ### Description
 
@@ -7811,23 +8177,25 @@ If the application resides on a National Security System (NSS) and uses an algor
 
 If FIPS-validated cryptographic modules are not used when generating hashes or if the application is configured to use the MD5 or SHA1 hashing algorithm, this is a finding.
 
-**Check ID:**  C-24241r493621_chk
+|Check ID|
+|---|
+|C-24241r493621_chk|
 
 ### Fix Text 
 
 Configure the application to use a FIPS-validated hashing algorithm when creating a cryptographic hash.
 
-**Fix ID:**  F-24230r493622_fix
-
-**Vulnerability ID:**  V-222571
-
-**Rule ID:**  SV-222571r961857_rule
+|Fix ID|
+|---|
+|F-24230r493622_fix|
 
 ---
 
 ## The application must utilize FIPS-validated cryptographic modules when protecting unclassified information that requires cryptographic protection.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222572|SV-222572r961857_rule|
 
 ### Description
 
@@ -7845,23 +8213,25 @@ http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm
 
 If the application is using cryptographic modules that are not FIPS-validated to protect unclassified data, this is a finding.
 
-**Check ID:**  C-24242r493624_chk
+|Check ID|
+|---|
+|C-24242r493624_chk|
 
 ### Fix Text 
 
 Configure the application to use a FIPS-validated cryptographic module.
 
-**Fix ID:**  F-24231r493625_fix
-
-**Vulnerability ID:**  V-222572
-
-**Rule ID:**  SV-222572r961857_rule
+|Fix ID|
+|---|
+|F-24231r493625_fix|
 
 ---
 
 ## Applications making SAML assertions must use FIPS-approved random numbers in the generation of SessionIndex in the SAML element AuthnStatement.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222573|SV-222573r961857_rule|
 
 ### Description
 
@@ -7883,23 +8253,25 @@ http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm
 
 If the application is using cryptographic modules that are not FIPS-validated when generating the SessionIndex in the SAML AuthnStatement, this is a finding.
 
-**Check ID:**  C-24243r493627_chk
+|Check ID|
+|---|
+|C-24243r493627_chk|
 
 ### Fix Text 
 
 Configure the application to use a FIPS-validated cryptographic module.
 
-**Fix ID:**  F-24232r493628_fix
-
-**Vulnerability ID:**  V-222573
-
-**Rule ID:**  SV-222573r961857_rule
+|Fix ID|
+|---|
+|F-24232r493628_fix|
 
 ---
 
 ## The application user interface must be either physically or logically separated from data storage and management interfaces.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222574|SV-222574r961095_rule|
 
 ### Description
 
@@ -7919,23 +8291,25 @@ Verify that the application provides separate interfaces for user traffic and fo
 
 If the application user interface and the application management interface are shared, this is a finding.
 
-**Check ID:**  C-24244r493630_chk
+|Check ID|
+|---|
+|C-24244r493630_chk|
 
 ### Fix Text 
 
 Configure the application so user interface to the application and management interface to the application is separated.
 
-**Fix ID:**  F-24233r493631_fix
-
-**Vulnerability ID:**  V-222574
-
-**Rule ID:**  SV-222574r961095_rule
+|Fix ID|
+|---|
+|F-24233r493631_fix|
 
 ---
 
 ## The application must set the HTTPOnly flag on session cookies.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222575|SV-222575r1043178_rule|
 
 ### Description
 
@@ -7975,23 +8349,25 @@ Set-Cookie: SessionId=z5ymkk45aworjo2l31tlhqqv; path=/; HttpOnly
 
 If the application does not set the HTTPOnly flag on session cookies or if the application administrator cannot demonstrate mitigating controls, this is a finding.
 
-**Check ID:**  C-24245r493633_chk
+|Check ID|
+|---|
+|C-24245r493633_chk|
 
 ### Fix Text 
 
 Configure the application to set the HTTPOnly flag on session cookies.
 
-**Fix ID:**  F-24234r493634_fix
-
-**Vulnerability ID:**  V-222575
-
-**Rule ID:**  SV-222575r1043178_rule
+|Fix ID|
+|---|
+|F-24234r493634_fix|
 
 ---
 
 ## The application must set the secure flag on session cookies.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222576|SV-222576r1043178_rule|
 
 ### Description
 
@@ -8022,23 +8398,25 @@ A windows explorer box will open that contains the contents of the Temporary Int
 
 If the "secure" flag is not set on the session cookie, or if the vulnerability scan results indicate the application does not set the secure flag on cookies, this is a finding.
 
-**Check ID:**  C-24246r493636_chk
+|Check ID|
+|---|
+|C-24246r493636_chk|
 
 ### Fix Text 
 
 Configure the application to ensure the secure flag is set on session cookies.
 
-**Fix ID:**  F-24235r493637_fix
-
-**Vulnerability ID:**  V-222576
-
-**Rule ID:**  SV-222576r1043178_rule
+|Fix ID|
+|---|
+|F-24235r493637_fix|
 
 ---
 
 ## The application must not expose session IDs.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222577|SV-222577r1043178_rule|
 
 ### Description
 
@@ -8066,23 +8444,25 @@ For example; a web application hosting static data will provide SSL/TLS encrypti
 
 If the session IDs are unencrypted across network segments, this is a finding.
 
-**Check ID:**  C-24247r493639_chk
+|Check ID|
+|---|
+|C-24247r493639_chk|
 
 ### Fix Text 
 
 Configure the application to protect session IDs from interception or from manipulation.
 
-**Fix ID:**  F-24236r493640_fix
-
-**Vulnerability ID:**  V-222577
-
-**Rule ID:**  SV-222577r1043178_rule
+|Fix ID|
+|---|
+|F-24236r493640_fix|
 
 ---
 
 ## The application must destroy the session ID value and/or cookie on logoff or browser close.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222578|SV-222578r1043179_rule|
 
 ### Description
 
@@ -8104,23 +8484,25 @@ Review the client system and using a browser or other tool capable of viewing cl
 
 If the session IDs and associated cookies are not destroyed on logoff or browser close, this is a finding.
 
-**Check ID:**  C-24248r493642_chk
+|Check ID|
+|---|
+|C-24248r493642_chk|
 
 ### Fix Text 
 
 Configure the application to destroy session ID cookies once the application session has terminated.
 
-**Fix ID:**  F-24237r493643_fix
-
-**Vulnerability ID:**  V-222578
-
-**Rule ID:**  SV-222578r1043179_rule
+|Fix ID|
+|---|
+|F-24237r493643_fix|
 
 ---
 
 ## Applications must use system-generated session identifiers that protect against session fixation.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222579|SV-222579r1043180_rule|
 
 ### Description
 
@@ -8146,23 +8528,25 @@ If the application is re-using/copying the users existing session ID that was cr
 
 If the session testing results indicate application session IDs are re-used after the user has logged out, this is a finding.
 
-**Check ID:**  C-24249r493645_chk
+|Check ID|
+|---|
+|C-24249r493645_chk|
 
 ### Fix Text 
 
 Design the application to generate new session IDs with unique values when authenticating user sessions.
 
-**Fix ID:**  F-24238r493646_fix
-
-**Vulnerability ID:**  V-222579
-
-**Rule ID:**  SV-222579r1043180_rule
+|Fix ID|
+|---|
+|F-24238r493646_fix|
 
 ---
 
 ## Applications must validate session identifiers.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222580|SV-222580r1043180_rule|
 
 ### Description
 
@@ -8178,23 +8562,25 @@ If using a web development framework, ask the application administrator to provi
 
 If the application is not configured to validate user session identifiers, this is a finding.
 
-**Check ID:**  C-24250r493648_chk
+|Check ID|
+|---|
+|C-24250r493648_chk|
 
 ### Fix Text 
 
 Configure the application to configure user session identifiers.
 
-**Fix ID:**  F-24239r493649_fix
-
-**Vulnerability ID:**  V-222580
-
-**Rule ID:**  SV-222580r1043180_rule
+|Fix ID|
+|---|
+|F-24239r493649_fix|
 
 ---
 
 ## Applications must not use URL embedded session IDs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222581|SV-222581r1043180_rule|
 
 ### Description
 
@@ -8218,23 +8604,25 @@ Identify any compensating controls that may be leveraged to minimize risk to use
 
 If the framework or the application is configured to transmit cookies within the URL or via URL rewriting, or if the session ID is created using a GET method and there are no compensating controls configured to address user session security, this is a finding.
 
-**Check ID:**  C-24251r493651_chk
+|Check ID|
+|---|
+|C-24251r493651_chk|
 
 ### Fix Text 
 
 Configure the application to transmit session ID information via cookies.
 
-**Fix ID:**  F-24240r493652_fix
-
-**Vulnerability ID:**  V-222581
-
-**Rule ID:**  SV-222581r1043180_rule
+|Fix ID|
+|---|
+|F-24240r493652_fix|
 
 ---
 
 ## The application must not re-use or recycle session IDs.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222582|SV-222582r1043180_rule|
 
 ### Description
 
@@ -8262,23 +8650,25 @@ If the application is re-using/copying the users existing session ID that was cr
 
 If the session testing results indicate application session IDs are re-used after the user has logged out, this is a finding.
 
-**Check ID:**  C-24252r493654_chk
+|Check ID|
+|---|
+|C-24252r493654_chk|
 
 ### Fix Text 
 
 Design the application to not re-use session IDs.
 
-**Fix ID:**  F-24241r493655_fix
-
-**Vulnerability ID:**  V-222582
-
-**Rule ID:**  SV-222582r1043180_rule
+|Fix ID|
+|---|
+|F-24241r493655_fix|
 
 ---
 
 ## The application must generate a unique session identifier using a FIPS 140-2/140-3 approved random number generator.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222583|SV-222583r1051270_rule|
 
 ### Description
 
@@ -8296,23 +8686,25 @@ Have a user log on to the application server to determine if the session IDs gen
 
 If the application server does not generate unique session identifiers and does not use a FIPS 140-2/140-3 random number generator to create the randomness of the session ID, this is a finding.
 
-**Check ID:**  C-24253r1051268_chk
+|Check ID|
+|---|
+|C-24253r1051268_chk|
 
 ### Fix Text 
 
 Configure the application server to generate unique session identifiers and to use a FIPS 140-2/140-3 random number generator to generate the randomness of the session identifiers.
 
-**Fix ID:**  F-24242r1051269_fix
-
-**Vulnerability ID:**  V-222583
-
-**Rule ID:**  SV-222583r1051270_rule
+|Fix ID|
+|---|
+|F-24242r1051269_fix|
 
 ---
 
 ## The application must only allow the use of DoD-approved certificate authorities for verification of the establishment of protected sessions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222584|SV-222584r961596_rule|
 
 ### Description
 
@@ -8342,23 +8734,25 @@ Select “Issuer”
 
 If the application utilizes PKI certificates other than DoD-approved PKI and ECA certificates, this is a finding.
 
-**Check ID:**  C-24254r493660_chk
+|Check ID|
+|---|
+|C-24254r493660_chk|
 
 ### Fix Text 
 
 Configure the application to utilize DoD-approved PKI established CAs when verifying DoD-signed certificates.
 
-**Fix ID:**  F-24243r493661_fix
-
-**Vulnerability ID:**  V-222584
-
-**Rule ID:**  SV-222584r961596_rule
+|Fix ID|
+|---|
+|F-24243r493661_fix|
 
 ---
 
 ## The application must fail to a secure state if system initialization fails, shutdown fails, or aborts fail.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222585|SV-222585r961122_rule|
 
 ### Description
 
@@ -8398,23 +8792,25 @@ Check to ensure that application data is still protected. Some examples of tests
 
 If the application fails in such a way that the application security controls are rendered inoperable, this is a finding.
 
-**Check ID:**  C-24255r493663_chk
+|Check ID|
+|---|
+|C-24255r493663_chk|
 
 ### Fix Text 
 
 Fix any vulnerability found when the application is an insecure state (initialization, shutdown and aborts).
 
-**Fix ID:**  F-24244r493664_fix
-
-**Vulnerability ID:**  V-222585
-
-**Rule ID:**  SV-222585r961122_rule
+|Fix ID|
+|---|
+|F-24244r493664_fix|
 
 ---
 
 ## In the event of a system failure, applications must preserve any information necessary to determine cause of failure and any information necessary to return to operations with least disruption to mission processes.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222586|SV-222586r961125_rule|
 
 ### Description
 
@@ -8432,23 +8828,25 @@ If documentation is provided stating that no particular information needs to be 
 
 If the application does not log the data required to determine root cause of application failure, or if information specified as required in order to expediently bring the application back online is not retained, this is a finding.
 
-**Check ID:**  C-24256r493666_chk
+|Check ID|
+|---|
+|C-24256r493666_chk|
 
 ### Fix Text 
 
 Create operational configuration documentation that identifies information needed for the application to return back into service or specify no such data is required, and retain data required to determine root cause of application failures.
 
-**Fix ID:**  F-24245r493667_fix
-
-**Vulnerability ID:**  V-222586
-
-**Rule ID:**  SV-222586r961125_rule
+|Fix ID|
+|---|
+|F-24245r493667_fix|
 
 ---
 
 ## The application must protect the confidentiality and integrity of stored information when required by DoD policy or the information owner.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222587|SV-222587r961128_rule|
 
 ### Description
 
@@ -8478,23 +8876,25 @@ Access the data repository and have the application administrator, application d
 
 If the application processes classified data or if the data owner has specified data protection requirements and the application administrator is unable to demonstrate how the data is protected, this is a finding.
 
-**Check ID:**  C-24257r493669_chk
+|Check ID|
+|---|
+|C-24257r493669_chk|
 
 ### Fix Text 
 
 Identify data elements that require protection. Document the data types and specify protection requirements and methods used.
 
-**Fix ID:**  F-24246r493670_fix
-
-**Vulnerability ID:**  V-222587
-
-**Rule ID:**  SV-222587r961128_rule
+|Fix ID|
+|---|
+|F-24246r493670_fix|
 
 ---
 
 ## The application must implement approved cryptographic mechanisms to prevent unauthorized modification of organization-defined information at rest on organization-defined information system components.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222588|SV-222588r961599_rule|
 
 ### Description
 
@@ -8520,7 +8920,9 @@ Access the data repository and have the application administrator identify the e
 
 If the application processes classified data or if the data owner has specified encryption requirements and the application administrator is unable to demonstrate how the data is encrypted, this is a finding.
 
-**Check ID:**  C-24258r493672_chk
+|Check ID|
+|---|
+|C-24258r493672_chk|
 
 ### Fix Text 
 
@@ -8530,17 +8932,17 @@ Document the data types and specify encryption requirements.
 
 Encrypt data according to DoD policy or data owner requirements.
 
-**Fix ID:**  F-24247r493673_fix
-
-**Vulnerability ID:**  V-222588
-
-**Rule ID:**  SV-222588r961599_rule
+|Fix ID|
+|---|
+|F-24247r493673_fix|
 
 ---
 
 ## The application must use appropriate cryptography in order to protect stored DoD information when required by the information owner or DoD policy.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222589|SV-222589r961602_rule|
 
 ### Description
 
@@ -8568,7 +8970,9 @@ If the application is processing classified data, type 1, suite B cryptography, 
 
 If the application processes classified data or if the data owner has specified encryption requirements and the application administrator is unable to demonstrate the type of encryption used or if the application processes classified and does not use type 1, suite B, or NSA-approved hardware-based encryption, this is a finding.
 
-**Check ID:**  C-24259r493675_chk
+|Check ID|
+|---|
+|C-24259r493675_chk|
 
 ### Fix Text 
 
@@ -8578,17 +8982,17 @@ Document the data types and specify encryption requirements.
 
 Encrypt classified data using Type 1, Suite B, or other NSA-approved encryption solutions.
 
-**Fix ID:**  F-24248r493676_fix
-
-**Vulnerability ID:**  V-222589
-
-**Rule ID:**  SV-222589r961602_rule
+|Fix ID|
+|---|
+|F-24248r493676_fix|
 
 ---
 
 ## The application must isolate security functions from non-security functions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222590|SV-222590r961131_rule|
 
 ### Description
 
@@ -8610,23 +9014,25 @@ Ensure the application utilizes a control structure that is capable of protectin
 
 If the application does not protect security functions that enforce security policy and protect security configuration settings, this is a finding.
 
-**Check ID:**  C-24260r493678_chk
+|Check ID|
+|---|
+|C-24260r493678_chk|
 
 ### Fix Text 
 
 Implement controls within the application that limits access to security configuration functionality and isolates regular application function from security-oriented function.
 
-**Fix ID:**  F-24249r493679_fix
-
-**Vulnerability ID:**  V-222590
-
-**Rule ID:**  SV-222590r961131_rule
+|Fix ID|
+|---|
+|F-24249r493679_fix|
 
 ---
 
 ## The application must maintain a separate execution domain for each executing process.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222591|SV-222591r961608_rule|
 
 ### Description
 
@@ -8644,23 +9050,25 @@ Ask the application administrator to demonstrate how the application processes a
 
 If the application does not maintain a separate execution domain for each executing process, this is a finding.
 
-**Check ID:**  C-24261r493681_chk
+|Check ID|
+|---|
+|C-24261r493681_chk|
 
 ### Fix Text 
 
 Design and configure applications to maintain a separate execution domain for each executing process.
 
-**Fix ID:**  F-24250r493682_fix
-
-**Vulnerability ID:**  V-222591
-
-**Rule ID:**  SV-222591r961608_rule
+|Fix ID|
+|---|
+|F-24250r493682_fix|
 
 ---
 
 ## Applications must prevent unauthorized and unintended information transfer via shared system resources.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222592|SV-222592r961149_rule|
 
 ### Description
 
@@ -8680,23 +9088,25 @@ If the application shares system resources with other applications, verify that 
 
 If the application does not prevent unauthorized and unintended information transfer via shared system resources, this is a finding.
 
-**Check ID:**  C-24262r493684_chk
+|Check ID|
+|---|
+|C-24262r493684_chk|
 
 ### Fix Text 
 
  Configure or design the application to utilize a security control that will implement a boundary that will prevent unauthorized and unintended information transfer via shared system resources.
 
-**Fix ID:**  F-24251r493685_fix
-
-**Vulnerability ID:**  V-222592
-
-**Rule ID:**  SV-222592r961149_rule
+|Fix ID|
+|---|
+|F-24251r493685_fix|
 
 ---
 
 ## XML-based applications must mitigate DoS attacks by using XML filters, parser options, or gateways.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222593|SV-222593r961620_rule|
 
 ### Description
 
@@ -8728,7 +9138,9 @@ Ask the application administrator to demonstrate how the application is configur
 
 If the application administrator cannot demonstrate how these protections are implemented either within the application itself or by third-party tools or utilities like an XML gateway, this is a finding.
 
-**Check ID:**  C-36248r602307_chk
+|Check ID|
+|---|
+|C-36248r602307_chk|
 
 ### Fix Text 
 
@@ -8740,17 +9152,17 @@ Implement:
 - Validation against overlong element names
 - Optimized configuration for maximum message throughput in order to ensure DoS attacks against web services are limited.
 
-**Fix ID:**  F-36212r864576_fix
-
-**Vulnerability ID:**  V-222593
-
-**Rule ID:**  SV-222593r961620_rule
+|Fix ID|
+|---|
+|F-36212r864576_fix|
 
 ---
 
 ## The application must restrict the ability to launch Denial of Service (DoS) attacks against itself or other information systems.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222594|SV-222594r961152_rule|
 
 ### Description
 
@@ -8780,23 +9192,25 @@ Examine test results and testing configuration to ensure that the application wa
 
 If the test results indicate the application is susceptible to DoS attacks or can be weaponized to attack other applications or systems, this is a finding.
 
-**Check ID:**  C-36249r602310_chk
+|Check ID|
+|---|
+|C-36249r602310_chk|
 
 ### Fix Text 
 
 Design and deploy the application to utilize controls that will prevent the application from being affected by DoS attacks or being used to attack other systems. This includes but is not limited to utilizing throttling techniques for application traffic such as QoS or implementing logic controls within the application code itself that prevents application use that results in network or system capabilities being exceeded.
 
-**Fix ID:**  F-36213r602311_fix
-
-**Vulnerability ID:**  V-222594
-
-**Rule ID:**  SV-222594r961152_rule
+|Fix ID|
+|---|
+|F-36213r602311_fix|
 
 ---
 
 ## The web service design must include redundancy mechanisms when used with high-availability systems.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222595|SV-222595r961155_rule|
 
 ### Description
 
@@ -8826,23 +9240,25 @@ This includes:
 
 If the application has been designated as high availability but the architecture is not built to high availability standards, this is a finding.
 
-**Check ID:**  C-24265r493693_chk
+|Check ID|
+|---|
+|C-24265r493693_chk|
 
 ### Fix Text 
 
 Build the application to address issues that are found in a redundant environment and utilize redundancy mechanisms to provide high availability.
 
-**Fix ID:**  F-24254r493694_fix
-
-**Vulnerability ID:**  V-222595
-
-**Rule ID:**  SV-222595r961155_rule
+|Fix ID|
+|---|
+|F-24254r493694_fix|
 
 ---
 
 ## The application must protect the confidentiality and integrity of transmitted information.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222596|SV-222596r961632_rule|
 
 ### Description
 
@@ -8872,23 +9288,25 @@ Verify the application is configured to enable encryption protections for data i
 
 If the application does not utilize TLS, IPsec or other approved encryption mechanism to protect the confidentiality and integrity of transmitted information, this is a finding.
 
-**Check ID:**  C-24266r493696_chk
+|Check ID|
+|---|
+|C-24266r493696_chk|
 
 ### Fix Text 
 
 Configure all of the application systems to require TLS encryption in accordance with data protection requirements.
 
-**Fix ID:**  F-24255r493697_fix
-
-**Vulnerability ID:**  V-222596
-
-**Rule ID:**  SV-222596r961632_rule
+|Fix ID|
+|---|
+|F-24255r493697_fix|
 
 ---
 
 ## The application must implement cryptographic mechanisms to prevent unauthorized disclosure of information and/or detect changes to information during transmission unless otherwise protected by alternative physical safeguards, such as, at a minimum, a Protected Distribution System (PDS).
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222597|SV-222597r961635_rule|
 
 ### Description
 
@@ -8916,23 +9334,25 @@ When the application uses messaging or web services or other technologies where 
 
 If the application is not configured to provide cryptographic protections to application data while it is transmitted unless protected by alternative safety measures like a PDS, this is a finding.
 
-**Check ID:**  C-36250r602313_chk
+|Check ID|
+|---|
+|C-36250r602313_chk|
 
 ### Fix Text 
 
 Configure the application to use cryptographic protections to prevent unauthorized disclosure of application data based upon the application architecture.
 
-**Fix ID:**  F-36214r602314_fix
-
-**Vulnerability ID:**  V-222597
-
-**Rule ID:**  SV-222597r961635_rule
+|Fix ID|
+|---|
+|F-36214r602314_fix|
 
 ---
 
 ## The application must maintain the confidentiality and integrity of information during preparation for transmission.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222598|SV-222598r961638_rule|
 
 ### Description
 
@@ -8952,23 +9372,25 @@ For tiered applications, (web server, application server, database server) verif
 
 If the application does not utilize TLS to protect the confidentiality and integrity of transmitted information, this is a finding.
 
-**Check ID:**  C-24268r493702_chk
+|Check ID|
+|---|
+|C-24268r493702_chk|
 
 ### Fix Text 
 
 Configure all of the application systems to require TLS encryption.
 
-**Fix ID:**  F-24257r493703_fix
-
-**Vulnerability ID:**  V-222598
-
-**Rule ID:**  SV-222598r961638_rule
+|Fix ID|
+|---|
+|F-24257r493703_fix|
 
 ---
 
 ## The application must maintain the confidentiality and integrity of information during reception.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222599|SV-222599r961641_rule|
 
 ### Description
 
@@ -8988,23 +9410,25 @@ For tiered applications, (web server, application server, database server) ensur
 
 If the application does not utilize TLS to protect the confidentiality and integrity of transmitted information, this is a finding.
 
-**Check ID:**  C-24269r493705_chk
+|Check ID|
+|---|
+|C-24269r493705_chk|
 
 ### Fix Text 
 
 Configure all of the application systems to require TLS encryption.
 
-**Fix ID:**  F-24258r493706_fix
-
-**Vulnerability ID:**  V-222599
-
-**Rule ID:**  SV-222599r961641_rule
+|Fix ID|
+|---|
+|F-24258r493706_fix|
 
 ---
 
 ## The application must not disclose unnecessary information to users.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222600|SV-222600r961638_rule|
 
 ### Description
 
@@ -9028,23 +9452,25 @@ Review error pages sent to application users to verify the pages are generic in 
 
 If the application displays any application technical data such as database version, application server information, or any other technical details that should not be disclosed to a regular user, this is a finding.
 
-**Check ID:**  C-24270r493708_chk
+|Check ID|
+|---|
+|C-24270r493708_chk|
 
 ### Fix Text 
 
 Configure the application to not display technical details about the application architecture on error events.
 
-**Fix ID:**  F-24259r493709_fix
-
-**Vulnerability ID:**  V-222600
-
-**Rule ID:**  SV-222600r961638_rule
+|Fix ID|
+|---|
+|F-24259r493709_fix|
 
 ---
 
 ## The application must not store sensitive information in hidden fields.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222601|SV-222601r961638_rule|
 
 ### Description
 
@@ -9064,7 +9490,9 @@ Examine identified hidden fields and determine what type of data is stored in th
 
 If the data stored in the hidden fields are determined to be authentication or session related data, or if the code review or vulnerability scan results are not available and configured to test for hidden fields, this is a finding.
 
-**Check ID:**  C-24271r493711_chk
+|Check ID|
+|---|
+|C-24271r493711_chk|
 
 ### Fix Text 
 
@@ -9072,17 +9500,17 @@ Design and configure the application to not store sensitive information in hidde
 
 Encrypt sensitive information stored in hidden fields using DoD-approved encryption and use server side session management techniques for user session management.
 
-**Fix ID:**  F-24260r493712_fix
-
-**Vulnerability ID:**  V-222601
-
-**Rule ID:**  SV-222601r961638_rule
+|Fix ID|
+|---|
+|F-24260r493712_fix|
 
 ---
 
 ## The application must protect from Cross-Site Scripting (XSS) vulnerabilities.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222602|SV-222602r961158_rule|
 
 ### Description
 
@@ -9111,7 +9539,9 @@ Input the following strings:
 
 If the script pop up box is displayed, or if scan reports show unremediated XSS results and no mitigating steps have been taken, this is a finding.
 
-**Check ID:**  C-36251r602316_chk
+|Check ID|
+|---|
+|C-36251r602316_chk|
 
 ### Fix Text 
 
@@ -9119,17 +9549,17 @@ Verify user input is validated and encode or escape user input to prevent embedd
 
 Develop your application using a web template system or a web application development framework that provides auto escaping features rather than building your own escape logic.
 
-**Fix ID:**  F-36215r602317_fix
-
-**Vulnerability ID:**  V-222602
-
-**Rule ID:**  SV-222602r961158_rule
+|Fix ID|
+|---|
+|F-36215r602317_fix|
 
 ---
 
 ## The application must protect from Cross-Site Request Forgery (CSRF) vulnerabilities.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222603|SV-222603r961158_rule|
 
 ### Description
 
@@ -9157,23 +9587,25 @@ If scan results are not available ask the application administrator to provide e
 
 If application scan results show an unremediated CSRF vulnerability, or if no scan results are available, or no mitigations have been enabled, this is a finding.
 
-**Check ID:**  C-24273r493717_chk
+|Check ID|
+|---|
+|C-24273r493717_chk|
 
 ### Fix Text 
 
 Configure the application to use unpredictable challenge tokens and check the HTTP referrer to ensure the request was issued from the site itself.  Implement mitigating controls as required such as using web reputation services.
 
-**Fix ID:**  F-24262r493718_fix
-
-**Vulnerability ID:**  V-222603
-
-**Rule ID:**  SV-222603r961158_rule
+|Fix ID|
+|---|
+|F-24262r493718_fix|
 
 ---
 
 ## The application must protect from command injection.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222604|SV-222604r961158_rule|
 
 ### Description
 
@@ -9217,23 +9649,25 @@ https://www.owasp.org/index.php/Testing_for_Command_Injection_%28OTG-INPVAL-013%
 
 If testing results are not provided demonstrating the vulnerability does not exist, or if the application representative cannot demonstrate how actions are taken to identify and protect from command injection vulnerabilities, this is a finding.
 
-**Check ID:**  C-24274r493720_chk
+|Check ID|
+|---|
+|C-24274r493720_chk|
 
 ### Fix Text 
 
 Modify the application so as to escape/sanitize special character input or configure the system to protect against command injection attacks based on application architecture.
 
-**Fix ID:**  F-24263r493721_fix
-
-**Vulnerability ID:**  V-222604
-
-**Rule ID:**  SV-222604r961158_rule
+|Fix ID|
+|---|
+|F-24263r493721_fix|
 
 ---
 
 ## The application must protect from canonical representation vulnerabilities.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222605|SV-222605r961158_rule|
 
 ### Description
 
@@ -9277,7 +9711,9 @@ PHP: Set in php.ini, ISO 8859-1”
 
 If the results are not provided or the application representative cannot demonstrate that the application does not use Unicode encoding, this is a finding.
 
-**Check ID:**  C-36252r602319_chk
+|Check ID|
+|---|
+|C-36252r602319_chk|
 
 ### Fix Text 
 
@@ -9285,17 +9721,17 @@ A suitable canonical form should be chosen and all user input canonicalized into
 
 Security checks should be carried out after decoding is completed. Moreover, it is recommended to check that the encoding method chosen is a valid canonical encoding for the symbol it represents.
 
-**Fix ID:**  F-36216r602320_fix
-
-**Vulnerability ID:**  V-222605
-
-**Rule ID:**  SV-222605r961158_rule
+|Fix ID|
+|---|
+|F-36216r602320_fix|
 
 ---
 
 ## The application must validate all input.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222606|SV-222606r961158_rule|
 
 ### Description
 
@@ -9333,23 +9769,25 @@ https://www.owasp.org/index.php/Testing_for_Input_Validation
 
 If test results include input validation errors, or if no test results exist, this is a finding.
 
-**Check ID:**  C-24276r493726_chk
+|Check ID|
+|---|
+|C-24276r493726_chk|
 
 ### Fix Text 
 
 Design and configure the application to validate input prior to executing commands.
 
-**Fix ID:**  F-24265r493727_fix
-
-**Vulnerability ID:**  V-222606
-
-**Rule ID:**  SV-222606r961158_rule
+|Fix ID|
+|---|
+|F-24265r493727_fix|
 
 ---
 
 ## The application must not be vulnerable to SQL Injection.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222607|SV-222607r961158_rule|
 
 ### Description
 
@@ -9389,23 +9827,25 @@ https://www.owasp.org/index.php/Testing_for_SQL_Injection_%28OTG-INPVAL-005%29
 
 If the application is vulnerable to SQL injection attack, contains SQL injection flaws, or if scan results do not exist, this is a finding.
 
-**Check ID:**  C-24277r493729_chk
+|Check ID|
+|---|
+|C-24277r493729_chk|
 
 ### Fix Text 
 
 Modify the application and remove SQL injection vulnerabilities.
 
-**Fix ID:**  F-24266r493730_fix
-
-**Vulnerability ID:**  V-222607
-
-**Rule ID:**  SV-222607r961158_rule
+|Fix ID|
+|---|
+|F-24266r493730_fix|
 
 ---
 
 ## The application must not be vulnerable to XML-oriented attacks.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222608|SV-222608r961158_rule|
 
 ### Description
 
@@ -9439,7 +9879,9 @@ If an XML firewall is deployed, request configuration information regarding the 
 
 If the vulnerability scan is not configured to scan for XML-oriented vulnerabilities, if no scan results exist, or if the XML firewall is not configured to protect the application, this is a finding.
 
-**Check ID:**  C-24278r493732_chk
+|Check ID|
+|---|
+|C-24278r493732_chk|
 
 ### Fix Text 
 
@@ -9447,17 +9889,17 @@ Design the application to utilize components that are not vulnerable to XML atta
 
 Patch the application components when vulnerabilities are discovered.
 
-**Fix ID:**  F-24267r493733_fix
-
-**Vulnerability ID:**  V-222608
-
-**Rule ID:**  SV-222608r961158_rule
+|Fix ID|
+|---|
+|F-24267r493733_fix|
 
 ---
 
 ## The application must not be subject to input handling vulnerabilities.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222609|SV-222609r961656_rule|
 
 ### Description
 
@@ -9509,7 +9951,9 @@ Review any risk acceptance documentation that indicates the ISSO has reviewed an
 
 If the vulnerability scan is not configured to test for input validation vulnerabilities if the most recent scan results show that high risk input validation vulnerabilities exist and a documented risk acceptance from the ISSO is not available, or if the scan results do not exist, this is a finding.
 
-**Check ID:**  C-36253r602322_chk
+|Check ID|
+|---|
+|C-36253r602322_chk|
 
 ### Fix Text 
 
@@ -9517,17 +9961,17 @@ Follow best practice when accepting user input and verify that all input is vali
 
 Remediate identified vulnerabilities and obtain documented risk acceptance for those issues that cannot be remediated immediately.
 
-**Fix ID:**  F-36217r864578_fix
-
-**Vulnerability ID:**  V-222609
-
-**Rule ID:**  SV-222609r961656_rule
+|Fix ID|
+|---|
+|F-36217r864578_fix|
 
 ---
 
 ## The application must generate error messages that provide information necessary for corrective actions without revealing information that could be exploited by adversaries.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222610|SV-222610r961167_rule|
 
 ### Description
 
@@ -9549,7 +9993,9 @@ If error messages are designed to provide users with just enough detail to pass 
 
 If variable names, SQL strings, system path information, or source or program code are displayed in error messages sent to non-privileged users, this is a finding.
 
-**Check ID:**  C-24280r493738_chk
+|Check ID|
+|---|
+|C-24280r493738_chk|
 
 ### Fix Text 
 
@@ -9557,17 +10003,17 @@ Configure the server to not send error messages containing system information or
 
 Use generic error messages.
 
-**Fix ID:**  F-24269r493739_fix
-
-**Vulnerability ID:**  V-222610
-
-**Rule ID:**  SV-222610r961167_rule
+|Fix ID|
+|---|
+|F-24269r493739_fix|
 
 ---
 
 ## The application must reveal error messages only to the ISSO, ISSM, or SA.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222611|SV-222611r961170_rule|
 
 ### Description
 
@@ -9593,7 +10039,9 @@ If detailed error messages are provided to privileged users, this is not a findi
 
 If variable names, SQL strings, system path information, or source or program code are displayed in error messages sent to non-privileged users, this is a finding.
 
-**Check ID:**  C-24281r493741_chk
+|Check ID|
+|---|
+|C-24281r493741_chk|
 
 ### Fix Text 
 
@@ -9601,17 +10049,17 @@ Configure the server to only send error messages containing system information o
 
 Use generic error messages for non-privileged users.
 
-**Fix ID:**  F-24270r493742_fix
-
-**Vulnerability ID:**  V-222611
-
-**Rule ID:**  SV-222611r961170_rule
+|Fix ID|
+|---|
+|F-24270r493742_fix|
 
 ---
 
 ## The application must not be vulnerable to overflow attacks.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222612|SV-222612r961665_rule|
 
 ### Description
 
@@ -9640,7 +10088,9 @@ If overflows are identified in the test results, verify the latest test results 
 If the test results show overflows exist and no remediation evidence is presented, or if test results are not available, this is a finding.
 
 
-**Check ID:**  C-36254r602325_chk
+|Check ID|
+|---|
+|C-36254r602325_chk|
 
 ### Fix Text 
 
@@ -9654,17 +10104,17 @@ Use OS-level preventative functionality and control user input validation.
 
 Patch applications when overflows are identified in vendor products.
 
-**Fix ID:**  F-36218r864579_fix
-
-**Vulnerability ID:**  V-222612
-
-**Rule ID:**  SV-222612r961665_rule
+|Fix ID|
+|---|
+|F-36218r864579_fix|
 
 ---
 
 ## The application must remove organization-defined software components after updated versions have been installed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222613|SV-222613r961677_rule|
 
 ### Description
 
@@ -9680,23 +10130,25 @@ Review the file system structure to see if older versions of the application are
 
 If old versions of the application or components are still installed on the system, this is a finding.
 
-**Check ID:**  C-24283r493747_chk
+|Check ID|
+|---|
+|C-24283r493747_chk|
 
 ### Fix Text 
 
 Configure or design the application to remove old components when updating.
 
-**Fix ID:**  F-24272r493748_fix
-
-**Vulnerability ID:**  V-222613
-
-**Rule ID:**  SV-222613r961677_rule
+|Fix ID|
+|---|
+|F-24272r493748_fix|
 
 ---
 
 ## Security-relevant software updates and patches must be kept up to date.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222614|SV-222614r961683_rule|
 
 ### Description
 
@@ -9712,23 +10164,25 @@ Review IAVMs and CTOs to determine if the application is being updated in accord
 
 If application updates are not checked on at least on a weekly basis and applied immediately or in accordance with POA&Ms, IAVMs, CTOs, DTMs or other authoritative patching guidelines or sources, this is a finding.
 
-**Check ID:**  C-24284r493750_chk
+|Check ID|
+|---|
+|C-24284r493750_chk|
 
 ### Fix Text 
 
 Check for application updates at least weekly and apply patches immediately or in accordance with POA&Ms, IAVMs, CTOs, DTMs or other authoritative patching guidelines or sources.
 
-**Fix ID:**  F-24273r493751_fix
-
-**Vulnerability ID:**  V-222614
-
-**Rule ID:**  SV-222614r961683_rule
+|Fix ID|
+|---|
+|F-24273r493751_fix|
 
 ---
 
 ## The application performing organization-defined security functions must verify correct operation of security functions.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222615|SV-222615r961731_rule|
 
 ### Description
 
@@ -9750,23 +10204,25 @@ Review application logs and take note of log entries that indicate security func
 
 If the application is designed to perform security function testing and does not verify the correct operation of security functions, this is a finding.
 
-**Check ID:**  C-24285r493753_chk
+|Check ID|
+|---|
+|C-24285r493753_chk|
 
 ### Fix Text 
 
 Design the application to verify the correct operation of security functions.
 
-**Fix ID:**  F-24274r493754_fix
-
-**Vulnerability ID:**  V-222615
-
-**Rule ID:**  SV-222615r961731_rule
+|Fix ID|
+|---|
+|F-24274r493754_fix|
 
 ---
 
 ## The application must perform verification of the correct operation of security functions: upon system startup and/or restart; upon command by a user with privileged access; and/or every 30 days.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222616|SV-222616r961734_rule|
 
 ### Description
 
@@ -9790,23 +10246,25 @@ Review application logs and take note of log entries that indicate security func
 
 If the application is designed to perform security function testing and does not verify the correct operation of security functions on startup, restart, or upon command by a privileged user, this is a finding.
 
-**Check ID:**  C-24286r493756_chk
+|Check ID|
+|---|
+|C-24286r493756_chk|
 
 ### Fix Text 
 
 Design the application to verify the correct operation of security functions on command and on application startup and restart.
 
-**Fix ID:**  F-24275r493757_fix
-
-**Vulnerability ID:**  V-222616
-
-**Rule ID:**  SV-222616r961734_rule
+|Fix ID|
+|---|
+|F-24275r493757_fix|
 
 ---
 
 ## The application must notify the ISSO and ISSM of failed security verification tests.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222617|SV-222617r961185_rule|
 
 ### Description
 
@@ -9834,23 +10292,25 @@ Review application features and function to identify areas of the management int
  
 If the application is designed to perform security function testing and does not notify the ISSO and ISSM of failed verification tests, this is a finding.
 
-**Check ID:**  C-24287r493759_chk
+|Check ID|
+|---|
+|C-24287r493759_chk|
 
 ### Fix Text 
 
 Configure the application to send notices to the ISSO and ISSM indicating the application failed a verification test.
 
-**Fix ID:**  F-24276r493760_fix
-
-**Vulnerability ID:**  V-222617
-
-**Rule ID:**  SV-222617r961185_rule
+|Fix ID|
+|---|
+|F-24276r493760_fix|
 
 ---
 
 ## Unsigned Category 1A mobile code must not be used in the application in accordance with DoD policy.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222618|SV-222618r961083_rule|
 
 ### Description
 
@@ -9886,23 +10346,25 @@ If mobile code is in use, the browser will prompt to download the control. At th
 
 If the code has not been signed or the application warns that a control cannot be invoked due to security settings, this is a finding.
 
-**Check ID:**  C-24288r493762_chk
+|Check ID|
+|---|
+|C-24288r493762_chk|
 
 ### Fix Text 
 
 Configure the application so Category 1A mobile code is signed.
 
-**Fix ID:**  F-24277r493763_fix
-
-**Vulnerability ID:**  V-222618
-
-**Rule ID:**  SV-222618r961083_rule
+|Fix ID|
+|---|
+|F-24277r493763_fix|
 
 ---
 
 ## The ISSO must ensure an account management process is implemented, verifying only authorized users can gain access to the application, and individual accounts designated as inactive, suspended, or terminated are promptly removed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222619|SV-222619r961863_rule|
 
 ### Description
 
@@ -9916,23 +10378,25 @@ Obtain a list of recently departed personnel and verify that their accounts were
  
 If a documented account management process does not exist or unauthorized users have active accounts, this is a finding.
 
-**Check ID:**  C-24289r493765_chk
+|Check ID|
+|---|
+|C-24289r493765_chk|
 
 ### Fix Text 
 
 Establish an account management process.
 
-**Fix ID:**  F-24278r493766_fix
-
-**Vulnerability ID:**  V-222619
-
-**Rule ID:**  SV-222619r961863_rule
+|Fix ID|
+|---|
+|F-24278r493766_fix|
 
 ---
 
 ## Application web servers must be on a separate network segment from the application and database servers if it is a tiered application operating in the DoD DMZ.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222620|SV-222620r961863_rule|
 
 ### Description
 
@@ -9979,23 +10443,25 @@ Verify the application web servers are separated from the application and databa
 
 If the application is tiered and the network infrastructure hosting the application is not configured to provide separation and security access controls between the tiered layers in accordance with DoD DMZ requirements, this is a finding.
 
-**Check ID:**  C-24290r493768_chk
+|Check ID|
+|---|
+|C-24290r493768_chk|
 
 ### Fix Text 
 
 Separate web server from other application tiers and place it on a separate network segment apart from the application and database servers in accordance with DoD DMZ data access controls requirements.
 
-**Fix ID:**  F-24279r493769_fix
-
-**Vulnerability ID:**  V-222620
-
-**Rule ID:**  SV-222620r961863_rule
+|Fix ID|
+|---|
+|F-24279r493769_fix|
 
 ---
 
 ## The ISSO must ensure application audit trails are retained for at least 1 year for applications without SAMI data, and 5 years for applications including SAMI data.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222621|SV-222621r961863_rule|
 
 ### Description
 
@@ -10007,23 +10473,25 @@ Verify a process is in place to retain application audit log files for one year 
 
 If audit logs have not been retained for one year or five years for SAMI data, this is a finding.
 
-**Check ID:**  C-24291r493771_chk
+|Check ID|
+|---|
+|C-24291r493771_chk|
 
 ### Fix Text 
 
 Retain application audit log files for one year and five years for SAMI data.
 
-**Fix ID:**  F-24280r493772_fix
-
-**Vulnerability ID:**  V-222621
-
-**Rule ID:**  SV-222621r961863_rule
+|Fix ID|
+|---|
+|F-24280r493772_fix|
 
 ---
 
 ## The ISSO must review audit trails periodically based on system documentation recommendations or immediately upon system security events.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222622|SV-222622r961863_rule|
 
 ### Description
 
@@ -10035,7 +10503,9 @@ Interview the application representative and ask for the system documentation th
 
 If the application representative cannot provide system documentation identifying how often the auditing logs are reviewed, or has not audited within the last time period stated in the system documentation, this is a finding.
 
-**Check ID:**  C-24292r493774_chk
+|Check ID|
+|---|
+|C-24292r493774_chk|
 
 ### Fix Text 
 
@@ -10043,17 +10513,17 @@ Establish a scheduled process for reviewing logs.
 
 Maintain a log or records of dates and times audit logs are reviewed.
 
-**Fix ID:**  F-24281r493775_fix
-
-**Vulnerability ID:**  V-222622
-
-**Rule ID:**  SV-222622r961863_rule
+|Fix ID|
+|---|
+|F-24281r493775_fix|
 
 ---
 
 ## The ISSO must report all suspected violations of IA policies in accordance with DoD information system IA procedures.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222623|SV-222623r961863_rule|
 
 ### Description
 
@@ -10065,23 +10535,25 @@ Interview the application representative and review the SOPs to ensure that viol
  
 If there is no policy for reporting IA violations, this is a finding.
 
-**Check ID:**  C-24293r493777_chk
+|Check ID|
+|---|
+|C-24293r493777_chk|
 
 ### Fix Text 
 
 Create and maintain a policy to report IA violations.
 
-**Fix ID:**  F-24282r493778_fix
-
-**Vulnerability ID:**  V-222623
-
-**Rule ID:**  SV-222623r961863_rule
+|Fix ID|
+|---|
+|F-24282r493778_fix|
 
 ---
 
 ## The ISSO must ensure active vulnerability testing is performed.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222624|SV-222624r1051272_rule|
 
 ### Description
 
@@ -10117,7 +10589,9 @@ If the vulnerability scan results include critical vulnerabilities 21 business d
 
 If the vulnerability scanning tests are not relevant to the architecture of the application, this is a finding.
 
-**Check ID:**  C-24294r1051271_chk
+|Check ID|
+|---|
+|C-24294r1051271_chk|
 
 ### Fix Text 
 
@@ -10127,17 +10601,17 @@ Verify the vulnerability scanning tool is configured to test all application com
 
 Address discovered vulnerabilities.
 
-**Fix ID:**  F-24283r493781_fix
-
-**Vulnerability ID:**  V-222624
-
-**Rule ID:**  SV-222624r1051272_rule
+|Fix ID|
+|---|
+|F-24283r493781_fix|
 
 ---
 
 ## Execution flow diagrams and design documents must be created to show how deadlock and recursion issues in web services are being mitigated.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222625|SV-222625r961863_rule|
 
 ### Description
 
@@ -10165,23 +10639,25 @@ If the issue is not addressed in the documentation or configuration settings, as
 
 If deadlock issues are not being addressed via documented web service configuration or design, this is a finding.
 
-**Check ID:**  C-24295r493783_chk
+|Check ID|
+|---|
+|C-24295r493783_chk|
 
 ### Fix Text 
 
 Develop web services to account for deadlock issues.
 
-**Fix ID:**  F-24284r493784_fix
-
-**Vulnerability ID:**  V-222625
-
-**Rule ID:**  SV-222625r961863_rule
+|Fix ID|
+|---|
+|F-24284r493784_fix|
 
 ---
 
 ## The designer must ensure the application does not store configuration and control files in the same directory as user data.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222626|SV-222626r961863_rule|
 
 ### Description
 
@@ -10201,23 +10677,25 @@ Examine file permissions to application folder.
 
 If the application user data is located in the same directory as the application configuration settings or control files, or if the file permissions allow application users write access to application configuration settings, this is a finding.
 
-**Check ID:**  C-24296r493786_chk
+|Check ID|
+|---|
+|C-24296r493786_chk|
 
 ### Fix Text 
 
 Separate the application user data into a different directory than the application code and user file permissions to restrict user access to application configuration settings.
 
-**Fix ID:**  F-24285r493787_fix
-
-**Vulnerability ID:**  V-222626
-
-**Rule ID:**  SV-222626r961863_rule
+|Fix ID|
+|---|
+|F-24285r493787_fix|
 
 ---
 
 ## The ISSO must ensure if a DoD STIG or NSA guide is not available, a third-party product will be configured by following available guidance.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222627|SV-222627r961863_rule|
 
 ### Description
 
@@ -10240,7 +10718,9 @@ commercially accepted practices,
 independent testing results,
 or vendor literature and lock down guides, this is a finding.
 
-**Check ID:**  C-24297r493789_chk
+|Check ID|
+|---|
+|C-24297r493789_chk|
 
 ### Fix Text 
 
@@ -10250,17 +10730,17 @@ Configure the application according to the product STIG or when a STIG is not av
 - independent testing results, or
 - vendor literature and lock down guides.
 
-**Fix ID:**  F-24286r493790_fix
-
-**Vulnerability ID:**  V-222627
-
-**Rule ID:**  SV-222627r961863_rule
+|Fix ID|
+|---|
+|F-24286r493790_fix|
 
 ---
 
 ## New IP addresses, data services, and associated ports used by the application must be submitted to the appropriate approving authority for the organization, which in turn will be submitted through the DoD Ports, Protocols, and Services Management (DoD PPSM)
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222628|SV-222628r961863_rule|
 
 ### Description
 
@@ -10291,7 +10771,9 @@ Identify the ports needed for the application:
 If the application is not in compliance with DoD Ports and Protocols guidance, this is a finding.
 
 
-**Check ID:**  C-36255r602328_chk
+|Check ID|
+|---|
+|C-36255r602328_chk|
 
 ### Fix Text 
 
@@ -10299,17 +10781,17 @@ Verify the accreditation documentation lists all interfaces and the ports, proto
 
 Verify that all ports, protocols, and services are used in accordance with the DoD PPSM.
 
-**Fix ID:**  F-36219r602329_fix
-
-**Vulnerability ID:**  V-222628
-
-**Rule ID:**  SV-222628r961863_rule
+|Fix ID|
+|---|
+|F-36219r602329_fix|
 
 ---
 
 ## The application must be registered with the DoD Ports and Protocols Database.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222629|SV-222629r961863_rule|
 
 ### Description
 
@@ -10321,23 +10803,25 @@ Verify registration of the application and ports in the Ports and Protocols Data
 
 If the application requires registration, and is not registered or all ports used have not been identified in the database, this is a finding.
 
-**Check ID:**  C-24299r493795_chk
+|Check ID|
+|---|
+|C-24299r493795_chk|
 
 ### Fix Text 
 
 Register the application and ports in the Ports and Protocols Database.
 
-**Fix ID:**  F-24288r493796_fix
-
-**Vulnerability ID:**  V-222629
-
-**Rule ID:**  SV-222629r961863_rule
+|Fix ID|
+|---|
+|F-24288r493796_fix|
 
 ---
 
 ## The Configuration Management (CM) repository must be properly patched and STIG compliant.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222630|SV-222630r961863_rule|
 
 ### Description
 
@@ -10361,23 +10845,25 @@ Review the ATO documentation and verify the system that operates the CM reposito
 
 If CM repository is not at the latest security patch level and is not operating on a STIG compliant system, this is a finding.
 
-**Check ID:**  C-24300r493798_chk
+|Check ID|
+|---|
+|C-24300r493798_chk|
 
 ### Fix Text 
 
 Patch the CM system when new security patches are made available and apply the relevant STIGs.
 
-**Fix ID:**  F-24289r493799_fix
-
-**Vulnerability ID:**  V-222630
-
-**Rule ID:**  SV-222630r961863_rule
+|Fix ID|
+|---|
+|F-24289r493799_fix|
 
 ---
 
 ## Access privileges to the Configuration Management (CM) repository must be reviewed every three months.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222631|SV-222631r961863_rule|
 
 ### Description
 
@@ -10405,23 +10891,25 @@ Ask the application administrator or the CM administrator when the last time the
 
 If CM access privileges have not been reviewed within the last three months, this is a finding.
 
-**Check ID:**  C-24301r493801_chk
+|Check ID|
+|---|
+|C-24301r493801_chk|
 
 ### Fix Text 
 
 Review access privileges to the CM repository at least every three months.
 
-**Fix ID:**  F-24290r493802_fix
-
-**Vulnerability ID:**  V-222631
-
-**Rule ID:**  SV-222631r961863_rule
+|Fix ID|
+|---|
+|F-24290r493802_fix|
 
 ---
 
 ## A Software Configuration Management (SCM) plan describing the configuration control and change management process of application objects developed by the organization and the roles and responsibilities of the organization must be created and maintained.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222632|SV-222632r961863_rule|
 
 ### Description
 
@@ -10578,23 +11066,25 @@ The CMR should audit all objects under CM control for modification.
 
 If the CMR does not audit for modifications, this is a finding.
 
-**Check ID:**  C-24302r493804_chk
+|Check ID|
+|---|
+|C-24302r493804_chk|
 
 ### Fix Text 
 
 Create and update a SCM plan describing the configuration control and change management process of application objects developed by the organization and the roles and responsibilities of the organization.  Configure CMR to comply.
 
-**Fix ID:**  F-24291r493805_fix
-
-**Vulnerability ID:**  V-222632
-
-**Rule ID:**  SV-222632r961863_rule
+|Fix ID|
+|---|
+|F-24291r493805_fix|
 
 ---
 
 ## A Configuration Control Board (CCB) that meets at least every release cycle, for managing the Configuration Management (CM) process must be established.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222633|SV-222633r961863_rule|
 
 ### Description
 
@@ -10620,23 +11110,25 @@ CCBs do not have to physically meet, and the CCB chair may authorize a release b
 
 If there is no evidence of CCB activity or meetings prior to the last release cycle, this is a finding.
 
-**Check ID:**  C-24303r493807_chk
+|Check ID|
+|---|
+|C-24303r493807_chk|
 
 ### Fix Text 
 
 Setup and maintain a Configuration Control Board.
 
-**Fix ID:**  F-24292r493808_fix
-
-**Vulnerability ID:**  V-222633
-
-**Rule ID:**  SV-222633r961863_rule
+|Fix ID|
+|---|
+|F-24292r493808_fix|
 
 ---
 
 ## The application services and interfaces must be compatible with and ready for IPv6 networks.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222634|SV-222634r987685_rule|
 
 ### Description
 
@@ -10650,23 +11142,25 @@ Verify the application environment is compliant with all DoD IPv6 Standards Prof
 
 If the application environment is not compliant with all DoD IPv6 Standards Profile for IPv6 Capable Products guidance for servers, this is a finding.
 
-**Check ID:**  C-24304r493810_chk
+|Check ID|
+|---|
+|C-24304r493810_chk|
 
 ### Fix Text 
 
 Design application to be compliant with all Department of Defense (DoD) Information Technology Standards Registry (DISR) IPv6 profiles.
 
-**Fix ID:**  F-24293r493811_fix
-
-**Vulnerability ID:**  V-222634
-
-**Rule ID:**  SV-222634r987685_rule
+|Fix ID|
+|---|
+|F-24293r493811_fix|
 
 ---
 
 ## The application must not be hosted on a general purpose machine if the application is designated as critical or high availability by the ISSO.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222635|SV-222635r961863_rule|
 
 ### Description
 
@@ -10682,23 +11176,25 @@ Identify the criticality of the applications installed on the system.
 
 If a mission critical application is deployed onto the same server as non-mission critical applications, this is a finding.
 
-**Check ID:**  C-24305r493813_chk
+|Check ID|
+|---|
+|C-24305r493813_chk|
 
 ### Fix Text 
 
 Deploy mission critical applications on servers that are not shared by other less critical applications.
 
-**Fix ID:**  F-24294r493814_fix
-
-**Vulnerability ID:**  V-222635
-
-**Rule ID:**  SV-222635r961863_rule
+|Fix ID|
+|---|
+|F-24294r493814_fix|
 
 ---
 
 ## A contingency plan must exist in accordance with DOD policy based on the application's availability requirements.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222636|SV-222636r1051323_rule|
 
 ### Description
 
@@ -10718,23 +11214,25 @@ For low availability applications, verify the contingency plan exists and provid
  
 If the contingency plan does not exist or does not meet the severity level requirements, this is a finding.
 
-**Check ID:**  C-24306r1051323_chk
+|Check ID|
+|---|
+|C-24306r1051323_chk|
 
 ### Fix Text 
 
 Create and maintain a contingency plan that identifies essential mission and business functions and associated contingency requirements.
 
-**Fix ID:**  F-24295r1051274_fix
-
-**Vulnerability ID:**  V-222636
-
-**Rule ID:**  SV-222636r1051323_rule
+|Fix ID|
+|---|
+|F-24295r1051274_fix|
 
 ---
 
 ## Recovery procedures and technical system features must exist so recovery is performed in a secure and verifiable manner. The ISSO will document circumstances inhibiting a trusted recovery.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222637|SV-222637r961863_rule|
 
 ### Description
 
@@ -10752,23 +11250,25 @@ Verify that the recovery procedures include any special considerations for trust
 
 If the application is not part of the site’s disaster recovery plan, or if any special considerations for trusted recovery are not documented, this is a finding.
 
-**Check ID:**  C-24307r493819_chk
+|Check ID|
+|---|
+|C-24307r493819_chk|
 
 ### Fix Text 
 
 Create and maintain a disaster recovery plan.
 
-**Fix ID:**  F-24296r493820_fix
-
-**Vulnerability ID:**  V-222637
-
-**Rule ID:**  SV-222637r961863_rule
+|Fix ID|
+|---|
+|F-24296r493820_fix|
 
 ---
 
 ## Data backup must be performed at required intervals in accordance with DoD policy.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222638|SV-222638r961863_rule|
 
 ### Description
 
@@ -10808,23 +11308,25 @@ Examine the SLA or MOU/MOA to ensure redundant capability is addressed. Finding 
 
 If any of the requirements above for the associated risk level of the application are not met, this is a finding.
 
-**Check ID:**  C-24308r493822_chk
+|Check ID|
+|---|
+|C-24308r493822_chk|
 
 ### Fix Text 
 
 Develop and implement backup procedures based on risk level of the system and in accordance with DoD policy.
 
-**Fix ID:**  F-24297r493823_fix
-
-**Vulnerability ID:**  V-222638
-
-**Rule ID:**  SV-222638r961863_rule
+|Fix ID|
+|---|
+|F-24297r493823_fix|
 
 ---
 
 ## Back-up copies of the application software or source code must be stored in a fire-rated container or stored separately (offsite).
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222639|SV-222639r961863_rule|
 
 ### Description
 
@@ -10846,23 +11348,25 @@ If application development occurs in-house and source code is available, verify 
 
 If back-up copies of the application software or source code are not stored in a fire-rated container or stored separately (offsite) from their respective environments, this is a finding.
 
-**Check ID:**  C-24309r493825_chk
+|Check ID|
+|---|
+|C-24309r493825_chk|
 
 ### Fix Text 
 
 Store a back-up copy of the application software and source code in a fire-rated container or store it separately (offsite) from their respective environments.
 
-**Fix ID:**  F-24298r493826_fix
-
-**Vulnerability ID:**  V-222639
-
-**Rule ID:**  SV-222639r961863_rule
+|Fix ID|
+|---|
+|F-24298r493826_fix|
 
 ---
 
 ## Procedures must be in place to assure the appropriate physical and technical protection of the backup and restoration of the application.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222640|SV-222640r961863_rule|
 
 ### Description
 
@@ -10876,23 +11380,25 @@ Verify assets housing the backup data (e.g., SANS, tapes, backup directories, so
 
 If backup and restoration devices are not included in the recovery procedures, this is a finding.
 
-**Check ID:**  C-24310r493828_chk
+|Check ID|
+|---|
+|C-24310r493828_chk|
 
 ### Fix Text 
 
 Develop and implement procedures to insure that backup and restoration assets are properly protected and stored in an area/location where it is unlikely they would be affected by an event that would affect the primary assets.
 
-**Fix ID:**  F-24299r493829_fix
-
-**Vulnerability ID:**  V-222640
-
-**Rule ID:**  SV-222640r961863_rule
+|Fix ID|
+|---|
+|F-24299r493829_fix|
 
 ---
 
 ## The application must use encryption to implement key exchange and authenticate endpoints prior to establishing a communication channel for key exchange.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222641|SV-222641r961863_rule|
 
 ### Description
 
@@ -10908,23 +11414,25 @@ Verify the application is using FIPS-140-2 validated cryptographic modules for e
 
 If the application does not implement encryption for key exchange, this is a finding.
 
-**Check ID:**  C-24311r493831_chk
+|Check ID|
+|---|
+|C-24311r493831_chk|
 
 ### Fix Text 
 
 Use encryption for key exchange.
 
-**Fix ID:**  F-24300r493832_fix
-
-**Vulnerability ID:**  V-222641
-
-**Rule ID:**  SV-222641r961863_rule
+|Fix ID|
+|---|
+|F-24300r493832_fix|
 
 ---
 
 ## The application must not contain embedded authentication data.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222642|SV-222642r961863_rule|
 
 ### Description
 
@@ -10942,23 +11450,25 @@ If access to the folder hosting the file is not restricted to the related applic
 
 The finding details should note specifically where the offending credentials or data were located and what resources they enabled.
 
-**Check ID:**  C-24312r493834_chk
+|Check ID|
+|---|
+|C-24312r493834_chk|
 
 ### Fix Text 
 
 Remove embedded authentication data stored in code, configuration files, scripts, HTML file, or any ASCII files.
 
-**Fix ID:**  F-24301r493835_fix
-
-**Vulnerability ID:**  V-222642
-
-**Rule ID:**  SV-222642r961863_rule
+|Fix ID|
+|---|
+|F-24301r493835_fix|
 
 ---
 
 ## The application must have the capability to mark sensitive/classified output when required.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222643|SV-222643r961863_rule|
 
 ### Description
 
@@ -10988,23 +11498,25 @@ In any case of a finding, the finding details should specify which functions fai
 
 After completing the test, destroy all printed output using the site’s preferred method for disposal. For example: utilizing a shredder or disposal in burn bags.
 
-**Check ID:**  C-24313r493837_chk
+|Check ID|
+|---|
+|C-24313r493837_chk|
 
 ### Fix Text 
 
 Enable the application to adequately mark sensitive/classified output.
 
-**Fix ID:**  F-24302r493838_fix
-
-**Vulnerability ID:**  V-222643
-
-**Rule ID:**  SV-222643r961863_rule
+|Fix ID|
+|---|
+|F-24302r493838_fix|
 
 ---
 
 ## Prior to each release of the application, updates to system, or applying patches; tests plans and procedures must be created and executed.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222644|SV-222644r961863_rule|
 
 ### Description
 
@@ -11020,23 +11532,25 @@ Ask the application representative to provide tests plans, procedures, and resul
 
 If test plans, procedures, and results do not exist, or are not updated for each application release, this is a finding.
 
-**Check ID:**  C-24314r493840_chk
+|Check ID|
+|---|
+|C-24314r493840_chk|
 
 ### Fix Text 
 
 Execute tests plans prior to release or patch update.
 
-**Fix ID:**  F-24303r493841_fix
-
-**Vulnerability ID:**  V-222644
-
-**Rule ID:**  SV-222644r961863_rule
+|Fix ID|
+|---|
+|F-24303r493841_fix|
 
 ---
 
 ## Application files must be cryptographically hashed prior to deploying to DoD operational networks.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222645|SV-222645r961863_rule|
 
 ### Description
 
@@ -11070,7 +11584,9 @@ If the application being reviewed is a COTS product and the vendor did not provi
 
 If the integrity of the application files/code is not validated prior to deployment to DoD operational networks, this is a finding.
 
-**Check ID:**  C-36256r602331_chk
+|Check ID|
+|---|
+|C-36256r602331_chk|
 
 ### Fix Text 
 
@@ -11078,17 +11594,17 @@ Developers/release managers create cryptographic hash values of application file
 
 Application Admins validate cryptographic hashes prior to deploying the application to production.
 
-**Fix ID:**  F-36220r602332_fix
-
-**Vulnerability ID:**  V-222645
-
-**Rule ID:**  SV-222645r961863_rule
+|Fix ID|
+|---|
+|F-36220r602332_fix|
 
 ---
 
 ## At least one tester must be designated to test for security flaws in addition to functional testing.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222646|SV-222646r961863_rule|
 
 ### Description
 
@@ -11106,23 +11622,25 @@ If the organization operating the application is not doing development work, thi
 
 If the organization has not designated personnel to conduct security testing, this is a finding.
 
-**Check ID:**  C-24316r493846_chk
+|Check ID|
+|---|
+|C-24316r493846_chk|
 
 ### Fix Text 
 
 Designate personnel to conduct security testing on the applications.
 
-**Fix ID:**  F-24305r493847_fix
-
-**Vulnerability ID:**  V-222646
-
-**Rule ID:**  SV-222646r961863_rule
+|Fix ID|
+|---|
+|F-24305r493847_fix|
 
 ---
 
 ## Test procedures must be created and at least annually executed to ensure system initialization, shutdown, and aborts are configured to verify the system remains in a secure state.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222647|SV-222647r961863_rule|
 
 ### Description
 
@@ -11140,23 +11658,25 @@ Dates should be noted as to the last date of testing.
 
 If annual testing procedures do not exist, or if administrators are unable to provide testing dates that indicate the tests were conducted within the last year, this is a finding.
 
-**Check ID:**  C-24317r493849_chk
+|Check ID|
+|---|
+|C-24317r493849_chk|
 
 ### Fix Text 
 
 Create test procedures to test the security state of the application and exercise test procedures annually.
 
-**Fix ID:**  F-24306r493850_fix
-
-**Vulnerability ID:**  V-222647
-
-**Rule ID:**  SV-222647r961863_rule
+|Fix ID|
+|---|
+|F-24306r493850_fix|
 
 ---
 
 ## An application code review must be performed on the application.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222648|SV-222648r961863_rule|
 
 ### Description
 
@@ -11208,23 +11728,25 @@ Ensure the code review looks for all known security flaws including but not limi
 
 If the organization does not conduct code reviews on the application that attempt to identify all known and potential security issues, or if code review results are not available for review, this is a finding.
 
-**Check ID:**  C-24318r493852_chk
+|Check ID|
+|---|
+|C-24318r493852_chk|
 
 ### Fix Text 
 
 Conduct and document code reviews on the application during development and identify and remediate all known and potential security vulnerabilities prior to releasing the application.
 
-**Fix ID:**  F-24307r493853_fix
-
-**Vulnerability ID:**  V-222648
-
-**Rule ID:**  SV-222648r961863_rule
+|Fix ID|
+|---|
+|F-24307r493853_fix|
 
 ---
 
 ## Code coverage statistics must be maintained for each release of the application.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222649|SV-222649r961863_rule|
 
 ### Description
 
@@ -11250,23 +11772,25 @@ Ask the application representative to provide code coverage statistics maintaine
 
 If these code coverage statistics do not exist, this is a finding.
 
-**Check ID:**  C-24319r493855_chk
+|Check ID|
+|---|
+|C-24319r493855_chk|
 
 ### Fix Text 
 
 Track application testing and maintain statistics that show how much of the application function was tested.
 
-**Fix ID:**  F-24308r493856_fix
-
-**Vulnerability ID:**  V-222649
-
-**Rule ID:**  SV-222649r961863_rule
+|Fix ID|
+|---|
+|F-24308r493856_fix|
 
 ---
 
 ## Flaws found during a code review must be tracked in a defect tracking system.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222650|SV-222650r961863_rule|
 
 ### Description
 
@@ -11284,23 +11808,25 @@ Ask the application representative to demonstrate that the configuration managem
 
 If there is no configuration management repository or the code review flaws are not captured in the configuration management repository, this is a finding.
 
-**Check ID:**  C-24320r493858_chk
+|Check ID|
+|---|
+|C-24320r493858_chk|
 
 ### Fix Text 
 
 Track software defects in a defect tracking system.
 
-**Fix ID:**  F-24309r493859_fix
-
-**Vulnerability ID:**  V-222650
-
-**Rule ID:**  SV-222650r961863_rule
+|Fix ID|
+|---|
+|F-24309r493859_fix|
 
 ---
 
 ## The changes to the application must be assessed for IA and accreditation impact prior to implementation.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222651|SV-222651r961863_rule|
 
 ### Description
 
@@ -11316,23 +11842,25 @@ Review the CCB process documentation to ensure potential changes to the applicat
 
 If IA impact analysis is not performed, this is a finding.
 
-**Check ID:**  C-24321r493861_chk
+|Check ID|
+|---|
+|C-24321r493861_chk|
 
 ### Fix Text 
 
 Review IA impact to the system prior to implementing changes.
 
-**Fix ID:**  F-24310r493862_fix
-
-**Vulnerability ID:**  V-222651
-
-**Rule ID:**  SV-222651r961863_rule
+|Fix ID|
+|---|
+|F-24310r493862_fix|
 
 ---
 
 ## Security flaws must be fixed or addressed in the project plan.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222652|SV-222652r961863_rule|
 
 ### Description
 
@@ -11352,23 +11880,25 @@ Ask the application representative to demonstrate how security flaws are integra
 
 If security flaws are not addressed in the project plan or there is no process to introduce security flaws into the project plan, this is a finding.
 
-**Check ID:**  C-24322r493864_chk
+|Check ID|
+|---|
+|C-24322r493864_chk|
 
 ### Fix Text 
 
 Address security flaws within a project plan to ensure they are tracked and addressed by management.
 
-**Fix ID:**  F-24311r493865_fix
-
-**Vulnerability ID:**  V-222652
-
-**Rule ID:**  SV-222652r961863_rule
+|Fix ID|
+|---|
+|F-24311r493865_fix|
 
 ---
 
 ## The application development team must follow a set of coding standards.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222653|SV-222653r961863_rule|
 
 ### Description
 
@@ -11399,7 +11929,9 @@ Ask the application representative about their coding standards. Ask for a codin
 
 If the developers do not follow a coding standard, or if a coding standard document does not exist, this is a finding.
 
-**Check ID:**  C-36257r602334_chk
+|Check ID|
+|---|
+|C-36257r602334_chk|
 
 ### Fix Text 
 
@@ -11407,17 +11939,17 @@ Create and maintain a coding standard process and documentation for developers t
 
 Include programming best practices based on the languages being used for application development. Include items that should be standardized across the team that deals with how developers write their application code.
 
-**Fix ID:**  F-36221r864580_fix
-
-**Vulnerability ID:**  V-222653
-
-**Rule ID:**  SV-222653r961863_rule
+|Fix ID|
+|---|
+|F-36221r864580_fix|
 
 ---
 
 ## The designer must create and update the Design Document for each release of the application.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222654|SV-222654r961863_rule|
 
 ### Description
 
@@ -11449,7 +11981,9 @@ Examine the design document and/or the threat model for the application and veri
 
 If the design document is incomplete, this is a finding.
 
-**Check ID:**  C-36258r602337_chk
+|Check ID|
+|---|
+|C-36258r602337_chk|
 
 ### Fix Text 
 
@@ -11465,17 +11999,17 @@ Create and maintain the Design Document for each release of the application and 
 - Categories of sensitive information processed or stored and specific protection plans (e.g., Privacy Act, HIPAA, etc.)
 - Restoration priority of subsystems, processes, or information.
 
-**Fix ID:**  F-36222r864581_fix
-
-**Vulnerability ID:**  V-222654
-
-**Rule ID:**  SV-222654r961863_rule
+|Fix ID|
+|---|
+|F-36222r864581_fix|
 
 ---
 
 ## Threat models must be documented and reviewed for each application release and updated as required by design and functionality changes or when new threats are discovered.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222655|SV-222655r961863_rule|
 
 ### Description
 
@@ -11521,23 +12055,25 @@ Verify identified threats and vulnerabilities are addressed or mitigated and the
 
 If the described threat model documentation does not exist, this is a finding.
 
-**Check ID:**  C-24325r493873_chk
+|Check ID|
+|---|
+|C-24325r493873_chk|
 
 ### Fix Text 
 
 Establish and maintain threat models and review for each application release and when new threats are discovered. Identify potential mitigations to identified threats. Verify mitigations are implemented to threats based on their risk analysis.
 
-**Fix ID:**  F-24314r493874_fix
-
-**Vulnerability ID:**  V-222655
-
-**Rule ID:**  SV-222655r961863_rule
+|Fix ID|
+|---|
+|F-24314r493874_fix|
 
 ---
 
 ## The application must not be subject to error handling vulnerabilities.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222656|SV-222656r961863_rule|
 
 ### Description
 
@@ -11559,23 +12095,25 @@ If the test results indicate the existence of error handling vulnerabilities and
 
 If no test results are available for review, this is a finding.
 
-**Check ID:**  C-24326r493876_chk
+|Check ID|
+|---|
+|C-24326r493876_chk|
 
 ### Fix Text 
 
 Ensure proper return code and exception handling is implemented throughout the application.
 
-**Fix ID:**  F-24315r493877_fix
-
-**Vulnerability ID:**  V-222656
-
-**Rule ID:**  SV-222656r961863_rule
+|Fix ID|
+|---|
+|F-24315r493877_fix|
 
 ---
 
 ## The application development team must provide an application incident response plan.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222657|SV-222657r961863_rule|
 
 ### Description
 
@@ -11605,7 +12143,9 @@ Ensure the plan includes an implemented process that:
 If the application incident response plan does not exist and at a minimum does not implement the aforementioned processes, this is a finding.
 
 
-**Check ID:**  C-36259r602340_chk
+|Check ID|
+|---|
+|C-36259r602340_chk|
 
 ### Fix Text 
 
@@ -11616,17 +12156,17 @@ The development team creates an application incident response plan documenting a
 - Tracks remediation effort
 - Notifies application users of available updates that address the reported issues.
 
-**Fix ID:**  F-36223r864582_fix
-
-**Vulnerability ID:**  V-222657
-
-**Rule ID:**  SV-222657r961863_rule
+|Fix ID|
+|---|
+|F-36223r864582_fix|
 
 ---
 
 ## All products must be supported by the vendor or the development team.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222658|SV-222658r961863_rule|
 
 ### Description
 
@@ -11650,23 +12190,25 @@ design documentation that includes support information, support specific contrac
 
 If any of the software components are not supported by a COTS vendor or a GOTS organization, this is a finding.
 
-**Check ID:**  C-24328r493882_chk
+|Check ID|
+|---|
+|C-24328r493882_chk|
 
 ### Fix Text 
 
 Remove or decommission all unsupported software products in the application.
 
-**Fix ID:**  F-24317r493883_fix
-
-**Vulnerability ID:**  V-222658
-
-**Rule ID:**  SV-222658r961863_rule
+|Fix ID|
+|---|
+|F-24317r493883_fix|
 
 ---
 
 ## The application must be decommissioned when maintenance or support is no longer available.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222659|SV-222659r961863_rule|
 
 ### Description
 
@@ -11680,23 +12222,25 @@ Interview the application representative and determine if all the application co
 
 If the application or any of the application components are not being maintained, this is a finding.
 
-**Check ID:**  C-24329r493885_chk
+|Check ID|
+|---|
+|C-24329r493885_chk|
 
 ### Fix Text 
 
 Ensure there is maintenance for the application.
 
-**Fix ID:**  F-24318r493886_fix
-
-**Vulnerability ID:**  V-222659
-
-**Rule ID:**  SV-222659r961863_rule
+|Fix ID|
+|---|
+|F-24318r493886_fix|
 
 ---
 
 ## Procedures must be in place to notify users when an application is decommissioned.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222660|SV-222660r961863_rule|
 
 ### Description
 
@@ -11710,23 +12254,25 @@ Interview the application representative to determine if provisions are in place
  
 If provisions are not in place to notify users when an application is decommissioned, this is a finding.
 
-**Check ID:**  C-24330r493888_chk
+|Check ID|
+|---|
+|C-24330r493888_chk|
 
 ### Fix Text 
 
 Create and establish procedures to notify users when an application is decommissioned.
 
-**Fix ID:**  F-24319r493889_fix
-
-**Vulnerability ID:**  V-222660
-
-**Rule ID:**  SV-222660r961863_rule
+|Fix ID|
+|---|
+|F-24319r493889_fix|
 
 ---
 
 ## Unnecessary built-in application accounts must be disabled.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222661|SV-222661r961863_rule|
 
 ### Description
 
@@ -11748,23 +12294,25 @@ If the account is required in order for the application to operate properly, ver
 
 If these accounts are not necessary to run the application, or if the accounts are required and the password has not been changed to meet DoD password requirements, this is a finding.
 
-**Check ID:**  C-24331r493891_chk
+|Check ID|
+|---|
+|C-24331r493891_chk|
 
 ### Fix Text 
 
 Disable unnecessary built-in userids, use other strong authentication when possible and use strong passwords if accounts are necessary for application operation.
 
-**Fix ID:**  F-24320r493892_fix
-
-**Vulnerability ID:**  V-222661
-
-**Rule ID:**  SV-222661r961863_rule
+|Fix ID|
+|---|
+|F-24320r493892_fix|
 
 ---
 
 ## Default passwords must be changed.
 
-<span style="color:#ff0000;font-size:150%;">High Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff0000;font-size:110%;">CAT-1: High</span>|V-222662|SV-222662r961863_rule|
 
 ### Description
 
@@ -11778,23 +12326,25 @@ If default passwords are found, attempt to authenticate with the published defau
 
 If authentication is successful, this is a finding.
 
-**Check ID:**  C-24332r493894_chk
+|Check ID|
+|---|
+|C-24332r493894_chk|
 
 ### Fix Text 
 
 Configure the application to use strong authenticators instead of passwords when possible. Otherwise, change default passwords to a DoD-approved strength password and follow all guidance for passwords.
 
-**Fix ID:**  F-24321r493895_fix
-
-**Vulnerability ID:**  V-222662
-
-**Rule ID:**  SV-222662r961863_rule
+|Fix ID|
+|---|
+|F-24321r493895_fix|
 
 ---
 
 ## An Application Configuration Guide must be created and included with the application.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222663|SV-222663r961863_rule|
 
 ### Description
 
@@ -11858,7 +12408,9 @@ Examples include but are not limited to:
 
 If there is no application configuration guide included with the application, this is a finding.
 
-**Check ID:**  C-24333r493897_chk
+|Check ID|
+|---|
+|C-24333r493897_chk|
 
 ### Fix Text 
 
@@ -11866,17 +12418,17 @@ Create the application configuration guide in accordance with configuration exam
 
 Verify the application configuration guide is distributed along  with the application.
 
-**Fix ID:**  F-24322r493898_fix
-
-**Vulnerability ID:**  V-222663
-
-**Rule ID:**  SV-222663r961863_rule
+|Fix ID|
+|---|
+|F-24322r493898_fix|
 
 ---
 
 ## If the application contains classified data, a Security Classification Guide must exist containing data elements and their classification.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222664|SV-222664r1051277_rule|
 
 ### Description
 
@@ -11912,23 +12464,25 @@ For information exempted from automatic declassification because its disclosure 
 
 If the security classification guide does not exist, or does not contain application data elements and their classification, this is a finding.
 
-**Check ID:**  C-24334r1051276_chk
+|Check ID|
+|---|
+|C-24334r1051276_chk|
 
 ### Fix Text 
 
 Create and maintain a security classification guide.
 
-**Fix ID:**  F-24323r493901_fix
-
-**Vulnerability ID:**  V-222664
-
-**Rule ID:**  SV-222664r1051277_rule
+|Fix ID|
+|---|
+|F-24323r493901_fix|
 
 ---
 
 ## The designer must ensure uncategorized or emerging mobile code is not used in applications.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222665|SV-222665r961863_rule|
 
 ### Description
 
@@ -11976,23 +12530,25 @@ Determine what mobile code types are used by the application.
 
 If uncategorized mobile code types are found, ask the application administrator to provide the documented waiver and risk acceptance. If the application is using uncategorized or emerging mobile code and there is no waiver provided, this is a finding.
 
-**Check ID:**  C-24335r493903_chk
+|Check ID|
+|---|
+|C-24335r493903_chk|
 
 ### Fix Text 
 
 Remove uncategorized or emerging mobile code from the application or obtain a waiver and risk acceptance to operate.
 
-**Fix ID:**  F-24324r493904_fix
-
-**Vulnerability ID:**  V-222665
-
-**Rule ID:**  SV-222665r961863_rule
+|Fix ID|
+|---|
+|F-24324r493904_fix|
 
 ---
 
 ## Production database exports must have database administration credentials and sensitive data removed before releasing the export.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222666|SV-222666r961863_rule|
 
 ### Description
 
@@ -12010,23 +12566,25 @@ If there are such data exports, ask if the production database includes sensitiv
 
 If any database exports include sensitive data and that data is not sanitized or removed prior to or immediately after import to the development database, this is a finding.
 
-**Check ID:**  C-24336r493906_chk
+|Check ID|
+|---|
+|C-24336r493906_chk|
 
 ### Fix Text 
 
 Remove sensitive data from production database exports.
 
-**Fix ID:**  F-24325r493907_fix
-
-**Vulnerability ID:**  V-222666
-
-**Rule ID:**  SV-222666r961863_rule
+|Fix ID|
+|---|
+|F-24325r493907_fix|
 
 ---
 
 ## Protections against DoS attacks must be implemented.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222667|SV-222667r961863_rule|
 
 ### Description
 
@@ -12044,23 +12602,25 @@ Verify the mitigations provided for DoS attacks are implemented from the threat 
 
 If mitigations for DoS attacks are identified in the threat model but are not implemented, this is a finding.
 
-**Check ID:**  C-24337r493909_chk
+|Check ID|
+|---|
+|C-24337r493909_chk|
 
 ### Fix Text 
 
 Implement mitigations from the threat model for DOS attacks.
 
-**Fix ID:**  F-24326r493910_fix
-
-**Vulnerability ID:**  V-222667
-
-**Rule ID:**  SV-222667r961863_rule
+|Fix ID|
+|---|
+|F-24326r493910_fix|
 
 ---
 
 ## The system must alert an administrator when low resource conditions are encountered.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222668|SV-222668r961863_rule|
 
 ### Description
 
@@ -12074,23 +12634,25 @@ Examine the system to determine if an automated, continuous on-line monitoring a
 
 If this monitoring capability does not exist, this is a finding.
 
-**Check ID:**  C-24338r493912_chk
+|Check ID|
+|---|
+|C-24338r493912_chk|
 
 ### Fix Text 
 
 Implement mechanisms to alert system administrators about a low resource condition.
 
-**Fix ID:**  F-24327r493913_fix
-
-**Vulnerability ID:**  V-222668
-
-**Rule ID:**  SV-222668r961863_rule
+|Fix ID|
+|---|
+|F-24327r493913_fix|
 
 ---
 
 ## At least one application administrator must be registered to receive update notifications, or security alerts, when automated alerts are available.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222669|SV-222669r961863_rule|
 
 ### Description
 
@@ -12106,23 +12668,25 @@ Ask the application representative to demonstrate deployment personnel are regis
 
 If no deployment personnel are registered to receive the alerts, this is a finding.
 
-**Check ID:**  C-24339r493915_chk
+|Check ID|
+|---|
+|C-24339r493915_chk|
 
 ### Fix Text 
 
 Register administrators to receive update notifications so they can patch and update applications and application components.
 
-**Fix ID:**  F-24328r493916_fix
-
-**Vulnerability ID:**  V-222669
-
-**Rule ID:**  SV-222669r961863_rule
+|Fix ID|
+|---|
+|F-24328r493916_fix|
 
 ---
 
 ## The application must provide notifications or alerts when product update and security related patches are available.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222670|SV-222670r961863_rule|
 
 ### Description
 
@@ -12146,7 +12710,9 @@ If there is no application security patch or update notification process, this i
 
 If the application notification process does not include a brief description, information on risks, how to obtain the patch or update and any potential mitigations, this is a finding.
 
-**Check ID:**  C-24340r493918_chk
+|Check ID|
+|---|
+|C-24340r493918_chk|
 
 ### Fix Text 
 
@@ -12154,17 +12720,17 @@ Provide a distribution mechanism for obtaining updates to the application.
 
 Include a description of the issue, a summary of risk as well as potential mitigations and how to obtain the update.
 
-**Fix ID:**  F-24329r493919_fix
-
-**Vulnerability ID:**  V-222670
-
-**Rule ID:**  SV-222670r961863_rule
+|Fix ID|
+|---|
+|F-24329r493919_fix|
 
 ---
 
 ## Connections between the DoD enclave and the Internet or other public or commercial wide area networks must require a DMZ.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222671|SV-222671r961863_rule|
 
 ### Description
 
@@ -12176,23 +12742,25 @@ Interview the application representative and determine if the application is pub
 
 If the application is publicly accessible and traffic is not being routed through a DMZ, this is a finding.
 
-**Check ID:**  C-24341r493921_chk
+|Check ID|
+|---|
+|C-24341r493921_chk|
 
 ### Fix Text 
 
 Setup a DMZ between DoD and public networks.
 
-**Fix ID:**  F-24330r493922_fix
-
-**Vulnerability ID:**  V-222671
-
-**Rule ID:**  SV-222671r961863_rule
+|Fix ID|
+|---|
+|F-24330r493922_fix|
 
 ---
 
 ## The application must generate audit records when concurrent logons from different workstations occur.
 
-<span style="color:#b3b31a;font-size:150%;">Low Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#b3b31a;font-size:110%;">CAT-3: Low</span>|V-222672|SV-222672r961833_rule|
 
 ### Description
 
@@ -12212,23 +12780,25 @@ Validate the IP address of the second workstation is recorded in the logs.
 
 If the application does not create an audit record when concurrent logons occur from different workstations, this is a finding.
 
-**Check ID:**  C-24342r493924_chk
+|Check ID|
+|---|
+|C-24342r493924_chk|
 
 ### Fix Text 
 
 Configure the application to log concurrent logons from different workstations.
 
-**Fix ID:**  F-24331r493925_fix
-
-**Vulnerability ID:**  V-222672
-
-**Rule ID:**  SV-222672r961833_rule
+|Fix ID|
+|---|
+|F-24331r493925_fix|
 
 ---
 
 ## The Program Manager must verify all levels of program management, designers, developers, and testers receive annual security training pertaining to their job function.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-222673|SV-222673r961863_rule|
 
 ### Description
 
@@ -12261,23 +12831,25 @@ Training must be in addition to DoD 8570 training requirements as DoD 8570 annua
 
 If there is no evidence of security training, this is a finding.
 
-**Check ID:**  C-24343r493927_chk
+|Check ID|
+|---|
+|C-24343r493927_chk|
 
 ### Fix Text 
 
 Provide application development/operational related security specific annual training for managers, designers, developers, and testers.
 
-**Fix ID:**  F-24332r493928_fix
-
-**Vulnerability ID:**  V-222673
-
-**Rule ID:**  SV-222673r961863_rule
+|Fix ID|
+|---|
+|F-24332r493928_fix|
 
 ---
 
 ## The application must implement NSA-approved cryptography to protect classified information in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards.
 
-<span style="color:#ff8c00;font-size:150%;">Medium Severity</span>
+|Severity|Vulnerability ID|Rule ID|
+|:---:|:---:|:---:|
+|<span style="color:#ff8c00;font-size:110%;">CAT-2: Medium</span>|V-265634|SV-265634r997307_rule|
 
 ### Description
 
@@ -12335,7 +12907,9 @@ NSA-validated type-1 encryption must be used for all SAMI data stored in the enc
 
 If the application is not configured to utilize the NSA-approved cryptographic modules in accordance with data protection requirements specified in the security plan, this is a finding.
 
-**Check ID:**  C-69551r997305_chk
+|Check ID|
+|---|
+|C-69551r997305_chk|
 
 ### Fix Text 
 
@@ -12345,11 +12919,9 @@ Encrypt stored, non-SAMI classified information using NIST FIPS 140-2-validated 
 
 Implement NSA-validated type-1 encryption of all SAMI data stored in the enclave.
 
-**Fix ID:**  F-69459r997306_fix
-
-**Vulnerability ID:**  V-265634
-
-**Rule ID:**  SV-265634r997307_rule
+|Fix ID|
+|---|
+|F-69459r997306_fix|
 
 ---
 
