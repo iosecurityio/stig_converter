@@ -21,6 +21,16 @@ Supported file formats:
 
 - get latest STIGs from DISA Cyber Exchange in `.zip`
 
+## Security Features
+
+This project implements multiple security controls to protect against common vulnerabilities:
+
+- **XXE Protection**: Secure XML parsing using `defusedxml` library prevents XML External Entity attacks
+- **Path Traversal Prevention**: All file operations validate paths against allowed directories
+- **Zip Slip Protection**: Secure ZIP extraction prevents malicious archive extraction attacks
+- **Input Validation**: URL parameters and file paths are sanitized to prevent injection attacks
+- **File Size Limits**: Download operations include size restrictions (100MB limit)
+
 ## Usage
 
 1. `git clone https://github.com/iosecurityio/stig_converter.git`
@@ -32,6 +42,28 @@ Supported file formats:
 1. `source venv/bin/activate`
 
 1. `pip install -r requirements.txt`
+
+## Security Architecture
+
+The security utilities are centralized in `scripts/security_utils.py` and provide:
+
+- **Path Validation**: `validate_file_path()` ensures all file operations stay within allowed directories
+- **Secure Output Handling**: `validate_output_path()` creates safe output paths with automatic directory creation
+- **Default Security Boundaries**: Operations restricted to current directory, `data/`, and `output/` subdirectories
+
+All conversion scripts now import and use these security functions to prevent:
+- Directory traversal attacks (e.g., `../../../etc/passwd`)
+- Arbitrary file writes outside project boundaries
+- ZIP bomb and zip slip attacks
+- XML External Entity (XXE) injection
+
+## Development
+
+Code formatting is enforced using `ruff`. After making changes, run:
+
+```bash
+ruff format scripts/
+```
 
 ## TODO
 

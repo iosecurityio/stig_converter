@@ -6,6 +6,8 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
 
+from security_utils import validate_output_path, get_default_allowed_dirs
+
 
 def convert_json_to_ckl(json_file, ckl_path, base_ckl) -> str:
     """
@@ -14,7 +16,6 @@ def convert_json_to_ckl(json_file, ckl_path, base_ckl) -> str:
 
     current_date = datetime.now().strftime("%Y%m%d")
     json_path = Path(json_file)
-    ckl_path = Path(ckl_path)
     base_ckl_path = Path(base_ckl)
 
     if not json_path.exists():
@@ -22,12 +23,8 @@ def convert_json_to_ckl(json_file, ckl_path, base_ckl) -> str:
     if not base_ckl_path.exists():
         raise FileNotFoundError(f"[X] Base checklist does not exist: {base_ckl_path}")
 
-    if ckl_path.is_dir():
-        new_ckl_path = ckl_path / f"{json_path.stem}-{current_date}.ckl"
-    else:
-        if not ckl_path.parent.exists():
-            raise FileNotFoundError(f"[X] Destination directory does not exist: {ckl_path.parent}")
-        new_ckl_path = ckl_path
+    # Validate and secure the output path
+    new_ckl_path = validate_output_path(ckl_path, json_file, get_default_allowed_dirs())
 
     # Read in the JSON Data
     try:
@@ -57,8 +54,8 @@ def convert_json_to_ckl(json_file, ckl_path, base_ckl) -> str:
             for json_finding in loaded_data:
                 for stig_data in vuln.iter("STIG_DATA"):
                     if (
-                            stig_data.tag == "VULN_ATTRIBUTE"
-                            and stig_data.text in json_finding
+                        stig_data.tag == "VULN_ATTRIBUTE"
+                        and stig_data.text in json_finding
                     ):
                         attribute_data = stig_data.find("ATTRIBUTE_DATA")
                         attribute_data.text = json_finding[stig_data.text]

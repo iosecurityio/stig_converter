@@ -3,6 +3,8 @@
 import json
 from pathlib import Path
 
+from security_utils import validate_output_path, get_default_allowed_dirs
+
 
 def color_severity(severity) -> str:
     """
@@ -29,13 +31,18 @@ def write_stigs(json_file, markdown_file):
     Takes in a STIG checklist in JSON and outputs a new Markdown file
     """
 
+    # Validate and secure the output path
+    validated_markdown_file = validate_output_path(
+        markdown_file, json_file, get_default_allowed_dirs()
+    )
+
     try:
         with open(json_file) as json_file:
             data = json.load(json_file)
         header = data["stig"]
         vulnids = header["findings"]
-        print(f"[*] Writing {markdown_file}.")
-        with open(markdown_file, "w", encoding="utf-8") as outfile:
+        print(f"[*] Writing {validated_markdown_file}.")
+        with open(validated_markdown_file, "w", encoding="utf-8") as outfile:
             outfile.write("# Application Security and Development STIGs\n\n")
             outfile.write(f"**Date:** {header['date']}\n\n")
             outfile.write(f"**Description:** {header['description']}\n\n")
@@ -45,7 +52,9 @@ def write_stigs(json_file, markdown_file):
                 outfile.write("## " + v.get("title") + "\n\n")
                 outfile.write("|Severity|Vulnerability ID|Rule ID|\n")
                 outfile.write("|:---:|:---:|:---:|\n")
-                outfile.write(f"|{color_severity(v.get('severity'))}|{v.get('id')}|{v.get('ruleID')}|\n\n")
+                outfile.write(
+                    f"|{color_severity(v.get('severity'))}|{v.get('id')}|{v.get('ruleID')}|\n\n"
+                )
                 outfile.write("### Description\n\n")
                 outfile.write(v.get("description") + "\n\n")
                 outfile.write("### Check Text\n\n")
@@ -60,7 +69,7 @@ def write_stigs(json_file, markdown_file):
                 outfile.write(f"|{v.get('fixid')}|\n\n")
 
                 outfile.write("---\n\n")
-        print(f"[*] File {markdown_file} written.")
+        print(f"[*] File {validated_markdown_file} written.")
     except Exception as e:
         print(f"[X] Exception: {e}")
 
