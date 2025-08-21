@@ -1,3 +1,5 @@
 httpx
 argparse
 anyio>=4.4.0 # not directly required, pinned by Snyk to avoid a vulnerability
+defusedxml>=0.7.1 # secure XML parsing to prevent XXE attacks
+ruff>=0.1.0 # code formatting and linting

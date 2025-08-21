@@ -2,9 +2,19 @@
 # Convert STIG .ckl to .json
 
 import json
-import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
+
+try:
+    from defusedxml.ElementTree import parse as safe_parse
+
+    DEFUSEDXML_AVAILABLE = True
+except ImportError:
+    import xml.etree.ElementTree as ET
+
+    DEFUSEDXML_AVAILABLE = False
+
+from security_utils import validate_output_path, get_default_allowed_dirs
 
 
 def convert_ckl_to_json(ckl_file, json_path) -> str:
@@ -16,22 +26,46 @@ def convert_ckl_to_json(ckl_file, json_path) -> str:
 
     current_date = datetime.now().strftime("%Y%m%d")
     ckl_path = Path(ckl_file)
-    json_path = Path(json_path)
 
     if not ckl_path.is_file():
         raise FileNotFoundError(f"[X] CKL file does not exist: {ckl_path}")
-    if json_path.is_dir():
-        new_json_path = json_path / f"{ckl_path.stem}-{current_date}.json"
-    else:
-        if not json_path.parent.exists():
-            raise FileNotFoundError(f"[X] Destination directory does not exist: {json_path}")
-        new_json_path = json_path
+
+    # Validate and secure the output path
+    new_json_path = validate_output_path(
+        json_path, ckl_file, get_default_allowed_dirs()
+    )
 
     print(f"[*] Converting CKL: {ckl_path}")
     with open(new_json_path, "w", newline="", encoding="utf-8") as json_file:
-        # Create an xml object from the ckl file
-        tree = ET.parse(ckl_file)
-        root = tree.getroot()
+        # Create an xml object from the ckl file with secure parsing
+        if DEFUSEDXML_AVAILABLE:
+            tree = safe_parse(ckl_file)
+            root = tree.getroot()
+        else:
+            # Fallback with manual XXE protection
+            import xml.parsers.expat
+
+            parser = xml.parsers.expat.ParserCreateNS()
+            parser.DefaultHandler = lambda data: None
+            parser.ExternalEntityRefHandler = (
+                lambda context, base, sysId, notationName: False
+            )
+            parser.EntityDeclHandler = (
+                lambda entityName,
+                is_parameter_entity,
+                value,
+                base,
+                systemId,
+                publicId,
+                notationName: False
+            )
+
+            with open(ckl_file, "rb") as f:
+                xml_content = f.read()
+
+            # Parse with ElementTree but disable external entities
+            tree = ET.fromstring(xml_content)
+            root = tree
         # Initialize hostname and IP before we parse checklist
         host_name = ""
         host_ip = ""

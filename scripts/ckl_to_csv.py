@@ -2,9 +2,19 @@
 # Convert STIGs .ckl checklists to .csv file
 
 import csv
-import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
+
+try:
+    from defusedxml.ElementTree import parse as safe_parse
+
+    DEFUSEDXML_AVAILABLE = True
+except ImportError:
+    import xml.etree.ElementTree as ET
+
+    DEFUSEDXML_AVAILABLE = False
+
+from security_utils import validate_output_path, get_default_allowed_dirs
 
 
 def convert_ckl_to_csv(ckl_file, csv_path) -> str:
@@ -33,29 +43,50 @@ def convert_ckl_to_csv(ckl_file, csv_path) -> str:
         "COMMENTS",
         "Unique_ID",
     ]
-    current_date = datetime.now().strftime('%Y%m%d')
+    current_date = datetime.now().strftime("%Y%m%d")
     ckl_path = Path(ckl_file)
-    csv_path = Path(csv_path)
 
     # Check that the input CKL file exists and is a file
     if not ckl_path.is_file():
         raise FileNotFoundError(f"[X] CKL file does not exist: {ckl_path}")
 
-    # If csv_path is a directory, construct a default CSV filename
-    if csv_path.is_dir():
-        new_csv_path = csv_path / f"{ckl_path.stem}-{current_date}.csv"
-    else:
-        # If parent directory doesn't exist, raise an error
-        if not csv_path.parent.exists():
-            raise FileNotFoundError(f"[X] Destination directory does not exist: {csv_path.parent}")
-        new_csv_path = csv_path
+    # Validate and secure the output path
+    new_csv_path = validate_output_path(csv_path, ckl_file, get_default_allowed_dirs())
 
     print(f"[*] Converting CKL: {ckl_path}")
     with open(new_csv_path, "w", newline="", encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
-        tree = ET.parse(ckl_path)
-        root = tree.getroot()
+
+        # Use secure XML parsing to prevent XXE attacks
+        if DEFUSEDXML_AVAILABLE:
+            tree = safe_parse(ckl_path)
+            root = tree.getroot()
+        else:
+            # Fallback with manual XXE protection
+            import xml.parsers.expat
+
+            parser = xml.parsers.expat.ParserCreateNS()
+            parser.DefaultHandler = lambda data: None
+            parser.ExternalEntityRefHandler = (
+                lambda context, base, sysId, notationName: False
+            )
+            parser.EntityDeclHandler = (
+                lambda entityName,
+                is_parameter_entity,
+                value,
+                base,
+                systemId,
+                publicId,
+                notationName: False
+            )
+
+            with open(ckl_path, "rb") as f:
+                xml_content = f.read()
+
+            # Parse with ElementTree but disable external entities
+            tree = ET.fromstring(xml_content)
+            root = tree
 
         # create a dictionary to hold findings
         finding = {

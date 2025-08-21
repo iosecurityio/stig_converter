@@ -6,6 +6,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from security_utils import validate_output_path, get_default_allowed_dirs
+
 
 def convert_csv_to_json(csv_file, json_path):
     """Converts .csv to .json for Splunk events
@@ -18,17 +20,14 @@ def convert_csv_to_json(csv_file, json_path):
     json_array = []
     current_date = datetime.now().strftime("%Y%m%d")
     csv_path = Path(csv_file)
-    json_path = Path(json_path)
 
     if not csv_path.is_file():
         raise FileNotFoundError(f"[X] CSV file does not exist: {csv_path}")
 
-    if json_path.is_dir():
-        new_json_path = json_path / f"{csv_path.stem}-{current_date}.json"
-    else:
-        if not json_path.exists():
-            raise FileNotFoundError(f"[X] JSON directory does not exist: {json_path.parent}")
-        new_json_path = json_path
+    # Validate and secure the output path
+    new_json_path = validate_output_path(
+        json_path, csv_file, get_default_allowed_dirs()
+    )
 
     # Read in the CSV
     print(f"[*] Converting CSV: {csv_path}")
