@@ -150,3 +150,4 @@ dmypy.json
 *.zip
 
 .DS_Store
+output/

@@ -52,6 +52,7 @@ The security utilities are centralized in `scripts/security_utils.py` and provid
 - **Default Security Boundaries**: Operations restricted to current directory, `data/`, and `output/` subdirectories
 
 All conversion scripts now import and use these security functions to prevent:
+
 - Directory traversal attacks (e.g., `../../../etc/passwd`)
 - Arbitrary file writes outside project boundaries
 - ZIP bomb and zip slip attacks

@@ -1,225 +1,249 @@
 """
-Name: stig_converter.py
-TLDR: Converts STIG Checklists to other various file formats
-Author: Allen Montgomery, IO Security
-Date: Apr 2025
+stig_converter.py
+Converts DISA STIG checklists between various file formats (CKL, CSV, JSON, Markdown).
+
+Usage:
+    stig_converter -i checklist.ckl -o report.csv
+    stig_converter -i checklist.ckl -o findings.json
+    stig_converter -i findings.json -o checklist.ckl --base-ckl template.ckl
+    stig_converter -i findings.json -o report.md
+    python -m stig_converter -i checklist.ckl -o report.csv
 """
 
 import argparse
+import json
 import re
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Optional
 
 __version__ = "2.3"
 
-
-class STIGConverter:
-    """
-    Converts STIG Checklists to/from various file formats (CSV, JSON, CKL)
-    """
-
-    def __init__(self, args: argparse.Namespace) -> None:
-        self.input_file_path = args.input
-        self.output_file_path = args.output
-        self.project_name = getattr(args, 'name', None)
-        self.event = getattr(args, 'event', False)
-        self.encoding = "utf-8"
-        self.date = datetime.now().strftime("%Y%m%d")
-
-    def update_filename(self, filename: str) -> str:
-        """
-        Updates the timestamp of the checklist to the current date
-        If the file already has a date in the filename, then it will replace it with the current date
-        If the file doesn't have a date in the filename, then it will append the current date to the end
-        Example: stig_checklist-20210723.ckl -> stig_checklist-20210724.ckl
-        Example: stig_checklist.ckl -> stig_checklist-20210724.ckl
-        """
-        # Check if the filename has a date in it (eg -20210723)
-        pattern = r"-(\d{8})"
-        match = re.search(pattern, filename)
-
-        if match:
-            matched_sequence = match.group(1)
-            # replace the date in the filename with the current date
-            updated_filename = filename.replace(matched_sequence, self.date)
-            # return the name of the file with the updated date
-            return updated_filename
-        else:
-            # if there is no date in the filename, then add the current date to the end
-            name, ext = filename.split(".")[:2]
-            updated_filename = f"{name}-{self.date}.{ext}"
-            return updated_filename
+_SUPPORTED_CONVERSIONS = {
+    "ckl": ["csv", "json", "md"],
+    "csv": ["json"],
+    "json": ["ckl", "md"],
+}
 
 
 class ValidationError(Exception):
-    """Custom exception for validation errors"""
+    """Raised when input/output path or conversion validation fails."""
     pass
 
 
 def validate_file_conversion(input_path: Path, output_path: Path) -> None:
     """
-    Validates that the file conversion is supported and paths are correct
-    
-    Args:
-        input_path: Path to input file
-        output_path: Path to output file
-        
-    Raises:
-        ValidationError: If validation fails
+    Validates that the conversion is supported and the paths are valid.
+
+    :raises ValidationError: on any failure
     """
-    supported_conversions = {
-        "ckl": ["csv", "json", "md"],
-        "csv": ["json"],
-        "json": ["ckl", "md"],
-    }
-    
-    # Check if input and output are the same
     if input_path.resolve() == output_path.resolve():
-        raise ValidationError(f"Input and output files cannot be the same: {input_path}")
-    
-    # Check if input file exists
-    if not input_path.is_file():
-        raise ValidationError(f"Input file does not exist: {input_path}")
-    
-    # Get file extensions
+        raise ValidationError(
+            f"Input and output files cannot be the same: {input_path}"
+        )
+
     input_ext = input_path.suffix[1:].lower()
     output_ext = output_path.suffix[1:].lower()
-    
-    # Validate input file type
-    if input_ext not in supported_conversions:
-        valid_types = ', '.join(supported_conversions.keys())
-        raise ValidationError(f"Unsupported input file type '{input_ext}'. Supported types: {valid_types}")
-    
-    # Validate conversion path
-    if output_ext not in supported_conversions[input_ext]:
-        valid_outputs = ', '.join(supported_conversions[input_ext])
+
+    if input_ext not in _SUPPORTED_CONVERSIONS:
+        valid = ", ".join(_SUPPORTED_CONVERSIONS)
         raise ValidationError(
-            f"Cannot convert from '{input_ext}' to '{output_ext}'. "
-            f"Valid outputs for '{input_ext}': {valid_outputs}"
+            f"Unsupported input type '{input_ext}'. Supported: {valid}"
         )
-    
-    # Ensure output directory exists
+    if output_ext not in _SUPPORTED_CONVERSIONS[input_ext]:
+        valid = ", ".join(_SUPPORTED_CONVERSIONS[input_ext])
+        raise ValidationError(
+            f"Cannot convert '{input_ext}' → '{output_ext}'. Valid outputs: {valid}"
+        )
+
+    if not input_path.is_file():
+        raise ValidationError(f"Input file does not exist: {input_path}")
+
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
 
+class STIGConverter:
+    """Converts STIG Checklists to/from various file formats (CSV, JSON, CKL, Markdown)."""
+
+    def __init__(self, args: argparse.Namespace) -> None:
+        self.input_file_path: Path = args.input
+        self.output_file_path: Path = args.output
+        self.project_name: Optional[str] = getattr(args, "name", None)
+        self.base_ckl: Optional[Path] = getattr(args, "base_ckl", None)
+        self.date: str = datetime.now().strftime("%Y%m%d")
+
+    def update_filename(self, filename: str) -> str:
+        """
+        Update or append a YYYYMMDD datestamp in a filename.
+
+        Examples:
+            stig_checklist-20210723.ckl  →  stig_checklist-<today>.ckl
+            stig_checklist.ckl           →  stig_checklist-<today>.ckl
+        """
+        match = re.search(r"-(\d{8})", filename)
+        if match:
+            return filename.replace(match.group(1), self.date)
+        p = Path(filename)
+        return str(p.with_name(f"{p.stem}-{self.date}{p.suffix}"))
+
+    def convert(self) -> str:
+        """Dispatch conversion based on input/output file extensions."""
+        input_ext = self.input_file_path.suffix[1:].lower()
+        output_ext = self.output_file_path.suffix[1:].lower()
+
+        if input_ext == "ckl" and output_ext == "csv":
+            return self._ckl_to_csv()
+        if input_ext == "ckl" and output_ext == "json":
+            return self._ckl_to_json()
+        if input_ext == "ckl" and output_ext == "md":
+            return self._ckl_to_md()
+        if input_ext == "csv" and output_ext == "json":
+            return self._csv_to_json()
+        if input_ext == "json" and output_ext == "ckl":
+            return self._json_to_ckl()
+        if input_ext == "json" and output_ext == "md":
+            return self._json_to_md()
+
+        raise ValidationError(
+            f"Unsupported conversion: {input_ext} → {output_ext}"
+        )
+
+    # ------------------------------------------------------------------
+    # Private conversion methods
+    # ------------------------------------------------------------------
+
+    def _ckl_to_csv(self) -> str:
+        from stig_converter.converters.ckl_to_csv import convert_ckl_to_csv
+        return convert_ckl_to_csv(self.input_file_path, self.output_file_path)
+
+    def _ckl_to_json(self) -> str:
+        from stig_converter.converters.ckl_to_json import convert_ckl_to_json
+        return convert_ckl_to_json(self.input_file_path, self.output_file_path)
+
+    def _csv_to_json(self) -> str:
+        from stig_converter.converters.csv_to_json import convert_csv_to_json
+        return convert_csv_to_json(self.input_file_path, self.output_file_path)
+
+    def _json_to_ckl(self) -> str:
+        if not self.base_ckl:
+            raise ValidationError("--base-ckl is required for JSON → CKL conversion")
+        from stig_converter.converters.json_to_ckl import convert_json_to_ckl
+        return convert_json_to_ckl(
+            self.input_file_path, self.output_file_path, self.base_ckl
+        )
+
+    def _json_to_md(self) -> str:
+        from stig_converter.converters.json_to_markdown import (
+            convert_checklist_to_md,
+            write_stigs,
+        )
+        with open(self.input_file_path, encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            # Checklist format produced by convert_ckl_to_json / convert_csv_to_json
+            return convert_checklist_to_md(data, self.output_file_path)
+        # Stigviewer format produced by get_stig_json
+        return write_stigs(self.input_file_path, self.output_file_path)
+
+    def _ckl_to_md(self) -> str:
+        """Two-step CKL → JSON (temp file) → Markdown."""
+        from stig_converter.converters.ckl_to_json import convert_ckl_to_json
+        from stig_converter.converters.json_to_markdown import convert_checklist_to_md
+
+        tmp_path = self.output_file_path.parent / f"_tmp_{self.date}.json"
+        try:
+            convert_ckl_to_json(self.input_file_path, tmp_path)
+            with open(tmp_path, encoding="utf-8") as f:
+                findings = json.load(f)
+            return convert_checklist_to_md(findings, self.output_file_path)
+        finally:
+            if tmp_path.exists():
+                tmp_path.unlink()
+
+
+# ------------------------------------------------------------------
+# CLI
+# ------------------------------------------------------------------
+
 def create_parser() -> argparse.ArgumentParser:
-    """
-    Creates and configures the argument parser
-    
-    Returns:
-        Configured ArgumentParser instance
-    """
     parser = argparse.ArgumentParser(
-        prog='stig_converter',
-        description='Convert DISA STIG checklists between various file formats (CKL, CSV, JSON, Markdown)',
-        epilog='''
-Examples:
-  %(prog)s -i checklist.ckl -o report.csv
-  %(prog)s --input data.json --output checklist.ckl --name "My Project"
-  %(prog)s -i checklist.ckl -o report.md --event
-        ''',
-        formatter_class=argparse.RawDescriptionHelpFormatter
+        prog="stig_converter",
+        description=(
+            "Convert DISA STIG checklists between file formats "
+            "(CKL, CSV, JSON, Markdown). "
+            "Output paths must be within the current working directory."
+        ),
+        epilog="""
+examples:
+  %(prog)s -i checklist.ckl -o data/report.csv
+  %(prog)s -i checklist.ckl -o data/findings.json
+  %(prog)s -i data/findings.json -o data/checklist.ckl --base-ckl data/template.ckl
+  %(prog)s -i data/findings.json -o output/report.md
+  %(prog)s -i data/stigviewer.json -o output/reference.md
+        """,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    
-    # Required arguments
     parser.add_argument(
-        '-i', '--input',
+        "-i", "--input",
         type=Path,
         required=True,
-        metavar='FILE',
-        help='Input STIG checklist file (supported: .ckl, .csv, .json)'
+        metavar="FILE",
+        help="Input STIG file (.ckl, .csv, .json)",
     )
-    
     parser.add_argument(
-        '-o', '--output', 
+        "-o", "--output",
         type=Path,
         required=True,
-        metavar='FILE',
-        help='Output file path (supported: .ckl, .csv, .json, .md)'
+        metavar="FILE",
+        help="Output file (.ckl, .csv, .json, .md)",
     )
-    
-    # Optional arguments
     parser.add_argument(
-        '-n', '--name',
-        metavar='NAME',
-        help='Project name to include in output (optional)'
+        "-n", "--name",
+        metavar="NAME",
+        help="Project name (optional, included in output where applicable)",
     )
-    
     parser.add_argument(
-        '-e', '--event',
-        action='store_true',
-        help='Enable event mode processing (optional)'
+        "--base-ckl",
+        dest="base_ckl",
+        type=Path,
+        metavar="FILE",
+        help="Base CKL template (required for JSON → CKL conversion)",
     )
-    
     parser.add_argument(
-        '--version',
-        action='version',
-        version=f'%(prog)s {__version__}'
+        "--version",
+        action="version",
+        version=f"%(prog)s {__version__}",
     )
-    
     return parser
 
 
-def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
-    """
-    Parses command line arguments with validation
-    
-    Args:
-        args: Optional list of arguments (for testing)
-        
-    Returns:
-        Parsed and validated arguments
-        
-    Raises:
-        SystemExit: On argument parsing or validation errors
-    """
+def parse_args(args: Optional[list] = None) -> argparse.Namespace:
     parser = create_parser()
-    
+    parsed = parser.parse_args(args)
     try:
-        parsed_args = parser.parse_args(args)
-        
-        # Validate file conversion
-        validate_file_conversion(parsed_args.input, parsed_args.output)
-        
-        return parsed_args
-        
+        validate_file_conversion(parsed.input, parsed.output)
     except ValidationError as e:
         parser.error(str(e))
-    except Exception as e:
-        parser.error(f"Unexpected error: {e}")
+    return parsed
 
 
 def main() -> None:
-    """Main entry point for the STIG converter"""
+    """CLI entry point."""
+    args = parse_args()
     try:
-        # Parse and validate arguments
-        args = parse_args()
-        
-        # Create converter instance
         converter = STIGConverter(args)
-        
-        print(f"[*] Converting {args.input} to {args.output}")
-        
-        # TODO: Implement actual conversion methods based on file types
-        # For now, this is a placeholder showing the improved structure
-        print(f"[*] Input file: {converter.input_file_path}")
-        print(f"[*] Output file: {converter.output_file_path}")
-        if converter.project_name:
-            print(f"[*] Project name: {converter.project_name}")
-        if converter.event:
-            print(f"[*] Event mode: enabled")
-            
-        # TODO: Call appropriate conversion method based on file extensions
-        # converter.convert()
-        
+        converter.convert()
     except KeyboardInterrupt:
-        print("\n[!] Operation cancelled by user")
+        print("\n[!] Operation cancelled by user", file=sys.stderr)
+        sys.exit(1)
+    except ValidationError as e:
+        print(f"[X] {e}", file=sys.stderr)
         sys.exit(1)
     except Exception as e:
-        print(f"[X] Error: {e}")
+        print(f"[X] Error: {e}", file=sys.stderr)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

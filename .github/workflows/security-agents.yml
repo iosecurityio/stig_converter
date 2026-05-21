@@ -1,0 +1,43 @@
+name: Security Agents
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  run-agents:
+    name: Run security agents and upload artifacts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install runtime deps (if any)
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Install optional scanners
+        run: |
+          pip install safety || true
+
+      - name: Run threat model generator
+        run: python3 .github/agents/threat-model/generate_threat_model.py
+
+      - name: Run secure review generator
+        run: python3 .github/agents/secure-code-review/generate_agent_report.py
+
+      - name: Run safety scan (if requirements present)
+        run: |
+          if [ -f requirements.txt ]; then safety check -r requirements.txt || true; fi
+
+      - name: Upload security report artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: output/**

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stig-converter"
+version = "2.3"
+description = "Converts DISA STIG checklists between various file formats (CKL, CSV, JSON, Markdown)"
+requires-python = ">=3.9"
+dependencies = [
+    "httpx",
+    "defusedxml>=0.7.1",
+    "anyio>=4.4.0",
+]
+
+[project.scripts]
+stig_converter = "stig_converter.stig_converter:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stig_converter*"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
