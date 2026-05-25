@@ -25,17 +25,29 @@ def validate_file_path(file_path, allowed_dirs):
     raise ValueError(f"File path not allowed: {file_path}")
 
 
+def _find_project_root() -> Path:
+    """
+    Walk up from this file's location to find the project root (the directory
+    containing pyproject.toml). Falls back to cwd() if not found.
+    """
+    here = Path(__file__).resolve().parent
+    for candidate in [here, *here.parents]:
+        if (candidate / "pyproject.toml").exists():
+            return candidate
+    return Path.cwd()
+
+
 def get_default_allowed_dirs():
     """
-    Get default allowed directories for file operations.
+    Get default allowed directories for file operations, anchored to the
+    project root so they are consistent regardless of the working directory.
     :return: List of allowed base directories
     """
+    root = _find_project_root()
     return [
-        Path.cwd(),
-        Path.cwd() / "data",
-        Path.cwd().parent / "data",
-        Path.cwd() / "output",
-        Path.cwd().parent / "output",
+        root,
+        root / "data",
+        root / "output",
     ]
 
 

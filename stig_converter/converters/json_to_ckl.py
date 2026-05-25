@@ -37,21 +37,21 @@ def _apply_finding(vuln, finding: dict) -> None:
             elem.text = finding[tag]
 
 
-def convert_json_to_ckl(json_file, ckl_path, base_ckl) -> str:
+def convert_json_to_ckl(json_file, ckl_path, template_ckl) -> str:
     """
     Populates a pre-existing STIG Checklist with the values of the equivalent items in a JSON file.
     :param json_file: Path to the JSON findings file
     :param ckl_path: Output directory or file path for the new .ckl
-    :param base_ckl: Path to the base CKL template to populate
+    :param template_ckl: Path to the CKL template to populate
     :return: Path to the created .ckl file
     """
     json_path = Path(json_file)
-    base_ckl_path = Path(base_ckl)
+    template_ckl_path = Path(template_ckl)
 
     if not json_path.exists():
         raise FileNotFoundError(f"[X] JSON file does not exist: {json_path}")
-    if not base_ckl_path.exists():
-        raise FileNotFoundError(f"[X] Base checklist does not exist: {base_ckl_path}")
+    if not template_ckl_path.exists():
+        raise FileNotFoundError(f"[X] Template checklist does not exist: {template_ckl_path}")
 
     new_ckl_path = validate_output_path(
         ckl_path, json_file, get_default_allowed_dirs(), extension=".ckl"
@@ -60,7 +60,7 @@ def convert_json_to_ckl(json_file, ckl_path, base_ckl) -> str:
     with open(json_path, "r", encoding="utf-8") as read_file:
         loaded_data = json.load(read_file)
 
-    ckl_tree = ET.parse(base_ckl_path)
+    ckl_tree = ET.parse(template_ckl_path)
     ckl_root = ckl_tree.getroot()
 
     if loaded_data:

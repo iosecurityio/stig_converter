@@ -1,24 +1,26 @@
 """
 stig_converter.py
-Converts DISA STIG checklists between various file formats (CKL, CSV, JSON, Markdown).
+Converts DISA STIG checklists between various file formats (CKL, CSV, JSON, Markdown)
+and can fetch the latest STIG data from remote sources.
 
 Usage:
-    stig_converter -i checklist.ckl -o report.csv
-    stig_converter -i checklist.ckl -o findings.json
-    stig_converter -i findings.json -o checklist.ckl --base-ckl template.ckl
-    stig_converter -i findings.json -o report.md
-    python -m stig_converter -i checklist.ckl -o report.csv
+    stig_converter convert -i checklist.ckl -o report.csv
+    stig_converter convert -i checklist.ckl -o findings.json
+    stig_converter convert -i findings.json -o checklist.ckl --template-ckl template.ckl
+    stig_converter convert -i findings.json -o report.md
+    stig_converter fetch --json output.json
+    stig_converter fetch --zip output.zip [--stig-sys ASD] [--stig-ver V6R4]
+    python -m stig_converter convert -i checklist.ckl -o report.csv
 """
 
 import argparse
-import json
 import re
 import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-__version__ = "2.3"
+__version__ = "2.4"
 
 _SUPPORTED_CONVERSIONS = {
     "ckl": ["csv", "json", "md"],
@@ -70,7 +72,7 @@ class STIGConverter:
         self.input_file_path: Path = args.input
         self.output_file_path: Path = args.output
         self.project_name: Optional[str] = getattr(args, "name", None)
-        self.base_ckl: Optional[Path] = getattr(args, "base_ckl", None)
+        self.template_ckl: Optional[Path] = getattr(args, "template_ckl", None)
         self.date: str = datetime.now().strftime("%Y%m%d")
 
     def update_filename(self, filename: str) -> str:
@@ -126,40 +128,20 @@ class STIGConverter:
         return convert_csv_to_json(self.input_file_path, self.output_file_path)
 
     def _json_to_ckl(self) -> str:
-        if not self.base_ckl:
-            raise ValidationError("--base-ckl is required for JSON → CKL conversion")
+        if not self.template_ckl:
+            raise ValidationError("--template-ckl is required for JSON → CKL conversion")
         from stig_converter.converters.json_to_ckl import convert_json_to_ckl
         return convert_json_to_ckl(
-            self.input_file_path, self.output_file_path, self.base_ckl
+            self.input_file_path, self.output_file_path, self.template_ckl
         )
 
     def _json_to_md(self) -> str:
-        from stig_converter.converters.json_to_markdown import (
-            convert_checklist_to_md,
-            write_stigs,
-        )
-        with open(self.input_file_path, encoding="utf-8") as f:
-            data = json.load(f)
-        if isinstance(data, list):
-            # Checklist format produced by convert_ckl_to_json / convert_csv_to_json
-            return convert_checklist_to_md(data, self.output_file_path)
-        # Stigviewer format produced by get_stig_json
-        return write_stigs(self.input_file_path, self.output_file_path)
+        from stig_converter.converters.json_to_markdown import convert_json_to_md
+        return convert_json_to_md(self.input_file_path, self.output_file_path)
 
     def _ckl_to_md(self) -> str:
-        """Two-step CKL → JSON (temp file) → Markdown."""
-        from stig_converter.converters.ckl_to_json import convert_ckl_to_json
-        from stig_converter.converters.json_to_markdown import convert_checklist_to_md
-
-        tmp_path = self.output_file_path.parent / f"_tmp_{self.date}.json"
-        try:
-            convert_ckl_to_json(self.input_file_path, tmp_path)
-            with open(tmp_path, encoding="utf-8") as f:
-                findings = json.load(f)
-            return convert_checklist_to_md(findings, self.output_file_path)
-        finally:
-            if tmp_path.exists():
-                tmp_path.unlink()
+        from stig_converter.converters.ckl_to_markdown import convert_ckl_to_md
+        return convert_ckl_to_md(self.input_file_path, self.output_file_path)
 
 
 # ------------------------------------------------------------------
@@ -170,70 +152,148 @@ def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="stig_converter",
         description=(
-            "Convert DISA STIG checklists between file formats "
-            "(CKL, CSV, JSON, Markdown). "
-            "Output paths must be within the current working directory."
+            "Work with DISA STIG checklists: convert between formats or fetch the latest data.\n\n"
+            "Subcommands:\n"
+            "  convert  Convert a checklist between CKL, CSV, JSON, and Markdown\n"
+            "  fetch    Download the latest STIG data from remote sources"
         ),
-        epilog="""
-examples:
-  %(prog)s -i checklist.ckl -o data/report.csv
-  %(prog)s -i checklist.ckl -o data/findings.json
-  %(prog)s -i data/findings.json -o data/checklist.ckl --base-ckl data/template.ckl
-  %(prog)s -i data/findings.json -o output/report.md
-  %(prog)s -i data/stigviewer.json -o output/reference.md
-        """,
         formatter_class=argparse.RawDescriptionHelpFormatter,
-    )
-    parser.add_argument(
-        "-i", "--input",
-        type=Path,
-        required=True,
-        metavar="FILE",
-        help="Input STIG file (.ckl, .csv, .json)",
-    )
-    parser.add_argument(
-        "-o", "--output",
-        type=Path,
-        required=True,
-        metavar="FILE",
-        help="Output file (.ckl, .csv, .json, .md)",
-    )
-    parser.add_argument(
-        "-n", "--name",
-        metavar="NAME",
-        help="Project name (optional, included in output where applicable)",
-    )
-    parser.add_argument(
-        "--base-ckl",
-        dest="base_ckl",
-        type=Path,
-        metavar="FILE",
-        help="Base CKL template (required for JSON → CKL conversion)",
     )
     parser.add_argument(
         "--version",
         action="version",
         version=f"%(prog)s {__version__}",
     )
+
+    subparsers = parser.add_subparsers(dest="command", metavar="COMMAND")
+    subparsers.required = True
+
+    # -- convert subcommand ------------------------------------------------
+    convert_parser = subparsers.add_parser(
+        "convert",
+        help="convert a checklist between file formats",
+        description=(
+            "Convert DISA STIG checklists between CKL, CSV, JSON, and Markdown formats.\n\n"
+            "Supported conversions:\n"
+            "  CKL  →  CSV, JSON, Markdown\n"
+            "  CSV  →  JSON\n"
+            "  JSON →  CKL, Markdown\n\n"
+            "CKL is the XML-based checklist format used by DISA STIG Viewer.\n"
+            "JSON → CKL requires a --template-ckl file."
+        ),
+        epilog=(
+            "examples:\n"
+            "  %(prog)s -i checklist.ckl -o report.csv\n"
+            "  %(prog)s -i checklist.ckl -o findings.json\n"
+            "  %(prog)s -i checklist.ckl -o report.md\n"
+            "  %(prog)s -i findings.json -o checklist.ckl --template-ckl template.ckl\n"
+            "  %(prog)s -i findings.json -o report.md\n"
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    convert_parser.add_argument(
+        "-i", "--input",
+        type=Path,
+        required=True,
+        metavar="FILE",
+        help="input file (.ckl, .csv, .json)",
+    )
+    convert_parser.add_argument(
+        "-o", "--output",
+        type=Path,
+        required=True,
+        metavar="FILE",
+        help="output file (.csv, .json, .ckl, .md)",
+    )
+    convert_parser.add_argument(
+        "-n", "--name",
+        metavar="NAME",
+        help="project name included in output where applicable",
+    )
+    convert_parser.add_argument(
+        "--template-ckl",
+        dest="template_ckl",
+        type=Path,
+        metavar="FILE",
+        help="CKL template file (required for JSON → CKL)",
+    )
+
+    # -- fetch subcommand --------------------------------------------------
+    fetch_parser = subparsers.add_parser(
+        "fetch",
+        help="download the latest STIG data from remote sources",
+        description=(
+            "Download the latest STIG data.\n\n"
+            "  --json  Fetches the ASD STIG checklist from stigviewer.com as JSON.\n"
+            "  --zip   Downloads the official STIG package from DISA Cyber Exchange as ZIP.\n\n"
+            "Exactly one of --json or --zip must be provided."
+        ),
+        epilog=(
+            "examples:\n"
+            "  %(prog)s --json data/latest_stigs.json\n"
+            "  %(prog)s --zip data/U_ASD_V6R4_STIG.zip\n"
+            "  %(prog)s --zip data/U_ASD_V6R4_STIG.zip --stig-sys ASD --stig-ver V6R4\n"
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    fetch_group = fetch_parser.add_mutually_exclusive_group(required=True)
+    fetch_group.add_argument(
+        "--json",
+        dest="fetch_json",
+        metavar="FILE",
+        help="output path for the downloaded JSON file (from stigviewer.com)",
+    )
+    fetch_group.add_argument(
+        "--zip",
+        dest="fetch_zip",
+        metavar="FILE",
+        help="output path for the downloaded ZIP file (from DISA Cyber Exchange)",
+    )
+    fetch_parser.add_argument(
+        "--stig-sys",
+        dest="stig_sys",
+        default="ASD",
+        metavar="SYS",
+        help="STIG system identifier for ZIP download (default: ASD)",
+    )
+    fetch_parser.add_argument(
+        "--stig-ver",
+        dest="stig_ver",
+        default="V6R4",
+        metavar="VER",
+        help="STIG version for ZIP download (default: V6R4)",
+    )
+
     return parser
 
 
 def parse_args(args: Optional[list] = None) -> argparse.Namespace:
     parser = create_parser()
     parsed = parser.parse_args(args)
-    try:
-        validate_file_conversion(parsed.input, parsed.output)
-    except ValidationError as e:
-        parser.error(str(e))
+    if parsed.command == "convert":
+        try:
+            validate_file_conversion(parsed.input, parsed.output)
+        except ValidationError as e:
+            parser.error(str(e))
     return parsed
 
 
 def main() -> None:
     """CLI entry point."""
+    if len(sys.argv) == 1:
+        create_parser().print_help()
+        sys.exit(0)
     args = parse_args()
     try:
-        converter = STIGConverter(args)
-        converter.convert()
+        if args.command == "convert":
+            converter = STIGConverter(args)
+            converter.convert()
+        elif args.command == "fetch":
+            from stig_converter.get_new_stigs import get_stig_json, get_stig_zip
+            if args.fetch_json:
+                get_stig_json(args.fetch_json)
+            else:
+                get_stig_zip(args.fetch_zip, stig_sys=args.stig_sys, stig_ver=args.stig_ver)
     except KeyboardInterrupt:
         print("\n[!] Operation cancelled by user", file=sys.stderr)
         sys.exit(1)

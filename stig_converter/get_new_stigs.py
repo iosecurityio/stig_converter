@@ -46,6 +46,7 @@ def get_stig_json(file_name, allowed_dirs=None):
 
     try:
         new_filepath = validate_file_path(file_name, allowed_dirs)
+        new_filepath.parent.mkdir(parents=True, exist_ok=True)
         print(f"[*] Downloading STIGs to {new_filepath}")
         target = (
             "https://stigviewer.com/stigs/application_security_and_development/json"
@@ -70,6 +71,7 @@ def get_stig_zip(output_name, stig_sys="ASD", stig_ver="V6R4", allowed_dirs=None
         allowed_dirs = get_default_allowed_dirs()
 
     file_path = validate_file_path(output_name, allowed_dirs)
+    file_path.parent.mkdir(parents=True, exist_ok=True)
 
     if file_path.exists():
         print(f"[!] The file '{file_path}' already exists.")
