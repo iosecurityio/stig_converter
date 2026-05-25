@@ -6,7 +6,7 @@ from pathlib import Path
 def test_package_imports():
     from stig_converter import STIGConverter, __version__
     assert STIGConverter is not None
-    assert __version__ == "2.4"
+    assert __version__ == "2.5"
 
 
 def test_converter_imports():
@@ -20,11 +20,17 @@ def test_converter_imports():
         write_stigs,
     )
     from stig_converter.converters.ckl_to_markdown import convert_ckl_to_md
+    from stig_converter.converters.ckl_to_cklb import convert_ckl_to_cklb
+    from stig_converter.converters.cklb_to_ckl import convert_cklb_to_ckl
+    from stig_converter.converters.xccdf_to_ckl import convert_xccdf_to_ckl
+    from stig_converter.converters.xccdf_to_cklb import convert_xccdf_to_cklb
     from stig_converter.get_new_stigs import get_stig_json, get_stig_zip
     assert all([
         convert_ckl_to_csv, convert_ckl_to_json, convert_csv_to_json,
         convert_json_to_ckl, convert_checklist_to_md, convert_json_to_md,
-        convert_ckl_to_md, write_stigs, get_stig_json, get_stig_zip,
+        convert_ckl_to_md, convert_ckl_to_cklb, convert_cklb_to_ckl,
+        convert_xccdf_to_ckl, convert_xccdf_to_cklb,
+        write_stigs, get_stig_json, get_stig_zip,
     ])
 
 

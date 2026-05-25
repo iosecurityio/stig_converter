@@ -20,12 +20,14 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-__version__ = "2.4"
+__version__ = "2.5"
 
 _SUPPORTED_CONVERSIONS = {
-    "ckl": ["csv", "json", "md"],
-    "csv": ["json"],
+    "ckl":  ["csv", "json", "md", "cklb"],
+    "cklb": ["ckl"],
+    "csv":  ["json"],
     "json": ["ckl", "md"],
+    "xml":  ["ckl", "cklb"],
 }
 
 
@@ -89,27 +91,27 @@ class STIGConverter:
         p = Path(filename)
         return str(p.with_name(f"{p.stem}-{self.date}{p.suffix}"))
 
+    _DISPATCH: dict = {
+        ("ckl",  "csv"):  "_ckl_to_csv",
+        ("ckl",  "json"): "_ckl_to_json",
+        ("ckl",  "md"):   "_ckl_to_md",
+        ("ckl",  "cklb"): "_ckl_to_cklb",
+        ("cklb", "ckl"):  "_cklb_to_ckl",
+        ("csv",  "json"): "_csv_to_json",
+        ("json", "ckl"):  "_json_to_ckl",
+        ("json", "md"):   "_json_to_md",
+        ("xml",  "ckl"):  "_xccdf_to_ckl",
+        ("xml",  "cklb"): "_xccdf_to_cklb",
+    }
+
     def convert(self) -> str:
         """Dispatch conversion based on input/output file extensions."""
         input_ext = self.input_file_path.suffix[1:].lower()
         output_ext = self.output_file_path.suffix[1:].lower()
-
-        if input_ext == "ckl" and output_ext == "csv":
-            return self._ckl_to_csv()
-        if input_ext == "ckl" and output_ext == "json":
-            return self._ckl_to_json()
-        if input_ext == "ckl" and output_ext == "md":
-            return self._ckl_to_md()
-        if input_ext == "csv" and output_ext == "json":
-            return self._csv_to_json()
-        if input_ext == "json" and output_ext == "ckl":
-            return self._json_to_ckl()
-        if input_ext == "json" and output_ext == "md":
-            return self._json_to_md()
-
-        raise ValidationError(
-            f"Unsupported conversion: {input_ext} → {output_ext}"
-        )
+        method_name = self._DISPATCH.get((input_ext, output_ext))
+        if not method_name:
+            raise ValidationError(f"Unsupported conversion: {input_ext} → {output_ext}")
+        return getattr(self, method_name)()
 
     # ------------------------------------------------------------------
     # Private conversion methods
@@ -143,6 +145,22 @@ class STIGConverter:
         from stig_converter.converters.ckl_to_markdown import convert_ckl_to_md
         return convert_ckl_to_md(self.input_file_path, self.output_file_path)
 
+    def _ckl_to_cklb(self) -> str:
+        from stig_converter.converters.ckl_to_cklb import convert_ckl_to_cklb
+        return convert_ckl_to_cklb(self.input_file_path, self.output_file_path)
+
+    def _cklb_to_ckl(self) -> str:
+        from stig_converter.converters.cklb_to_ckl import convert_cklb_to_ckl
+        return convert_cklb_to_ckl(self.input_file_path, self.output_file_path)
+
+    def _xccdf_to_ckl(self) -> str:
+        from stig_converter.converters.xccdf_to_ckl import convert_xccdf_to_ckl
+        return convert_xccdf_to_ckl(self.input_file_path, self.output_file_path)
+
+    def _xccdf_to_cklb(self) -> str:
+        from stig_converter.converters.xccdf_to_cklb import convert_xccdf_to_cklb
+        return convert_xccdf_to_cklb(self.input_file_path, self.output_file_path)
+
 
 # ------------------------------------------------------------------
 # CLI
@@ -175,10 +193,14 @@ def create_parser() -> argparse.ArgumentParser:
         description=(
             "Convert DISA STIG checklists between CKL, CSV, JSON, and Markdown formats.\n\n"
             "Supported conversions:\n"
-            "  CKL  →  CSV, JSON, Markdown\n"
+            "  CKL  →  CSV, JSON, Markdown, CKLB\n"
+            "  CKLB →  CKL\n"
             "  CSV  →  JSON\n"
-            "  JSON →  CKL, Markdown\n\n"
+            "  JSON →  CKL, Markdown\n"
+            "  XML  →  CKL, CKLB  (DISA XCCDF Benchmark)\n\n"
             "CKL is the XML-based checklist format used by DISA STIG Viewer.\n"
+            "CKLB is the JSON-based checklist format used by DISA STIG Viewer 3+.\n"
+            "XML (XCCDF) → CKL/CKLB produces a blank checklist with all findings set to Not_Reviewed.\n"
             "JSON → CKL requires a --template-ckl file."
         ),
         epilog=(
@@ -188,6 +210,10 @@ def create_parser() -> argparse.ArgumentParser:
             "  %(prog)s -i checklist.ckl -o report.md\n"
             "  %(prog)s -i findings.json -o checklist.ckl --template-ckl template.ckl\n"
             "  %(prog)s -i findings.json -o report.md\n"
+            "  %(prog)s -i checklist.ckl -o checklist.cklb\n"
+            "  %(prog)s -i checklist.cklb -o checklist.ckl\n"
+            "  %(prog)s -i benchmark.xml -o checklist.ckl\n"
+            "  %(prog)s -i benchmark.xml -o checklist.cklb\n"
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -196,7 +222,7 @@ def create_parser() -> argparse.ArgumentParser:
         type=Path,
         required=True,
         metavar="FILE",
-        help="input file (.ckl, .csv, .json)",
+        help="input file (.ckl, .cklb, .csv, .json, .xml)",
     )
     convert_parser.add_argument(
         "-o", "--output",

@@ -6,11 +6,17 @@
 
 **Supported conversions:**
 
-| Input  | Output                  |
-| ------ | ----------------------- |
-| `.ckl` | `.csv`, `.json`, `.md`  |
-| `.csv` | `.json`                 |
-| `.json`| `.ckl`, `.md`           |
+| Input   | Output                          | Notes                                              |
+| ------- | ------------------------------- | -------------------------------------------------- |
+| `.ckl`  | `.csv`, `.json`, `.md`, `.cklb` |                                                    |
+| `.cklb` | `.ckl`                          |                                                    |
+| `.csv`  | `.json`                         |                                                    |
+| `.json` | `.ckl`, `.md`                   | JSON → CKL requires `--template-ckl`               |
+| `.xml`  | `.ckl`, `.cklb`                 | DISA XCCDF Benchmark; all findings → Not_Reviewed  |
+
+CKL is the XML-based checklist format used by DISA STIG Viewer.
+CKLB is the JSON-based checklist format used by DISA STIG Viewer 3+.
+XML (XCCDF) is the DISA Benchmark definition file included in official STIG packages.
 
 Additional utilities:
 
@@ -50,6 +56,18 @@ stig_converter convert -i data/findings.json -o data/checklist.ckl --template-ck
 
 # JSON to Markdown
 stig_converter convert -i data/findings.json -o data/report.md
+
+# CKL to CKLB
+stig_converter convert -i data/checklist.ckl -o data/checklist.cklb
+
+# CKLB to CKL
+stig_converter convert -i data/checklist.cklb -o data/checklist.ckl
+
+# XCCDF Benchmark to CKL (blank checklist, all findings Not_Reviewed)
+stig_converter convert -i data/U_ASD_STIG_V6R4_Manual-xccdf.xml -o data/checklist.ckl
+
+# XCCDF Benchmark to CKLB (blank checklist, all findings not_reviewed)
+stig_converter convert -i data/U_ASD_STIG_V6R4_Manual-xccdf.xml -o data/checklist.cklb
 ```
 
 ### fetch

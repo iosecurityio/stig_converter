@@ -4,85 +4,90 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a STIG (Security Technical Implementation Guide) converter that transforms DISA STIG checklists between various file formats. The project converts between CKL (XML-based STIG checklists), CSV, JSON, and Markdown formats.
+`stig_converter` is a unified CLI tool that converts DISA STIG checklists between file formats and downloads the latest STIG data from remote sources.
 
 ## Core Architecture
 
-The codebase is currently in refactor mode, transitioning from individual scripts to a unified converter:
+- **CLI entry point**: `stig_converter/stig_converter.py` — `STIGConverter` class with a `_DISPATCH` table, `create_parser()`, and `main()`
+- **Converters**: `stig_converter/converters/` — one file per conversion pair, each exposing a single public `convert_*` function
+- **Fetch utilities**: `stig_converter/get_new_stigs.py` — downloads STIGs from stigviewer.com and DISA Cyber Exchange
+- **Security**: `stig_converter/security_utils.py` — path validation anchored to project root
 
-- **Main converter**: `stig_converter/stig_converter.py` contains the `STIGConverter` class and `Interface` CLI handler
-- **Individual scripts**: `scripts/` directory contains standalone conversion utilities:
-  - `ckl_to_csv.py` - Converts CKL (XML) to CSV format
-  - `ckl_to_json.py` - Converts CKL to JSON format  
-  - `csv_to_json.py` - Converts CSV to JSON format
-  - `json_to_ckl.py` - Converts JSON back to CKL format
-  - `json_to_markdown.py` - Generates readable Markdown reports from JSON
-  - `get_new_stigs.py` - Downloads latest STIGs from stigviewer.com and DISA Cyber Exchange
+### Supported conversions
+
+| Input   | Output                          | Notes                                             |
+| ------- | ------------------------------- | ------------------------------------------------- |
+| `.ckl`  | `.csv`, `.json`, `.md`, `.cklb` |                                                   |
+| `.cklb` | `.ckl`                          |                                                   |
+| `.csv`  | `.json`                         |                                                   |
+| `.json` | `.ckl`, `.md`                   | JSON → CKL requires `--template-ckl`              |
+| `.xml`  | `.ckl`, `.cklb`                 | DISA XCCDF Benchmark; all findings → Not_Reviewed |
+
+### Converter files
+
+| File | Conversion |
+| ---- | ---------- |
+| `ckl_to_csv.py` | CKL → CSV |
+| `ckl_to_json.py` | CKL → JSON |
+| `ckl_to_markdown.py` | CKL → Markdown (via JSON intermediate) |
+| `ckl_to_cklb.py` | CKL → CKLB |
+| `cklb_to_ckl.py` | CKLB → CKL |
+| `csv_to_json.py` | CSV → JSON |
+| `json_to_ckl.py` | JSON → CKL |
+| `json_to_markdown.py` | JSON → Markdown |
+| `xccdf_to_ckl.py` | XCCDF XML → CKL |
+| `xccdf_to_cklb.py` | XCCDF XML → CKLB |
 
 ## Development Setup
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Common Commands
 
-Since the main `stig_converter.py` is incomplete, use individual scripts for conversions:
-
 ```bash
-# Convert CKL to CSV
-python scripts/ckl_to_csv.py
+# Convert
+stig_converter convert -i data/checklist.ckl -o data/report.csv
+stig_converter convert -i data/U_ASD_STIG_V6R4_Manual-xccdf.xml -o data/checklist.ckl
 
-# Convert JSON to Markdown report
-python scripts/json_to_markdown.py
+# Fetch latest STIGs
+stig_converter fetch --json data/latest_stigs.json
+stig_converter fetch --zip data/U_ASD_V6R4_STIG.zip
 
-# Download latest STIGs
-python scripts/get_new_stigs.py
+# Run tests (always do this after any change)
+python -m pytest tests/ -v
 ```
 
-## File Formats and Data Flow
+## File Formats
 
-**CKL Format**: XML-based STIG checklist format used by DISA. Contains vulnerability details, findings status, and asset information.
-
-**JSON Format**: Normalized format with structure:
-```json
-[
-  {
-    "HOST_NAME": "hostname",
-    "HOST_IP": "ip_address", 
-    "Vuln_Num": "V-######",
-    "Severity": "high|medium|low",
-    "Rule_ID": "SV-######_rule",
-    "Rule_Title": "Description",
-    "STATUS": "Open|NotAFinding|Not_Reviewed",
-    "FINDING_DETAILS": "details",
-    "COMMENTS": "comments"
-  }
-]
-```
-
-**Conversion Flow**:
-- CKL → CSV/JSON (primary input format)
-- CSV → JSON (intermediate processing)
-- JSON → CKL/Markdown (output formats)
+**CKL**: XML-based STIG checklist used by DISA STIG Viewer.
+**CKLB**: JSON-based STIG checklist used by DISA STIG Viewer 3+.
+**XCCDF XML**: DISA Benchmark definition included in official STIG ZIP packages.
+**JSON**: Normalized flat list of findings produced by `ckl_to_json`/`csv_to_json`.
 
 ## Key Implementation Details
 
-- All scripts use `pathlib.Path` for cross-platform file handling
-- XML parsing uses `xml.etree.ElementTree` for CKL files
-- Date stamping follows `YYYYMMDD` format (e.g., `20250730`)
-- Severity levels map to CAT-1 (high), CAT-2 (medium), CAT-3 (low)
-- UTF-8 encoding is used throughout for international character support
+- All paths validated against project root via `security_utils.get_default_allowed_dirs()`
+- XML parsing uses `defusedxml` (falls back to stdlib with a warning)
+- XCCDF description fields are XML-escaped sub-tags parsed with regex
+- UUIDs in CKL/CKLB are generated deterministically with `uuid.uuid5` from rule/benchmark IDs
+- Status mapping: CKL `Not_Reviewed` ↔ CKLB `not_reviewed`, `Open` ↔ `open`, `NotAFinding` ↔ `not_a_finding`, `Not_Applicable` ↔ `not_applicable`
+- Date stamps follow `YYYYMMDD` format
+- UTF-8 encoding throughout
 
-## Data Directory Structure
+## Non-Negotiable Development Rules
 
-The `data/` directory contains:
-- Sample STIG checklists in various formats
-- Downloaded STIG packages from DISA
-- Generated output files with date stamps
+These rules apply to every change, no exceptions:
 
-## Current State
+1. **Run tests after every change**: `python -m pytest tests/ -v` must pass before a task is considered done. Add new tests when fixing bugs or adding features.
 
-The main `stig_converter.py` is incomplete - the `STIGConverter` class lacks the actual conversion method implementations. The working functionality exists in the individual scripts under `scripts/`. The TODO indicates consolidating these into the main converter class.
+2. **Update README.md with every functional change**: New converters, CLI options, or behaviors must be reflected in the Usage section with accurate, working examples. Examples must include the subcommand (`stig_converter convert ...`).
+
+3. **Clean up orphaned files immediately**: Any file that is moved, replaced, or accidentally created must be deleted before finishing. Run `git status` to verify before marking a task done.
+
+4. **No stale functionality**: When a feature is moved or replaced, remove the old location and all references to it. Do not leave dead imports, unused functions, or outdated comments.
+
+5. **Live smoke test CLI changes**: For any change to the CLI (new subcommand, new option, new converter), do a live `stig_converter ...` run from the project root to confirm it works end-to-end before finishing.
